@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wsprec"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.2", "numpy>=1.24"]
+
+[project.scripts]
+wsprec = "wsprec.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["wsprec*"]
