@@ -44,15 +44,57 @@ Parameters: `bias` (scalar; index `[]`), `user_bias.weight`, `item_bias.weight`,
 The edit command uses no gradients and evaluates validation only. Never pass
 pickle checkpoints from untrusted sources. The baseline checkpoint is reusable.
 
-## Planned experimental extensions
+## Completed exploratory study (2026-11-04)
 
-- Warm/low-support user-item groups defined from training counts only.
-- Semantic anchors and title embeddings with matched information controls.
-- LLM editor integration, feedback budgets and complete token/cost logs.
-- Budget-matched random edits and deterministic transformation baselines.
+[Chinese research report](output/pdf/WSP4Rec_research_report.pdf),
+[aggregate results](reports/study_summary.json), [cost record](reports/costs.json),
+and [tables](reports/tables/) document the first controlled study. It includes
+MSE/BPR MF, three training seeds, eight independent Astra editor conditions
+(two objectives x weight visibility x title access), 64 proposed candidates,
+calibration/random/title-smoothing controls, train-count groups, collateral harm,
+and contextual popularity/EASE references. Every editor used two rounds of four
+validation queries. Seed42 selected recipes transfer unchanged to seeds43/44.
 
-The current framework deliberately keeps these extensions explicit rather than
-reporting them as already implemented.
+Mean test NDCG@10 for base / no-title WSP / WSP+titles is
+0.05801 / 0.07328 / 0.07534 for MSE and
+0.10441 / 0.10490 / 0.10566 for BPR. No-title BPR WSP selected the same bias
+scaling as the calibration control. EASE scores 0.12031. These results do **not**
+establish a unique benefit from LLM weight access, cold-start effectiveness or
+competitive recommendation performance. Title smoothing has a small BPR signal;
+no low-support-item Recall@10 improvement was observed in the selected editors.
+
+Native Astra token usage and per-call subscription charges are unavailable and
+explicitly null, not zero. CPU compute walls, query counts and Qwen GPU memory
+and extraction time are recorded. Query-matched controls are not fully matched
+in search space or monetary cost. See the report for isolation and timing limits.
+
+## Study reproduction
+
+The study protocol is in `study_protocol.json`; pre-test clarifications are in
+`study_amendments.json`, and the common editor interface is
+`editor_interface.json`. The final manifest hashes inputs before test labels
+are read. Historical CLI scoring and study matrix-product scoring are
+mathematically equivalent but not bitwise identical at float32 near ties.
+
+```bash
+pip install -e '.[text,report]'
+wsprec prepare
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -m wsprec.study train
+python -m wsprec.study export
+python -m wsprec.title_embeddings --titles runs/study/text/titles.json \
+  --output runs/study/text/title_embeddings.npy \
+  --revision 97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3 --device cuda:0
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python scripts/replay_study.py
+python scripts/build_study_report.py
+```
+
+`replay_study.py` uses archived Astra recipes; it does not regenerate model
+responses. It refuses to overwrite an existing frozen study. Exact numbers
+can vary across Torch/BLAS versions. For new discoveries, use isolated Astra
+sessions with the exported per-condition allowlists; return only candidate IDs
+and validation NDCG as feedback. No arbitrary agent code, fitting or test access
+is part of the editing interface. The report is a research report, not a
+submission-ready four-page paper.
 
 ## Ranking protocol
 

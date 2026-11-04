@@ -1,0 +1,509 @@
+{
+  "created_unix": 1793784734.6845179,
+  "choices": {
+    "mse": {
+      "weights": {
+        "recipe": {
+          "id": "mse_weights_r2_support_interaction_calibration",
+          "rationale": "Combine quarter bias, which improved round-one validation alone, with a 0.08 support prior. Up to a ranking-invariant positive rescaling, this compares directly with prior 0.32 but amplifies interactions fourfold. It tests whether nearly rank-one interaction structure adds value after support correction without arbitrary dimension reweighting.",
+          "ops": [
+            {
+              "kind": "scale",
+              "parameter": "item_bias.weight",
+              "group": "all",
+              "factor": 0.25
+            },
+            {
+              "kind": "popularity_shift",
+              "coefficient": 0.08
+            }
+          ]
+        },
+        "valid_ndcg@10": 0.06554571342751293,
+        "feedback_queries": 8,
+        "valid_curve_best_so_far": [
+          0.058423598430735184,
+          0.058423598430735184,
+          0.06379218919841476,
+          0.06379218919841476,
+          0.06461765729351397,
+          0.06461765729351397,
+          0.06461765729351397,
+          0.06554571342751293
+        ],
+        "candidate_files": [
+          "runs/study/editors/mse-weights/round1.validation.json",
+          "runs/study/editors/mse-weights/round2.validation.json"
+        ]
+      },
+      "blind": {
+        "recipe": {
+          "id": "mse_blind_r2_tail_pop035",
+          "rationale": "Combine the individually helpful sparse-factor regularization with the best popularity correction to test complementary improvement.",
+          "ops": [
+            {
+              "kind": "neighbor_smooth",
+              "parameter": "item.weight",
+              "group": "low",
+              "source": "weights",
+              "neighbors": 10,
+              "strength": 0.25
+            },
+            {
+              "kind": "support_shrink",
+              "parameter": "item.weight",
+              "group": "all",
+              "tau": 5
+            },
+            {
+              "kind": "popularity_shift",
+              "coefficient": 0.35
+            }
+          ]
+        },
+        "valid_ndcg@10": 0.06494932809620388,
+        "feedback_queries": 8,
+        "valid_curve_best_so_far": [
+          0.05685496705549086,
+          0.06491271183677456,
+          0.06491271183677456,
+          0.06491271183677456,
+          0.06491271183677456,
+          0.06491271183677456,
+          0.06491271183677456,
+          0.06494932809620388
+        ],
+        "candidate_files": [
+          "runs/study/editors/mse-blind/round1.validation.json",
+          "runs/study/editors/mse-blind/round2.validation.json"
+        ]
+      },
+      "weights_text": {
+        "recipe": {
+          "id": "mse_wt_r2_support_bias",
+          "rationale": "Keep the 0.2 support prior and halve item biases to assess a stronger relative exposure contribution without amplifying potentially noisy latent dimensions; text smoothing remains conservative.",
+          "ops": [
+            {
+              "kind": "neighbor_smooth",
+              "parameter": "item.weight",
+              "group": "low",
+              "source": "text",
+              "neighbors": 10,
+              "strength": 0.25
+            },
+            {
+              "kind": "scale",
+              "parameter": "item_bias.weight",
+              "group": "all",
+              "factor": 0.5
+            },
+            {
+              "kind": "popularity_shift",
+              "coefficient": 0.2
+            }
+          ]
+        },
+        "valid_ndcg@10": 0.06548471884365581,
+        "feedback_queries": 8,
+        "valid_curve_best_so_far": [
+          0.05551313943751218,
+          0.05792040535204862,
+          0.06344531524847848,
+          0.06477858404221391,
+          0.06491271183677456,
+          0.06491271183677456,
+          0.0651405708053669,
+          0.06548471884365581
+        ],
+        "candidate_files": [
+          "runs/study/editors/mse-weights_text/round1.validation.json",
+          "runs/study/editors/mse-weights_text/round2.validation.json"
+        ]
+      },
+      "blind_text": {
+        "recipe": {
+          "id": "r1_text_support_prior",
+          "rationale": "MSE calibration need not align with top-ranked relevance. A positive support prior may promote reliably estimated items, paired with mild sparse-item semantic smoothing.",
+          "ops": [
+            {
+              "kind": "popularity_shift",
+              "coefficient": 0.2
+            },
+            {
+              "kind": "neighbor_smooth",
+              "parameter": "item.weight",
+              "group": "low",
+              "source": "text",
+              "neighbors": 10,
+              "strength": 0.2
+            },
+            {
+              "kind": "neighbor_smooth",
+              "parameter": "item.weight",
+              "group": "zero",
+              "source": "text",
+              "neighbors": 10,
+              "strength": 0.5
+            }
+          ]
+        },
+        "valid_ndcg@10": 0.06477858404221391,
+        "feedback_queries": 8,
+        "valid_curve_best_so_far": [
+          0.05551313943751218,
+          0.05551313943751218,
+          0.05685496705549086,
+          0.06477858404221391,
+          0.06477858404221391,
+          0.06477858404221391,
+          0.06477858404221391,
+          0.06477858404221391
+        ],
+        "candidate_files": [
+          "runs/study/editors/mse-blind_text/round1.validation.json",
+          "runs/study/editors/mse-blind_text/round2.validation.json"
+        ]
+      },
+      "calibration": {
+        "recipe": {
+          "id": "pop_shift_0.2",
+          "ops": [
+            {
+              "kind": "popularity_shift",
+              "coefficient": 0.2
+            }
+          ]
+        },
+        "valid_ndcg@10": 0.06477858404221391,
+        "feedback_queries": 8,
+        "valid_curve_best_so_far": [
+          0.05710754945420377,
+          0.05710754945420377,
+          0.05710754945420377,
+          0.05710754945420377,
+          0.05710754945420377,
+          0.05710754945420377,
+          0.06344531524847848,
+          0.06477858404221391
+        ],
+        "candidate_files": [
+          "runs/study/controls/mse-calibration.validation.json"
+        ]
+      },
+      "random": {
+        "recipe": {
+          "id": "random_5",
+          "ops": [
+            {
+              "kind": "popularity_shift",
+              "coefficient": 0.2519100963223669
+            }
+          ]
+        },
+        "valid_ndcg@10": 0.064036004760719,
+        "feedback_queries": 8,
+        "valid_curve_best_so_far": [
+          0.05551313943751218,
+          0.05551313943751218,
+          0.05551313943751218,
+          0.0560680431491616,
+          0.0560680431491616,
+          0.064036004760719,
+          0.064036004760719,
+          0.064036004760719
+        ],
+        "candidate_files": [
+          "runs/study/controls/mse-random.validation.json"
+        ]
+      },
+      "semantic": {
+        "recipe": {
+          "id": "title_all_0.1",
+          "ops": [
+            {
+              "kind": "neighbor_smooth",
+              "parameter": "item.weight",
+              "source": "text",
+              "group": "all",
+              "neighbors": 10,
+              "strength": 0.1
+            }
+          ]
+        },
+        "valid_ndcg@10": 0.055854425470428334,
+        "feedback_queries": 8,
+        "valid_curve_best_so_far": [
+          0.05551685540236623,
+          0.055854425470428334,
+          0.055854425470428334,
+          0.055854425470428334,
+          0.055854425470428334,
+          0.055854425470428334,
+          0.055854425470428334,
+          0.055854425470428334
+        ],
+        "candidate_files": [
+          "runs/study/controls/mse-semantic.validation.json"
+        ]
+      }
+    },
+    "bpr": {
+      "weights": {
+        "recipe": {
+          "id": "bpr_weights_r1_bias_half",
+          "rationale": "Item bias has standard deviation 0.464 and correlation 0.905 with log support, while item norms also strongly track support (0.913). Halve item bias to test whether the separately learned popularity term is excessive alongside interactions; preserves all learned geometry. Correlations motivate the hypothesis but do not establish its ranking benefit.",
+          "ops": [
+            {
+              "kind": "scale",
+              "parameter": "item_bias.weight",
+              "group": "all",
+              "factor": 0.5
+            }
+          ]
+        },
+        "valid_ndcg@10": 0.12147265964052226,
+        "feedback_queries": 8,
+        "valid_curve_best_so_far": [
+          0.12147265964052226,
+          0.12147265964052226,
+          0.12147265964052226,
+          0.12147265964052226,
+          0.12147265964052226,
+          0.12147265964052226,
+          0.12147265964052226,
+          0.12147265964052226
+        ],
+        "candidate_files": [
+          "runs/study/editors/bpr-weights/round1.validation.json",
+          "runs/study/editors/bpr-weights/round2.validation.json"
+        ]
+      },
+      "blind": {
+        "recipe": {
+          "id": "bpr_blind_r2_bias_055",
+          "rationale": "Probe a moderate continuation beyond the successful 0.7 scale, between 0.4 and 0.7, because top-ten ordering need not vary monotonically with bias scale.",
+          "ops": [
+            {
+              "kind": "scale",
+              "parameter": "item_bias.weight",
+              "group": "all",
+              "factor": 0.55
+            }
+          ]
+        },
+        "valid_ndcg@10": 0.12128801291714214,
+        "feedback_queries": 8,
+        "valid_curve_best_so_far": [
+          0.12127913974409871,
+          0.12127913974409871,
+          0.12127913974409871,
+          0.12127913974409871,
+          0.12127913974409871,
+          0.12127913974409871,
+          0.12128801291714214,
+          0.12128801291714214
+        ],
+        "candidate_files": [
+          "runs/study/editors/bpr-blind/round1.validation.json",
+          "runs/study/editors/bpr-blind/round2.validation.json"
+        ]
+      },
+      "weights_text": {
+        "recipe": {
+          "id": "bpr_wt_r2_bias_half_text",
+          "rationale": "Combine the strongest first-round bias calibration with independently positive restrained all-item title-neighbor smoothing; the mechanisms adjust the shared prior and personalized item geometry respectively.",
+          "ops": [
+            {
+              "kind": "scale",
+              "parameter": "item_bias.weight",
+              "group": "all",
+              "factor": 0.5
+            },
+            {
+              "kind": "neighbor_smooth",
+              "parameter": "item.weight",
+              "group": "all",
+              "source": "text",
+              "neighbors": 5,
+              "strength": 0.15
+            }
+          ]
+        },
+        "valid_ndcg@10": 0.12172460878058353,
+        "feedback_queries": 8,
+        "valid_curve_best_so_far": [
+          0.11901201906956592,
+          0.12147265964052226,
+          0.12147265964052226,
+          0.12147265964052226,
+          0.12147265964052226,
+          0.12147265964052226,
+          0.12172460878058353,
+          0.12172460878058353
+        ],
+        "candidate_files": [
+          "runs/study/editors/bpr-weights_text/round1.validation.json",
+          "runs/study/editors/bpr-weights_text/round2.validation.json"
+        ]
+      },
+      "blind_text": {
+        "recipe": {
+          "id": "bpr_bt_r2_bias_045",
+          "rationale": "Bias scaling to 0.7 improved validation while 1.3 hurt; extend the improving direction to 0.45.",
+          "ops": [
+            {
+              "kind": "scale",
+              "parameter": "item_bias.weight",
+              "group": "all",
+              "factor": 0.45
+            }
+          ]
+        },
+        "valid_ndcg@10": 0.12146766350464892,
+        "feedback_queries": 8,
+        "valid_curve_best_so_far": [
+          0.12127913974409871,
+          0.12127913974409871,
+          0.12127913974409871,
+          0.12127913974409871,
+          0.12146766350464892,
+          0.12146766350464892,
+          0.12146766350464892,
+          0.12146766350464892
+        ],
+        "candidate_files": [
+          "runs/study/editors/bpr-blind_text/round1.validation.json",
+          "runs/study/editors/bpr-blind_text/round2.validation.json"
+        ]
+      },
+      "calibration": {
+        "recipe": {
+          "id": "bias_scale_0.5",
+          "ops": [
+            {
+              "kind": "scale",
+              "parameter": "item_bias.weight",
+              "factor": 0.5
+            }
+          ]
+        },
+        "valid_ndcg@10": 0.12147265964052226,
+        "feedback_queries": 8,
+        "valid_curve_best_so_far": [
+          0.11907388364102084,
+          0.12147265964052226,
+          0.12147265964052226,
+          0.12147265964052226,
+          0.12147265964052226,
+          0.12147265964052226,
+          0.12147265964052226,
+          0.12147265964052226
+        ],
+        "candidate_files": [
+          "runs/study/controls/bpr-calibration.validation.json"
+        ]
+      },
+      "random": {
+        "recipe": {
+          "id": "random_3",
+          "ops": [
+            {
+              "kind": "norm_shrink",
+              "parameter": "item_bias.weight",
+              "group": "high",
+              "strength": 0.08867659591152433
+            }
+          ]
+        },
+        "valid_ndcg@10": 0.12003328922671995,
+        "feedback_queries": 8,
+        "valid_curve_best_so_far": [
+          0.11901201906956592,
+          0.11920611786947667,
+          0.11920611786947667,
+          0.12003328922671995,
+          0.12003328922671995,
+          0.12003328922671995,
+          0.12003328922671995,
+          0.12003328922671995
+        ],
+        "candidate_files": [
+          "runs/study/controls/bpr-random.validation.json"
+        ]
+      },
+      "semantic": {
+        "recipe": {
+          "id": "title_all_0.05",
+          "ops": [
+            {
+              "kind": "neighbor_smooth",
+              "parameter": "item.weight",
+              "source": "text",
+              "group": "all",
+              "neighbors": 10,
+              "strength": 0.05
+            }
+          ]
+        },
+        "valid_ndcg@10": 0.119883000613349,
+        "feedback_queries": 8,
+        "valid_curve_best_so_far": [
+          0.119883000613349,
+          0.119883000613349,
+          0.119883000613349,
+          0.119883000613349,
+          0.119883000613349,
+          0.119883000613349,
+          0.119883000613349,
+          0.119883000613349
+        ],
+        "candidate_files": [
+          "runs/study/controls/bpr-semantic.validation.json"
+        ]
+      }
+    }
+  },
+  "sha256": {
+    "runs/study/editors/mse-weights/round1.validation.json": "467787b3b2a592961487a8682f4fae2ee8b61dcfbde9b457dc0d6516972ee1cd",
+    "runs/study/editors/mse-weights/round2.validation.json": "5a5d2db14e13904b27a064bca69a72eebfb68348c09349ab78a831e8277e74da",
+    "runs/study/editors/mse-blind/round1.validation.json": "47d1d44b8e6e85df8b33d044d6c0749cfc289d764d82dce0a6410479c976cd48",
+    "runs/study/editors/mse-blind/round2.validation.json": "430b2ca3120307fcbf6762962f2a3b6bc44a5a919d77ea4dffeb13983fc96d14",
+    "runs/study/editors/mse-weights_text/round1.validation.json": "6a004ff3436f80b5e34ad6cb1b12c38435dbf8f3e19e5ed1a4e0bc1a70d3e005",
+    "runs/study/editors/mse-weights_text/round2.validation.json": "10d8056a17d8c17f12bde303af285e695e6913049add261b4c458e6ad0e5f33e",
+    "runs/study/editors/mse-blind_text/round1.validation.json": "9db2bd586cf819edf4a5045585ad02eba540dcadabb1dd44c958bedd58b19dc1",
+    "runs/study/editors/mse-blind_text/round2.validation.json": "70f37e2f30e67ee83ea38d4e7644b075e5b4425899a11364cbae972eb58dd80b",
+    "runs/study/controls/mse-calibration.validation.json": "24fa4f7eeda7404c1c14bd1059c488f356ea663771d4d0cffd5555257c040079",
+    "runs/study/controls/mse-random.validation.json": "e16893c773739bbf173ea4b01e549f0b5767bd59723ba8a0a492cd30200c277b",
+    "runs/study/controls/mse-semantic.validation.json": "51bbd54de97e036e1a69c77edc38fde54e6a699d0a6b89dba1e4d05096c0b023",
+    "runs/study/training/mse-s42-lr0.003-wd0.001/best.pt": "dfd3bc74c0fd8d96b4cc995799f4577fec9a84f365eb2fb48c7635fa032c978a",
+    "runs/study/training/mse-s43-lr0.003-wd0.001/best.pt": "793ef3a2180babe207b759d0fe9c6b036a32e76b39fdf345f749d5320d1fe77a",
+    "runs/study/training/mse-s44-lr0.003-wd0.001/best.pt": "60bb62c79398b16687c08cb5ec5415604f93ac66779c46196d0031dc74d3b7b2",
+    "runs/study/editors/bpr-weights/round1.validation.json": "fe86b15cd97960b24c6c00002bb8711dee76a4a1d6f0a6e08ff5dc77067b1b85",
+    "runs/study/editors/bpr-weights/round2.validation.json": "7baf6d4101d04548e17522fb524e510d242ab439c1f0f20c2ffc4a7af6aad2d3",
+    "runs/study/editors/bpr-blind/round1.validation.json": "72b140ce03e78b597f42664da3e71df412a55c8fe45174e0279bcfd1822217c0",
+    "runs/study/editors/bpr-blind/round2.validation.json": "e0442be537521f74f18bd9303eeba646d9df1a4bfbc565e3dd01048480bbf604",
+    "runs/study/editors/bpr-weights_text/round1.validation.json": "789d36b0dcffc0eb4e623bfeb6ed4e834ed3ed9f3ff664d9cc244d826430b37f",
+    "runs/study/editors/bpr-weights_text/round2.validation.json": "d51d6e7d0da4132b92c3b2f5317a644cfd29880f3c981e818b595883dca70f1e",
+    "runs/study/editors/bpr-blind_text/round1.validation.json": "89b7f536e3193fe7d8bec62cd1a938491657c5b214b34918a557aa77603c8f61",
+    "runs/study/editors/bpr-blind_text/round2.validation.json": "1bed8eed26b328b727e49ea5daa3af37cd31e4e270d7bb2d849e321d5b6d201e",
+    "runs/study/controls/bpr-calibration.validation.json": "ec67a317b38fb1935259711f2ad243d758baf8821c548432c42aeff862a19ed2",
+    "runs/study/controls/bpr-random.validation.json": "b5bc1735c8476d78a1d2926e460dc8dcefc93a3160b06b7dba84de4cf2467ad4",
+    "runs/study/controls/bpr-semantic.validation.json": "b93f538d294cca718dcc0460d31daa9bfeabb36f5af4683f084ff18a2050adf0",
+    "runs/study/training/bpr-s42-lr0.01-wd1e-05/best.pt": "b5a0bc088bf1e234b83d60de48ed7f8a0a7a7c4dda47c000285d6bb7b5b7c24e",
+    "runs/study/training/bpr-s43-lr0.01-wd1e-05/best.pt": "8eea4d68f3fa96e8063b619561d43a9cf75c485d66e7377d0453293dd909fdef",
+    "runs/study/training/bpr-s44-lr0.01-wd1e-05/best.pt": "54bcb2186a72d2cbd286fc08f9b099f0b52d849580df3bf2d5d3ea2f5cd3a97e",
+    "study_protocol.json": "b765a8b2a52b05907c72d22d24e9f8a31f54c33dfb05132de990317d2731c73e",
+    "study_amendments.json": "fe428cb255445e177f8aa7cc1c4a68e678d30990bdd48c0d086f3670170f059b",
+    "editor_interface.json": "75896f33a6de9ccfac7e5f2e0119c5e80c15c40ed76f5abeebc122cc62af0d37",
+    "wsprec/study.py": "d4807f14c0b48d02101b89b42bbf1b9d57fd3f2e50afbfceeba20cea0770dd73",
+    "wsprec/study_metrics.py": "655fb0d26a508b63b7a0853f5fee0c428510221de063b7366fc62964705d2de2",
+    "wsprec/finalize_study.py": "786789e4301e5c8b7c360f458b8ff4e8b04adeeeb89f991984b891b67fb89d2b",
+    "runs/study/text/title_embeddings.npy": "035e546eeb8a7fc9731cf5106f7baa8c52e09df3b89dd5babf5a089f87aacc68",
+    "runs/study/references/ease.npy": "ba37d4d741f237a21e612c0952239444b062d6cc2fde51522b765c3860742494",
+    "runs/study/references/popularity.npy": "429ffe30b1aa7a4814e416ba348e7989c4b621986aa410205c769b006a3d5548"
+  },
+  "shuffled_text_diagnostic": "Fixed RNG2026 permutation of Qwen item representations at edit compilation; same selected recipes, no feedback/reselection; tests graph correspondence, not a shuffled-prompt editor",
+  "test_policy": "all choices frozen before this runner reads test; recipes transfer to seeds43/44 without further selection",
+  "reference_addition": "Popularity and EASE were added as contextual references before test access, not matched editor controls",
+  "selection_repeats": "Nontext controls evaluated twice while awaiting text features; unique selection budget8 but physical repeated evaluation cost included separately"
+}

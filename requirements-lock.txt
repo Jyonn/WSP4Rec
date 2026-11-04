@@ -10,4 +10,4 @@ sympy==1.14.0
 torch==2.15.0
 typing_extensions==4.16.0
 # Editable install with no version control (wsprec==0.1.0)
--e /Users/jyonn/Projects/Research/WeightSpaceProgramming
+-e .

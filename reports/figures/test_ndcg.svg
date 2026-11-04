@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="490" height="255" preserveAspectRatio="xMinYMin meet" viewBox="0 0 490 255" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="490" height="255"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-255)" style="clip-path: url(#clip)">
+		<g transform="">
+			<text x="70" y="242" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,23%,36%); stroke:none;" transform="translate(0,484) scale(1,-1)">MSE-MF: test NDCG@10</text>
+			<text x="45.768" y="224" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,448) scale(1,-1)">Base</text>
+			<rect x="70" y="222" width="64.46071188749136" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(60%,68%,74%); fill-rule: evenodd;"/>
+			<path d="M 131.696735,228 L 137.224689,228 Z" style="stroke: rgb(9%,23%,36%); stroke-linecap: butt; stroke-width: 0.7;"/>
+			<text x="140.22468911994133" y="224" style="font-family: Helvetica; font-size: 7px;fill: rgb(9%,23%,36%); stroke:none;" transform="translate(0,448) scale(1,-1)">0.0580</text>
+			<text x="45.775999999999996" y="199" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,398) scale(1,-1)">WSP</text>
+			<rect x="70" y="197" width="81.42197064819504" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,53%,52%); fill-rule: evenodd;"/>
+			<path d="M 150.664616,203 L 152.179326,203 Z" style="stroke: rgb(9%,23%,36%); stroke-linecap: butt; stroke-width: 0.7;"/>
+			<text x="155.1793257145746" y="199" style="font-family: Helvetica; font-size: 7px;fill: rgb(9%,23%,36%); stroke:none;" transform="translate(0,398) scale(1,-1)">0.0733</text>
+			<text x="46.216" y="174" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,348) scale(1,-1)">Blind</text>
+			<rect x="70" y="172" width="83.81948146329137" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(60%,68%,74%); fill-rule: evenodd;"/>
+			<path d="M 152.983418,178 L 154.655545,178 Z" style="stroke: rgb(9%,23%,36%); stroke-linecap: butt; stroke-width: 0.7;"/>
+			<text x="157.65554518192172" y="174" style="font-family: Helvetica; font-size: 7px;fill: rgb(9%,23%,36%); stroke:none;" transform="translate(0,348) scale(1,-1)">0.0754</text>
+			<text x="36.216" y="149" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,298) scale(1,-1)">WSP+T</text>
+			<rect x="70" y="147" width="83.71621258679397" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,53%,52%); fill-rule: evenodd;"/>
+			<path d="M 153.239235,153 L 154.193191,153 Z" style="stroke: rgb(9%,23%,36%); stroke-linecap: butt; stroke-width: 0.7;"/>
+			<text x="157.19319055374163" y="149" style="font-family: Helvetica; font-size: 7px;fill: rgb(9%,23%,36%); stroke:none;" transform="translate(0,298) scale(1,-1)">0.0753</text>
+			<text x="36.656" y="124" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,248) scale(1,-1)">Blind+T</text>
+			<rect x="70" y="122" width="83.26371826077923" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(60%,68%,74%); fill-rule: evenodd;"/>
+			<path d="M 152.144894,128 L 154.382543,128 Z" style="stroke: rgb(9%,23%,36%); stroke-linecap: butt; stroke-width: 0.7;"/>
+			<text x="157.38254257466792" y="124" style="font-family: Helvetica; font-size: 7px;fill: rgb(9%,23%,36%); stroke:none;" transform="translate(0,248) scale(1,-1)">0.0749</text>
+			<text x="31.991999999999997" y="99" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,198) scale(1,-1)">Calibrate</text>
+			<rect x="70" y="97" width="83.26371826077923" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(60%,68%,74%); fill-rule: evenodd;"/>
+			<path d="M 152.144894,103 L 154.382543,103 Z" style="stroke: rgb(9%,23%,36%); stroke-linecap: butt; stroke-width: 0.7;"/>
+			<text x="157.38254257466792" y="99" style="font-family: Helvetica; font-size: 7px;fill: rgb(9%,23%,36%); stroke:none;" transform="translate(0,198) scale(1,-1)">0.0749</text>
+			<text x="33.768" y="74" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,148) scale(1,-1)">Random</text>
+			<rect x="70" y="72" width="83.77657970236339" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(60%,68%,74%); fill-rule: evenodd;"/>
+			<path d="M 153.353668,78 L 154.199491,78 Z" style="stroke: rgb(9%,23%,36%); stroke-linecap: butt; stroke-width: 0.7;"/>
+			<text x="157.19949118969842" y="74" style="font-family: Helvetica; font-size: 7px;fill: rgb(9%,23%,36%); stroke:none;" transform="translate(0,148) scale(1,-1)">0.0754</text>
+			<text x="21.32" y="49" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,98) scale(1,-1)">TitleSmooth</text>
+			<rect x="70" y="47" width="65.43120793740036" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(60%,68%,74%); fill-rule: evenodd;"/>
+			<path d="M 132.467669,53 L 138.394747,53 Z" style="stroke: rgb(9%,23%,36%); stroke-linecap: butt; stroke-width: 0.7;"/>
+			<text x="141.39474734922314" y="49" style="font-family: Helvetica; font-size: 7px;fill: rgb(9%,23%,36%); stroke:none;" transform="translate(0,98) scale(1,-1)">0.0589</text>
+			<path d="M 70,28 L 70,32 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="62.216" y="16" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,32) scale(1,-1)">0.00</text>
+			<path d="M 125.555556,28 L 125.555556,32 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="117.77155555555554" y="16" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,32) scale(1,-1)">0.05</text>
+			<path d="M 181.111111,28 L 181.111111,32 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="173.3271111111111" y="16" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,32) scale(1,-1)">0.10</text>
+			<path d="M 70,32 L 220,32 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="315" y="242" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,23%,36%); stroke:none;" transform="translate(0,484) scale(1,-1)">BPR-MF: test NDCG@10</text>
+			<text x="290.76800000000003" y="224" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,448) scale(1,-1)">Base</text>
+			<rect x="315" y="222" width="116.01525146183496" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(60%,68%,74%); fill-rule: evenodd;"/>
+			<path d="M 430.232735,228 L 431.797768,228 Z" style="stroke: rgb(9%,23%,36%); stroke-linecap: butt; stroke-width: 0.7;"/>
+			<text x="434.7977677036593" y="224" style="font-family: Helvetica; font-size: 7px;fill: rgb(9%,23%,36%); stroke:none;" transform="translate(0,448) scale(1,-1)">0.1044</text>
+			<text x="290.776" y="199" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,398) scale(1,-1)">WSP</text>
+			<rect x="315" y="197" width="116.55157322427272" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,53%,52%); fill-rule: evenodd;"/>
+			<path d="M 429.306005,203 L 433.797141,203 Z" style="stroke: rgb(9%,23%,36%); stroke-linecap: butt; stroke-width: 0.7;"/>
+			<text x="436.7971411432651" y="199" style="font-family: Helvetica; font-size: 7px;fill: rgb(9%,23%,36%); stroke:none;" transform="translate(0,398) scale(1,-1)">0.1049</text>
+			<text x="291.216" y="174" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,348) scale(1,-1)">Blind</text>
+			<rect x="315" y="172" width="116.66386745996095" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(60%,68%,74%); fill-rule: evenodd;"/>
+			<path d="M 429.064904,178 L 434.262831,178 Z" style="stroke: rgb(9%,23%,36%); stroke-linecap: butt; stroke-width: 0.7;"/>
+			<text x="437.2628309047663" y="174" style="font-family: Helvetica; font-size: 7px;fill: rgb(9%,23%,36%); stroke:none;" transform="translate(0,348) scale(1,-1)">0.1050</text>
+			<text x="281.216" y="149" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,298) scale(1,-1)">WSP+T</text>
+			<rect x="315" y="147" width="117.40296014524893" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,53%,52%); fill-rule: evenodd;"/>
+			<path d="M 429.159596,153 L 435.646324,153 Z" style="stroke: rgb(9%,23%,36%); stroke-linecap: butt; stroke-width: 0.7;"/>
+			<text x="438.64632449851587" y="149" style="font-family: Helvetica; font-size: 7px;fill: rgb(9%,23%,36%); stroke:none;" transform="translate(0,298) scale(1,-1)">0.1057</text>
+			<text x="281.656" y="124" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,248) scale(1,-1)">Blind+T</text>
+			<rect x="315" y="122" width="116.78653144919588" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(60%,68%,74%); fill-rule: evenodd;"/>
+			<path d="M 429.536646,128 L 434.036417,128 Z" style="stroke: rgb(9%,23%,36%); stroke-linecap: butt; stroke-width: 0.7;"/>
+			<text x="437.0364170996283" y="124" style="font-family: Helvetica; font-size: 7px;fill: rgb(9%,23%,36%); stroke:none;" transform="translate(0,248) scale(1,-1)">0.1051</text>
+			<text x="276.992" y="99" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,198) scale(1,-1)">Calibrate</text>
+			<rect x="315" y="97" width="116.55157322427272" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(60%,68%,74%); fill-rule: evenodd;"/>
+			<path d="M 429.306005,103 L 433.797141,103 Z" style="stroke: rgb(9%,23%,36%); stroke-linecap: butt; stroke-width: 0.7;"/>
+			<text x="436.7971411432651" y="99" style="font-family: Helvetica; font-size: 7px;fill: rgb(9%,23%,36%); stroke:none;" transform="translate(0,198) scale(1,-1)">0.1049</text>
+			<text x="278.76800000000003" y="74" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,148) scale(1,-1)">Random</text>
+			<rect x="315" y="72" width="116.132400757754" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(60%,68%,74%); fill-rule: evenodd;"/>
+			<path d="M 429.372086,78 L 432.892715,78 Z" style="stroke: rgb(9%,23%,36%); stroke-linecap: butt; stroke-width: 0.7;"/>
+			<text x="435.8927153579492" y="74" style="font-family: Helvetica; font-size: 7px;fill: rgb(9%,23%,36%); stroke:none;" transform="translate(0,148) scale(1,-1)">0.1045</text>
+			<text x="266.32" y="49" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,98) scale(1,-1)">TitleSmooth</text>
+			<rect x="315" y="47" width="117.55572066142838" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(60%,68%,74%); fill-rule: evenodd;"/>
+			<path d="M 431.433385,53 L 433.678057,53 Z" style="stroke: rgb(9%,23%,36%); stroke-linecap: butt; stroke-width: 0.7;"/>
+			<text x="436.6780565584988" y="49" style="font-family: Helvetica; font-size: 7px;fill: rgb(9%,23%,36%); stroke:none;" transform="translate(0,98) scale(1,-1)">0.1058</text>
+			<path d="M 315,28 L 315,32 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="307.216" y="16" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,32) scale(1,-1)">0.00</text>
+			<path d="M 370.555556,28 L 370.555556,32 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="362.77155555555555" y="16" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,32) scale(1,-1)">0.05</text>
+			<path d="M 426.111111,28 L 426.111111,32 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="418.3271111111111" y="16" style="font-family: Helvetica; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,32) scale(1,-1)">0.10</text>
+			<path d="M 315,32 L 465,32 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1;"/>
+		</g>
+	</g>
+</svg>

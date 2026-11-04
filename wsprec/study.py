@@ -1,6 +1,6 @@
 """Reproducible, validation-only discovery and sealed final evaluation.
 
-Run commands in order: train, export, controls, candidates, freeze, final.
+Run train, export, controls, candidates; then use wsprec.finalize_study.
 No test labels are loaded by train/export/controls/candidates.
 """
 import argparse
@@ -48,6 +48,9 @@ def quick_metric(s, rows, seen, k=10):
     relevant[r[:, 0], r[:, 1]] = True
     relevant[seen[:, 0], seen[:, 1]] = False
     eligible = relevant.sum(1) > 0
+    if not eligible.any():
+        return None
+    k = min(k, s.shape[1])
     top = np.argsort(-s, axis=1, kind='stable')[:, :k]
     hits = np.take_along_axis(relevant, top, axis=1)
     discount = 1 / np.log2(np.arange(k) + 2)
@@ -71,6 +74,8 @@ def train_one(objective, seed, lr, wd, epochs=80, patience=12):
     positives = x[x[:, 2] >= 4]
     known = torch.zeros((users, items), dtype=torch.bool)
     known[x[:, 0], x[:, 1]] = True
+    if objective == 'bpr' and (known.sum(1)[positives[:, 0]] == items).any():
+        raise ValueError('BPR user has no eligible negative items')
     best, best_epoch, best_state = -np.inf, 0, None
     history = []
     for epoch in range(1, epochs + 1):
@@ -153,7 +158,7 @@ def group_mask(count, group):
             'mid': (count > q1) & (count <= q2), 'high': count > q2}[group]
 
 
-def apply_recipe(base, recipe, text=False, random_seed=2026):
+def apply_recipe(base, recipe, text=False, random_seed=2026, text_features=None):
     """Compile algebraic operations to weights, without optimization or gradients.
 
     All operations are relative to the SAME original checkpoint, sequentially
@@ -161,8 +166,17 @@ def apply_recipe(base, recipe, text=False, random_seed=2026):
     """
     state = {k: v.detach().clone() for k, v in base.items()}
     uc, ic = counts()
+    if len(recipe.get('ops', [])) > 5:
+        raise ValueError('at most five operations')
     for op in recipe.get('ops', []):
         kind = op['kind']
+        for field, low, high in (('factor', 0, 3), ('strength', 0, 1), ('coefficient', -1, 1)):
+            if field in op and not low <= float(op[field]) <= high:
+                raise ValueError(f'{field} outside shared bounds')
+        if 'factors' in op and any(not 0 <= float(v) <= 3 for v in op['factors']):
+            raise ValueError('dimension factors outside shared bounds')
+        if 'neighbors' in op and (not isinstance(op['neighbors'], int) or not 1 <= op['neighbors'] <= 50):
+            raise ValueError('invalid neighbor count')
         if kind == 'popularity_shift':
             c = np.log1p(ic).astype(float)
             c = (c - c.mean()) / max(c.std(), 1e-8)
@@ -192,11 +206,13 @@ def apply_recipe(base, recipe, text=False, random_seed=2026):
             strength = float(op['strength'])
             norm = a.norm(dim=1, keepdim=True).clamp_min(1e-8)
             target = float(op.get('target', float(norm.median())))
+            if not np.isfinite(target) or target < 0:
+                raise ValueError('target norm must be finite and nonnegative')
             a[mask] *= (1 - strength + strength * target / norm[mask])
         elif kind == 'support_shrink':
             tau = float(op['tau'])
-            if tau < 0:
-                raise ValueError('tau must be nonnegative')
+            if not np.isfinite(tau) or tau < 0:
+                raise ValueError('tau must be finite and nonnegative')
             factors = torch.tensor(count / (count + tau + 1e-12), dtype=a.dtype)[:, None]
             a[mask] *= factors[mask]
         elif kind == 'neighbor_smooth':
@@ -206,7 +222,7 @@ def apply_recipe(base, recipe, text=False, random_seed=2026):
             if source == 'text':
                 if not text:
                     raise ValueError('text information forbidden in this condition')
-                features = np.load(OUT / 'text/title_embeddings.npy')
+                features = np.load(OUT / 'text/title_embeddings.npy') if text_features is None else text_features
             elif source == 'weights':
                 features = base[key].numpy()
             else:
@@ -219,8 +235,10 @@ def apply_recipe(base, recipe, text=False, random_seed=2026):
             neighbors = np.argsort(-similarity, axis=1, kind='stable')[:, :int(op.get('neighbors', 10))]
             sim = np.take_along_axis(similarity, neighbors, 1)
             weights = np.maximum(sim, 0)
+            empty = weights.sum(1) == 0
             weights /= np.maximum(weights.sum(1, keepdims=True), 1e-8)
             smoothed = (base[key].numpy()[neighbors] * weights[:, :, None]).sum(1)
+            smoothed[empty] = base[key].numpy()[empty]
             strength = float(op['strength'])
             a[mask] = (1-strength) * a[mask] + strength * torch.tensor(smoothed, dtype=a.dtype)[mask]
         else:
@@ -286,7 +304,23 @@ def controls():
     calibrations = [
         {'id': f'bias_scale_{v}', 'ops': [{'kind': 'scale', 'parameter': 'item_bias.weight', 'factor': v}]} for v in (0., .5, 1.5, 2.)]
     calibrations += [{'id': f'pop_shift_{v}', 'ops': [{'kind': 'popularity_shift', 'coefficient': v}]} for v in (-.2, -.1, .1, .2)]
-    random = [{'id': f'random_{i}', 'random_seed': 2026+i, 'ops': [{'kind': 'random_noise', 'strength': strength}]} for i, strength in enumerate((.01, .03, .1, .3, .01, .03, .1, .3))]
+    # A fixed random control over FOUR operation families (a narrower search
+    # space than Astra's compositions, dimensions and neighbour transformations).
+    rng = np.random.default_rng(2026)
+    random = []
+    for i in range(8):
+        key = str(rng.choice(['user.weight', 'item.weight', 'item_bias.weight']))
+        group = str(rng.choice(['all', 'low', 'mid', 'high']))
+        kind = i % 4
+        if kind == 0:
+            op = {'kind': 'scale', 'parameter': key, 'group': group, 'factor': float(rng.uniform(.5, 1.5))}
+        elif kind == 1:
+            op = {'kind': 'popularity_shift', 'coefficient': float(rng.uniform(-.3, .3))}
+        elif kind == 2:
+            op = {'kind': 'support_shrink', 'parameter': key, 'group': group, 'tau': float(rng.uniform(1, 30))}
+        else:
+            op = {'kind': 'norm_shrink', 'parameter': key, 'group': group, 'strength': float(rng.uniform(0, .5))}
+        random.append({'id': f'random_{i}', 'ops': [op]})
     semantic = [{'id': f'title_{group}_{v}', 'ops': [{'kind': 'neighbor_smooth', 'parameter': 'item.weight', 'source': 'text', 'group': group, 'neighbors': 10, 'strength': v}]} for group in ('all', 'low') for v in (.05, .1, .25, .5)]
     for obj in ('mse', 'bpr'):
         for name, recipes, text in (('calibration', calibrations, False), ('random', random, False), ('semantic', semantic, True)):

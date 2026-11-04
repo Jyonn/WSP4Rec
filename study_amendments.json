@@ -1,0 +1,14 @@
+{
+  "timing": "All clarifications and diagnostics below fixed before final test decompression; no test-driven changes.",
+  "feedback_filter": "Editors receive only own candidate IDs, validation NDCG@10 and generic errors; delta norms and changed-parameter counts remain audit-only.",
+  "scoring": "All new study choices use the same matrix-product interaction plus item-bias path; user/global constants omitted. Mathematically ranking-equivalent but not bitwise identical to historical scalar float32 CLI.",
+  "operator_checks": "finite nonnegative norm target and support tau; zero-positive-neighbor similarity falls back to original vector; bounded factors/strengths enforced",
+  "reference_baselines": "Popularity and validation-tuned EASE added before final test as contextual comparators, not same-budget editors",
+  "random_control_scope": "8 predefined seeded draws from four operation families, narrower than the full composed Astra interface; no claim of fully matched search space",
+  "title_intervention_scope": "Qwen3-Embedding-0.6B raw title including year, last-token L2-normalized embeddings; title access and compiler-side title-neighbor operator jointly enabled. Not a test of language comprehension alone.",
+  "shuffled_title_diagnostic": "Final selected text recipes also applied with fixed RNG2026 item-to-text-representation permutation, no reselection or new editor calls. This tests correspondence of smoothing graph, not full shuffled prompt editing.",
+  "runtime_scope": "Measured per-trial compute walls exclude interpreter startup; text extraction timed separately. Native editor total tokens, exact inference wall, and billed dollar costs unavailable and stored as null. Text round tool spans are partial observational costs.",
+  "isolation": "Native subagents instructed to read explicit allowlist and not evaluate; compliance was observed/reported, not enforced by a container-level filesystem boundary.",
+  "extra_evaluations": "Nontext controls were physically run twice while text embeddings became ready. Same unique eight recipes, no extra information to editors; repeated compute is separately acknowledged.",
+  "cold_start_scope": "Zero training-interaction items stay in catalogue; BPR may sample them as unobserved negatives. These are not proof of general zero-shot recommendation capability."
+}

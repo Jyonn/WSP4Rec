@@ -8,6 +8,10 @@ version = "0.1.0"
 requires-python = ">=3.10"
 dependencies = ["torch>=2.2", "numpy>=1.24"]
 
+[project.optional-dependencies]
+text = ["transformers>=4.51"]
+report = ["reportlab>=4.0", "pypdf>=4.0"]
+
 [project.scripts]
 wsprec = "wsprec.cli:main"
 

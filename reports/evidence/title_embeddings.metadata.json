@@ -1,0 +1,24 @@
+{
+  "model": "Qwen/Qwen3-Embedding-0.6B",
+  "requested_revision": "main",
+  "resolved_revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+  "shape": [
+    1682,
+    1024
+  ],
+  "pooling": "last_nonpadding_token_left_padding",
+  "instruction": null,
+  "max_length": 128,
+  "titles_sha256": "81dde397922ec704e1f0169f8a7c92ea07e6aa7deb3b6768e9607cfb09b0928a",
+  "embeddings_sha256": "035e546eeb8a7fc9731cf5106f7baa8c52e09df3b89dd5babf5a089f87aacc68",
+  "wall_seconds": 7.169899448752403,
+  "load_seconds": 5.516205072402954,
+  "encode_seconds": 1.6536970511078835,
+  "input_tokens": 19396,
+  "device": "cuda:0",
+  "gpu_name": "NVIDIA A100 80GB PCIe",
+  "peak_gpu_memory_bytes": 1475968000,
+  "torch": "2.7.0+cu118",
+  "python": "3.10.13",
+  "billing_usd": null
+}
