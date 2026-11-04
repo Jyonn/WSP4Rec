@@ -1,0 +1,18 @@
+{
+  "task": "Improve validation NDCG@10 by algebraic edits of a trained FM, no fitting, gradients, training loops or test access.",
+  "output": "JSON list of exactly four candidate objects per round. Each object has id, rationale, ops. Every candidate starts from the same original checkpoint, not the previous candidate.",
+  "editable": ["user.weight", "item.weight", "item_bias.weight"],
+  "groups": ["all", "low", "mid", "high", "zero"],
+  "group_definition": "Counts of ALL training interactions; positive-count tertiles, zero separate; user zero absent.",
+  "operations": [
+    {"kind":"scale", "parameter":"item_bias.weight", "group":"all", "factor":0.5},
+    {"kind":"dimension_scale", "parameter":"item.weight", "group":"all", "factors":"list of 16 multipliers"},
+    {"kind":"norm_shrink", "parameter":"item.weight", "group":"all", "strength":0.2, "target":"optional target vector norm; otherwise median norm"},
+    {"kind":"support_shrink", "parameter":"item.weight", "group":"all", "tau":5},
+    {"kind":"popularity_shift", "coefficient":-0.1, "meaning":"add coefficient * standardized log1p(item train count) to item biases"},
+    {"kind":"neighbor_smooth", "parameter":"item.weight", "group":"low", "source":"weights or text", "neighbors":10, "strength":0.1, "meaning":"convex blend with cosine-weighted original trained item vectors of top-K neighbors; zero-support neighbors excluded"}
+  ],
+  "constraints": {"max_abs_weight":100, "no_raw_interactions":true, "no_self_evaluation":true, "no_test":true, "max_ops_per_recipe":5, "scale_factor_range":[0,3], "strength_range":[0,1], "pop_coefficient_range":[-1,1], "neighbors_range":[1,50]},
+  "information_conditions": {"weights":"common.json + weights.npz only", "blind":"common.json only; do not read learned weights, summary stats of weights, or forward scores", "weights_text":"common.json + weights.npz + titles.json + Qwen title embeddings", "blind_text":"common.json + titles.json + Qwen title embeddings; no learned recommendation weights"},
+  "important": "Neither global bias nor user bias affects within-user ranking. No-op is always retained externally without consuming a candidate. Neighbors may use weights internally in runner even for blind condition, but blind editor cannot inspect weight values or resulting neighbors. Only source=text needs text access. Title embeddings never enter base-model training or online inference. You may inspect allowed numerical arrays with numpy, but may not run any recommendation forward evaluation. Do not view other editor trajectories or predefined controls. Read/write only the explicitly assigned input and output files. Save brief numerical diagnostics and reasoning to the assigned analysis JSON, and no unapproved files."
+}

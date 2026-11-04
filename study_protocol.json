@@ -1,0 +1,20 @@
+{
+  "version": "2026-11-04-v1",
+  "status": "frozen_before_new_training_and_test_evaluation",
+  "rqs": {
+    "RQ1": "Can gradient-free Astra weight editing improve ID-only recommendation under a finite validation budget?",
+    "RQ2": "How do gains and collateral harm vary with training-only user activity and item popularity?",
+    "RQ3": "Do title semantics provide additional editing gains, particularly under sparse interactions?",
+    "RQ4": "Does access to learned weight values help beyond feedback-only editing and simple transformations?"
+  },
+  "dataset": "MovieLens-100K; fixed metadata catalogue; per-user chronological 80/10/10",
+  "seeds": [42, 43, 44],
+  "ranking": {"positive_threshold": 4, "k": 10, "candidates": "full catalogue excluding train for validation and train+valid for test", "selection": "validation NDCG@10"},
+  "training": {"dimension": 16, "epochs_max": 80, "patience": 12, "objectives": ["mse", "bpr"], "learning_rates": [0.003, 0.01], "weight_decay": [0.00001, 0.001], "batch_size": 2048},
+  "editor": {"model": "gpt-6-astra", "gradient_access": false, "raw_interaction_access": false, "test_access": false, "conditions": ["weights", "blind", "weights_text", "blind_text"], "discovery_seed": 42, "rounds": 2, "candidates_per_round": 4, "selection": "validation on seed42 only; transfer chosen recipe to seeds43/44 without additional selection", "no_op_always_eligible": true, "budget_seconds_per_experiment": 3600},
+  "controls": ["no_op", "8_predefined_calibrations", "8_seeded_random_weight_edits", "8_predefined_title_smoothing_edits"],
+  "groups": "training-count tertiles for users and positive-count items, zero-support items separate; thresholds frozen from train",
+  "inference": "three training seeds are robustness checks, not independent editor replications; paired-user bootstrap is conditional on trained model; no SOTA or broad causal claims",
+  "cost": "wall time, calls, feedback evaluations, changed parameters, edit norm, CPU/GPU time, peak memory; unavailable token/billing fields remain null",
+  "test_policy": "all recipes and validation choices frozen in a hashed manifest before one final reporting pass; never revise based on test"
+}
