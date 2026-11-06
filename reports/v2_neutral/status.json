@@ -1,0 +1,11 @@
+{
+  "status": "superseded_intermediate",
+  "reason": "Two explicit No overview found placeholders were discovered in final metadata QA; rebuild and rerun required.",
+  "original_zero_based_item_ids": [
+    1523,
+    1625
+  ],
+  "implementation_commit": "64ebda5",
+  "replacement": "v3_neutral",
+  "costs_retained": true
+}

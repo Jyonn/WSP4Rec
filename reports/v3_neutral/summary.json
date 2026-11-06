@@ -1,0 +1,371 @@
+{
+  "dataset": {
+    "counts": {
+      "before": {
+        "users": 943,
+        "items": 1682,
+        "interactions": 100000
+      },
+      "after": {
+        "users": 943,
+        "items": 1568,
+        "interactions": 97445
+      }
+    },
+    "removals": {
+      "no_reliable_description_match_in_this_source": {
+        "items": 114,
+        "interactions": 2555
+      },
+      "fewer_than_three_interactions_after_item_filter": {
+        "users": 0,
+        "interactions": 0
+      }
+    },
+    "split_sizes": {
+      "train": 77573,
+      "valid": 9691,
+      "test": 10181
+    },
+    "seed": 20261106,
+    "item_rule": "Reliable matched public description; nonempty and not an explicit missing-description placeholder.",
+    "user_rule": "Retain users with at least three interactions after filtering items.",
+    "split_rule": "Within user sort by timestamp then original item ID. Floor 80% and 90% boundaries, adjusted to leave at least one example in each split.",
+    "id_rule": "NumPy default_rng(seed) permutes sorted original items, then sorted retained users.",
+    "embedding_source": "Existing per-movie caches subset and reordered by anonymous item ID.",
+    "sources": {
+      "raw_interactions": {
+        "path": "data/ml-100k/u.data",
+        "sha256": "06416e597f82b7342361e41163890c81036900f418ad91315590814211dca490"
+      },
+      "matched_movies": {
+        "path": "data/movie_descriptions/matched_movies.json",
+        "sha256": "4e8b169cd4a36643ae9e1778da31fc691ac81de83b5a1b9fcc715d5cdb33c23d"
+      },
+      "title_only": {
+        "path": "runs/followup/llama3/title_only.npy",
+        "sha256": "d9c24b30fdddeb9a6644a893ddc01b1f42bd11508d7f14fae1d0baabcbd44eff"
+      },
+      "title_description": {
+        "path": "runs/followup/llama3/title_description.npy",
+        "sha256": "53c6eb5923a533661b1da3bb1f6dcb58777347aae4bc19ab30d1160644500996"
+      }
+    }
+  },
+  "aggregates": {
+    "mse": {
+      "base": {
+        "ndcg@10": 0.058262379176367764,
+        "recall@10": 0.05915485400140396,
+        "hit_rate@10": 0.2612928348909657
+      },
+      "none-visible": {
+        "ndcg@10": 0.06939440751508459,
+        "editor_rep_means_ndcg": [
+          0.06576374833097341,
+          0.07302506669919577
+        ],
+        "recall@10": 0.07459579204747765
+      },
+      "none-blind": {
+        "ndcg@10": 0.06612739154015605,
+        "editor_rep_means_ndcg": [
+          0.06479244573588729,
+          0.06746233734442482
+        ],
+        "recall@10": 0.07022040545859509
+      },
+      "title-visible": {
+        "ndcg@10": 0.06858074938537531,
+        "editor_rep_means_ndcg": [
+          0.06568949372864626,
+          0.07147200504210438
+        ],
+        "recall@10": 0.07146490552591725
+      },
+      "title-blind": {
+        "ndcg@10": 0.06503299026685944,
+        "editor_rep_means_ndcg": [
+          0.06328713123187116,
+          0.0667788493018477
+        ],
+        "recall@10": 0.06930925796389018
+      },
+      "description-visible": {
+        "ndcg@10": 0.06265865348788242,
+        "editor_rep_means_ndcg": [
+          0.06239778586239858,
+          0.06291952111336627
+        ],
+        "recall@10": 0.0636301483806162
+      },
+      "description-blind": {
+        "ndcg@10": 0.06501747783011175,
+        "editor_rep_means_ndcg": [
+          0.0657125840734974,
+          0.06432237158672612
+        ],
+        "recall@10": 0.06881738242503896
+      }
+    },
+    "bpr": {
+      "base": {
+        "ndcg@10": 0.10568382582963659,
+        "recall@10": 0.12155663003121935,
+        "hit_rate@10": 0.3940809968847352
+      },
+      "none-visible": {
+        "ndcg@10": 0.10153350453189255,
+        "editor_rep_means_ndcg": [
+          0.10584642445702035,
+          0.09722058460676475
+        ],
+        "recall@10": 0.11651393144020847
+      },
+      "none-blind": {
+        "ndcg@10": 0.10760654243710946,
+        "editor_rep_means_ndcg": [
+          0.10823666740532495,
+          0.10697641746889397
+        ],
+        "recall@10": 0.12441026820519313
+      },
+      "title-visible": {
+        "ndcg@10": 0.10885080436170574,
+        "editor_rep_means_ndcg": [
+          0.10915166180564917,
+          0.10854994691776232
+        ],
+        "recall@10": 0.12034978028394097
+      },
+      "title-blind": {
+        "ndcg@10": 0.10841580928455338,
+        "editor_rep_means_ndcg": [
+          0.10860525290532362,
+          0.10822636566378314
+        ],
+        "recall@10": 0.12386400769876899
+      },
+      "description-visible": {
+        "ndcg@10": 0.1075154871627037,
+        "editor_rep_means_ndcg": [
+          0.10934714849577083,
+          0.10568382582963659
+        ],
+        "recall@10": 0.12166545241054118
+      },
+      "description-blind": {
+        "ndcg@10": 0.10811669397704668,
+        "editor_rep_means_ndcg": [
+          0.10889685589785425,
+          0.10733653205623912
+        ],
+        "recall@10": 0.12179645217259294
+      }
+    }
+  },
+  "references": {
+    "popular": {
+      "ndcg@10": 0.07299277507222607,
+      "recall@10": 0.07743615022446372,
+      "hit_rate@10": 0.3119158878504673,
+      "ranking_users": 856,
+      "positives": 4867
+    },
+    "ease": {
+      "ndcg@10": 0.12324326008353924,
+      "recall@10": 0.14101282427999956,
+      "hit_rate@10": 0.42406542056074764,
+      "ranking_users": 856,
+      "positives": 4867
+    }
+  },
+  "costs": {
+    "training_trials": 12,
+    "training_wall_seconds": 35.977367581333965,
+    "training_validation_evaluations": 360,
+    "editor_trajectories": 24,
+    "editor_generation_turns": 48,
+    "editor_candidate_queries": 192,
+    "invalid_editor_candidates": 29,
+    "invalid_by_trajectory": {
+      "mse-none-visible-r0": 0,
+      "mse-none-visible-r1": 0,
+      "mse-none-blind-r0": 4,
+      "mse-none-blind-r1": 4,
+      "mse-title-visible-r0": 0,
+      "mse-title-visible-r1": 0,
+      "mse-title-blind-r0": 4,
+      "mse-title-blind-r1": 4,
+      "mse-description-visible-r0": 0,
+      "mse-description-visible-r1": 0,
+      "mse-description-blind-r0": 5,
+      "mse-description-blind-r1": 4,
+      "bpr-none-visible-r0": 0,
+      "bpr-none-visible-r1": 0,
+      "bpr-none-blind-r0": 0,
+      "bpr-none-blind-r1": 0,
+      "bpr-title-visible-r0": 0,
+      "bpr-title-visible-r1": 0,
+      "bpr-title-blind-r0": 0,
+      "bpr-title-blind-r1": 0,
+      "bpr-description-visible-r0": 1,
+      "bpr-description-visible-r1": 3,
+      "bpr-description-blind-r0": 0,
+      "bpr-description-blind-r1": 0
+    },
+    "invalid_reasons": {
+      "patch exceeds the relative L2 change budget": 29
+    },
+    "control_candidate_queries": 64,
+    "invalid_control_candidates": 0,
+    "candidate_execution_wall_seconds": 28.484458913560957,
+    "test_reporting_wall_seconds": 30.13856479106471,
+    "new_embedding_gpu_seconds": 0,
+    "reference_validation_evaluations": 5,
+    "ease_reference_fit_and_validation_wall_seconds": 0.42221287498250604,
+    "unmetered_compute": [
+      "dataset preparation",
+      "control asset construction",
+      "editor numeric inspection and asset construction",
+      "popular-reference and Gram construction"
+    ],
+    "integrity_replay_evaluations": 227,
+    "integrity_replay_wall_seconds": 15.26263629226014,
+    "integrity_passes": 1,
+    "text_cost_scope": "reuse individually encoded Llama-3 features by metadata filtering/reindexing; prior encoding cost not zero and recorded in reports/followup",
+    "editor_input_tokens": null,
+    "editor_output_tokens": null,
+    "editor_billed_usd": null,
+    "editor_total_inference_wall_seconds": null,
+    "timing_scope": "inside-operation walls, not end-to-end development/coordination cost",
+    "numeric_assets": {
+      "logical_assets": 413,
+      "unique_assets": 249,
+      "compressed_bytes": 14061684
+    },
+    "superseded_intermediate": {
+      "training_trials": 12,
+      "training_wall_seconds": 25.472122165374458,
+      "training_validation_evaluations": 367,
+      "editor_trajectories": 24,
+      "editor_generation_turns": 48,
+      "editor_candidate_queries": 192,
+      "invalid_editor_candidates": 27,
+      "invalid_by_trajectory": {
+        "mse-none-visible-r0": 0,
+        "mse-none-visible-r1": 0,
+        "mse-none-blind-r0": 4,
+        "mse-none-blind-r1": 4,
+        "mse-title-visible-r0": 0,
+        "mse-title-visible-r1": 0,
+        "mse-title-blind-r0": 6,
+        "mse-title-blind-r1": 4,
+        "mse-description-visible-r0": 0,
+        "mse-description-visible-r1": 0,
+        "mse-description-blind-r0": 4,
+        "mse-description-blind-r1": 5,
+        "bpr-none-visible-r0": 0,
+        "bpr-none-visible-r1": 0,
+        "bpr-none-blind-r0": 0,
+        "bpr-none-blind-r1": 0,
+        "bpr-title-visible-r0": 0,
+        "bpr-title-visible-r1": 0,
+        "bpr-title-blind-r0": 0,
+        "bpr-title-blind-r1": 0,
+        "bpr-description-visible-r0": 0,
+        "bpr-description-visible-r1": 0,
+        "bpr-description-blind-r0": 0,
+        "bpr-description-blind-r1": 0
+      },
+      "invalid_reasons": {
+        "patch exceeds the relative L2 change budget": 27
+      },
+      "control_candidate_queries": 64,
+      "invalid_control_candidates": 0,
+      "candidate_execution_wall_seconds": 20.07737292582169,
+      "test_reporting_wall_seconds": 31.243420832790434,
+      "new_embedding_gpu_seconds": 0,
+      "integrity_replay_evaluations": 458,
+      "integrity_replay_wall_seconds": 27.689701333176345,
+      "integrity_passes": 2,
+      "text_cost_scope": "reuse individually encoded Llama-3 features by metadata filtering/reindexing; prior encoding cost not zero and recorded in reports/followup",
+      "editor_input_tokens": null,
+      "editor_output_tokens": null,
+      "editor_billed_usd": null,
+      "editor_total_inference_wall_seconds": null,
+      "timing_scope": "inside-operation walls, not end-to-end development/coordination cost",
+      "numeric_assets": {
+        "logical_assets": 410,
+        "unique_assets": 236,
+        "compressed_bytes": 6077467
+      },
+      "ease_reference_fit_and_validation_wall_seconds": 0.4241545000113547,
+      "unmetered_compute": [
+        "dataset preparation",
+        "control asset construction",
+        "editor numeric inspection and asset construction",
+        "popular-reference and Gram construction"
+      ],
+      "reference_validation_evaluations": 5
+    },
+    "including_intermediate": {
+      "training_trials": 24,
+      "training_wall_seconds": 61.44948974670842,
+      "editor_trajectories": 48,
+      "editor_generation_turns": 96,
+      "editor_candidate_queries": 384,
+      "control_candidate_queries": 128,
+      "candidate_execution_wall_seconds": 48.56183183938265,
+      "integrity_replay_evaluations": 685,
+      "integrity_replay_wall_seconds": 42.952337625436485,
+      "test_reporting_wall_seconds": 61.381985623855144,
+      "ease_reference_fit_and_validation_wall_seconds": 0.8463673749938607,
+      "reference_validation_evaluations": 10
+    },
+    "execution_notes": {
+      "interrupted_dispatch_attempts": 1,
+      "scope": "One followup_task invocation for mse-none-blind-r0 round2 had no acknowledgement when the desktop turn was interrupted. Its execution/inference charge cannot be confirmed. The followup was resumed; only one four-candidate round2 batch was evaluated.",
+      "extra_candidate_evaluations_from_interruption": 0,
+      "accounting": "Saved completed dispatch records and this uncertain attempt are listed separately; monetary cost remains unknown."
+    }
+  },
+  "prompt_audit": {
+    "initial_tasks": 24,
+    "saved_generation_dispatches": 48,
+    "directional_lexicon_absent_from_instructions": true,
+    "hypotheses_or_rationales_requested": false,
+    "schema": "id and operations only",
+    "domain_specific_operations": false,
+    "all_submitted_patch_fields": [
+      "id",
+      "operations"
+    ],
+    "isolation": "fresh fork-none native subagents with file allowlists; not an OS-level isolated filesystem",
+    "scope": "audit of supplied instructions and saved outputs, not a claim about private reasoning or absence of pretrained priors"
+  },
+  "operator_counts": {
+    "add": 183,
+    "multiply": 86,
+    "left_multiply": 8,
+    "right_multiply": 2,
+    "replace": 1
+  },
+  "parameter_counts": {
+    "item_bias.weight": 213,
+    "user.weight": 28,
+    "item.weight": 39
+  },
+  "first_round_parameter_counts": {
+    "item_bias.weight": 103,
+    "user.weight": 11,
+    "item.weight": 14
+  },
+  "no_op_trajectories": [
+    "bpr-description-visible-r1"
+  ],
+  "transfer_invalid_cases": [],
+  "manifest_sha256": "5f063bba8b2d0bc3b1c9108247086cea3edcc82af5d5a5bf4de6e84c5b60d248",
+  "same_corpus_scope": "new filtered/split cohort, not untouched external test data",
+  "editor_independence_scope": "two independent editor runs; each frozen policy transfers across three training seeds; six scores are not six independent editor runs"
+}

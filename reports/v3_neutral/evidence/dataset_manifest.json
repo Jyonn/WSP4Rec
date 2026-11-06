@@ -1,0 +1,53 @@
+{
+  "counts": {
+    "before": {
+      "users": 943,
+      "items": 1682,
+      "interactions": 100000
+    },
+    "after": {
+      "users": 943,
+      "items": 1568,
+      "interactions": 97445
+    }
+  },
+  "removals": {
+    "no_reliable_description_match_in_this_source": {
+      "items": 114,
+      "interactions": 2555
+    },
+    "fewer_than_three_interactions_after_item_filter": {
+      "users": 0,
+      "interactions": 0
+    }
+  },
+  "split_sizes": {
+    "train": 77573,
+    "valid": 9691,
+    "test": 10181
+  },
+  "seed": 20261106,
+  "item_rule": "Reliable matched public description; nonempty and not an explicit missing-description placeholder.",
+  "user_rule": "Retain users with at least three interactions after filtering items.",
+  "split_rule": "Within user sort by timestamp then original item ID. Floor 80% and 90% boundaries, adjusted to leave at least one example in each split.",
+  "id_rule": "NumPy default_rng(seed) permutes sorted original items, then sorted retained users.",
+  "embedding_source": "Existing per-movie caches subset and reordered by anonymous item ID.",
+  "sources": {
+    "raw_interactions": {
+      "path": "data/ml-100k/u.data",
+      "sha256": "06416e597f82b7342361e41163890c81036900f418ad91315590814211dca490"
+    },
+    "matched_movies": {
+      "path": "data/movie_descriptions/matched_movies.json",
+      "sha256": "4e8b169cd4a36643ae9e1778da31fc691ac81de83b5a1b9fcc715d5cdb33c23d"
+    },
+    "title_only": {
+      "path": "runs/followup/llama3/title_only.npy",
+      "sha256": "d9c24b30fdddeb9a6644a893ddc01b1f42bd11508d7f14fae1d0baabcbd44eff"
+    },
+    "title_description": {
+      "path": "runs/followup/llama3/title_description.npy",
+      "sha256": "53c6eb5923a533661b1da3bb1f6dcb58777347aae4bc19ab30d1160644500996"
+    }
+  }
+}

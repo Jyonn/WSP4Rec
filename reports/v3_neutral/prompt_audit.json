@@ -1,0 +1,14 @@
+{
+  "initial_tasks": 24,
+  "saved_generation_dispatches": 48,
+  "directional_lexicon_absent_from_instructions": true,
+  "hypotheses_or_rationales_requested": false,
+  "schema": "id and operations only",
+  "domain_specific_operations": false,
+  "all_submitted_patch_fields": [
+    "id",
+    "operations"
+  ],
+  "isolation": "fresh fork-none native subagents with file allowlists; not an OS-level isolated filesystem",
+  "scope": "audit of supplied instructions and saved outputs, not a claim about private reasoning or absence of pretrained priors"
+}

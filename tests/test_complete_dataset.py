@@ -73,3 +73,20 @@ class CompleteDatasetTest(unittest.TestCase):
                     np.testing.assert_array_equal(np.load(output / f"{name}.npy"), splits[name])
             with self.assertRaises(FileExistsError):
                 prepare(raw, metadata, root, output)
+
+
+class DescriptionQualityTest(unittest.TestCase):
+    def test_missing_placeholders(self):
+        from wsprec.description_quality import has_public_description
+        for text in (None, '', '  ', 'No overview found.', ' NO OVERVIEW AVAILABLE! ', 'N/A'):
+            self.assertFalse(has_public_description(text), repr(text))
+        for text in ('A family returns home.', 'Unknown soldiers seek shelter.', 'Coming soon to a small town, a stranger changes lives.'):
+            self.assertTrue(has_public_description(text), repr(text))
+
+    def test_flagged_placeholder_is_removed(self):
+        from wsprec.complete_dataset import build_records
+        movies=[{'item_id':i,'title':str(i),'description':('No overview found.' if i==3 else 'A public plot.'),'description_available':True} for i in range(4)]
+        _, movies, mapping, stats=build_records(np.array([[1,i+1,4,i] for i in range(4)]),movies)
+        self.assertEqual(len(movies),3)
+        self.assertNotIn(3,mapping['item_new_to_old'])
+        self.assertEqual(stats['counts']['after']['interactions'],3)

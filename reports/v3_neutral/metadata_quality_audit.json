@@ -1,0 +1,20 @@
+{
+  "retained_movies": 1568,
+  "all_nonempty": true,
+  "explicit_missing_placeholders_excluded": true,
+  "additional_placeholders_removed": [
+    {
+      "original_zero_based_item_id": 1523,
+      "title": "Kaspar Hauser (1993)",
+      "value": "No overview found."
+    },
+    {
+      "original_zero_based_item_id": 1625,
+      "title": "Nobody Loves Me (Keiner liebt mich) (1994)",
+      "value": "No overview found."
+    }
+  ],
+  "minimum_description_characters": 45,
+  "duplicate_text_extra_items": 18,
+  "source_scope": "Public pinned source match, not an exhaustive claim of movie-description existence."
+}

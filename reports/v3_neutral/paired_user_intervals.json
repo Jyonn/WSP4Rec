@@ -1,0 +1,1269 @@
+{
+  "scope": "paired users conditional on a fixed trained model and selected policy; not inference over editor calls",
+  "results": {
+    "mse": {
+      "42": {
+        "mse-none-visible-r0": {
+          "mean_delta": 0.013256835316485645,
+          "ci95": [
+            0.00841702373334754,
+            0.018254556695981795
+          ],
+          "improved_fraction": 0.18691588785046728,
+          "harmed_fraction": 0.1133177570093458,
+          "unchanged_fraction": 0.6997663551401869,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-none-visible-r1": {
+          "mean_delta": 0.01754801262578305,
+          "ci95": [
+            0.009640310729146012,
+            0.025204166723105065
+          ],
+          "improved_fraction": 0.21845794392523366,
+          "harmed_fraction": 0.1542056074766355,
+          "unchanged_fraction": 0.6273364485981309,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-none-blind-r0": {
+          "mean_delta": 0.011621170580600339,
+          "ci95": [
+            0.007684353745790743,
+            0.0158407369927857
+          ],
+          "improved_fraction": 0.18808411214953272,
+          "harmed_fraction": 0.0969626168224299,
+          "unchanged_fraction": 0.7149532710280374,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-none-blind-r1": {
+          "mean_delta": 0.01329888756639047,
+          "ci95": [
+            0.00796892950007496,
+            0.01883112816783773
+          ],
+          "improved_fraction": 0.18457943925233644,
+          "harmed_fraction": 0.125,
+          "unchanged_fraction": 0.6904205607476636,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-title-visible-r0": {
+          "mean_delta": 0.013564521294282044,
+          "ci95": [
+            0.007195948277751359,
+            0.019967109820798738
+          ],
+          "improved_fraction": 0.2044392523364486,
+          "harmed_fraction": 0.11799065420560748,
+          "unchanged_fraction": 0.677570093457944,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-title-visible-r1": {
+          "mean_delta": 0.014930309162716208,
+          "ci95": [
+            0.008388565189131583,
+            0.021415690537049288
+          ],
+          "improved_fraction": 0.19626168224299065,
+          "harmed_fraction": 0.1378504672897196,
+          "unchanged_fraction": 0.6658878504672897,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-title-blind-r0": {
+          "mean_delta": 0.0098636377379531,
+          "ci95": [
+            0.005975142841219542,
+            0.013874694093136505
+          ],
+          "improved_fraction": 0.19042056074766356,
+          "harmed_fraction": 0.09813084112149532,
+          "unchanged_fraction": 0.7114485981308412,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-title-blind-r1": {
+          "mean_delta": 0.013654476752334643,
+          "ci95": [
+            0.008605466431401063,
+            0.01896511534954521
+          ],
+          "improved_fraction": 0.19626168224299065,
+          "harmed_fraction": 0.11448598130841121,
+          "unchanged_fraction": 0.6892523364485982,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-description-visible-r0": {
+          "mean_delta": 0.0063225725316475075,
+          "ci95": [
+            0.0018525844436462755,
+            0.010748237268671242
+          ],
+          "improved_fraction": 0.1658878504672897,
+          "harmed_fraction": 0.12149532710280374,
+          "unchanged_fraction": 0.7126168224299065,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-description-visible-r1": {
+          "mean_delta": 0.011536394560560742,
+          "ci95": [
+            0.006537584643629425,
+            0.016908421698181852
+          ],
+          "improved_fraction": 0.1985981308411215,
+          "harmed_fraction": 0.11214953271028037,
+          "unchanged_fraction": 0.6892523364485982,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-description-blind-r0": {
+          "mean_delta": 0.013581249647481036,
+          "ci95": [
+            0.008983424180011553,
+            0.018376617044755614
+          ],
+          "improved_fraction": 0.19509345794392524,
+          "harmed_fraction": 0.10397196261682243,
+          "unchanged_fraction": 0.7009345794392523,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-description-blind-r1": {
+          "mean_delta": 0.010907432484856658,
+          "ci95": [
+            0.007127621037291788,
+            0.01490506087288767
+          ],
+          "improved_fraction": 0.18457943925233644,
+          "harmed_fraction": 0.09345794392523364,
+          "unchanged_fraction": 0.7219626168224299,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-uniform": {
+          "mean_delta": 0.00010328916966511513,
+          "ci95": [
+            -0.0006577416587516873,
+            0.0008775721220866009
+          ],
+          "improved_fraction": 0.053738317757009345,
+          "harmed_fraction": 0.0514018691588785,
+          "unchanged_fraction": 0.8948598130841121,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-random": {
+          "mean_delta": -7.883938284917682e-05,
+          "ci95": [
+            -0.0012022953959073828,
+            0.001007734535887089
+          ],
+          "improved_fraction": 0.0455607476635514,
+          "harmed_fraction": 0.0514018691588785,
+          "unchanged_fraction": 0.9030373831775701,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-title_neighbors": {
+          "mean_delta": -0.0009314133367710529,
+          "ci95": [
+            -0.00233514102163713,
+            0.00032479110579415496
+          ],
+          "improved_fraction": 0.06191588785046729,
+          "harmed_fraction": 0.07359813084112149,
+          "unchanged_fraction": 0.8644859813084113,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-description_neighbors": {
+          "mean_delta": -0.0009436813412112696,
+          "ci95": [
+            -0.0023708856345783444,
+            0.00046511770294247677
+          ],
+          "improved_fraction": 0.07242990654205607,
+          "harmed_fraction": 0.07242990654205607,
+          "unchanged_fraction": 0.8551401869158879,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        }
+      },
+      "43": {
+        "mse-none-visible-r0": {
+          "mean_delta": 0.006127932994317868,
+          "ci95": [
+            0.0030529908563111325,
+            0.009526967232051854
+          ],
+          "improved_fraction": 0.15654205607476634,
+          "harmed_fraction": 0.08644859813084112,
+          "unchanged_fraction": 0.7570093457943925,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-none-visible-r1": {
+          "mean_delta": 0.01484247668684179,
+          "ci95": [
+            0.008911523078846092,
+            0.02086991435360228
+          ],
+          "improved_fraction": 0.2044392523364486,
+          "harmed_fraction": 0.12032710280373832,
+          "unchanged_fraction": 0.6752336448598131,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-none-blind-r0": {
+          "mean_delta": 0.00457700302201536,
+          "ci95": [
+            0.002151202749271082,
+            0.0072839542559882
+          ],
+          "improved_fraction": 0.1378504672897196,
+          "harmed_fraction": 0.08177570093457943,
+          "unchanged_fraction": 0.780373831775701,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-none-blind-r1": {
+          "mean_delta": 0.009340897030530173,
+          "ci95": [
+            0.005466077412465283,
+            0.013620354165252655
+          ],
+          "improved_fraction": 0.17873831775700935,
+          "harmed_fraction": 0.09228971962616822,
+          "unchanged_fraction": 0.7289719626168224,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-title-visible-r0": {
+          "mean_delta": 0.005373913811653626,
+          "ci95": [
+            0.0020053863827298956,
+            0.008765810831600308
+          ],
+          "improved_fraction": 0.14485981308411214,
+          "harmed_fraction": 0.08761682242990654,
+          "unchanged_fraction": 0.7675233644859814,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-title-visible-r1": {
+          "mean_delta": 0.015023348285561138,
+          "ci95": [
+            0.009840527597279563,
+            0.020718765250858757
+          ],
+          "improved_fraction": 0.19742990654205608,
+          "harmed_fraction": 0.10630841121495327,
+          "unchanged_fraction": 0.6962616822429907,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-title-blind-r0": {
+          "mean_delta": 0.002562044533705975,
+          "ci95": [
+            0.00026835816083902326,
+            0.004864863479909371
+          ],
+          "improved_fraction": 0.11799065420560748,
+          "harmed_fraction": 0.08411214953271028,
+          "unchanged_fraction": 0.7978971962616822,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-title-blind-r1": {
+          "mean_delta": 0.007452882034657654,
+          "ci95": [
+            0.003905706758904288,
+            0.011305351260383813
+          ],
+          "improved_fraction": 0.1658878504672897,
+          "harmed_fraction": 0.09345794392523364,
+          "unchanged_fraction": 0.7406542056074766,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-description-visible-r0": {
+          "mean_delta": 0.0036240585450795838,
+          "ci95": [
+            0.0013410065125066236,
+            0.0060668610325352096
+          ],
+          "improved_fraction": 0.1308411214953271,
+          "harmed_fraction": 0.07710280373831775,
+          "unchanged_fraction": 0.7920560747663551,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-description-visible-r1": {
+          "mean_delta": 0.002905729831052026,
+          "ci95": [
+            0.00026380755350193387,
+            0.00553868542854662
+          ],
+          "improved_fraction": 0.12149532710280374,
+          "harmed_fraction": 0.08644859813084112,
+          "unchanged_fraction": 0.7920560747663551,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-description-blind-r0": {
+          "mean_delta": 0.00523711121239808,
+          "ci95": [
+            0.0023317751351632295,
+            0.008480133127635906
+          ],
+          "improved_fraction": 0.1483644859813084,
+          "harmed_fraction": 0.08878504672897196,
+          "unchanged_fraction": 0.7628504672897196,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-description-blind-r1": {
+          "mean_delta": 0.0039750097027539885,
+          "ci95": [
+            0.0015502507950992076,
+            0.006539434815856789
+          ],
+          "improved_fraction": 0.13200934579439252,
+          "harmed_fraction": 0.0794392523364486,
+          "unchanged_fraction": 0.7885514018691588,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-uniform": {
+          "mean_delta": 0.00025424186092762974,
+          "ci95": [
+            -0.0004762491256109742,
+            0.00097948208306221
+          ],
+          "improved_fraction": 0.04322429906542056,
+          "harmed_fraction": 0.038551401869158876,
+          "unchanged_fraction": 0.9182242990654206,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-random": {
+          "mean_delta": 0.00038909667241544664,
+          "ci95": [
+            -4.200047574653059e-05,
+            0.0009090808535457492
+          ],
+          "improved_fraction": 0.030373831775700934,
+          "harmed_fraction": 0.018691588785046728,
+          "unchanged_fraction": 0.9509345794392523,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-title_neighbors": {
+          "mean_delta": -0.0008382346887265824,
+          "ci95": [
+            -0.00246415189420226,
+            0.00091929433988439
+          ],
+          "improved_fraction": 0.06775700934579439,
+          "harmed_fraction": 0.11214953271028037,
+          "unchanged_fraction": 0.8200934579439252,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-description_neighbors": {
+          "mean_delta": 0.001358138613846689,
+          "ci95": [
+            -0.00030294808714417874,
+            0.00312976673002255
+          ],
+          "improved_fraction": 0.08761682242990654,
+          "harmed_fraction": 0.0969626168224299,
+          "unchanged_fraction": 0.8154205607476636,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        }
+      },
+      "44": {
+        "mse-none-visible-r0": {
+          "mean_delta": 0.0031193391530134717,
+          "ci95": [
+            0.00042606927124398203,
+            0.006021676492908484
+          ],
+          "improved_fraction": 0.12733644859813084,
+          "harmed_fraction": 0.07126168224299065,
+          "unchanged_fraction": 0.8014018691588785,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-none-visible-r1": {
+          "mean_delta": 0.011897573255859167,
+          "ci95": [
+            0.007312292653728077,
+            0.016800885937027502
+          ],
+          "improved_fraction": 0.19042056074766356,
+          "harmed_fraction": 0.0911214953271028,
+          "unchanged_fraction": 0.7184579439252337,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-none-blind-r0": {
+          "mean_delta": 0.0033920260759428655,
+          "ci95": [
+            0.0009286079185439768,
+            0.005759951989740212
+          ],
+          "improved_fraction": 0.125,
+          "harmed_fraction": 0.06191588785046729,
+          "unchanged_fraction": 0.8130841121495327,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-none-blind-r1": {
+          "mean_delta": 0.004960089907250559,
+          "ci95": [
+            0.0018445165400095705,
+            0.00827869422548292
+          ],
+          "improved_fraction": 0.1530373831775701,
+          "harmed_fraction": 0.08177570093457943,
+          "unchanged_fraction": 0.7651869158878505,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-title-visible-r0": {
+          "mean_delta": 0.0033429085508998087,
+          "ci95": [
+            0.00026235387767272725,
+            0.00634786473354914
+          ],
+          "improved_fraction": 0.1261682242990654,
+          "harmed_fraction": 0.07009345794392523,
+          "unchanged_fraction": 0.8037383177570093,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-title-visible-r1": {
+          "mean_delta": 0.009675220148932571,
+          "ci95": [
+            0.00547269653189592,
+            0.014148114242763597
+          ],
+          "improved_fraction": 0.16822429906542055,
+          "harmed_fraction": 0.08411214953271028,
+          "unchanged_fraction": 0.7476635514018691,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-title-blind-r0": {
+          "mean_delta": 0.0026485738948510452,
+          "ci95": [
+            0.0002995118426689824,
+            0.005007784033513892
+          ],
+          "improved_fraction": 0.1191588785046729,
+          "harmed_fraction": 0.06425233644859812,
+          "unchanged_fraction": 0.8165887850467289,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-title-blind-r1": {
+          "mean_delta": 0.004442051589447521,
+          "ci95": [
+            0.0015643609590551444,
+            0.007457394222229085
+          ],
+          "improved_fraction": 0.1425233644859813,
+          "harmed_fraction": 0.07126168224299065,
+          "unchanged_fraction": 0.7862149532710281,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-description-visible-r0": {
+          "mean_delta": 0.0024595889813653817,
+          "ci95": [
+            -7.839556486042007e-05,
+            0.005011864532802412
+          ],
+          "improved_fraction": 0.10864485981308411,
+          "harmed_fraction": 0.06775700934579439,
+          "unchanged_fraction": 0.8235981308411215,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-description-visible-r1": {
+          "mean_delta": -0.0004706985806172999,
+          "ci95": [
+            -0.0030339516752522187,
+            0.0020466456021155845
+          ],
+          "improved_fraction": 0.09462616822429906,
+          "harmed_fraction": 0.07827102803738317,
+          "unchanged_fraction": 0.8271028037383178,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-description-blind-r0": {
+          "mean_delta": 0.003532253831509716,
+          "ci95": [
+            0.0007990089446498261,
+            0.00645874568536807
+          ],
+          "improved_fraction": 0.12850467289719625,
+          "harmed_fraction": 0.07009345794392523,
+          "unchanged_fraction": 0.8014018691588785,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-description-blind-r1": {
+          "mean_delta": 0.0032975350434644095,
+          "ci95": [
+            0.000838546804773016,
+            0.00565183971456979
+          ],
+          "improved_fraction": 0.12149532710280374,
+          "harmed_fraction": 0.0630841121495327,
+          "unchanged_fraction": 0.8154205607476636,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-uniform": {
+          "mean_delta": 0.00018254653091378351,
+          "ci95": [
+            -0.001001959170575846,
+            0.0013827487155531823
+          ],
+          "improved_fraction": 0.04439252336448598,
+          "harmed_fraction": 0.03387850467289719,
+          "unchanged_fraction": 0.9217289719626168,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-random": {
+          "mean_delta": 0.0003915848347647421,
+          "ci95": [
+            -5.444258323303969e-05,
+            0.0009008490439636677
+          ],
+          "improved_fraction": 0.016355140186915886,
+          "harmed_fraction": 0.017523364485981307,
+          "unchanged_fraction": 0.9661214953271028,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-title_neighbors": {
+          "mean_delta": 0.0020265409267883074,
+          "ci95": [
+            -0.0002839855659622239,
+            0.004246763304091625
+          ],
+          "improved_fraction": 0.10046728971962617,
+          "harmed_fraction": 0.08878504672897196,
+          "unchanged_fraction": 0.8107476635514018,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "mse-description_neighbors": {
+          "mean_delta": 0.0025569126061461707,
+          "ci95": [
+            0.0004812822332760943,
+            0.004781303630850425
+          ],
+          "improved_fraction": 0.102803738317757,
+          "harmed_fraction": 0.08294392523364486,
+          "unchanged_fraction": 0.8142523364485982,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        }
+      }
+    },
+    "bpr": {
+      "42": {
+        "bpr-none-visible-r0": {
+          "mean_delta": 0.0004233711729786891,
+          "ci95": [
+            -0.0031074034379480397,
+            0.004006035614982876
+          ],
+          "improved_fraction": 0.1588785046728972,
+          "harmed_fraction": 0.16121495327102803,
+          "unchanged_fraction": 0.6799065420560748,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-none-visible-r1": {
+          "mean_delta": -0.00492724871549748,
+          "ci95": [
+            -0.009884170842491425,
+            0.00022719875050262325
+          ],
+          "improved_fraction": 0.169392523364486,
+          "harmed_fraction": 0.22313084112149534,
+          "unchanged_fraction": 0.6074766355140186,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-none-blind-r0": {
+          "mean_delta": 0.002964375303476765,
+          "ci95": [
+            0.0005119471840953065,
+            0.005662327986251422
+          ],
+          "improved_fraction": 0.1191588785046729,
+          "harmed_fraction": 0.08644859813084112,
+          "unchanged_fraction": 0.794392523364486,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-none-blind-r1": {
+          "mean_delta": 0.0011809353456024186,
+          "ci95": [
+            -0.0007421145547946125,
+            0.003151024744210558
+          ],
+          "improved_fraction": 0.08761682242990654,
+          "harmed_fraction": 0.07359813084112149,
+          "unchanged_fraction": 0.8387850467289719,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-title-visible-r0": {
+          "mean_delta": 0.003847652927086812,
+          "ci95": [
+            -0.000717484053314049,
+            0.008524758712108576
+          ],
+          "improved_fraction": 0.16705607476635514,
+          "harmed_fraction": 0.1588785046728972,
+          "unchanged_fraction": 0.6740654205607477,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-title-visible-r1": {
+          "mean_delta": 0.002923794823555758,
+          "ci95": [
+            -0.002376805595490754,
+            0.008561364316821021
+          ],
+          "improved_fraction": 0.20794392523364486,
+          "harmed_fraction": 0.1483644859813084,
+          "unchanged_fraction": 0.6436915887850467,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-title-blind-r0": {
+          "mean_delta": 0.002746606659639767,
+          "ci95": [
+            -0.0011071119272211152,
+            0.006690771013537351
+          ],
+          "improved_fraction": 0.1530373831775701,
+          "harmed_fraction": 0.12149532710280374,
+          "unchanged_fraction": 0.7254672897196262,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-title-blind-r1": {
+          "mean_delta": 0.002496606844726792,
+          "ci95": [
+            -0.0008590483507540349,
+            0.006032347066737485
+          ],
+          "improved_fraction": 0.15070093457943926,
+          "harmed_fraction": 0.14369158878504673,
+          "unchanged_fraction": 0.705607476635514,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-description-visible-r0": {
+          "mean_delta": 0.004235135251474962,
+          "ci95": [
+            -0.0004706452270829478,
+            0.008946883312064056
+          ],
+          "improved_fraction": 0.18925233644859812,
+          "harmed_fraction": 0.13317757009345793,
+          "unchanged_fraction": 0.677570093457944,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-description-visible-r1": {
+          "mean_delta": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "improved_fraction": 0.0,
+          "harmed_fraction": 0.0,
+          "unchanged_fraction": 1.0,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-description-blind-r0": {
+          "mean_delta": 0.003682569451368607,
+          "ci95": [
+            -0.0009232213840827293,
+            0.008572894664831458
+          ],
+          "improved_fraction": 0.17990654205607476,
+          "harmed_fraction": 0.15537383177570094,
+          "unchanged_fraction": 0.6647196261682243,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-description-blind-r1": {
+          "mean_delta": 0.0012047304585978255,
+          "ci95": [
+            -0.0007125187978514723,
+            0.0032173719052722032
+          ],
+          "improved_fraction": 0.12266355140186916,
+          "harmed_fraction": 0.102803738317757,
+          "unchanged_fraction": 0.7745327102803738,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-uniform": {
+          "mean_delta": -1.758042195130642e-05,
+          "ci95": [
+            -0.001212391342337226,
+            0.001188999493967867
+          ],
+          "improved_fraction": 0.07009345794392523,
+          "harmed_fraction": 0.07009345794392523,
+          "unchanged_fraction": 0.8598130841121495,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-random": {
+          "mean_delta": -0.0012058160844323714,
+          "ci95": [
+            -0.0043004455999516725,
+            0.00185068717507169
+          ],
+          "improved_fraction": 0.12383177570093458,
+          "harmed_fraction": 0.1542056074766355,
+          "unchanged_fraction": 0.7219626168224299,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-title_neighbors": {
+          "mean_delta": 0.0022687474057844115,
+          "ci95": [
+            -0.0005444373186636958,
+            0.005245959390615432
+          ],
+          "improved_fraction": 0.14369158878504673,
+          "harmed_fraction": 0.15186915887850466,
+          "unchanged_fraction": 0.7044392523364486,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-description_neighbors": {
+          "mean_delta": 0.0011912109677117524,
+          "ci95": [
+            -0.0010916023360660297,
+            0.0035456345869996127
+          ],
+          "improved_fraction": 0.12266355140186916,
+          "harmed_fraction": 0.10981308411214953,
+          "unchanged_fraction": 0.7675233644859814,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        }
+      },
+      "43": {
+        "bpr-none-visible-r0": {
+          "mean_delta": -0.00040265177010068983,
+          "ci95": [
+            -0.003914675412982471,
+            0.002968671403171032
+          ],
+          "improved_fraction": 0.14602803738317757,
+          "harmed_fraction": 0.1542056074766355,
+          "unchanged_fraction": 0.6997663551401869,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-none-visible-r1": {
+          "mean_delta": -0.008309563317909288,
+          "ci95": [
+            -0.013667947536133632,
+            -0.002587631514671397
+          ],
+          "improved_fraction": 0.1588785046728972,
+          "harmed_fraction": 0.2266355140186916,
+          "unchanged_fraction": 0.6144859813084113,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-none-blind-r0": {
+          "mean_delta": 0.0025389151352074204,
+          "ci95": [
+            1.7699451422639854e-05,
+            0.005225776077224145
+          ],
+          "improved_fraction": 0.12266355140186916,
+          "harmed_fraction": 0.0911214953271028,
+          "unchanged_fraction": 0.7862149532710281,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-none-blind-r1": {
+          "mean_delta": 0.0021324582397043946,
+          "ci95": [
+            0.00019538125870080547,
+            0.004076732547843923
+          ],
+          "improved_fraction": 0.10163551401869159,
+          "harmed_fraction": 0.0794392523364486,
+          "unchanged_fraction": 0.8189252336448598,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-title-visible-r0": {
+          "mean_delta": 0.003840807479388678,
+          "ci95": [
+            -0.000758645227432081,
+            0.008516839264493876
+          ],
+          "improved_fraction": 0.1822429906542056,
+          "harmed_fraction": 0.15070093457943926,
+          "unchanged_fraction": 0.6670560747663551,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-title-visible-r1": {
+          "mean_delta": 0.004732226607923755,
+          "ci95": [
+            -0.0011927738862506608,
+            0.011037187255107248
+          ],
+          "improved_fraction": 0.21144859813084113,
+          "harmed_fraction": 0.1530373831775701,
+          "unchanged_fraction": 0.6355140186915887,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-title-blind-r0": {
+          "mean_delta": 0.0047576950101210266,
+          "ci95": [
+            0.0009641619844188157,
+            0.008735118699770401
+          ],
+          "improved_fraction": 0.18574766355140188,
+          "harmed_fraction": 0.11565420560747663,
+          "unchanged_fraction": 0.6985981308411215,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-title-blind-r1": {
+          "mean_delta": 0.00276879192226074,
+          "ci95": [
+            -0.0009464978006679458,
+            0.0062767875306219325
+          ],
+          "improved_fraction": 0.17289719626168223,
+          "harmed_fraction": 0.13434579439252337,
+          "unchanged_fraction": 0.6927570093457944,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-description-visible-r0": {
+          "mean_delta": 0.005315578560144002,
+          "ci95": [
+            0.0003257854308888583,
+            0.010374384615723634
+          ],
+          "improved_fraction": 0.20210280373831777,
+          "harmed_fraction": 0.12850467289719625,
+          "unchanged_fraction": 0.669392523364486,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-description-visible-r1": {
+          "mean_delta": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "improved_fraction": 0.0,
+          "harmed_fraction": 0.0,
+          "unchanged_fraction": 1.0,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-description-blind-r0": {
+          "mean_delta": 0.004667447279116362,
+          "ci95": [
+            -0.0005800349901906736,
+            0.009834278198158804
+          ],
+          "improved_fraction": 0.20327102803738317,
+          "harmed_fraction": 0.1425233644859813,
+          "unchanged_fraction": 0.6542056074766355,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-description-blind-r1": {
+          "mean_delta": 0.003369546516486855,
+          "ci95": [
+            0.0010611881799779694,
+            0.005901695818679586
+          ],
+          "improved_fraction": 0.12850467289719625,
+          "harmed_fraction": 0.10046728971962617,
+          "unchanged_fraction": 0.7710280373831776,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-uniform": {
+          "mean_delta": 0.0014021290214433423,
+          "ci95": [
+            -0.0005591787194617996,
+            0.0033323357916747146
+          ],
+          "improved_fraction": 0.08878504672897196,
+          "harmed_fraction": 0.07009345794392523,
+          "unchanged_fraction": 0.8411214953271028,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-random": {
+          "mean_delta": -0.0009856445388711388,
+          "ci95": [
+            -0.00376164772263146,
+            0.00205822902366088
+          ],
+          "improved_fraction": 0.1378504672897196,
+          "harmed_fraction": 0.14719626168224298,
+          "unchanged_fraction": 0.7149532710280374,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-title_neighbors": {
+          "mean_delta": 0.00171634044416314,
+          "ci95": [
+            -0.0010691936093784851,
+            0.00457488237415562
+          ],
+          "improved_fraction": 0.14953271028037382,
+          "harmed_fraction": 0.14369158878504673,
+          "unchanged_fraction": 0.7067757009345794,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-description_neighbors": {
+          "mean_delta": 0.0009506208188253144,
+          "ci95": [
+            -0.000902969252250567,
+            0.002821258332737111
+          ],
+          "improved_fraction": 0.12383177570093458,
+          "harmed_fraction": 0.10163551401869159,
+          "unchanged_fraction": 0.7745327102803738,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        }
+      },
+      "44": {
+        "bpr-none-visible-r0": {
+          "mean_delta": 0.00046707647927321934,
+          "ci95": [
+            -0.004027328345625509,
+            0.005175110202636305
+          ],
+          "improved_fraction": 0.18808411214953272,
+          "harmed_fraction": 0.17990654205607476,
+          "unchanged_fraction": 0.6320093457943925,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-none-visible-r1": {
+          "mean_delta": -0.012152911635208654,
+          "ci95": [
+            -0.01742606815860175,
+            -0.00670130333734669
+          ],
+          "improved_fraction": 0.1366822429906542,
+          "harmed_fraction": 0.2605140186915888,
+          "unchanged_fraction": 0.602803738317757,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-none-blind-r0": {
+          "mean_delta": 0.0021552342883810315,
+          "ci95": [
+            -0.0007967305265384032,
+            0.0050624017830161695
+          ],
+          "improved_fraction": 0.15771028037383178,
+          "harmed_fraction": 0.1413551401869159,
+          "unchanged_fraction": 0.7009345794392523,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-none-blind-r1": {
+          "mean_delta": 0.0005643813324652769,
+          "ci95": [
+            -0.0017827550979248835,
+            0.002866594202971689
+          ],
+          "improved_fraction": 0.12149532710280374,
+          "harmed_fraction": 0.11565420560747663,
+          "unchanged_fraction": 0.7628504672897196,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-title-visible-r0": {
+          "mean_delta": 0.002715047521562175,
+          "ci95": [
+            -0.001404445689643795,
+            0.007090398330050377
+          ],
+          "improved_fraction": 0.17406542056074767,
+          "harmed_fraction": 0.1530373831775701,
+          "unchanged_fraction": 0.6728971962616822,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-title-visible-r1": {
+          "mean_delta": 0.0009423418328977256,
+          "ci95": [
+            -0.004556657796572438,
+            0.006499855737180097
+          ],
+          "improved_fraction": 0.19742990654205608,
+          "harmed_fraction": 0.15654205607476634,
+          "unchanged_fraction": 0.6460280373831776,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-title-blind-r0": {
+          "mean_delta": 0.0012599795573002399,
+          "ci95": [
+            -0.0023765768500147474,
+            0.004821860427668092
+          ],
+          "improved_fraction": 0.17172897196261683,
+          "harmed_fraction": 0.14018691588785046,
+          "unchanged_fraction": 0.6880841121495327,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-title-blind-r1": {
+          "mean_delta": 0.002362220735452087,
+          "ci95": [
+            -0.0006242123235984477,
+            0.0052671994384586905
+          ],
+          "improved_fraction": 0.16004672897196262,
+          "harmed_fraction": 0.13317757009345793,
+          "unchanged_fraction": 0.7067757009345794,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-description-visible-r0": {
+          "mean_delta": 0.0014392541867836645,
+          "ci95": [
+            -0.0029184885069933435,
+            0.005691308873185673
+          ],
+          "improved_fraction": 0.1810747663551402,
+          "harmed_fraction": 0.13901869158878505,
+          "unchanged_fraction": 0.6799065420560748,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-description-visible-r1": {
+          "mean_delta": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "improved_fraction": 0.0,
+          "harmed_fraction": 0.0,
+          "unchanged_fraction": 1.0,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-description-blind-r0": {
+          "mean_delta": 0.001289073474167968,
+          "ci95": [
+            -0.002838471344681994,
+            0.00524288879606041
+          ],
+          "improved_fraction": 0.1810747663551402,
+          "harmed_fraction": 0.1483644859813084,
+          "unchanged_fraction": 0.6705607476635514,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-description-blind-r1": {
+          "mean_delta": 0.0003838417047229697,
+          "ci95": [
+            -0.0023524174596401847,
+            0.002941767001437317
+          ],
+          "improved_fraction": 0.14719626168224298,
+          "harmed_fraction": 0.13200934579439252,
+          "unchanged_fraction": 0.7207943925233645,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-uniform": {
+          "mean_delta": 0.0010269613946803896,
+          "ci95": [
+            -0.0013687593639260182,
+            0.0034988668164765164
+          ],
+          "improved_fraction": 0.12383177570093458,
+          "harmed_fraction": 0.1191588785046729,
+          "unchanged_fraction": 0.7570093457943925,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-random": {
+          "mean_delta": 0.00045378089039333527,
+          "ci95": [
+            -0.0030240418169906395,
+            0.004153626047482188
+          ],
+          "improved_fraction": 0.14018691588785046,
+          "harmed_fraction": 0.16355140186915887,
+          "unchanged_fraction": 0.6962616822429907,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-title_neighbors": {
+          "mean_delta": -0.0003168899291731919,
+          "ci95": [
+            -0.003475074731453598,
+            0.002984503022037554
+          ],
+          "improved_fraction": 0.15070093457943926,
+          "harmed_fraction": 0.17289719626168223,
+          "unchanged_fraction": 0.6764018691588785,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        },
+        "bpr-description_neighbors": {
+          "mean_delta": -0.00013628516581370376,
+          "ci95": [
+            -0.0022509286619518377,
+            0.0019787575360161965
+          ],
+          "improved_fraction": 0.10397196261682243,
+          "harmed_fraction": 0.11098130841121495,
+          "unchanged_fraction": 0.7850467289719626,
+          "ranking_users": 856,
+          "repetitions": 2000,
+          "seed": 2026
+        }
+      }
+    }
+  }
+}

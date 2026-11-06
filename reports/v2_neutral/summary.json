@@ -1,0 +1,284 @@
+{
+  "dataset": {
+    "counts": {
+      "before": {
+        "users": 943,
+        "items": 1682,
+        "interactions": 100000
+      },
+      "after": {
+        "users": 943,
+        "items": 1570,
+        "interactions": 97454
+      }
+    },
+    "removals": {
+      "no_reliable_description_match_in_this_source": {
+        "items": 112,
+        "interactions": 2546
+      },
+      "fewer_than_three_interactions_after_item_filter": {
+        "users": 0,
+        "interactions": 0
+      }
+    },
+    "split_sizes": {
+      "train": 77581,
+      "valid": 9691,
+      "test": 10182
+    },
+    "seed": 20261106,
+    "item_rule": "Metadata description_available is true and stripped description is nonempty.",
+    "user_rule": "Retain users with at least three interactions after filtering items.",
+    "split_rule": "Within user sort by timestamp then original item ID. Floor 80% and 90% boundaries, adjusted to leave at least one example in each split.",
+    "id_rule": "NumPy default_rng(seed) permutes sorted original items, then sorted retained users.",
+    "embedding_source": "Existing per-movie caches subset and reordered by anonymous item ID.",
+    "sources": {
+      "raw_interactions": {
+        "path": "data/ml-100k/u.data",
+        "sha256": "06416e597f82b7342361e41163890c81036900f418ad91315590814211dca490"
+      },
+      "matched_movies": {
+        "path": "data/movie_descriptions/matched_movies.json",
+        "sha256": "4e8b169cd4a36643ae9e1778da31fc691ac81de83b5a1b9fcc715d5cdb33c23d"
+      },
+      "title_only": {
+        "path": "runs/followup/llama3/title_only.npy",
+        "sha256": "d9c24b30fdddeb9a6644a893ddc01b1f42bd11508d7f14fae1d0baabcbd44eff"
+      },
+      "title_description": {
+        "path": "runs/followup/llama3/title_description.npy",
+        "sha256": "53c6eb5923a533661b1da3bb1f6dcb58777347aae4bc19ab30d1160644500996"
+      }
+    }
+  },
+  "aggregates": {
+    "mse": {
+      "base": {
+        "ndcg@10": 0.0581497688216667,
+        "recall@10": 0.05693675116370014,
+        "hit_rate@10": 0.2515576323987539
+      },
+      "none-visible": {
+        "ndcg@10": 0.07416220730590277,
+        "editor_rep_means_ndcg": [
+          0.07431786079916257,
+          0.07400655381264297
+        ],
+        "recall@10": 0.0789772641373851
+      },
+      "none-blind": {
+        "ndcg@10": 0.070070160030896,
+        "editor_rep_means_ndcg": [
+          0.07211506813158838,
+          0.06802525193020363
+        ],
+        "recall@10": 0.07461122776457729
+      },
+      "title-visible": {
+        "ndcg@10": 0.06892419983116266,
+        "editor_rep_means_ndcg": [
+          0.07388503507536133,
+          0.063963364586964
+        ],
+        "recall@10": 0.07161949209724139
+      },
+      "title-blind": {
+        "ndcg@10": 0.067385457126201,
+        "editor_rep_means_ndcg": [
+          0.06566646788593193,
+          0.06910444636647008
+        ],
+        "recall@10": 0.07222553246206757
+      },
+      "description-visible": {
+        "ndcg@10": 0.06947751544283082,
+        "editor_rep_means_ndcg": [
+          0.07489676547876628,
+          0.06405826540689535
+        ],
+        "recall@10": 0.0727875409555517
+      },
+      "description-blind": {
+        "ndcg@10": 0.07379309250619526,
+        "editor_rep_means_ndcg": [
+          0.07299234116968312,
+          0.07459384384270741
+        ],
+        "recall@10": 0.07909723853522385
+      }
+    },
+    "bpr": {
+      "base": {
+        "ndcg@10": 0.10543026881315486,
+        "recall@10": 0.11876514827246014,
+        "hit_rate@10": 0.38746105919003115
+      },
+      "none-visible": {
+        "ndcg@10": 0.10304276809140314,
+        "editor_rep_means_ndcg": [
+          0.10623609094607595,
+          0.09984944523673032
+        ],
+        "recall@10": 0.11808214874084214
+      },
+      "none-blind": {
+        "ndcg@10": 0.10782155550436841,
+        "editor_rep_means_ndcg": [
+          0.10818668369289187,
+          0.10745642731584494
+        ],
+        "recall@10": 0.1240686269285598
+      },
+      "title-visible": {
+        "ndcg@10": 0.10807208803574267,
+        "editor_rep_means_ndcg": [
+          0.10889016118856627,
+          0.10725401488291907
+        ],
+        "recall@10": 0.12281888159416732
+      },
+      "title-blind": {
+        "ndcg@10": 0.10718103256104744,
+        "editor_rep_means_ndcg": [
+          0.10787827739603108,
+          0.10648378772606382
+        ],
+        "recall@10": 0.12054260209808126
+      },
+      "description-visible": {
+        "ndcg@10": 0.10796833480566431,
+        "editor_rep_means_ndcg": [
+          0.10552851709903617,
+          0.11040815251229245
+        ],
+        "recall@10": 0.12106323073357328
+      },
+      "description-blind": {
+        "ndcg@10": 0.10920046075925088,
+        "editor_rep_means_ndcg": [
+          0.10841932865244146,
+          0.1099815928660603
+        ],
+        "recall@10": 0.12398572534765544
+      }
+    }
+  },
+  "references": {
+    "popular": {
+      "ndcg@10": 0.0730711242387861,
+      "recall@10": 0.07756595292435986,
+      "hit_rate@10": 0.3119158878504673,
+      "ranking_users": 856,
+      "positives": 4868
+    },
+    "ease": {
+      "ndcg@10": 0.12320815655472779,
+      "recall@10": 0.14094410520358394,
+      "hit_rate@10": 0.42406542056074764,
+      "ranking_users": 856,
+      "positives": 4868
+    }
+  },
+  "costs": {
+    "training_trials": 12,
+    "training_wall_seconds": 25.472122165374458,
+    "training_validation_evaluations": 367,
+    "editor_trajectories": 24,
+    "editor_generation_turns": 48,
+    "editor_candidate_queries": 192,
+    "invalid_editor_candidates": 27,
+    "invalid_by_trajectory": {
+      "mse-none-visible-r0": 0,
+      "mse-none-visible-r1": 0,
+      "mse-none-blind-r0": 4,
+      "mse-none-blind-r1": 4,
+      "mse-title-visible-r0": 0,
+      "mse-title-visible-r1": 0,
+      "mse-title-blind-r0": 6,
+      "mse-title-blind-r1": 4,
+      "mse-description-visible-r0": 0,
+      "mse-description-visible-r1": 0,
+      "mse-description-blind-r0": 4,
+      "mse-description-blind-r1": 5,
+      "bpr-none-visible-r0": 0,
+      "bpr-none-visible-r1": 0,
+      "bpr-none-blind-r0": 0,
+      "bpr-none-blind-r1": 0,
+      "bpr-title-visible-r0": 0,
+      "bpr-title-visible-r1": 0,
+      "bpr-title-blind-r0": 0,
+      "bpr-title-blind-r1": 0,
+      "bpr-description-visible-r0": 0,
+      "bpr-description-visible-r1": 0,
+      "bpr-description-blind-r0": 0,
+      "bpr-description-blind-r1": 0
+    },
+    "invalid_reasons": {
+      "patch exceeds the relative L2 change budget": 27
+    },
+    "control_candidate_queries": 64,
+    "invalid_control_candidates": 0,
+    "candidate_execution_wall_seconds": 20.07737292582169,
+    "test_reporting_wall_seconds": 31.243420832790434,
+    "new_embedding_gpu_seconds": 0,
+    "integrity_replay_evaluations": 458,
+    "integrity_replay_wall_seconds": 27.689701333176345,
+    "integrity_passes": 2,
+    "text_cost_scope": "reuse individually encoded Llama-3 features by metadata filtering/reindexing; prior encoding cost not zero and recorded in reports/followup",
+    "editor_input_tokens": null,
+    "editor_output_tokens": null,
+    "editor_billed_usd": null,
+    "editor_total_inference_wall_seconds": null,
+    "timing_scope": "inside-operation walls, not end-to-end development/coordination cost",
+    "numeric_assets": {
+      "logical_assets": 410,
+      "unique_assets": 236,
+      "compressed_bytes": 6077467
+    },
+    "ease_reference_fit_and_validation_wall_seconds": 0.4241545000113547,
+    "unmetered_compute": [
+      "dataset preparation",
+      "control asset construction",
+      "editor numeric inspection and asset construction",
+      "popular-reference and Gram construction"
+    ],
+    "reference_validation_evaluations": 5
+  },
+  "prompt_audit": {
+    "initial_tasks": 24,
+    "saved_generation_dispatches": 48,
+    "directional_lexicon_absent_from_instructions": true,
+    "hypotheses_or_rationales_requested": false,
+    "schema": "id and operations only",
+    "domain_specific_operations": false,
+    "all_submitted_patch_fields": [
+      "id",
+      "operations"
+    ],
+    "isolation": "fresh fork-none native subagents with file allowlists; not an OS-level isolated filesystem",
+    "scope": "audit of supplied instructions and saved outputs, not a claim about private reasoning or absence of pretrained priors"
+  },
+  "operator_counts": {
+    "add": 187,
+    "multiply": 92,
+    "right_multiply": 4,
+    "left_multiply": 6
+  },
+  "parameter_counts": {
+    "item_bias.weight": 211,
+    "user.weight": 39,
+    "item.weight": 39
+  },
+  "first_round_parameter_counts": {
+    "item_bias.weight": 109,
+    "user.weight": 19,
+    "item.weight": 13
+  },
+  "manifest_sha256": "239c6206de786b1094be3682eb2fcd35b9a15ec618c8576a61c37025a505a58b",
+  "same_corpus_scope": "new filtered/split cohort, not untouched external test data",
+  "editor_independence_scope": "two independent editor runs; each frozen policy transfers across three training seeds; six scores are not six independent editor runs",
+  "status": "superseded_intermediate",
+  "replacement": "reports/v3_neutral/summary.json",
+  "reason": "Two retained descriptions were explicit No overview found placeholders; rerun on the corrected cohort required."
+}

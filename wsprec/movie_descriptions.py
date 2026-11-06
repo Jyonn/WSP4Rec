@@ -12,6 +12,7 @@ import re
 import unicodedata
 from collections import Counter, defaultdict
 from pathlib import Path
+from .description_quality import has_public_description
 
 
 def normalize_title(value):
@@ -46,7 +47,7 @@ def match_records(items, source_rows, overrides=None):
     index = defaultdict(set)
     year_index = defaultdict(list)
     for row_id, record in enumerate(source_rows):
-        if not record.get('overview') or not str(record['overview']).strip():
+        if not has_public_description(record.get('overview')):
             continue
         record['source_row'] = row_id
         variants, _ = title_variants(str(record['name']))

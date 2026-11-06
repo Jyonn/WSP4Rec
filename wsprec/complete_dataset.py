@@ -7,6 +7,7 @@ import tempfile
 from pathlib import Path
 
 import numpy as np
+from .description_quality import has_public_description
 
 
 SEED = 20261106
@@ -28,8 +29,7 @@ def build_records(raw, matched, seed=SEED):
 
     retained_items = sorted(item for item, movie in catalogue.items()
                             if movie["description_available"] is True
-                            and isinstance(movie["description"], str)
-                            and movie["description"].strip())
+                            and has_public_description(movie["description"]))
     filtered = rows[np.isin(rows[:, 1], retained_items)]
     original_users = np.unique(rows[:, 0])
     users, counts = np.unique(filtered[:, 0], return_counts=True)
@@ -120,7 +120,7 @@ def prepare(raw_path, metadata_path, cache, destination, seed=SEED):
             np.save(staging / f"{name}.npy", features[indices])
         manifest.update({
             "seed": seed,
-            "item_rule": "Metadata description_available is true and stripped description is nonempty.",
+            "item_rule": "Reliable matched public description; nonempty and not an explicit missing-description placeholder.",
             "user_rule": "Retain users with at least three interactions after filtering items.",
             "split_rule": "Within user sort by timestamp then original item ID. Floor 80% and 90% "
                           "boundaries, adjusted to leave at least one example in each split.",
@@ -139,7 +139,7 @@ def main():
     parser.add_argument("--raw", type=Path, default=Path("data/ml-100k/u.data"))
     parser.add_argument("--metadata", type=Path, default=Path("data/movie_descriptions/matched_movies.json"))
     parser.add_argument("--cache", type=Path, default=Path("runs/followup/llama3"))
-    parser.add_argument("--output", type=Path, default=Path("data/ml-100k-description-complete"))
+    parser.add_argument("--output", type=Path, default=Path("data/ml-100k-description-complete-v3"))
     args = parser.parse_args()
     result = prepare(args.raw, args.metadata, args.cache, args.output)
     print(json.dumps({key: result[key] for key in ("counts", "removals", "split_sizes")}, indent=2))

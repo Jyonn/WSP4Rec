@@ -2,6 +2,7 @@
 import csv
 import hashlib
 import json
+import os
 import shutil
 import zipfile
 from collections import Counter
@@ -9,8 +10,9 @@ from pathlib import Path
 import numpy as np
 
 ROOT=Path(__file__).resolve().parents[1]
-OUT=ROOT/'runs/v2_neutral'
-REPORT=ROOT/'reports/v2_neutral'
+OUT=ROOT/os.environ.get('WSPREC_RUN_DIR','runs/v3_neutral')
+DATA=ROOT/os.environ.get('WSPREC_DATA_DIR','data/ml-100k-description-complete-v3')
+REPORT=ROOT/os.environ.get('WSPREC_REPORT_DIR','reports/v3_neutral')
 SEEDS=('42','43','44')
 
 
@@ -24,7 +26,7 @@ def main():
     prior_integrity=json.loads(prior_path.read_text()) if prior_path.exists() else {'replayed_scored_patches':0,'wall_seconds':0}
     REPORT.mkdir(parents=True,exist_ok=True);(REPORT/'evidence').mkdir(exist_ok=True)
     for source,name in ((OUT/'frozen_manifest.json','frozen_manifest.json'),(OUT/'training_summary.json','training_summary.json'),
-        (ROOT/'data/ml-100k-description-complete/manifest.json','dataset_manifest.json'),(OUT/'editor_assignments.json','editor_assignments.json'),
+        (DATA/'manifest.json','dataset_manifest.json'),(OUT/'editor_assignments.json','editor_assignments.json'),
         (OUT/'consistency_audit.json','consistency_audit.json')):
         shutil.copy2(source,REPORT/'evidence'/name)
     all_evaluations={};raw={};operator_counts=Counter();parameter_counts=Counter();first_parameter_counts=Counter()
@@ -95,18 +97,34 @@ def main():
         'control_candidate_queries':len(control_results),'invalid_control_candidates':sum(r['error'] is not None for r in control_results),
         'candidate_execution_wall_seconds':sum(d['wall_seconds'] for v in all_evaluations.values() for d in v),
         'test_reporting_wall_seconds':result['wall_seconds'],'new_embedding_gpu_seconds':0,
+        'reference_validation_evaluations':len(json.loads((OUT/'references/validation.json').read_text())['results']),
+        'ease_reference_fit_and_validation_wall_seconds':json.loads((OUT/'references/validation.json').read_text())['wall_seconds'],
+        'unmetered_compute':['dataset preparation','control asset construction','editor numeric inspection and asset construction','popular-reference and Gram construction'],
         'integrity_replay_evaluations':integrity['replayed_scored_patches']+prior_integrity['replayed_scored_patches'],
         'integrity_replay_wall_seconds':integrity['wall_seconds']+prior_integrity['wall_seconds'],
         'integrity_passes':2 if prior_path.exists() else 1,
         'text_cost_scope':'reuse individually encoded Llama-3 features by metadata filtering/reindexing; prior encoding cost not zero and recorded in reports/followup',
         'editor_input_tokens':None,'editor_output_tokens':None,'editor_billed_usd':None,'editor_total_inference_wall_seconds':None,
         'timing_scope':'inside-operation walls, not end-to-end development/coordination cost','numeric_assets':numeric}
+    prior_costs=ROOT/'reports/v2_neutral/costs.json'
+    if OUT.name=='v3_neutral' and prior_costs.exists():
+        previous=json.loads(prior_costs.read_text())
+        costs['superseded_intermediate']=previous
+        costs['including_intermediate']={k:costs[k]+previous[k] for k in ('training_trials','training_wall_seconds','editor_trajectories','editor_generation_turns','editor_candidate_queries','control_candidate_queries','candidate_execution_wall_seconds','integrity_replay_evaluations','integrity_replay_wall_seconds','test_reporting_wall_seconds','ease_reference_fit_and_validation_wall_seconds','reference_validation_evaluations')}
+    notes=OUT/'execution_notes.json'
+    if notes.exists():
+        costs['execution_notes']=json.loads(notes.read_text())
+        shutil.copy2(notes,REPORT/'evidence/execution_notes.json')
     (REPORT/'costs.json').write_text(json.dumps(costs,indent=2))
     summary={'dataset':json.loads((REPORT/'evidence/dataset_manifest.json').read_text()),'aggregates':aggregates,
         'references':{k:v['summary'] for k,v in result['references'].items()},'costs':costs,'prompt_audit':audit,
         'operator_counts':dict(operator_counts),'parameter_counts':dict(parameter_counts),'first_round_parameter_counts':dict(first_parameter_counts),
+        'no_op_trajectories':[k for k in assignments if manifest['choices'][k]['selection'] is None],
+        'transfer_invalid_cases':[{'objective':obj,'seed':seed,'trajectory':key,'error':value['transfer_error']} for obj,by_seed in result['objectives'].items() for seed,methods in by_seed.items() for key,value in methods.items() if value.get('transfer_error')],
         'manifest_sha256':result['manifest_sha256'],'same_corpus_scope':'new filtered/split cohort, not untouched external test data',
         'editor_independence_scope':'two independent editor runs; each frozen policy transfers across three training seeds; six scores are not six independent editor runs'}
+    intervals={obj:{seed:{key:value['paired_bootstrap_vs_base'] for key,value in methods.items() if 'paired_bootstrap_vs_base' in value} for seed,methods in by_seed.items()} for obj,by_seed in result['objectives'].items()}
+    (REPORT/'paired_user_intervals.json').write_text(json.dumps({'scope':'paired users conditional on a fixed trained model and selected policy; not inference over editor calls','results':intervals},indent=2))
     (REPORT/'summary.json').write_text(json.dumps(summary,indent=2))
     print(json.dumps({'aggregates':aggregates,'costs':costs,'prompt_audit':audit},indent=2))
 

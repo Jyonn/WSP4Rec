@@ -1,0 +1,6 @@
+{
+  "interrupted_dispatch_attempts": 1,
+  "scope": "One followup_task invocation for mse-none-blind-r0 round2 had no acknowledgement when the desktop turn was interrupted. Its execution/inference charge cannot be confirmed. The followup was resumed; only one four-candidate round2 batch was evaluated.",
+  "extra_candidate_evaluations_from_interruption": 0,
+  "accounting": "Saved completed dispatch records and this uncertain attempt are listed separately; monetary cost remains unknown."
+}

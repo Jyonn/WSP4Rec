@@ -1,0 +1,31 @@
+{
+  "scope": "Research report self-review; no new hypothesis or direction supplied to editors.",
+  "contribution": {
+    "status": "limited empirical probe",
+    "evidence": "Generic patch interface, matched text catalogue and exact candidate/snapshot evidence; no novel recommendation algorithm claimed."
+  },
+  "clarity": {
+    "status": "pass with explicit limits",
+    "evidence": "Dataset, prompt, model, compiler, selection, per-seed results and costs preserved."
+  },
+  "empirical_strength": {
+    "status": "limited",
+    "evidence": "Two independent editor replicates; mixed results across conditions and below EASE contextual reference. No claim of general improvement or superiority."
+  },
+  "evaluation": {
+    "status": "limited",
+    "evidence": "One filtered MovieLens cohort; full-catalogue metrics, groups and duplicate-text diagnostic. Controls not fully matched in search space or adaptive behavior."
+  },
+  "method": {
+    "status": "bounded scope",
+    "evidence": "No fitting or forward scoring by editors. Changes bounded to 50% global relative L2. Instruction allowlists are not OS isolation; generic invalid feedback may affect blind candidate feasibility."
+  },
+  "claim_checks": {
+    "description_not_above_title_in_corresponding_condition_means": true,
+    "weight_access_not_consistently_better_in_condition_means": true,
+    "internal_motivation_inferred": false,
+    "untouched_external_test_claimed": false,
+    "editor_replicates_conflated_with_training_seeds": false,
+    "unavailable_token_or_money_cost_fabricated": false
+  }
+}

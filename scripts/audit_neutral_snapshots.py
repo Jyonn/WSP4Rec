@@ -7,7 +7,7 @@ from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 import numpy as np
 import torch
-from wsprec.neutral_study import OUT,ROOT,cp,data,quick_metric,scores,save,digest
+from wsprec.neutral_study import OUT,ROOT,DATA,cp,data,quick_metric,scores,save,digest
 from wsprec.tensor_edits import compile_patch
 
 
@@ -15,7 +15,7 @@ def main():
     torch.set_num_threads(1);started=time.monotonic();train,valid=data();bases={o:cp(o)['state'] for o in ('mse','bpr')}
     inputs={}
     for path in [ROOT/'wsprec/neutral_study.py',ROOT/'wsprec/tensor_edits.py',ROOT/'wsprec/study.py',ROOT/'wsprec/study_metrics.py',ROOT/'wsprec/cli.py',
-        OUT/'training_summary.json',OUT/'editor_assignments.json',ROOT/'data/ml-100k-description-complete/train.npy',ROOT/'data/ml-100k-description-complete/valid.npy']:
+        OUT/'training_summary.json',OUT/'editor_assignments.json',DATA/'train.npy',DATA/'valid.npy']:
         inputs[str(path.relative_to(ROOT))]=digest(path)
     training=json.loads((OUT/'training_summary.json').read_text())
     for obj in ('mse','bpr'):

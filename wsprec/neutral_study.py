@@ -4,6 +4,7 @@ import hashlib
 import json
 import shutil
 import time
+import os
 from collections import Counter
 from pathlib import Path
 
@@ -15,8 +16,9 @@ from .study_metrics import rank_metrics, paired_bootstrap
 from .tensor_edits import compile_patch, _asset_array
 
 ROOT=Path(__file__).resolve().parents[1]
-DATA=ROOT/'data/ml-100k-description-complete'
-OUT=ROOT/'runs/v2_neutral'
+DATA=ROOT/os.environ.get('WSPREC_DATA_DIR','data/ml-100k-description-complete-v3')
+OUT=ROOT/os.environ.get('WSPREC_RUN_DIR','runs/v3_neutral')
+PROTOCOL=ROOT/os.environ.get('WSPREC_PROTOCOL','neutral_protocol_v3.json')
 OBJECTIVES=('mse','bpr')
 TEXTS=('none','title','description')
 VISIBILITIES=('visible','blind')
@@ -260,7 +262,7 @@ def freeze():
         if feedback!=expected:raise ValueError('feedback is not the prescribed score-only data')
     for obj in OBJECTIVES:
         for family in CONTROL_FAMILIES:choices[f'{obj}-{family}']=choose(f'{obj}-{family}',obj)
-    for path in [ROOT/'neutral_protocol_v2.json',ROOT/'editor_interface_v2.json',ROOT/'editor_prompt_v2.txt',
+    for path in [PROTOCOL,ROOT/'editor_interface_v2.json',ROOT/'editor_prompt_v2.txt',ROOT/'wsprec/description_quality.py',ROOT/'wsprec/complete_dataset.py',
         ROOT/'wsprec/neutral_study.py',ROOT/'wsprec/tensor_edits.py',ROOT/'wsprec/study.py',ROOT/'wsprec/study_metrics.py',ROOT/'wsprec/cli.py',
         OUT/'training_summary.json',OUT/'consistency_audit.json',DATA/'manifest.json',DATA/'train.npy',DATA/'valid.npy',
         DATA/'splits.npz',DATA/'movies.json',DATA/'title_only.npy',DATA/'title_description.npy']:

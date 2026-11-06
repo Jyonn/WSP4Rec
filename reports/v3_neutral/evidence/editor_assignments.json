@@ -1,0 +1,310 @@
+{
+  "mse-none-visible-r0": {
+    "objective": "mse",
+    "text": "none",
+    "visibility": "visible",
+    "replicate": 0,
+    "allowlist": [
+      "editor_interface_v2.json",
+      "runs/v3_neutral/inputs/mse_model.json",
+      "runs/v3_neutral/inputs/mse_parameters.npz"
+    ],
+    "output_directory": "runs/v3_neutral/editors/mse-none-visible-r0"
+  },
+  "mse-none-visible-r1": {
+    "objective": "mse",
+    "text": "none",
+    "visibility": "visible",
+    "replicate": 1,
+    "allowlist": [
+      "editor_interface_v2.json",
+      "runs/v3_neutral/inputs/mse_model.json",
+      "runs/v3_neutral/inputs/mse_parameters.npz"
+    ],
+    "output_directory": "runs/v3_neutral/editors/mse-none-visible-r1"
+  },
+  "mse-none-blind-r0": {
+    "objective": "mse",
+    "text": "none",
+    "visibility": "blind",
+    "replicate": 0,
+    "allowlist": [
+      "editor_interface_v2.json",
+      "runs/v3_neutral/inputs/mse_model.json"
+    ],
+    "output_directory": "runs/v3_neutral/editors/mse-none-blind-r0"
+  },
+  "mse-none-blind-r1": {
+    "objective": "mse",
+    "text": "none",
+    "visibility": "blind",
+    "replicate": 1,
+    "allowlist": [
+      "editor_interface_v2.json",
+      "runs/v3_neutral/inputs/mse_model.json"
+    ],
+    "output_directory": "runs/v3_neutral/editors/mse-none-blind-r1"
+  },
+  "mse-title-visible-r0": {
+    "objective": "mse",
+    "text": "title",
+    "visibility": "visible",
+    "replicate": 0,
+    "allowlist": [
+      "editor_interface_v2.json",
+      "runs/v3_neutral/inputs/mse_model.json",
+      "runs/v3_neutral/inputs/mse_parameters.npz",
+      "runs/v3_neutral/inputs/title_items.json",
+      "runs/v3_neutral/inputs/title_features.npy"
+    ],
+    "output_directory": "runs/v3_neutral/editors/mse-title-visible-r0"
+  },
+  "mse-title-visible-r1": {
+    "objective": "mse",
+    "text": "title",
+    "visibility": "visible",
+    "replicate": 1,
+    "allowlist": [
+      "editor_interface_v2.json",
+      "runs/v3_neutral/inputs/mse_model.json",
+      "runs/v3_neutral/inputs/mse_parameters.npz",
+      "runs/v3_neutral/inputs/title_items.json",
+      "runs/v3_neutral/inputs/title_features.npy"
+    ],
+    "output_directory": "runs/v3_neutral/editors/mse-title-visible-r1"
+  },
+  "mse-title-blind-r0": {
+    "objective": "mse",
+    "text": "title",
+    "visibility": "blind",
+    "replicate": 0,
+    "allowlist": [
+      "editor_interface_v2.json",
+      "runs/v3_neutral/inputs/mse_model.json",
+      "runs/v3_neutral/inputs/title_items.json",
+      "runs/v3_neutral/inputs/title_features.npy"
+    ],
+    "output_directory": "runs/v3_neutral/editors/mse-title-blind-r0"
+  },
+  "mse-title-blind-r1": {
+    "objective": "mse",
+    "text": "title",
+    "visibility": "blind",
+    "replicate": 1,
+    "allowlist": [
+      "editor_interface_v2.json",
+      "runs/v3_neutral/inputs/mse_model.json",
+      "runs/v3_neutral/inputs/title_items.json",
+      "runs/v3_neutral/inputs/title_features.npy"
+    ],
+    "output_directory": "runs/v3_neutral/editors/mse-title-blind-r1"
+  },
+  "mse-description-visible-r0": {
+    "objective": "mse",
+    "text": "description",
+    "visibility": "visible",
+    "replicate": 0,
+    "allowlist": [
+      "editor_interface_v2.json",
+      "runs/v3_neutral/inputs/mse_model.json",
+      "runs/v3_neutral/inputs/mse_parameters.npz",
+      "runs/v3_neutral/inputs/description_items.json",
+      "runs/v3_neutral/inputs/description_features.npy"
+    ],
+    "output_directory": "runs/v3_neutral/editors/mse-description-visible-r0"
+  },
+  "mse-description-visible-r1": {
+    "objective": "mse",
+    "text": "description",
+    "visibility": "visible",
+    "replicate": 1,
+    "allowlist": [
+      "editor_interface_v2.json",
+      "runs/v3_neutral/inputs/mse_model.json",
+      "runs/v3_neutral/inputs/mse_parameters.npz",
+      "runs/v3_neutral/inputs/description_items.json",
+      "runs/v3_neutral/inputs/description_features.npy"
+    ],
+    "output_directory": "runs/v3_neutral/editors/mse-description-visible-r1"
+  },
+  "mse-description-blind-r0": {
+    "objective": "mse",
+    "text": "description",
+    "visibility": "blind",
+    "replicate": 0,
+    "allowlist": [
+      "editor_interface_v2.json",
+      "runs/v3_neutral/inputs/mse_model.json",
+      "runs/v3_neutral/inputs/description_items.json",
+      "runs/v3_neutral/inputs/description_features.npy"
+    ],
+    "output_directory": "runs/v3_neutral/editors/mse-description-blind-r0"
+  },
+  "mse-description-blind-r1": {
+    "objective": "mse",
+    "text": "description",
+    "visibility": "blind",
+    "replicate": 1,
+    "allowlist": [
+      "editor_interface_v2.json",
+      "runs/v3_neutral/inputs/mse_model.json",
+      "runs/v3_neutral/inputs/description_items.json",
+      "runs/v3_neutral/inputs/description_features.npy"
+    ],
+    "output_directory": "runs/v3_neutral/editors/mse-description-blind-r1"
+  },
+  "bpr-none-visible-r0": {
+    "objective": "bpr",
+    "text": "none",
+    "visibility": "visible",
+    "replicate": 0,
+    "allowlist": [
+      "editor_interface_v2.json",
+      "runs/v3_neutral/inputs/bpr_model.json",
+      "runs/v3_neutral/inputs/bpr_parameters.npz"
+    ],
+    "output_directory": "runs/v3_neutral/editors/bpr-none-visible-r0"
+  },
+  "bpr-none-visible-r1": {
+    "objective": "bpr",
+    "text": "none",
+    "visibility": "visible",
+    "replicate": 1,
+    "allowlist": [
+      "editor_interface_v2.json",
+      "runs/v3_neutral/inputs/bpr_model.json",
+      "runs/v3_neutral/inputs/bpr_parameters.npz"
+    ],
+    "output_directory": "runs/v3_neutral/editors/bpr-none-visible-r1"
+  },
+  "bpr-none-blind-r0": {
+    "objective": "bpr",
+    "text": "none",
+    "visibility": "blind",
+    "replicate": 0,
+    "allowlist": [
+      "editor_interface_v2.json",
+      "runs/v3_neutral/inputs/bpr_model.json"
+    ],
+    "output_directory": "runs/v3_neutral/editors/bpr-none-blind-r0"
+  },
+  "bpr-none-blind-r1": {
+    "objective": "bpr",
+    "text": "none",
+    "visibility": "blind",
+    "replicate": 1,
+    "allowlist": [
+      "editor_interface_v2.json",
+      "runs/v3_neutral/inputs/bpr_model.json"
+    ],
+    "output_directory": "runs/v3_neutral/editors/bpr-none-blind-r1"
+  },
+  "bpr-title-visible-r0": {
+    "objective": "bpr",
+    "text": "title",
+    "visibility": "visible",
+    "replicate": 0,
+    "allowlist": [
+      "editor_interface_v2.json",
+      "runs/v3_neutral/inputs/bpr_model.json",
+      "runs/v3_neutral/inputs/bpr_parameters.npz",
+      "runs/v3_neutral/inputs/title_items.json",
+      "runs/v3_neutral/inputs/title_features.npy"
+    ],
+    "output_directory": "runs/v3_neutral/editors/bpr-title-visible-r0"
+  },
+  "bpr-title-visible-r1": {
+    "objective": "bpr",
+    "text": "title",
+    "visibility": "visible",
+    "replicate": 1,
+    "allowlist": [
+      "editor_interface_v2.json",
+      "runs/v3_neutral/inputs/bpr_model.json",
+      "runs/v3_neutral/inputs/bpr_parameters.npz",
+      "runs/v3_neutral/inputs/title_items.json",
+      "runs/v3_neutral/inputs/title_features.npy"
+    ],
+    "output_directory": "runs/v3_neutral/editors/bpr-title-visible-r1"
+  },
+  "bpr-title-blind-r0": {
+    "objective": "bpr",
+    "text": "title",
+    "visibility": "blind",
+    "replicate": 0,
+    "allowlist": [
+      "editor_interface_v2.json",
+      "runs/v3_neutral/inputs/bpr_model.json",
+      "runs/v3_neutral/inputs/title_items.json",
+      "runs/v3_neutral/inputs/title_features.npy"
+    ],
+    "output_directory": "runs/v3_neutral/editors/bpr-title-blind-r0"
+  },
+  "bpr-title-blind-r1": {
+    "objective": "bpr",
+    "text": "title",
+    "visibility": "blind",
+    "replicate": 1,
+    "allowlist": [
+      "editor_interface_v2.json",
+      "runs/v3_neutral/inputs/bpr_model.json",
+      "runs/v3_neutral/inputs/title_items.json",
+      "runs/v3_neutral/inputs/title_features.npy"
+    ],
+    "output_directory": "runs/v3_neutral/editors/bpr-title-blind-r1"
+  },
+  "bpr-description-visible-r0": {
+    "objective": "bpr",
+    "text": "description",
+    "visibility": "visible",
+    "replicate": 0,
+    "allowlist": [
+      "editor_interface_v2.json",
+      "runs/v3_neutral/inputs/bpr_model.json",
+      "runs/v3_neutral/inputs/bpr_parameters.npz",
+      "runs/v3_neutral/inputs/description_items.json",
+      "runs/v3_neutral/inputs/description_features.npy"
+    ],
+    "output_directory": "runs/v3_neutral/editors/bpr-description-visible-r0"
+  },
+  "bpr-description-visible-r1": {
+    "objective": "bpr",
+    "text": "description",
+    "visibility": "visible",
+    "replicate": 1,
+    "allowlist": [
+      "editor_interface_v2.json",
+      "runs/v3_neutral/inputs/bpr_model.json",
+      "runs/v3_neutral/inputs/bpr_parameters.npz",
+      "runs/v3_neutral/inputs/description_items.json",
+      "runs/v3_neutral/inputs/description_features.npy"
+    ],
+    "output_directory": "runs/v3_neutral/editors/bpr-description-visible-r1"
+  },
+  "bpr-description-blind-r0": {
+    "objective": "bpr",
+    "text": "description",
+    "visibility": "blind",
+    "replicate": 0,
+    "allowlist": [
+      "editor_interface_v2.json",
+      "runs/v3_neutral/inputs/bpr_model.json",
+      "runs/v3_neutral/inputs/description_items.json",
+      "runs/v3_neutral/inputs/description_features.npy"
+    ],
+    "output_directory": "runs/v3_neutral/editors/bpr-description-blind-r0"
+  },
+  "bpr-description-blind-r1": {
+    "objective": "bpr",
+    "text": "description",
+    "visibility": "blind",
+    "replicate": 1,
+    "allowlist": [
+      "editor_interface_v2.json",
+      "runs/v3_neutral/inputs/bpr_model.json",
+      "runs/v3_neutral/inputs/description_items.json",
+      "runs/v3_neutral/inputs/description_features.npy"
+    ],
+    "output_directory": "runs/v3_neutral/editors/bpr-description-blind-r1"
+  }
+}

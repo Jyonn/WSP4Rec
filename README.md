@@ -1,5 +1,12 @@
 # WSP4Rec
 
+The latest experiment rebuilds MovieLens after removing films without a reliable
+public description, including explicit missing-overview placeholders: 943 users,
+1,568 films and 97,445 interactions. It uses fresh Astra contexts, a generic
+tensor-edit interface, and patch-only submissions without directional hypotheses
+or requested rationales. The original studies below remain historical records.
+
+
 MovieLens-100K + a two-field Factorization Machine. With only user/item fields,
 this FM is mathematically equivalent to biased matrix factorization. The initial
 training objective remains explicit rating prediction (MSE). Primary evaluation
@@ -123,7 +130,9 @@ The frozen first study is unchanged. New metadata preparation retrieves genuine
 movie overviews from the public
 [movie_descriptors dataset](https://huggingface.co/datasets/mt0rm0/movie_descriptors),
 pinning revision and content hashes. Conservative title/alias/year matching
-currently covers 1,570/1,682 movies (93.3%). The other 112 stay explicitly missing
+initially reported 1,570/1,682 matches (93.3%); later QA identified two of these
+as explicit missing-overview placeholders. The corrected reliable count is 1,568.
+The original matching output is preserved historically. The other 112 stayed explicitly missing
 or ambiguous; no fuzzy match or generated plot is silently substituted.
 See [coverage](reports/followup/description_coverage.json) and
 [identity matches](reports/followup/description_matches.csv).
@@ -170,6 +179,96 @@ trajectories added a positive support prior. Ranking gains do not establish
 popularity debiasing. The audit concerns saved explicit rationales and diagnostics,
 not unavailable private internal reasoning.
 
-No new recommendation/test score is inferred from representation extraction.
+No recommendation/test score is inferred from representation extraction alone.
 Future comparisons must separate encoder replacement from added descriptions,
 account for missing-description coverage, and freeze a new evaluation protocol.
+
+## Description-complete neutral rerun (2026-11-06)
+
+The corrected cohort has 943 users, 1,568 films and 97,445 interactions.
+Filtering removes 114 films and 2,555 interactions before rebuilding per-user
+chronological splits (77,573 train / 9,691 validation / 10,181 test).
+Retained titles have reliable matches in one pinned public source; removal does
+not establish that a description is unavailable everywhere. Two explicit
+`No overview found.` placeholders invalidate the intermediate 1,570-film run,
+which is preserved under `reports/v2_neutral/` with its status and full cost record.
+
+Protocol: `neutral_protocol_v3.json`; shared generic interface:
+`editor_interface_v2.json`; exact instruction template: `editor_prompt_v2.txt`.
+Fresh native Astra editors see only their allowlisted model specification,
+observation counts and condition-specific weights/text. They receive no prior
+results or directional hypotheses and submit only numeric patches, without
+requested hypotheses or rationales. The interface provides generic arithmetic
+operations over all actual parameters. It is allowlist-based instruction
+isolation, not an operating-system security boundary.
+
+Each of 24 editor trajectories has two rounds of four candidates; invalid
+candidates consume a slot. The validation-selected policy, including unchanged
+fallback, is frozen and transferred unchanged to two further training seeds.
+Two independent editor replicates are distinct from three training-seed scores.
+There are also four predefined eight-query controls per objective; their search
+spaces and adaptivity are not fully matched to the editors.
+
+The text conditions reuse aligned title-only and title+description features from
+the same pinned Meta-Llama-3-8B encoder. No retained item uses missing-description
+fallback, and no additional GPU encoding is needed. Historical encoding cost is
+recorded separately. Both training objectives use 16-dimensional biased matrix
+factorization and full-catalogue ranking at 10.
+
+```bash
+python -m wsprec.complete_dataset
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -m wsprec.neutral_study train
+python -m wsprec.neutral_study export
+python scripts/prepare_neutral_prompts.py
+python -m wsprec.neutral_study controls
+python -m wsprec.neutral_study references
+# Run fresh editors using the exact saved prompt and each exported allowlist.
+# Evaluate each round once and return only candidate IDs, scores and errors.
+python scripts/process_neutral_submissions.py --round 1 TRAJECTORY
+python scripts/process_neutral_submissions.py --round 2 TRAJECTORY
+python scripts/audit_neutral_snapshots.py
+python -m wsprec.neutral_study freeze
+python -m wsprec.neutral_study final
+python scripts/collect_neutral_results.py
+python scripts/build_neutral_report.py
+```
+
+Final mean test NDCG@10 (three training seeds; editor rows also average two
+independent editor replicates):
+
+| Condition | MSE | BPR |
+| --- | ---: | ---: |
+| Original model | 0.05826 | 0.10568 |
+| No text / weights visible | 0.06939 | 0.10153 |
+| No text / weights hidden | 0.06613 | 0.10761 |
+| Title / weights visible | 0.06858 | 0.10885 |
+| Title / weights hidden | 0.06503 | 0.10842 |
+| Title + description / weights visible | 0.06266 | 0.10752 |
+| Title + description / weights hidden | 0.06502 | 0.10812 |
+
+In this run, description-condition means did not exceed their corresponding
+title-only means, and access to weights did not consistently beat blind editing.
+The EASE contextual reference scored 0.12324. These are observations of the
+frozen policies, not claims about internal motivations or general superiority.
+One trajectory selected the unchanged model; no transfer violated the bounds.
+All 227 valid editor/control patches replayed exactly before test opening.
+
+[Chinese report](output/pdf/WSP4Rec_description_complete_neutral_report.pdf),
+[complete results](reports/v3_neutral/summary.json),
+[per-seed results](reports/v3_neutral/test_results.csv),
+[paired-user intervals](reports/v3_neutral/paired_user_intervals.json),
+[prompt audit](reports/v3_neutral/prompt_audit.json), and
+[costs](reports/v3_neutral/costs.json) contain the evidence. The final run used
+192 editor candidates (29 invalid) and 48 recorded generation turns. Including
+the superseded intermediate run gives 384 editor candidates and 96 recorded
+turns; one interrupted, unacknowledged dispatch attempt is listed separately.
+Its inference execution/charge cannot be confirmed. Token counts and monetary
+charges are unavailable, and compute timings do not cover every preparation,
+inspection or coordination operation.
+
+Dataset preparation, scoring and final reporting refuse to overwrite existing
+outputs. `final` claims an exclusive test-open marker before reading labels.
+The snapshot audit replays validation only and provides no editor feedback.
+Raw ratings, descriptions, features, model checkpoints and private ID mappings
+are not committed. Native subscription token counts and per-call monetary
+charges remain unavailable (`null`), not zero.
