@@ -11,6 +11,7 @@ dependencies = ["torch>=2.2", "numpy>=1.24"]
 [project.optional-dependencies]
 text = ["transformers>=4.51"]
 report = ["reportlab>=4.0", "pypdf>=4.0"]
+descriptions = ["pyarrow>=10"]
 
 [project.scripts]
 wsprec = "wsprec.cli:main"

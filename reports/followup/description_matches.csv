@@ -1,0 +1,1683 @@
+item_id,title,description_available,match_method,source_row,source_name,source_year
+0,Toy Story (1995),True,exact_title_year,0,Toy Story,1995
+1,GoldenEye (1995),True,exact_title_year,9,GoldenEye,1995
+2,Four Rooms (1995),True,exact_title_year,17,Four Rooms,1995
+3,Get Shorty (1995),True,exact_title_year,20,Get Shorty,1995
+4,Copycat (1995),True,exact_title_year,21,Copycat,1995
+5,Shanghai Triad (Yao a yao yao dao waipo qiao) (1995),True,exact_title_year,29,Shanghai Triad,1995
+6,Twelve Monkeys (1995),True,exact_title_year,31,Twelve Monkeys,1995
+7,Babe (1995),True,exact_title_year,32,Babe,1995
+8,Dead Man Walking (1995),True,exact_title_year,34,Dead Man Walking,1995
+9,Richard III (1995),True,exact_title_year,39,Richard III,1995
+10,Seven (Se7en) (1995),True,exact_title_year,45,Se7en,1995
+11,"Usual Suspects, The (1995)",True,exact_title_year,48,The Usual Suspects,1995
+12,Mighty Aphrodite (1995),True,exact_title_year,50,Mighty Aphrodite,1995
+13,"Postino, Il (1994)",False,unmatched,,,
+14,Mr. Holland's Opus (1995),True,exact_title_year,60,Mr. Holland's Opus,1995
+15,French Twist (Gazon maudit) (1995),True,exact_title_year,66,French Twist,1995
+16,From Dusk Till Dawn (1996),True,exact_title_year,68,From Dusk Till Dawn,1996
+17,"White Balloon, The (1995)",True,exact_title_year,78,The White Balloon,1995
+18,Antonia's Line (1995),True,exact_title_year,80,Antonia's Line,1995
+19,Angels and Insects (1995),True,exact_title_year,83,Angels and Insects,1995
+20,Muppet Treasure Island (1996),True,exact_title_year,104,Muppet Treasure Island,1996
+21,Braveheart (1995),True,exact_title_year,107,Braveheart,1995
+22,Taxi Driver (1976),True,exact_title_year,108,Taxi Driver,1976
+23,Rumble in the Bronx (1995),True,exact_title_year,109,Rumble in the Bronx,1995
+24,"Birdcage, The (1996)",True,exact_title_year,138,The Birdcage,1996
+25,"Brothers McMullen, The (1995)",True,exact_title_year,140,The Brothers McMullen,1995
+26,Bad Boys (1995),True,exact_title_year,141,Bad Boys,1995
+27,Apollo 13 (1995),True,exact_title_year,146,Apollo 13,1995
+28,Batman Forever (1995),True,exact_title_year,149,Batman Forever,1995
+29,Belle de jour (1967),True,exact_title_year,150,Belle de Jour,1967
+30,Crimson Tide (1995),True,exact_title_year,157,Crimson Tide,1995
+31,Crumb (1994),True,exact_title_year,158,Crumb,1994
+32,Desperado (1995),True,exact_title_year,159,Desperado,1995
+33,"Doom Generation, The (1995)",True,exact_title_year,162,The Doom Generation,1995
+34,Free Willy 2: The Adventure Home (1995),True,exact_title_year,165,Free Willy 2 - The Adventure Home,1995
+35,Mad Love (1995),True,exact_title_year,175,Mad Love,1995
+36,Nadja (1994),True,exact_title_year,180,Nadja,1994
+37,"Net, The (1995)",True,exact_title_year,181,The Net,1995
+38,Strange Days (1995),True,exact_title_year,194,Strange Days,1995
+39,"To Wong Foo, Thanks for Everything! Julie Newmar (1995)",True,exact_title_year,199,"To Wong Foo, Thanks for Everything! Julie Newmar",1995
+40,Billy Madison (1995),True,exact_title_year,212,Billy Madison,1995
+41,Clerks (1994),True,exact_title_year,218,Clerks,1994
+42,Disclosure (1994),True,exact_title_year,220,Disclosure,1994
+43,Dolores Claiborne (1994),True,exact_title_year_plusminus1,225,Dolores Claiborne,1995
+44,Eat Drink Man Woman (1994),True,exact_title_year,227,Eat Drink Man Woman,1994
+45,Exotica (1994),True,exact_title_year,228,Exotica,1994
+46,Ed Wood (1994),True,exact_title_year,230,Ed Wood,1994
+47,Hoop Dreams (1994),True,exact_title_year,241,Hoop Dreams,1994
+48,I.Q. (1994),True,exact_title_year,247,I.Q.,1994
+49,Star Wars (1977),True,exact_title_year,255,Star Wars,1977
+50,Legends of the Fall (1994),True,exact_title_year,261,Legends of the Fall,1994
+51,"Madness of King George, The (1994)",True,exact_title_year,267,The Madness of King George,1994
+52,Natural Born Killers (1994),True,exact_title_year,283,Natural Born Killers,1994
+53,Outbreak (1995),True,exact_title_year,287,Outbreak,1995
+54,"Professional, The (1994)",False,unmatched,,,
+55,Pulp Fiction (1994),True,exact_title_year,291,Pulp Fiction,1994
+56,Priest (1994),True,exact_title_year,294,Priest,1994
+57,Quiz Show (1994),True,exact_title_year,295,Quiz Show,1994
+58,Three Colors: Red (1994),True,exact_title_year,300,Three Colors: Red,1994
+59,Three Colors: Blue (1993),True,exact_title_year,301,Three Colors: Blue,1993
+60,Three Colors: White (1994),True,exact_title_year,302,Three Colors: White,1994
+61,Stargate (1994),True,exact_title_year,310,Stargate,1994
+62,"Santa Clause, The (1994)",True,exact_title_year,311,The Santa Clause,1994
+63,"Shawshank Redemption, The (1994)",True,exact_title_year,312,The Shawshank Redemption,1994
+64,What's Eating Gilbert Grape (1993),True,exact_title_year,330,What's Eating Gilbert Grape,1993
+65,While You Were Sleeping (1995),True,exact_title_year,332,While You Were Sleeping,1995
+66,Ace Ventura: Pet Detective (1994),True,exact_title_year,337,Ace Ventura: Pet Detective,1994
+67,"Crow, The (1994)",True,exact_title_year,346,The Crow,1994
+68,Forrest Gump (1994),True,exact_title_year,349,Forrest Gump,1994
+69,Four Weddings and a Funeral (1994),True,exact_title_year,350,Four Weddings and a Funeral,1994
+70,"Lion King, The (1994)",True,exact_title_year,357,The Lion King,1994
+71,"Mask, The (1994)",True,exact_title_year,360,The Mask,1994
+72,Maverick (1994),True,exact_title_year,361,Maverick,1994
+73,Faster Pussycat! Kill! Kill! (1965),True,exact_title_year,383,"Faster, Pussycat! Kill! Kill!",1965
+74,Brother Minister: The Assassination of Malcolm X (1994),True,exact_title_year_plusminus1,397,Brother Minister: The Assassination of Malcolm X,1995
+75,Carlito's Way (1993),True,exact_title_year,424,Carlito's Way,1993
+76,"Firm, The (1993)",True,exact_title_year,447,The Firm,1993
+77,Free Willy (1993),True,exact_title_year,448,Free Willy,1993
+78,"Fugitive, The (1993)",True,exact_title_year,450,The Fugitive,1993
+79,Hot Shots! Part Deux (1993),True,exact_title_year,459,Hot Shots! Part Deux,1993
+80,"Hudsucker Proxy, The (1994)",True,exact_title_year,464,The Hudsucker Proxy,1994
+81,Jurassic Park (1993),True,exact_title_year,473,Jurassic Park,1993
+82,Much Ado About Nothing (1993),True,exact_title_year,490,Much Ado About Nothing,1993
+83,Robert A. Heinlein's The Puppet Masters (1994),False,unmatched,,,
+84,"Ref, The (1994)",True,exact_title_year,507,The Ref,1994
+85,"Remains of the Day, The (1993)",True,exact_title_year,508,The Remains of the Day,1993
+86,Searching for Bobby Fischer (1993),True,exact_title_year,522,Searching for Bobby Fischer,1993
+87,Sleepless in Seattle (1993),True,exact_title_year,532,Sleepless in Seattle,1993
+88,Blade Runner (1982),True,exact_title_year,534,Blade Runner,1982
+89,So I Married an Axe Murderer (1993),True,exact_title_year,536,So I Married an Axe Murderer,1993
+90,"Nightmare Before Christmas, The (1993)",True,exact_title_year,544,The Nightmare Before Christmas,1993
+91,True Romance (1993),True,exact_title_year,548,True Romance,1993
+92,Welcome to the Dollhouse (1995),True,exact_title_year,554,Welcome to the Dollhouse,1995
+93,Home Alone (1990),True,exact_title_year,577,Home Alone,1990
+94,Aladdin (1992),True,exact_title_year,579,Aladdin,1992
+95,Terminator 2: Judgment Day (1991),True,exact_title_year,580,Terminator 2: Judgment Day,1991
+96,Dances with Wolves (1990),True,exact_title_year,581,Dances with Wolves,1990
+97,"Silence of the Lambs, The (1991)",True,exact_title_year,584,The Silence of the Lambs,1991
+98,Snow White and the Seven Dwarfs (1937),True,exact_title_year,585,Snow White and the Seven Dwarfs,1937
+99,Fargo (1996),True,exact_title_year,598,Fargo,1996
+100,Heavy Metal (1981),True,exact_title_year,600,Heavy Metal,1981
+101,"Aristocats, The (1970)",True,exact_title_year,606,The Aristocats,1970
+102,All Dogs Go to Heaven 2 (1996),True,exact_title_year,620,All Dogs Go to Heaven 2,1996
+103,Theodore Rex (1995),True,exact_title_year,623,Theodore Rex,1995
+104,Sgt. Bilko (1996),True,exact_title_year,626,Sgt. Bilko,1996
+105,Diabolique (1996),True,exact_title_year,629,Diabolique,1996
+106,Moll Flanders (1996),True,exact_title_year,636,Moll Flanders,1996
+107,Kids in the Hall: Brain Candy (1996),True,exact_title_year,647,Kids in the Hall: Brain Candy,1996
+108,Mystery Science Theater 3000: The Movie (1996),True,exact_title_year,654,Mystery Science Theater 3000: The Movie,1996
+109,Operation Dumbo Drop (1995),True,exact_title_year,669,Operation Dumbo Drop,1995
+110,"Truth About Cats & Dogs, The (1996)",True,exact_title_year,687,The Truth About Cats & Dogs,1996
+111,Flipper (1996),True,exact_title_year,690,Flipper,1996
+112,"Horseman on the Roof, The (Hussard sur le toit, Le) (1995)",True,exact_title_year,694,The Horseman on the Roof,1995
+113,Wallace & Gromit: The Best of Aardman Animation (1996),False,unmatched,,,
+114,"Haunted World of Edward D. Wood Jr., The (1995)",True,exact_title_year_plusminus1,699,"The Haunted World of Edward D. Wood, Jr.",1996
+115,Cold Comfort Farm (1995),True,exact_title_year,704,Cold Comfort Farm,1995
+116,"Rock, The (1996)",True,exact_title_year,708,The Rock,1996
+117,Twister (1996),True,exact_title_year,711,Twister,1996
+118,Maya Lin: A Strong Clear Vision (1994),True,exact_title_year_plusminus1,732,Maya Lin: A Strong Clear Vision,1995
+119,Striptease (1996),True,exact_title_year,735,Striptease,1996
+120,Independence Day (ID4) (1996),True,exact_title_year,751,Independence Day,1996
+121,"Cable Guy, The (1996)",True,exact_title_year,755,The Cable Guy,1996
+122,"Frighteners, The (1996)",True,exact_title_year,769,The Frighteners,1996
+123,Lone Star (1996),True,exact_title_year,770,Lone Star,1996
+124,Phenomenon (1996),True,exact_title_year,772,Phenomenon,1996
+125,"Spitfire Grill, The (1996)",True,exact_title_year,812,The Spitfire Grill,1996
+126,"Godfather, The (1972)",True,exact_title_year,821,The Godfather,1972
+127,Supercop (1992),False,unmatched,,,
+128,Bound (1996),True,exact_title_year,827,Bound,1996
+129,Kansas City (1996),True,exact_title_year,830,Kansas City,1996
+130,Breakfast at Tiffany's (1961),True,exact_title_year,861,Breakfast at Tiffany's,1961
+131,"Wizard of Oz, The (1939)",True,exact_title_year,878,The Wizard of Oz,1939
+132,Gone with the Wind (1939),True,exact_title_year,879,Gone with the Wind,1939
+133,Citizen Kane (1941),True,exact_title_year,882,Citizen Kane,1941
+134,2001: A Space Odyssey (1968),True,exact_title_year,883,2001: A Space Odyssey,1968
+135,Mr. Smith Goes to Washington (1939),True,exact_title_year,913,Mr. Smith Goes to Washington,1939
+136,Big Night (1996),True,exact_title_year,952,Big Night,1996
+137,D3: The Mighty Ducks (1996),True,exact_title_year,962,D3: The Mighty Ducks,1996
+138,"Love Bug, The (1969)",True,exact_title_year_plusminus1,967,The Love Bug,1968
+139,Homeward Bound: The Incredible Journey (1993),True,exact_title_year,972,Homeward Bound: The Incredible Journey,1993
+140,"20,000 Leagues Under the Sea (1954)",True,exact_title_year,976,"20,000 Leagues Under the Sea",1954
+141,Bedknobs and Broomsticks (1971),True,exact_title_year,988,Bedknobs and Broomsticks,1971
+142,"Sound of Music, The (1965)",True,exact_title_year,992,The Sound of Music,1965
+143,Die Hard (1988),True,exact_title_year,993,Die Hard,1988
+144,"Lawnmower Man, The (1992)",True,exact_title_year,994,The Lawnmower Man,1992
+145,Unhook the Stars (1996),True,exact_title_year,995,Unhook the Stars,1996
+146,"Long Kiss Goodnight, The (1996)",True,exact_title_year,1004,The Long Kiss Goodnight,1996
+147,"Ghost and the Darkness, The (1996)",True,exact_title_year,1005,The Ghost and the Darkness,1996
+148,Jude (1996),True,exact_title_year,1011,Jude,1996
+149,Swingers (1996),True,exact_title_year,1015,Swingers,1996
+150,Willy Wonka and the Chocolate Factory (1971),True,exact_title_year,1027,Willy Wonka & the Chocolate Factory,1971
+151,Sleeper (1973),True,exact_title_year,1030,Sleeper,1973
+152,"Fish Called Wanda, A (1988)",True,exact_title_year,1032,A Fish Called Wanda,1988
+153,Monty Python's Life of Brian (1979),False,unmatched,,,
+154,Dirty Dancing (1987),True,exact_title_year,1041,Dirty Dancing,1987
+155,Reservoir Dogs (1992),True,exact_title_year,1042,Reservoir Dogs,1992
+156,Platoon (1986),True,exact_title_year,1043,Platoon,1986
+157,Weekend at Bernie's (1989),True,exact_title_year,1044,Weekend at Bernie's,1989
+158,Basic Instinct (1992),True,exact_title_year,1045,Basic Instinct,1992
+159,Glengarry Glen Ross (1992),True,exact_title_year,1048,Glengarry Glen Ross,1992
+160,Top Gun (1986),True,exact_title_year,1054,Top Gun,1986
+161,On Golden Pond (1981),True,exact_title_year,1073,On Golden Pond,1981
+162,"Return of the Pink Panther, The (1974)",True,exact_title_year_plusminus1,1074,The Return of the Pink Panther,1975
+163,"Abyss, The (1989)",True,exact_title_year,1076,The Abyss,1989
+164,Jean de Florette (1986),True,exact_title_year,1080,Jean de Florette,1986
+165,Manon of the Spring (Manon des sources) (1986),True,exact_title_year,1081,Manon of the Spring,1986
+166,Private Benjamin (1980),True,exact_title_year,1083,Private Benjamin,1980
+167,Monty Python and the Holy Grail (1974),True,exact_title_year_plusminus1,1084,Monty Python and the Holy Grail,1975
+168,"Wrong Trousers, The (1993)",True,exact_title_year,1094,The Wrong Trousers,1993
+169,Cinema Paradiso (1988),True,exact_title_year,1116,Cinema Paradiso,1988
+170,Delicatessen (1991),True,exact_title_year,1119,Delicatessen,1991
+171,"Empire Strikes Back, The (1980)",True,exact_title_year,1138,The Empire Strikes Back,1980
+172,"Princess Bride, The (1987)",True,exact_title_year,1139,The Princess Bride,1987
+173,Raiders of the Lost Ark (1981),True,exact_title_year,1140,Raiders of the Lost Ark,1981
+174,Brazil (1985),True,exact_title_year,1141,Brazil,1985
+175,Aliens (1986),True,exact_title_year,1142,Aliens,1986
+176,"Good, The Bad and The Ugly, The (1966)",True,exact_title_year,1143,"The Good, the Bad and the Ugly",1966
+177,12 Angry Men (1957),True,exact_title_year,1145,12 Angry Men,1957
+178,"Clockwork Orange, A (1971)",True,exact_title_year,1147,A Clockwork Orange,1971
+179,Apocalypse Now (1979),True,exact_title_year,1149,Apocalypse Now,1979
+180,Return of the Jedi (1983),True,exact_title_year,1151,Return of the Jedi,1983
+181,GoodFellas (1990),True,exact_title_year,1154,GoodFellas,1990
+182,Alien (1979),True,exact_title_year,1155,Alien,1979
+183,Army of Darkness (1993),True,exact_title_year_plusminus1,1156,Army of Darkness,1992
+184,Psycho (1960),True,exact_title_year,1160,Psycho,1960
+185,"Blues Brothers, The (1980)",True,exact_title_year,1161,The Blues Brothers,1980
+186,"Godfather: Part II, The (1974)",True,exact_title_year,1162,The Godfather: Part II,1974
+187,Full Metal Jacket (1987),True,exact_title_year,1163,Full Metal Jacket,1987
+188,"Grand Day Out, A (1992)",False,unmatched,,,
+189,Henry V (1989),True,exact_title_year,1165,Henry V,1989
+190,Amadeus (1984),True,exact_title_year,1166,Amadeus,1984
+191,Raging Bull (1980),True,exact_title_year,1169,Raging Bull,1980
+192,"Right Stuff, The (1983)",True,exact_title_year,1171,The Right Stuff,1983
+193,"Sting, The (1973)",True,exact_title_year,1174,The Sting,1973
+194,"Terminator, The (1984)",True,exact_title_year,1179,The Terminator,1984
+195,Dead Poets Society (1989),True,exact_title_year,1185,Dead Poets Society,1989
+196,"Graduate, The (1967)",True,exact_title_year,1186,The Graduate,1967
+197,Nikita (La Femme Nikita) (1990),True,exact_title_year,1188,La Femme Nikita,1990
+198,"Bridge on the River Kwai, The (1957)",True,exact_title_year,1189,The Bridge on the River Kwai,1957
+199,"Shining, The (1980)",True,exact_title_year,1197,The Shining,1980
+200,Evil Dead II (1987),True,exact_title_year,1200,Evil Dead II,1987
+201,Groundhog Day (1993),True,exact_title_year,1204,Groundhog Day,1993
+202,Unforgiven (1992),True,exact_title_year,1205,Unforgiven,1992
+203,Back to the Future (1985),True,exact_title_year,1209,Back to the Future,1985
+204,Patton (1970),True,exact_title_year,1211,Patton,1970
+205,Akira (1988),True,exact_title_year,1213,Akira,1988
+206,Cyrano de Bergerac (1990),True,exact_title_year,1216,Cyrano de Bergerac,1990
+207,Young Frankenstein (1974),True,exact_title_year,1217,Young Frankenstein,1974
+208,This Is Spinal Tap (1984),True,exact_title_year,1227,This Is Spinal Tap,1984
+209,Indiana Jones and the Last Crusade (1989),True,exact_title_year,1230,Indiana Jones and the Last Crusade,1989
+210,M*A*S*H (1970),True,exact_title_year,4905,M*A*S*H,1970
+211,"Unbearable Lightness of Being, The (1988)",True,exact_title_year,1233,The Unbearable Lightness of Being,1988
+212,"Room with a View, A (1986)",True,exact_title_year_plusminus1,1234,A Room with a View,1985
+213,Pink Floyd - The Wall (1982),True,exact_title_year,1236,Pink Floyd: The Wall,1982
+214,Field of Dreams (1989),True,exact_title_year,1240,Field of Dreams,1989
+215,When Harry Met Sally... (1989),True,exact_title_year,1245,When Harry Met Sally...,1989
+216,Bram Stoker's Dracula (1992),False,unmatched,,,
+217,Cape Fear (1991),True,exact_title_year,1279,Cape Fear,1991
+218,"Nightmare on Elm Street, A (1984)",True,exact_title_year,1283,A Nightmare on Elm Street,1984
+219,"Mirror Has Two Faces, The (1996)",True,exact_title_year,1289,The Mirror Has Two Faces,1996
+220,Breaking the Waves (1996),True,exact_title_year,1290,Breaking the Waves,1996
+221,Star Trek: First Contact (1996),True,exact_title_year,1292,Star Trek: First Contact,1996
+222,Sling Blade (1996),True,exact_title_year,1294,Sling Blade,1996
+223,Ridicule (1996),True,exact_title_year,1300,Ridicule,1996
+224,101 Dalmatians (1996),True,exact_title_year,1302,101 Dalmatians,1996
+225,Die Hard 2 (1990),True,exact_title_year,1305,Die Hard 2,1990
+226,Star Trek VI: The Undiscovered Country (1991),True,exact_title_year,1307,Star Trek VI: The Undiscovered Country,1991
+227,Star Trek: The Wrath of Khan (1982),False,unmatched,,,
+228,Star Trek III: The Search for Spock (1984),True,exact_title_year,1310,Star Trek III: The Search for Spock,1984
+229,Star Trek IV: The Voyage Home (1986),True,exact_title_year,1311,Star Trek IV: The Voyage Home,1986
+230,Batman Returns (1992),True,exact_title_year,1312,Batman Returns,1992
+231,Young Guns (1988),True,exact_title_year,1313,Young Guns,1988
+232,Under Siege (1992),True,exact_title_year,1320,Under Siege,1992
+233,Jaws (1975),True,exact_title_year,1322,Jaws,1975
+234,Mars Attacks! (1996),True,exact_title_year,1326,Mars Attacks!,1996
+235,Citizen Ruth (1996),True,exact_title_year,1327,Citizen Ruth,1996
+236,Jerry Maguire (1996),True,exact_title_year,1328,Jerry Maguire,1996
+237,Raising Arizona (1987),True,exact_title_year,1329,Raising Arizona,1987
+238,Sneakers (1992),True,exact_title_year,1331,Sneakers,1992
+239,Beavis and Butt-head Do America (1996),True,exact_title_year,1338,Beavis and Butt-Head Do America,1996
+240,"Last of the Mohicans, The (1992)",True,exact_title_year,1341,The Last of the Mohicans,1992
+241,Kolya (1996),True,exact_title_year,1374,Kolya,1996
+242,Jungle2Jungle (1997),True,exact_title_year,1398,Jungle 2 Jungle,1997
+243,Smilla's Sense of Snow (1997),True,exact_title_year,1403,Smilla's Sense of Snow,1997
+244,"Devil's Own, The (1997)",True,exact_title_year,1410,The Devil's Own,1997
+245,Chasing Amy (1997),True,exact_title_year,1543,Chasing Amy,1997
+246,Turbo: A Power Rangers Movie (1997),True,exact_title_year,1414,Turbo: A Power Rangers Movie,1997
+247,Grosse Pointe Blank (1997),True,exact_title_year,1419,Grosse Pointe Blank,1997
+248,Austin Powers: International Man of Mystery (1997),True,exact_title_year,1433,Austin Powers: International Man of Mystery,1997
+249,"Fifth Element, The (1997)",True,exact_title_year,1442,The Fifth Element,1997
+250,Shall We Dance? (1996),True,exact_title_year,1450,Shall We Dance?,1996
+251,"Lost World: Jurassic Park, The (1997)",True,exact_title_year,1456,The Lost World: Jurassic Park,1997
+252,"Pillow Book, The (1995)",True,exact_title_year_plusminus1,1466,The Pillow Book,1996
+253,Batman & Robin (1997),True,exact_title_year,1473,Batman & Robin,1997
+254,My Best Friend's Wedding (1997),True,exact_title_year,1480,My Best Friend's Wedding,1997
+255,When the Cats Away (Chacun cherche son chat) (1996),True,exact_title_year,1482,When the Cat's Away,1996
+256,Men in Black (1997),True,exact_title_year,1490,Men in Black,1997
+257,Contact (1997),True,exact_title_year,1494,Contact,1997
+258,George of the Jungle (1997),True,exact_title_year,1498,George of the Jungle,1997
+259,Event Horizon (1997),True,exact_title_year,1500,Event Horizon,1997
+260,Air Bud (1997),True,exact_title_year,1502,Air Bud,1997
+261,In the Company of Men (1997),True,exact_title_year,1504,In the Company of Men,1997
+262,Steel (1997),True,exact_title_year,1509,Steel,1997
+263,Mimic (1997),True,exact_title_year,1513,Mimic,1997
+264,"Hunt for Red October, The (1990)",True,exact_title_year,1519,The Hunt for Red October,1990
+265,Kull the Conqueror (1997),True,exact_title_year,1516,Kull the Conqueror,1997
+266,unknown,False,unmatched,,,
+267,Chasing Amy (1997),True,exact_title_year,1543,Chasing Amy,1997
+268,"Full Monty, The (1997)",True,exact_title_year,1545,The Full Monty,1997
+269,Gattaca (1997),True,exact_title_year,1557,Gattaca,1997
+270,Starship Troopers (1997),True,exact_title_year,1580,Starship Troopers,1997
+271,Good Will Hunting (1997),True,exact_title_year,1606,Good Will Hunting,1997
+272,Heat (1995),True,exact_title_year,5,Heat,1995
+273,Sabrina (1995),True,exact_title_year,6,Sabrina,1995
+274,Sense and Sensibility (1995),True,exact_title_year,16,Sense and Sensibility,1995
+275,Leaving Las Vegas (1995),True,exact_title_year,24,Leaving Las Vegas,1995
+276,Restoration (1995),True,exact_title_year,41,Restoration,1995
+277,Bed of Roses (1996),True,exact_title_year,72,Bed of Roses,1996
+278,Once Upon a Time... When We Were Colored (1995),True,exact_title_year_plusminus1,81,Once Upon a Time... When We Were Colored,1996
+279,Up Close and Personal (1996),True,exact_title_year,137,Up Close & Personal,1996
+280,"River Wild, The (1994)",True,exact_title_year,369,The River Wild,1994
+281,"Time to Kill, A (1996)",True,exact_title_year,775,A Time to Kill,1996
+282,Emma (1996),False,ambiguous,,,
+283,Tin Cup (1996),True,exact_title_year,816,Tin Cup,1996
+284,Secrets & Lies (1996),True,exact_title_year,998,Secrets & Lies,1996
+285,"English Patient, The (1996)",True,exact_title_year,1126,The English Patient,1996
+286,Marvin's Room (1996),True,exact_title_year,1334,Marvin's Room,1996
+287,Scream (1996),True,exact_title_year,1340,Scream,1996
+288,Evita (1996),True,exact_title_year,1349,Evita,1996
+289,Fierce Creatures (1997),True,exact_title_year,1356,Fierce Creatures,1997
+290,Absolute Power (1997),True,exact_title_year,1385,Absolute Power,1997
+291,Rosewood (1997),True,exact_title_year,1391,Rosewood,1997
+292,Donnie Brasco (1997),True,exact_title_year,1392,Donnie Brasco,1997
+293,Liar Liar (1997),True,exact_title_year,1407,Liar Liar,1997
+294,Breakdown (1997),True,exact_title_year,1434,Breakdown,1997
+295,"Promesse, La (1996)",False,unmatched,,,
+296,Ulee's Gold (1997),True,exact_title_year,1540,Ulee's Gold,1997
+297,Face/Off (1997),True,exact_title_year,1484,Face/Off,1997
+298,Hoodlum (1997),True,exact_title_year,1511,Hoodlum,1997
+299,Air Force One (1997),True,exact_title_year,1517,Air Force One,1997
+300,In & Out (1997),True,exact_title_year,1523,In & Out,1997
+301,L.A. Confidential (1997),True,exact_title_year,1526,L.A. Confidential,1997
+302,Ulee's Gold (1997),True,exact_title_year,1540,Ulee's Gold,1997
+303,Fly Away Home (1996),True,exact_title_year,944,Fly Away Home,1996
+304,"Ice Storm, The (1997)",True,exact_title_year,1541,The Ice Storm,1997
+305,"Mrs. Brown (Her Majesty, Mrs. Brown) (1997)",True,exact_title_year,1547,Mrs Brown,1997
+306,"Devil's Advocate, The (1997)",True,exact_title_year,1549,The Devil's Advocate,1997
+307,FairyTale: A True Story (1997),True,exact_title_year,1558,FairyTale: A True Story,1997
+308,Deceiver (1997),True,exact_title_year,1575,Deceiver,1997
+309,"Rainmaker, The (1997)",True,exact_title_year,1576,The Rainmaker,1997
+310,"Wings of the Dove, The (1997)",True,exact_title_year,1587,The Wings of the Dove,1997
+311,Midnight in the Garden of Good and Evil (1997),True,exact_title_year,1612,Midnight in the Garden of Good and Evil,1997
+312,Titanic (1997),True,exact_title_year,1621,Titanic,1997
+313,3 Ninjas: High Noon At Mega Mountain (1998),True,exact_title_year,1636,3 Ninjas: High Noon at Mega Mountain,1998
+314,Apt Pupil (1998),True,exact_title_year,2187,Apt Pupil,1998
+315,As Good As It Gets (1997),True,exact_title_year,1671,As Good as It Gets,1997
+316,In the Name of the Father (1993),True,exact_title_year,468,In the Name of the Father,1993
+317,Schindler's List (1993),True,exact_title_year,520,Schindler's List,1993
+318,Everyone Says I Love You (1996),True,exact_title_year,1012,Everyone Says I Love You,1996
+319,Paradise Lost: The Child Murders at Robin Hood Hills (1996),True,exact_title_year,1297,Paradise Lost: The Child Murders at Robin Hood Hills,1996
+320,Mother (1996),True,exact_title_year,1347,Mother,1996
+321,Murder at 1600 (1997),True,exact_title_year,1353,Murder at 1600,1997
+322,Dante's Peak (1997),True,exact_title_year,1367,Dante's Peak,1997
+323,Lost Highway (1997),True,exact_title_year,1390,Lost Highway,1997
+324,Crash (1996),True,exact_title_year,1405,Crash,1996
+325,G.I. Jane (1997),True,exact_title_year,1496,G.I. Jane,1997
+326,Cop Land (1997),True,exact_title_year,1499,Cop Land,1997
+327,Conspiracy Theory (1997),True,exact_title_year,1507,Conspiracy Theory,1997
+328,Desperate Measures (1998),True,exact_title_year,1508,Desperate Measures,1998
+329,187 (1997),False,unmatched,,,
+330,"Edge, The (1997)",True,exact_title_year,1524,The Edge,1997
+331,Kiss the Girls (1997),True,exact_title_year,1528,Kiss the Girls,1997
+332,"Game, The (1997)",True,exact_title_year,1533,The Game,1997
+333,U Turn (1997),True,exact_title_year,1535,U Turn,1997
+334,How to Be a Player (1997),False,unmatched,,,
+335,Playing God (1997),True,exact_title_year,1551,Playing God,1997
+336,"House of Yes, The (1997)",True,exact_title_year,1552,The House of Yes,1997
+337,Bean (1997),True,exact_title_year,1569,Bean,1997
+338,Mad City (1997),True,exact_title_year,1571,Mad City,1997
+339,Boogie Nights (1997),True,exact_title_year,1577,Boogie Nights,1997
+340,Critical Care (1997),True,exact_title_year,1581,Critical Care,1997
+341,"Man Who Knew Too Little, The (1997)",True,exact_title_year,1593,The Man Who Knew Too Little,1997
+342,Alien: Resurrection (1997),True,exact_title_year,1594,Alien: Resurrection,1997
+343,"Apostle, The (1997)",True,exact_title_year,1597,The Apostle,1997
+344,Deconstructing Harry (1997),True,exact_title_year,1603,Deconstructing Harry,1997
+345,Jackie Brown (1997),True,exact_title_year,1629,Jackie Brown,1997
+346,Wag the Dog (1997),True,exact_title_year,1642,Wag the Dog,1997
+347,Desperate Measures (1998),True,exact_title_year,1508,Desperate Measures,1998
+348,Hard Rain (1998),True,exact_title_year,1646,Hard Rain,1998
+349,Fallen (1998),True,exact_title_year,1648,Fallen,1998
+350,"Prophecy II, The (1998)",True,exact_title_year,1650,The Prophecy II,1998
+351,Spice World (1997),True,exact_title_year,1653,Spice World,1997
+352,Deep Rising (1998),True,exact_title_year,1654,Deep Rising,1998
+353,"Wedding Singer, The (1998)",True,exact_title_year,1665,The Wedding Singer,1998
+354,Sphere (1998),True,exact_title_year,1666,Sphere,1998
+355,"Client, The (1994)",True,exact_title_year,343,The Client,1994
+356,One Flew Over the Cuckoo's Nest (1975),True,exact_title_year,1136,One Flew Over the Cuckoo's Nest,1975
+357,Spawn (1997),True,exact_title_year,1501,Spawn,1997
+358,"Assignment, The (1997)",True,exact_title_year,1538,The Assignment,1997
+359,Wonderland (1997),True,exact_title_year,1561,Wonderland,1997
+360,Incognito (1997),True,exact_title_year,1579,Incognito,1997
+361,Blues Brothers 2000 (1998),True,exact_title_year,1662,Blues Brothers 2000,1998
+362,Sudden Death (1995),True,exact_title_year,8,Sudden Death,1995
+363,Ace Ventura: When Nature Calls (1995),True,exact_title_year,18,Ace Ventura: When Nature Calls,1995
+364,Powder (1995),True,exact_title_year,23,Powder,1995
+365,Dangerous Minds (1995),True,exact_title_year,30,Dangerous Minds,1995
+366,Clueless (1995),True,exact_title_year,37,Clueless,1995
+367,Bio-Dome (1996),True,exact_title_year,63,Bio-Dome,1996
+368,Black Sheep (1996),True,exact_title_year,86,Black Sheep,1996
+369,Mary Reilly (1996),True,exact_title_year,89,Mary Reilly,1996
+370,"Bridges of Madison County, The (1995)",True,exact_title_year,102,The Bridges of Madison County,1995
+371,Jeffrey (1995),True,exact_title_year,167,Jeffrey,1995
+372,Judge Dredd (1995),True,exact_title_year,169,Judge Dredd,1995
+373,Mighty Morphin Power Rangers: The Movie (1995),True,exact_title_year,177,Mighty Morphin Power Rangers: The Movie,1995
+374,Showgirls (1995),True,exact_title_year,189,Showgirls,1995
+375,Houseguest (1994),True,exact_title_year_plusminus1,243,Houseguest,1995
+376,Heavyweights (1994),True,exact_title_year_plusminus1,245,Heavyweights,1995
+377,Miracle on 34th Street (1994),True,exact_title_year,272,Miracle on 34th Street,1994
+378,Tales From the Crypt Presents: Demon Knight (1995),False,unmatched,,,
+379,Star Trek: Generations (1994),True,exact_title_year,322,Star Trek: Generations,1994
+380,Muriel's Wedding (1994),True,exact_title_year,335,Muriel's Wedding,1994
+381,"Adventures of Priscilla, Queen of the Desert, The (1994)",True,exact_title_year,338,"The Adventures of Priscilla, Queen of the Desert",1994
+382,"Flintstones, The (1994)",True,exact_title_year,348,The Flintstones,1994
+383,Naked Gun 33 1/3: The Final Insult (1994),True,exact_title_year,363,The Naked Gun 33⅓: The Final Insult,1994
+384,True Lies (1994),True,exact_title_year,373,True Lies,1994
+385,Addams Family Values (1993),True,exact_title_year,403,Addams Family Values,1993
+386,"Age of Innocence, The (1993)",True,exact_title_year,405,The Age of Innocence,1993
+387,Beverly Hills Cop III (1994),True,exact_title_year,413,Beverly Hills Cop III,1994
+388,Black Beauty (1994),True,exact_title_year,414,Black Beauty,1994
+389,Fear of a Black Hat (1993),True,exact_title_year_plusminus1,442,Fear of a Black Hat,1994
+390,Last Action Hero (1993),True,exact_title_year,478,Last Action Hero,1993
+391,"Man Without a Face, The (1993)",True,exact_title_year,484,The Man without a Face,1993
+392,Mrs. Doubtfire (1993),True,exact_title_year,493,Mrs. Doubtfire,1993
+393,Radioland Murders (1994),True,exact_title_year,506,Radioland Murders,1994
+394,Robin Hood: Men in Tights (1993),True,exact_title_year,513,Robin Hood: Men in Tights,1993
+395,Serial Mom (1994),True,exact_title_year,525,Serial Mom,1994
+396,Striking Distance (1993),True,exact_title_year,537,Striking Distance,1993
+397,Super Mario Bros. (1993),True,exact_title_year,539,Super Mario Bros.,1993
+398,"Three Musketeers, The (1993)",True,exact_title_year,545,The Three Musketeers,1993
+399,"Little Rascals, The (1994)",True,exact_title_year,567,The Little Rascals,1994
+400,"Brady Bunch Movie, The (1995)",True,exact_title_year,576,The Brady Bunch Movie,1995
+401,Ghost (1990),True,exact_title_year,578,Ghost,1990
+402,Batman (1989),True,exact_title_year,583,Batman,1989
+403,Pinocchio (1940),True,exact_title_year,587,Pinocchio,1940
+404,Mission: Impossible (1996),True,exact_title_year,634,Mission: Impossible,1996
+405,Thinner (1996),True,exact_title_year,716,Thinner,1996
+406,Spy Hard (1996),True,exact_title_year,717,Spy Hard,1996
+407,"Close Shave, A (1995)",True,exact_title_year,719,A Close Shave,1995
+408,Jack (1996),True,exact_title_year,738,Jack,1996
+409,Kingpin (1996),True,exact_title_year,756,Kingpin,1996
+410,"Nutty Professor, The (1996)",True,exact_title_year,759,The Nutty Professor,1996
+411,"Very Brady Sequel, A (1996)",True,exact_title_year,785,A Very Brady Sequel,1996
+412,Tales from the Crypt Presents: Bordello of Blood (1996),False,unmatched,,,
+413,My Favorite Year (1982),True,exact_title_year,880,My Favorite Year,1982
+414,"Apple Dumpling Gang, The (1975)",True,exact_title_year,964,The Apple Dumpling Gang,1975
+415,Old Yeller (1957),True,exact_title_year,969,Old Yeller,1957
+416,"Parent Trap, The (1961)",True,exact_title_year,970,The Parent Trap,1961
+417,Cinderella (1950),True,exact_title_year,979,Cinderella,1950
+418,Mary Poppins (1964),True,exact_title_year,985,Mary Poppins,1964
+419,Alice in Wonderland (1951),True,exact_title_year,989,Alice in Wonderland,1951
+420,William Shakespeare's Romeo and Juliet (1996),False,unmatched,,,
+421,Aladdin and the King of Thieves (1996),True,exact_title_year,1019,Aladdin and the King of Thieves,1996
+422,E.T. the Extra-Terrestrial (1982),True,exact_title_year,1050,E.T. the Extra-Terrestrial,1982
+423,Children of the Corn: The Gathering (1996),False,unmatched,,,
+424,Bob Roberts (1992),True,exact_title_year,1115,Bob Roberts,1992
+425,"Transformers: The Movie, The (1986)",True,exact_title_year,3859,The Transformers: The Movie,1986
+426,To Kill a Mockingbird (1962),True,exact_title_year,1148,To Kill a Mockingbird,1962
+427,Harold and Maude (1971),True,exact_title_year,1175,Harold and Maude,1971
+428,"Day the Earth Stood Still, The (1951)",True,exact_title_year,1192,The Day the Earth Stood Still,1951
+429,Duck Soup (1933),True,exact_title_year,1195,Duck Soup,1933
+430,Highlander (1986),True,exact_title_year,1214,Highlander,1986
+431,Fantasia (1940),True,exact_title_year,1221,Fantasia,1940
+432,Heathers (1989),True,exact_title_year_plusminus1,1224,Heathers,1988
+433,Forbidden Planet (1956),True,exact_title_year,1239,Forbidden Planet,1956
+434,Butch Cassidy and the Sundance Kid (1969),True,exact_title_year,1242,Butch Cassidy and the Sundance Kid,1969
+435,"American Werewolf in London, An (1981)",True,exact_title_year,1258,An American Werewolf in London,1981
+436,Amityville 1992: It's About Time (1992),False,unmatched,,,
+437,Amityville 3-D (1983),True,exact_title_year,1260,Amityville 3-D,1983
+438,Amityville: A New Generation (1993),True,exact_title_year,1262,Amityville: A New Generation,1993
+439,Amityville II: The Possession (1982),True,exact_title_year,1263,Amityville II: The Possession,1982
+440,"Amityville Horror, The (1979)",True,exact_title_year,1264,The Amityville Horror,1979
+441,"Amityville Curse, The (1990)",True,exact_title_year_plusminus1,1265,The Amityville Curse,1989
+442,"Birds, The (1963)",True,exact_title_year,1270,The Birds,1963
+443,"Blob, The (1958)",True,exact_title_year,1271,The Blob,1958
+444,"Body Snatcher, The (1945)",True,exact_title_year,1274,The Body Snatcher,1945
+445,Burnt Offerings (1976),True,exact_title_year,1277,Burnt Offerings,1976
+446,Carrie (1976),True,exact_title_year,1281,Carrie,1976
+447,"Omen, The (1976)",True,exact_title_year,1286,The Omen,1976
+448,Star Trek: The Motion Picture (1979),True,exact_title_year,1306,Star Trek: The Motion Picture,1979
+449,Star Trek V: The Final Frontier (1989),True,exact_title_year,1308,Star Trek V: The Final Frontier,1989
+450,Grease (1978),True,exact_title_year,1315,Grease,1978
+451,Jaws 2 (1978),True,exact_title_year,1323,Jaws 2,1978
+452,Jaws 3-D (1983),True,exact_title_year,1324,Jaws 3-D,1983
+453,Bastard Out of Carolina (1996),True,exact_title_year,1332,Bastard Out of Carolina,1996
+454,Jackie Chan's First Strike (1996),False,unmatched,,,
+455,Beverly Hills Ninja (1997),True,exact_title_year,1362,Beverly Hills Ninja,1997
+456,Free Willy 3: The Rescue (1997),True,exact_title_year,1505,Free Willy 3: The Rescue,1997
+457,Nixon (1995),True,exact_title_year,13,Nixon,1995
+458,"Cry, the Beloved Country (1995)",True,exact_title_year,38,"Cry, the Beloved Country",1995
+459,"Crossing Guard, The (1995)",True,exact_title_year,76,The Crossing Guard,1995
+460,Smoke (1995),True,exact_title_year,190,Smoke,1995
+461,Like Water For Chocolate (Como agua para chocolate) (1992),True,exact_title_year,260,Like Water for Chocolate,1992
+462,"Secret of Roan Inish, The (1994)",True,exact_title_year,308,The Secret of Roan Inish,1994
+463,Vanya on 42nd Street (1994),True,exact_title_year,327,Vanya on 42nd Street,1994
+464,"Jungle Book, The (1994)",True,exact_title_year,355,The Jungle Book,1994
+465,Red Rock West (1992),True,exact_title_year_plusminus1,366,Red Rock West,1993
+466,"Bronx Tale, A (1993)",True,exact_title_year,421,A Bronx Tale,1993
+467,Rudy (1993),True,exact_title_year,517,Rudy,1993
+468,Short Cuts (1993),True,exact_title_year,528,Short Cuts,1993
+469,Tombstone (1993),True,exact_title_year,546,Tombstone,1993
+470,Courage Under Fire (1996),True,exact_title_year,633,Courage Under Fire,1996
+471,Dragonheart (1996),True,exact_title_year,638,DragonHeart,1996
+472,James and the Giant Peach (1996),True,exact_title_year,645,James and the Giant Peach,1996
+473,Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb (1963),True,exact_title_year_plusminus1,724,Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb,1964
+474,Trainspotting (1996),True,exact_title_year,749,Trainspotting,1996
+475,"First Wives Club, The (1996)",True,exact_title_year,795,The First Wives Club,1996
+476,Matilda (1996),True,exact_title_year,802,Matilda,1996
+477,"Philadelphia Story, The (1940)",True,exact_title_year,857,The Philadelphia Story,1940
+478,Vertigo (1958),True,exact_title_year,862,Vertigo,1958
+479,North by Northwest (1959),True,exact_title_year,867,North by Northwest,1959
+480,"Apartment, The (1960)",True,exact_title_year,868,The Apartment,1960
+481,Some Like It Hot (1959),True,exact_title_year,869,Some Like It Hot,1959
+482,Casablanca (1942),True,exact_title_year,871,Casablanca,1942
+483,"Maltese Falcon, The (1941)",True,exact_title_year,872,The Maltese Falcon,1941
+484,My Fair Lady (1964),True,exact_title_year,873,My Fair Lady,1964
+485,Sabrina (1954),True,exact_title_year,874,Sabrina,1954
+486,Roman Holiday (1953),True,exact_title_year,875,Roman Holiday,1953
+487,Sunset Blvd. (1950),False,unmatched,,,
+488,Notorious (1946),True,exact_title_year,889,Notorious,1946
+489,To Catch a Thief (1955),True,exact_title_year,892,To Catch a Thief,1955
+490,"Adventures of Robin Hood, The (1938)",True,exact_title_year,899,The Adventures of Robin Hood,1938
+491,East of Eden (1955),True,exact_title_year,908,East of Eden,1955
+492,"Thin Man, The (1934)",True,exact_title_year,909,The Thin Man,1934
+493,His Girl Friday (1940),True,exact_title_year,910,His Girl Friday,1940
+494,Around the World in 80 Days (1956),False,unmatched,,,
+495,It's a Wonderful Life (1946),True,exact_title_year,912,It's a Wonderful Life,1946
+496,Bringing Up Baby (1938),True,exact_title_year,914,Bringing Up Baby,1938
+497,"African Queen, The (1951)",True,exact_title_year,928,The African Queen,1951
+498,Cat on a Hot Tin Roof (1958),True,exact_title_year,930,Cat on a Hot Tin Roof,1958
+499,Fly Away Home (1996),True,exact_title_year,944,Fly Away Home,1996
+500,Dumbo (1941),True,exact_title_year,986,Dumbo,1941
+501,Bananas (1971),True,exact_title_year,1031,Bananas,1971
+502,"Candidate, The (1972)",True,exact_title_year,1035,The Candidate,1972
+503,Bonnie and Clyde (1967),True,exact_title_year,1037,Bonnie and Clyde,1967
+504,Dial M for Murder (1954),True,exact_title_year,1039,Dial M for Murder,1954
+505,Rebel Without a Cause (1955),True,exact_title_year,1056,Rebel Without a Cause,1955
+506,"Streetcar Named Desire, A (1951)",True,exact_title_year,1057,A Streetcar Named Desire,1951
+507,"People vs. Larry Flynt, The (1996)",True,exact_title_year,1070,The People vs. Larry Flynt,1996
+508,My Left Foot (1989),False,unmatched,,,
+509,"Magnificent Seven, The (1954)",False,unmatched,,,
+510,Lawrence of Arabia (1962),True,exact_title_year,1146,Lawrence of Arabia,1962
+511,Wings of Desire (1987),True,exact_title_year,1152,Wings of Desire,1987
+512,"Third Man, The (1949)",True,exact_title_year,1153,The Third Man,1949
+513,Annie Hall (1977),True,exact_title_year,1170,Annie Hall,1977
+514,"Boot, Das (1981)",True,exact_title_year,1173,Das Boot,1981
+515,Local Hero (1983),True,exact_title_year,1178,Local Hero,1983
+516,Manhattan (1979),True,exact_title_year,1183,Manhattan,1979
+517,Miller's Crossing (1990),True,exact_title_year,1184,Miller's Crossing,1990
+518,"Treasure of the Sierra Madre, The (1948)",True,exact_title_year,1193,The Treasure of the Sierra Madre,1948
+519,"Great Escape, The (1963)",True,exact_title_year,1201,The Great Escape,1963
+520,"Deer Hunter, The (1978)",True,exact_title_year,1202,The Deer Hunter,1978
+521,Down by Law (1986),True,exact_title_year,1212,Down by Law,1986
+522,Cool Hand Luke (1967),True,exact_title_year,1215,Cool Hand Luke,1967
+523,"Great Dictator, The (1940)",True,exact_title_year,1220,The Great Dictator,1940
+524,"Big Sleep, The (1946)",True,exact_title_year,1223,The Big Sleep,1946
+525,Ben-Hur (1959),True,exact_title_year,1226,Ben-Hur,1959
+526,Gandhi (1982),True,exact_title_year,1232,Gandhi,1982
+527,"Killing Fields, The (1984)",True,exact_title_year,1237,The Killing Fields,1984
+528,My Life as a Dog (Mitt liv som hund) (1985),True,exact_title_year,1238,My Life as a Dog,1985
+529,"Man Who Would Be King, The (1975)",True,exact_title_year,1241,The Man Who Would Be King,1975
+530,Shine (1996),True,exact_title_year,1293,Shine,1996
+531,Kama Sutra: A Tale of Love (1996),True,exact_title_year,1399,Kama Sutra - A Tale of Love,1996
+532,"Daytrippers, The (1996)",True,exact_title_year,1406,The Daytrippers,1996
+533,Traveller (1997),True,exact_title_year,1425,Traveller,1997
+534,Addicted to Love (1997),True,exact_title_year,1453,Addicted to Love,1997
+535,Ponette (1996),True,exact_title_year,1457,Ponette,1996
+536,My Own Private Idaho (1991),True,exact_title_year,1520,My Own Private Idaho,1991
+537,Anastasia (1997),True,exact_title_year,1592,Anastasia,1997
+538,Mouse Hunt (1997),True,exact_title_year,1613,MouseHunt,1997
+539,Money Train (1995),True,exact_title_year,19,Money Train,1995
+540,Mortal Kombat (1995),True,exact_title_year,42,Mortal Kombat,1995
+541,Pocahontas (1995),True,exact_title_year,46,Pocahontas,1995
+542,"Misérables, Les (1995)",True,exact_title_year,71,Les Miserables,1995
+543,Things to Do in Denver when You're Dead (1995),True,exact_title_year,79,Things to Do in Denver When You're Dead,1995
+544,Vampire in Brooklyn (1995),True,exact_title_year,90,Vampire in Brooklyn,1995
+545,Broken Arrow (1996),True,exact_title_year,92,Broken Arrow,1996
+546,"Young Poisoner's Handbook, The (1995)",True,exact_title_year,114,The Young Poisoner's Handbook,1995
+547,"NeverEnding Story III, The (1994)",False,unmatched,,,
+548,Rob Roy (1995),True,exact_title_year,147,Rob Roy,1995
+549,Die Hard: With a Vengeance (1995),True,exact_title_year,161,Die Hard: With a Vengeance,1995
+550,Lord of Illusions (1995),True,exact_title_year,173,Lord of Illusions,1995
+551,Species (1995),True,exact_title_year,192,Species,1995
+552,"Walk in the Clouds, A (1995)",True,exact_title_year,203,A Walk in the Clouds,1995
+553,Waterworld (1995),True,exact_title_year,204,Waterworld,1995
+554,White Man's Burden (1995),True,exact_title_year,205,White Man's Burden,1995
+555,Wild Bill (1995),True,exact_title_year,206,Wild Bill,1995
+556,Farinelli: il castrato (1994),False,unmatched,,,
+557,Heavenly Creatures (1994),True,exact_title_year,242,Heavenly Creatures,1994
+558,Interview with the Vampire (1994),True,exact_title_year,248,Interview with the Vampire,1994
+559,"Kid in King Arthur's Court, A (1995)",True,exact_title_year,253,A Kid in King Arthur's Court,1995
+560,Mary Shelley's Frankenstein (1994),True,exact_title_year,268,Mary Shelley's Frankenstein,1994
+561,"Quick and the Dead, The (1995)",True,exact_title_year,298,The Quick and the Dead,1995
+562,Stephen King's The Langoliers (1995),False,unmatched,,,
+563,Tales from the Hood (1995),True,exact_title_year,323,Tales from the Hood,1995
+564,Village of the Damned (1995),True,exact_title_year,325,Village of the Damned,1995
+565,Clear and Present Danger (1994),True,exact_title_year,342,Clear and Present Danger,1994
+566,Wes Craven's New Nightmare (1994),False,unmatched,,,
+567,Speed (1994),True,exact_title_year,370,Speed,1994
+568,Wolf (1994),True,exact_title_year,375,Wolf,1994
+569,Wyatt Earp (1994),True,exact_title_year,376,Wyatt Earp,1994
+570,Another Stakeout (1993),True,exact_title_year,408,Another Stakeout,1993
+571,Blown Away (1994),True,exact_title_year,416,Blown Away,1994
+572,Body Snatchers (1993),True,exact_title_year,419,Body Snatchers,1993
+573,Boxing Helena (1993),True,exact_title_year,420,Boxing Helena,1993
+574,City Slickers II: The Legend of Curly's Gold (1994),True,exact_title_year,425,City Slickers II: The Legend of Curly's Gold,1994
+575,Cliffhanger (1993),True,exact_title_year,427,Cliffhanger,1993
+576,Coneheads (1993),True,exact_title_year,428,Coneheads,1993
+577,Demolition Man (1993),True,exact_title_year,435,Demolition Man,1993
+578,Fatal Instinct (1993),True,exact_title_year,438,Fatal Instinct,1993
+579,"Englishman Who Went Up a Hill, But Came Down a Mountain, The (1995)",True,exact_title_year,461,The Englishman Who Went Up a Hill But Came Down a Mountain,1995
+580,Kalifornia (1993),True,exact_title_year,474,Kalifornia,1993
+581,"Piano, The (1993)",True,exact_title_year,502,The Piano,1993
+582,Romeo Is Bleeding (1993),True,exact_title_year,514,Romeo Is Bleeding,1993
+583,"Secret Garden, The (1993)",True,exact_title_year,524,The Secret Garden,1993
+584,Son in Law (1993),True,exact_title_year,535,Son in Law,1993
+585,Terminal Velocity (1994),True,exact_title_year,541,Terminal Velocity,1994
+586,"Hour of the Pig, The (1993)",False,unmatched,,,
+587,Beauty and the Beast (1991),True,exact_title_year,586,Beauty and the Beast,1991
+588,"Wild Bunch, The (1969)",True,exact_title_year,590,The Wild Bunch,1969
+589,Hellraiser: Bloodline (1996),True,exact_title_year,601,Hellraiser: Bloodline,1996
+590,Primal Fear (1996),True,exact_title_year,617,Primal Fear,1996
+591,True Crime (1995),True,exact_title_year_plusminus1,674,True Crime,1996
+592,Stalingrad (1993),True,exact_title_year,733,Stalingrad,1993
+593,Heavy (1995),True,exact_title_year,737,Heavy,1995
+594,"Fan, The (1996)",True,exact_title_year,753,The Fan,1996
+595,"Hunchback of Notre Dame, The (1996)",True,exact_title_year,754,The Hunchback of Notre Dame,1996
+596,Eraser (1996),True,exact_title_year,757,Eraser,1996
+597,"Big Squeeze, The (1996)",True,exact_title_year,811,The Big Squeeze,1996
+598,Police Story 4: Project S (Chao ji ji hua) (1993),False,unmatched,,,
+599,Daniel Defoe's Robinson Crusoe (1996),False,unmatched,,,
+600,For Whom the Bell Tolls (1943),True,exact_title_year,856,For Whom the Bell Tolls,1943
+601,"American in Paris, An (1951)",True,exact_title_year,859,An American in Paris,1951
+602,Rear Window (1954),True,exact_title_year,863,Rear Window,1954
+603,It Happened One Night (1934),True,exact_title_year,864,It Happened One Night,1934
+604,Meet Me in St. Louis (1944),True,exact_title_year,877,Meet Me in St. Louis,1944
+605,All About Eve (1950),True,exact_title_year,885,All About Eve,1950
+606,Rebecca (1940),True,exact_title_year,887,Rebecca,1940
+607,Spellbound (1945),True,exact_title_year,890,Spellbound,1945
+608,Father of the Bride (1950),True,exact_title_year,893,Father of the Bride,1950
+609,Gigi (1958),True,exact_title_year,897,Gigi,1958
+610,Laura (1944),True,exact_title_year,901,Laura,1944
+611,Lost Horizon (1937),True,exact_title_year,903,Lost Horizon,1937
+612,My Man Godfrey (1936),True,exact_title_year,906,My Man Godfrey,1936
+613,Giant (1956),True,exact_title_year,907,Giant,1956
+614,"39 Steps, The (1935)",True,exact_title_year,924,The 39 Steps,1935
+615,Night of the Living Dead (1968),True,exact_title_year,927,Night of the Living Dead,1968
+616,"Blue Angel, The (Blaue Engel, Der) (1930)",True,exact_title_year,4815,The Blue Angel,1930
+617,Picnic (1955),True,exact_title_year,940,Picnic,1955
+618,Extreme Measures (1996),True,exact_title_year,960,Extreme Measures,1996
+619,"Chamber, The (1996)",True,exact_title_year,963,The Chamber,1996
+620,"Davy Crockett, King of the Wild Frontier (1955)",True,exact_title_year,965,"Davy Crockett, King of the Wild Frontier",1955
+621,Swiss Family Robinson (1960),True,exact_title_year,974,Swiss Family Robinson,1960
+622,Angels in the Outfield (1994),True,exact_title_year,978,Angels in the Outfield,1994
+623,"Three Caballeros, The (1945)",True,exact_title_year_plusminus1,981,The Three Caballeros,1944
+624,"Sword in the Stone, The (1963)",True,exact_title_year,982,The Sword in the Stone,1963
+625,So Dear to My Heart (1949),True,exact_title_year_plusminus1,983,So Dear to My Heart,1948
+626,Robin Hood: Prince of Thieves (1991),True,exact_title_year,984,Robin Hood: Prince of Thieves,1991
+627,Sleepers (1996),True,exact_title_year,1016,Sleepers,1996
+628,Victor/Victoria (1982),True,exact_title_year,1034,Victor/Victoria,1982
+629,"Great Race, The (1965)",True,exact_title_year,1036,The Great Race,1965
+630,"Crying Game, The (1992)",True,exact_title_year,1047,The Crying Game,1992
+631,Sophie's Choice (1982),True,exact_title_year,1049,Sophie's Choice,1982
+632,"Christmas Carol, A (1938)",True,exact_title_year,1052,A Christmas Carol,1938
+633,Microcosmos: Le peuple de l'herbe (1996),False,unmatched,,,
+634,"Fog, The (1980)",True,exact_title_year,1077,The Fog,1980
+635,Escape from New York (1981),True,exact_title_year,1078,Escape from New York,1981
+636,"Howling, The (1981)",True,exact_title_year,1079,The Howling,1981
+637,"Return of Martin Guerre, The (Retour de Martin Guerre, Le) (1982)",True,exact_title_year,1096,The Return of Martin Guerre,1982
+638,"Tin Drum, The (Blechtrommel, Die) (1979)",True,exact_title_year,1106,The Tin Drum,1979
+639,"Cook the Thief His Wife & Her Lover, The (1989)",True,exact_title_year,1117,"The Cook, the Thief, His Wife & Her Lover",1989
+640,Paths of Glory (1957),True,exact_title_year,1122,Paths of Glory,1957
+641,"Grifters, The (1990)",True,exact_title_year,1123,The Grifters,1990
+642,The Innocent (1994),True,exact_title_year_plusminus1,7095,The Innocent,1993
+643,"Thin Blue Line, The (1988)",True,exact_title_year,1132,The Thin Blue Line,1988
+644,Paris Is Burning (1990),True,exact_title_year,1135,Paris is Burning,1990
+645,Once Upon a Time in the West (1969),True,exact_title_year_plusminus1,1150,Once Upon a Time in the West,1968
+646,Ran (1985),True,exact_title_year,1158,Ran,1985
+647,"Quiet Man, The (1952)",True,exact_title_year,1167,The Quiet Man,1952
+648,Once Upon a Time in America (1984),True,exact_title_year,1168,Once Upon a Time in America,1984
+649,"Seventh Seal, The (Sjunde inseglet, Det) (1957)",True,exact_title_year,1177,The Seventh Seal,1957
+650,Glory (1989),True,exact_title_year,1181,Glory,1989
+651,Rosencrantz and Guildenstern Are Dead (1990),True,exact_title_year_plusminus1,1182,Rosencrantz & Guildenstern Are Dead,1991
+652,Touch of Evil (1958),True,exact_title_year,1187,Touch of Evil,1958
+653,Chinatown (1974),True,exact_title_year,1191,Chinatown,1974
+654,Stand by Me (1986),True,exact_title_year,1198,Stand by Me,1986
+655,M (1931),True,exact_title_year,1199,M,1931
+656,"Manchurian Candidate, The (1962)",True,exact_title_year,1206,The Manchurian Candidate,1962
+657,Pump Up the Volume (1990),True,exact_title_year,1207,Pump up the Volume,1990
+658,Arsenic and Old Lace (1944),True,exact_title_year,1208,Arsenic and Old Lace,1944
+659,Fried Green Tomatoes (1991),True,exact_title_year,1210,Fried Green Tomatoes,1991
+660,High Noon (1952),True,exact_title_year,1222,High Noon,1952
+661,Somewhere in Time (1980),True,exact_title_year,1225,Somewhere in Time,1980
+662,Being There (1979),True,exact_title_year,1231,Being There,1979
+663,"Paris, Texas (1984)",True,exact_title_year,1243,"Paris, Texas",1984
+664,Alien 3 (1992),True,exact_title_year,1257,Alien³,1992
+665,Blood For Dracula (Andy Warhol's Dracula) (1974),True,exact_title_year,1266,Blood for Dracula,1974
+666,Audrey Rose (1977),True,exact_title_year,1268,Audrey Rose,1977
+667,Blood Beach (1981),True,exact_title_year_plusminus1,1272,Blood Beach,1980
+668,Body Parts (1991),True,exact_title_year,1273,Body Parts,1991
+669,Body Snatchers (1993),True,exact_title_year,419,Body Snatchers,1993
+670,Bride of Frankenstein (1935),True,exact_title_year,1276,Bride of Frankenstein,1935
+671,Candyman (1992),True,exact_title_year,1278,Candyman,1992
+672,Cape Fear (1962),True,exact_title_year,1280,Cape Fear,1962
+673,Cat People (1982),True,exact_title_year,1282,Cat People,1982
+674,"Nosferatu (Nosferatu, eine Symphonie des Grauens) (1922)",True,exact_title_year,1284,Nosferatu,1922
+675,"Crucible, The (1996)",True,exact_title_year,1301,The Crucible,1996
+676,Fire on the Mountain (1996),True,exact_title_year,1376,Fire on the Mountain,1996
+677,Volcano (1997),True,exact_title_year,1431,Volcano,1997
+678,Conan the Barbarian (1981),True,exact_title_year_plusminus1,1497,Conan the Barbarian,1982
+679,Kull the Conqueror (1997),True,exact_title_year,1516,Kull the Conqueror,1997
+680,Wishmaster (1997),True,exact_title_year,1531,Wishmaster,1997
+681,I Know What You Did Last Summer (1997),True,exact_title_year,1548,I Know What You Did Last Summer,1997
+682,Rocket Man (1997),True,exact_title_year,1550,RocketMan,1997
+683,In the Line of Fire (1993),True,exact_title_year,467,In the Line of Fire,1993
+684,Executive Decision (1996),True,exact_title_year,487,Executive Decision,1996
+685,"Perfect World, A (1993)",True,exact_title_year,500,A Perfect World,1993
+686,McHale's Navy (1997),True,exact_title_year,1373,McHale's Navy,1997
+687,Leave It to Beaver (1997),True,exact_title_year,1512,Leave it to Beaver,1997
+688,"Jackal, The (1997)",True,exact_title_year,1591,The Jackal,1997
+689,Seven Years in Tibet (1997),True,exact_title_year,1527,Seven Years in Tibet,1997
+690,Dark City (1998),True,exact_title_year,1643,Dark City,1998
+691,"American President, The (1995)",True,exact_title_year,10,The American President,1995
+692,Casino (1995),True,exact_title_year,15,Casino,1995
+693,Persuasion (1995),True,exact_title_year,27,Persuasion,1995
+694,Kicking and Screaming (1995),True,exact_title_year,70,Kicking and Screaming,1995
+695,City Hall (1996),True,exact_title_year,97,City Hall,1996
+696,"Basketball Diaries, The (1995)",True,exact_title_year,143,The Basketball Diaries,1995
+697,"Browning Version, The (1994)",True,exact_title_year,207,The Browning Version,1994
+698,Little Women (1994),True,exact_title_year,256,Little Women,1994
+699,Miami Rhapsody (1995),True,exact_title_year,273,Miami Rhapsody,1995
+700,"Wonderful, Horrible Life of Leni Riefenstahl, The (1993)",True,exact_title_year,356,"The Wonderful, Horrible Life of Leni Riefenstahl",1993
+701,Barcelona (1994),True,exact_title_year,410,Barcelona,1994
+702,Widows' Peak (1994),True,exact_title_year,445,Widows' Peak,1994
+703,"House of the Spirits, The (1993)",True,exact_title_year,462,The House of the Spirits,1993
+704,Singin' in the Rain (1952),True,exact_title_year,858,Singin' in the Rain,1952
+705,Bad Moon (1996),True,exact_title_year,1112,Bad Moon,1996
+706,Enchanted April (1991),True,exact_title_year,1121,Enchanted April,1991
+707,"Sex, Lies, and Videotape (1989)",True,exact_title_year,1129,"Sex, Lies, and Videotape",1989
+708,Strictly Ballroom (1992),True,exact_title_year,1131,Strictly Ballroom,1992
+709,Better Off Dead... (1985),True,exact_title_year,1196,Better Off Dead...,1985
+710,"Substance of Fire, The (1996)",True,exact_title_year,1319,The Substance of Fire,1996
+711,Tin Men (1987),True,exact_title_year,1330,Tin Men,1987
+712,Othello (1995),True,exact_title_year,25,Othello,1995
+713,Carrington (1995),True,exact_title_year,33,Carrington,1995
+714,To Die For (1995),True,exact_title_year,43,To Die For,1995
+715,Home for the Holidays (1995),True,exact_title_year,55,Home for the Holidays,1995
+716,"Juror, The (1996)",True,exact_title_year,77,The Juror,1996
+717,In the Bleak Midwinter (1995),False,unmatched,,,
+718,Canadian Bacon (1994),True,exact_title_year_plusminus1,153,Canadian Bacon,1995
+719,First Knight (1995),True,exact_title_year,164,First Knight,1995
+720,Mallrats (1995),True,exact_title_year,176,Mallrats,1995
+721,Nine Months (1995),True,exact_title_year,182,Nine Months,1995
+722,Boys on the Side (1995),True,exact_title_year,214,Boys on the Side,1995
+723,Circle of Friends (1995),True,exact_title_year,217,Circle of Friends,1995
+724,Exit to Eden (1994),True,exact_title_year,229,Exit to Eden,1994
+725,Fluke (1995),True,exact_title_year,236,Fluke,1995
+726,Immortal Beloved (1994),True,exact_title_year,244,Immortal Beloved,1994
+727,Junior (1994),True,exact_title_year,251,Junior,1994
+728,Nell (1994),True,exact_title_year,277,Nell,1994
+729,"Queen Margot (Reine Margot, La) (1994)",True,exact_title_year,297,Queen Margot,1994
+730,"Corrina, Corrina (1994)",True,exact_title_year,344,"Corrina, Corrina",1994
+731,Dave (1993),True,exact_title_year,433,Dave,1993
+732,Go Fish (1994),True,exact_title_year,454,Go Fish,1994
+733,Made in America (1993),True,exact_title_year,482,Made in America,1993
+734,Philadelphia (1993),True,exact_title_year,501,Philadelphia,1993
+735,Shadowlands (1993),True,exact_title_year,527,Shadowlands,1993
+736,Sirens (1994),True,exact_title_year_plusminus1,530,Sirens,1993
+737,Threesome (1994),True,exact_title_year,543,Threesome,1994
+738,Pretty Woman (1990),True,exact_title_year,588,Pretty Woman,1990
+739,Jane Eyre (1996),True,exact_title_year,603,Jane Eyre,1996
+740,"Last Supper, The (1995)",True,exact_title_year,616,The Last Supper,1995
+741,Ransom (1996),True,exact_title_year,797,Ransom,1996
+742,"Crow: City of Angels, The (1996)",True,exact_title_year,804,The Crow: City of Angels,1996
+743,Michael Collins (1996),True,exact_title_year,949,Michael Collins,1996
+744,"Ruling Class, The (1972)",True,exact_title_year,1107,The Ruling Class,1972
+745,Real Genius (1985),True,exact_title_year,1235,Real Genius,1985
+746,Benny & Joon (1993),True,exact_title_year,1370,Benny & Joon,1993
+747,"Saint, The (1997)",True,exact_title_year,1402,The Saint,1997
+748,"MatchMaker, The (1997)",True,exact_title_year,1537,The Matchmaker,1997
+749,Amistad (1997),True,exact_title_year,1596,Amistad,1997
+750,Tomorrow Never Dies (1997),True,exact_title_year,1622,Tomorrow Never Dies,1997
+751,"Replacement Killers, The (1998)",True,exact_title_year,1659,The Replacement Killers,1998
+752,Burnt By the Sun (1994),True,exact_title_year,209,Burnt by the Sun,1994
+753,Red Corner (1997),True,exact_title_year,1590,Red Corner,1997
+754,Jumanji (1995),True,exact_title_year,1,Jumanji,1995
+755,Father of the Bride Part II (1995),True,exact_title_year,4,Father of the Bride Part II,1995
+756,Across the Sea of Time (1995),True,exact_title_year,35,Across the Sea of Time,1995
+757,Lawnmower Man 2: Beyond Cyberspace (1996),True,exact_title_year,64,Lawnmower Man 2: Beyond Cyberspace,1996
+758,Fair Game (1995),True,exact_title_year,69,Fair Game,1995
+759,Screamers (1995),True,exact_title_year,74,Screamers,1995
+760,Nick of Time (1995),True,exact_title_year,87,Nick of Time,1995
+761,Beautiful Girls (1996),True,exact_title_year,91,Beautiful Girls,1996
+762,Happy Gilmore (1996),True,exact_title_year,101,Happy Gilmore,1996
+763,If Lucy Fell (1996),True,exact_title_year,115,If Lucy Fell,1996
+764,Boomerang (1992),True,exact_title_year,119,Boomerang,1992
+765,Man of the Year (1995),True,exact_title_year,134,Man of the Year,1995
+766,"Addiction, The (1995)",True,exact_title_year,148,The Addiction,1995
+767,Casper (1995),True,exact_title_year,154,Casper,1995
+768,Congo (1995),True,exact_title_year,156,Congo,1995
+769,Devil in a Blue Dress (1995),True,exact_title_year,160,Devil in a Blue Dress,1995
+770,Johnny Mnemonic (1995),True,exact_title_year,168,Johnny Mnemonic,1995
+771,Kids (1995),True,exact_title_year,171,Kids,1995
+772,Mute Witness (1994),True,exact_title_year_plusminus1,179,Mute Witness,1995
+773,"Prophecy, The (1995)",True,exact_title_year,184,The Prophecy,1995
+774,Something to Talk About (1995),True,exact_title_year,191,Something to Talk About,1995
+775,Three Wishes (1995),True,exact_title_year,197,Three Wishes,1995
+776,Castle Freak (1995),True,exact_title_year,216,Castle Freak,1995
+777,Don Juan DeMarco (1995),True,exact_title_year_plusminus1,219,Don Juan DeMarco,1994
+778,Drop Zone (1994),True,exact_title_year,222,Drop Zone,1994
+779,Dumb & Dumber (1994),True,exact_title_year,226,Dumb and Dumber,1994
+780,French Kiss (1995),True,exact_title_year,231,French Kiss,1995
+781,Little Odessa (1994),True,exact_title_year,263,Little Odessa,1994
+782,Milk Money (1994),True,exact_title_year,271,Milk Money,1994
+783,Beyond Bedlam (1993),True,exact_title_year_plusminus1,280,Beyond Bedlam,1994
+784,Only You (1994),True,exact_title_year,284,Only You,1994
+785,"Perez Family, The (1995)",True,exact_title_year,289,The Perez Family,1995
+786,Roommates (1995),False,unmatched,,,
+787,Relative Fear (1994),True,exact_title_year_plusminus1,305,Relative Fear,1995
+788,Swimming with Sharks (1995),True,exact_title_year_plusminus1,316,Swimming with Sharks,1994
+789,Tommy Boy (1995),True,exact_title_year,326,Tommy Boy,1995
+790,"Baby-Sitters Club, The (1995)",True,exact_title_year,336,The Baby-Sitters Club,1995
+791,Bullets Over Broadway (1994),True,exact_title_year,341,Bullets Over Broadway,1994
+792,Crooklyn (1994),True,exact_title_year,345,Crooklyn,1994
+793,It Could Happen to You (1994),True,exact_title_year,354,It Could Happen to You,1994
+794,Richie Rich (1994),False,unmatched,,,
+795,Speechless (1994),True,exact_title_year,371,Speechless,1994
+796,Timecop (1994),True,exact_title_year,372,Timecop,1994
+797,Bad Company (1995),True,exact_title_year,377,Bad Company,1995
+798,Boys Life (1995),False,unmatched,,,
+799,In the Mouth of Madness (1995),True,exact_title_year_plusminus1,400,In the Mouth of Madness,1994
+800,"Air Up There, The (1994)",True,exact_title_year,407,The Air Up There,1994
+801,Hard Target (1993),True,exact_title_year,457,Hard Target,1993
+802,Heaven & Earth (1993),True,exact_title_year,458,Heaven & Earth,1993
+803,Jimmy Hollywood (1994),True,exact_title_year,471,Jimmy Hollywood,1994
+804,Manhattan Murder Mystery (1993),True,exact_title_year,485,Manhattan Murder Mystery,1993
+805,Menace II Society (1993),True,exact_title_year,486,Menace II Society,1993
+806,Poetic Justice (1993),True,exact_title_year,503,Poetic Justice,1993
+807,"Program, The (1993)",True,exact_title_year,504,The Program,1993
+808,Rising Sun (1993),True,exact_title_year,510,Rising Sun,1993
+809,"Shadow, The (1994)",True,exact_title_year,526,The Shadow,1994
+810,Thirty-Two Short Films About Glenn Gould (1993),True,exact_title_year,542,Thirty Two Short Films About Glenn Gould,1993
+811,Andre (1994),True,exact_title_year,569,Andre,1994
+812,"Celluloid Closet, The (1995)",True,exact_title_year_plusminus1,572,The Celluloid Closet,1996
+813,"Great Day in Harlem, A (1994)",True,exact_title_year,593,A Great Day in Harlem,1994
+814,One Fine Day (1996),True,exact_title_year,595,One Fine Day,1996
+815,Candyman: Farewell to the Flesh (1995),True,exact_title_year,596,Candyman: Farewell to the Flesh,1995
+816,Frisk (1995),True,exact_title_year_plusminus1,625,Frisk,1996
+817,Girl 6 (1996),True,exact_title_year,628,Girl 6,1996
+818,Eddie (1996),True,exact_title_year,640,Eddie,1996
+819,Space Jam (1996),True,exact_title_year,656,Space Jam,1996
+820,Mrs. Winterbourne (1996),True,exact_title_year,671,Mrs. Winterbourne,1996
+821,Faces (1968),True,exact_title_year,681,Faces,1968
+822,Mulholland Falls (1996),True,exact_title_year,686,Mulholland Falls,1996
+823,"Great White Hype, The (1996)",True,exact_title_year,702,The Great White Hype,1996
+824,"Arrival, The (1996)",True,exact_title_year,722,The Arrival,1996
+825,"Phantom, The (1996)",True,exact_title_year,734,The Phantom,1996
+826,Daylight (1996),True,exact_title_year,768,Daylight,1996
+827,Alaska (1996),True,exact_title_year,778,Alaska,1996
+828,Fled (1996),True,exact_title_year,779,Fled,1996
+829,Power 98 (1995),True,exact_title_year_plusminus1,783,Power 98,1996
+830,Escape from L.A. (1996),True,exact_title_year,813,Escape from L.A.,1996
+831,Bogus (1996),True,exact_title_year,845,Bogus,1996
+832,Bulletproof (1996),True,exact_title_year,846,Bulletproof,1996
+833,Halloween: The Curse of Michael Myers (1995),True,exact_title_year,850,Halloween: The Curse of Michael Myers,1995
+834,"Gay Divorcee, The (1934)",True,exact_title_year,866,The Gay Divorcee,1934
+835,Ninotchka (1939),True,exact_title_year,895,Ninotchka,1939
+836,Meet John Doe (1941),True,exact_title_year,932,Meet John Doe,1941
+837,In the Line of Duty 2 (1987),False,unmatched,,,
+838,Loch Ness (1995),True,exact_title_year_plusminus1,11097,Loch Ness,1996
+839,Last Man Standing (1996),True,exact_title_year,953,Last Man Standing,1996
+840,"Glimmer Man, The (1996)",True,exact_title_year,961,The Glimmer Man,1996
+841,Pollyanna (1960),True,exact_title_year,971,Pollyanna,1960
+842,"Shaggy Dog, The (1959)",True,exact_title_year,973,The Shaggy Dog,1959
+843,Freeway (1996),True,exact_title_year,991,Freeway,1996
+844,That Thing You Do! (1996),True,exact_title_year,999,That Thing You Do!,1996
+845,To Gillian on Her 37th Birthday (1996),True,exact_title_year,1000,To Gillian on Her 37th Birthday,1996
+846,Looking for Richard (1996),True,exact_title_year,1006,Looking for Richard,1996
+847,"Murder, My Sweet (1944)",True,exact_title_year,1024,"Murder, My Sweet",1944
+848,Days of Thunder (1990),True,exact_title_year,1053,Days of Thunder,1990
+849,"Perfect Candidate, A (1996)",True,exact_title_year,1072,A Perfect Candidate,1996
+850,Two or Three Things I Know About Her (1966),False,unmatched,,,
+851,"Bloody Child, The (1996)",True,exact_title_year,1110,The Bloody Child,1996
+852,Braindead (1992),True,exact_title_year,1180,Braindead,1992
+853,Bad Taste (1987),True,exact_title_year,1194,Bad Taste,1987
+854,Diva (1981),True,exact_title_year,1203,Diva,1981
+855,Night on Earth (1991),True,exact_title_year,1218,Night on Earth,1991
+856,Paris Was a Woman (1995),True,exact_title_year_plusminus1,1253,Paris Was a Woman,1996
+857,Amityville: Dollhouse (1996),True,exact_title_year,1261,Amityville: Dollhouse,1996
+858,April Fool's Day (1986),True,exact_title_year,1267,April Fool's Day,1986
+859,"Believers, The (1987)",True,exact_title_year,1269,The Believers,1987
+860,Nosferatu a Venezia (1986),False,unmatched,,,
+861,Jingle All the Way (1996),True,exact_title_year,1295,Jingle All the Way,1996
+862,"Garden of Finzi-Contini, The (Giardino dei Finzi-Contini, Il) (1970)",False,unmatched,,,
+863,My Fellow Americans (1996),True,exact_title_year,1325,My Fellow Americans,1996
+864,"Ice Storm, The (1997)",True,exact_title_year,1541,The Ice Storm,1997
+865,Michael (1996),True,exact_title_year,1342,Michael,1996
+866,"Whole Wide World, The (1996)",True,exact_title_year,1346,The Whole Wide World,1996
+867,Hearts and Minds (1996),True,exact_title_year_plusminus1,1354,Hearts and Minds,1995
+868,Fools Rush In (1997),True,exact_title_year,1383,Fools Rush In,1997
+869,Touch (1997),True,exact_title_year,1384,Touch,1997
+870,Vegas Vacation (1997),True,exact_title_year,1387,Vegas Vacation,1997
+871,Love Jones (1997),True,exact_title_year,1401,Love Jones,1997
+872,Picture Perfect (1997),True,exact_title_year,1503,Picture Perfect,1997
+873,Career Girls (1997),True,exact_title_year,1506,Career Girls,1997
+874,She's So Lovely (1997),True,exact_title_year,1510,She's So Lovely,1997
+875,Money Talks (1997),True,exact_title_year,1514,Money Talks,1997
+876,Excess Baggage (1997),True,exact_title_year,1515,Excess Baggage,1997
+877,That Darn Cat! (1997),True,exact_title_year,1386,That Darn Cat,1997
+878,"Peacemaker, The (1997)",True,exact_title_year,1525,The Peacemaker,1997
+879,Soul Food (1997),True,exact_title_year,1529,Soul Food,1997
+880,Money Talks (1997),True,exact_title_year,1514,Money Talks,1997
+881,Washington Square (1997),True,exact_title_year,1554,Washington Square,1997
+882,Telling Lies in America (1997),True,exact_title_year,1555,Telling Lies In America,1997
+883,Year of the Horse (1997),True,exact_title_year,1556,Year of the Horse,1997
+884,Phantoms (1998),True,exact_title_year,1559,Phantoms,1998
+885,"Life Less Ordinary, A (1997)",True,exact_title_year,1562,A Life Less Ordinary,1997
+886,Eve's Bayou (1997),True,exact_title_year,1564,Eve's Bayou,1997
+887,One Night Stand (1997),True,exact_title_year,1572,One Night Stand,1997
+888,"Tango Lesson, The (1997)",True,exact_title_year,1573,The Tango Lesson,1997
+889,Mortal Kombat: Annihilation (1997),True,exact_title_year,1585,Mortal Kombat: Annihilation,1997
+890,Bent (1997),True,exact_title_year,1599,Bent,1997
+891,Flubber (1997),True,exact_title_year,1604,Flubber,1997
+892,For Richer or Poorer (1997),True,exact_title_year,1605,For Richer or Poorer,1997
+893,Home Alone 3 (1997),True,exact_title_year,1609,Home Alone 3,1997
+894,Scream 2 (1997),True,exact_title_year,1617,Scream 2,1997
+895,"Sweet Hereafter, The (1997)",True,exact_title_year,1619,The Sweet Hereafter,1997
+896,Time Tracers (1995),False,unmatched,,,
+897,"Postman, The (1997)",True,exact_title_year,1626,The Postman,1997
+898,"Winter Guest, The (1997)",True,exact_title_year,1628,The Winter Guest,1997
+899,Kundun (1997),True,exact_title_year,1630,Kundun,1997
+900,Mr. Magoo (1997),True,exact_title_year,1631,Mr. Magoo,1997
+901,"Big Lebowski, The (1998)",True,exact_title_year,1632,The Big Lebowski,1998
+902,Afterglow (1997),True,exact_title_year,1633,Afterglow,1997
+903,Ma vie en rose (My Life in Pink) (1997),True,exact_title_year,1634,My Life in Pink,1997
+904,Great Expectations (1998),True,exact_title_year,1635,Great Expectations,1998
+905,Oscar & Lucinda (1997),True,exact_title_year,2666,Oscar and Lucinda,1997
+906,Vermin (1998),False,unmatched,,,
+907,Half Baked (1998),True,exact_title_year,1647,Half Baked,1998
+908,Dangerous Beauty (1998),True,exact_title_year,2430,Dangerous Beauty,1998
+909,Nil By Mouth (1997),True,exact_title_year,1720,Nil by Mouth,1997
+910,Twilight (1998),True,exact_title_year,1675,Twilight,1998
+911,U.S. Marshalls (1998),False,unmatched,,,
+912,Love and Death on Long Island (1997),True,exact_title_year,1678,Love and Death on Long Island,1997
+913,Wild Things (1998),True,exact_title_year,1686,Wild Things,1998
+914,Primary Colors (1998),True,exact_title_year,1690,Primary Colors,1998
+915,Lost in Space (1998),True,exact_title_year,1706,Lost in Space,1998
+916,Mercury Rising (1998),True,exact_title_year,1708,Mercury Rising,1998
+917,City of Angels (1998),True,exact_title_year,1710,City of Angels,1998
+918,"City of Lost Children, The (1995)",True,exact_title_year,28,The City of Lost Children,1995
+919,Two Bits (1995),True,exact_title_year,65,Two Bits,1995
+920,Farewell My Concubine (1993),True,exact_title_year,439,Farewell My Concubine,1993
+921,Dead Man (1995),True,exact_title_year,693,Dead Man,1995
+922,Raise the Red Lantern (1991),True,exact_title_year,1219,Raise the Red Lantern,1991
+923,White Squall (1996),True,exact_title_year,84,White Squall,1996
+924,Unforgettable (1996),True,exact_title_year,100,Unforgettable,1996
+925,Down Periscope (1996),True,exact_title_year,132,Down Periscope,1996
+926,"Flower of My Secret, The (Flor de mi secreto, La) (1995)",True,exact_title_year,607,The Flower of My Secret,1995
+927,"Craft, The (1996)",True,exact_title_year,701,The Craft,1996
+928,Harriet the Spy (1996),True,exact_title_year,771,Harriet the Spy,1996
+929,Chain Reaction (1996),True,exact_title_year,801,Chain Reaction,1996
+930,"Island of Dr. Moreau, The (1996)",True,exact_title_year,841,The Island of Dr. Moreau,1996
+931,First Kid (1996),True,exact_title_year,842,First Kid,1996
+932,"Funeral, The (1996)",True,exact_title_year,1064,The Funeral,1996
+933,"Preacher's Wife, The (1996)",True,exact_title_year,1298,The Preacher's Wife,1996
+934,Paradise Road (1997),True,exact_title_year,1424,Paradise Road,1997
+935,Brassed Off (1996),True,exact_title_year,1454,Brassed Off,1996
+936,"Thousand Acres, A (1997)",True,exact_title_year,1532,A Thousand Acres,1997
+937,"Smile Like Yours, A (1997)",True,exact_title_year,1539,A Smile Like Yours,1997
+938,Murder in the First (1995),True,exact_title_year,275,Murder in the First,1995
+939,Airheads (1994),True,exact_title_year,406,Airheads,1994
+940,With Honors (1994),True,exact_title_year,443,With Honors,1994
+941,What's Love Got to Do with It (1993),True,exact_title_year,470,What's Love Got to Do with It,1993
+942,Killing Zoe (1994),True,exact_title_year_plusminus1,475,Killing Zoe,1993
+943,Renaissance Man (1994),True,exact_title_year,509,Renaissance Man,1994
+944,Charade (1963),True,exact_title_year,870,Charade,1963
+945,"Fox and the Hound, The (1981)",True,exact_title_year,990,The Fox and the Hound,1981
+946,"Big Blue, The (Grand bleu, Le) (1988)",True,exact_title_year,1157,The Big Blue,1988
+947,Booty Call (1997),True,exact_title_year,1393,Booty Call,1997
+948,How to Make an American Quilt (1995),True,exact_title_year,44,How To Make An American Quilt,1995
+949,Georgia (1995),True,exact_title_year,53,Georgia,1995
+950,"Indian in the Cupboard, The (1995)",True,exact_title_year,58,The Indian in the Cupboard,1995
+951,Blue in the Face (1995),True,exact_title_year,152,Blue in the Face,1995
+952,Unstrung Heroes (1995),True,exact_title_year,201,Unstrung Heroes,1995
+953,Unzipped (1995),True,exact_title_year,202,Unzipped,1995
+954,Before Sunrise (1995),True,exact_title_year,211,Before Sunrise,1995
+955,Nobody's Fool (1994),True,exact_title_year,276,Nobody's Fool,1994
+956,Pushing Hands (1992),True,exact_title_year,293,Pushing Hands,1992
+957,To Live (Huozhe) (1994),True,exact_title_year,319,To Live,1994
+958,Dazed and Confused (1993),True,exact_title_year,434,Dazed and Confused,1993
+959,Naked (1993),True,exact_title_year,494,Naked,1993
+960,Orlando (1993),True,exact_title_year_plusminus1,499,Orlando,1992
+961,Ruby in Paradise (1993),True,exact_title_year,516,Ruby in Paradise,1993
+962,Some Folks Call It a Sling Blade (1993),True,exact_title_year_plusminus1,660,Some Folks Call It a Sling Blade,1994
+963,"Month by the Lake, A (1995)",True,exact_title_year,726,A Month by the Lake,1995
+964,Funny Face (1957),True,exact_title_year,860,Funny Face,1957
+965,"Affair to Remember, An (1957)",True,exact_title_year,891,An Affair to Remember,1957
+966,Little Lord Fauntleroy (1936),True,exact_title_year,920,Little Lord Fauntleroy,1936
+967,"Inspector General, The (1949)",True,exact_title_year,922,The Inspector General,1949
+968,Winnie the Pooh and the Blustery Day (1968),True,exact_title_year,980,Winnie the Pooh and the Blustery Day,1968
+969,Hear My Song (1991),True,exact_title_year,1124,Hear My Song,1991
+970,Mediterraneo (1991),True,exact_title_year,1127,Mediterraneo,1991
+971,Passion Fish (1992),True,exact_title_year,1130,Passion Fish,1992
+972,Grateful Dead (1995),False,unmatched,,,
+973,Eye for an Eye (1996),True,exact_title_year,59,Eye for an Eye,1996
+974,Fear (1996),True,exact_title_year,646,Fear,1996
+975,Solo (1996),True,exact_title_year,672,Solo,1996
+976,"Substitute, The (1996)",True,exact_title_year,673,The Substitute,1996
+977,Heaven's Prisoners (1996),True,exact_title_year,706,Heaven's Prisoners,1996
+978,"Trigger Effect, The (1996)",True,exact_title_year,843,The Trigger Effect,1996
+979,Mother Night (1996),True,exact_title_year,852,Mother Night,1996
+980,Dangerous Ground (1997),True,exact_title_year,939,Dangerous Ground,1997
+981,Maximum Risk (1996),True,exact_title_year,948,Maximum Risk,1996
+982,"Rich Man's Wife, The (1996)",True,exact_title_year,950,The Rich Man's Wife,1996
+983,Shadow Conspiracy (1997),True,exact_title_year,1010,Shadow Conspiracy,1997
+984,Blood & Wine (1997),True,exact_title_year_plusminus1,1287,Blood and Wine,1996
+985,Turbulence (1997),True,exact_title_year,1358,Turbulence,1997
+986,Underworld (1997),True,exact_title_year_plusminus1,1361,Underworld,1996
+987,"Beautician and the Beast, The (1997)",True,exact_title_year,1379,The Beautician and the Beast,1997
+988,Cats Don't Dance (1997),True,exact_title_year,1411,Cats Don't Dance,1997
+989,Anna Karenina (1997),True,exact_title_year,1415,Anna Karenina,1997
+990,Keys to Tulsa (1997),True,exact_title_year,1420,Keys to Tulsa,1997
+991,Head Above Water (1996),True,exact_title_year,1476,Head Above Water,1996
+992,Hercules (1997),True,exact_title_year,1477,Hercules,1997
+993,"Last Time I Committed Suicide, The (1997)",True,exact_title_year,1478,The Last Time I Committed Suicide,1997
+994,"Kiss Me, Guido (1997)",True,exact_title_year,1521,"Kiss Me, Guido",1997
+995,"Big Green, The (1995)",True,exact_title_year,52,The Big Green,1995
+996,Stuart Saves His Family (1995),True,exact_title_year,306,Stuart Saves His Family,1995
+997,Cabin Boy (1994),True,exact_title_year,422,Cabin Boy,1994
+998,Clean Slate (1994),True,exact_title_year,426,Clean Slate,1994
+999,Lightning Jack (1994),True,exact_title_year,480,Lightning Jack,1994
+1000,"Stupids, The (1996)",True,exact_title_year,721,The Stupids,1996
+1001,"Pest, The (1997)",True,exact_title_year,1382,The Pest,1997
+1002,That Darn Cat! (1997),True,exact_title_year,1386,That Darn Cat,1997
+1003,Geronimo: An American Legend (1993),True,exact_title_year,451,Geronimo: An American Legend,1993
+1004,"Double vie de Véronique, La (Double Life of Veronique, The) (1991)",True,exact_title_year,1120,The Double Life of Veronique,1991
+1005,Until the End of the World (Bis ans Ende der Welt) (1991),True,exact_title_year,1244,Until the End of the World,1991
+1006,Waiting for Guffman (1996),True,exact_title_year,1377,Waiting for Guffman,1996
+1007,I Shot Andy Warhol (1996),True,exact_title_year,739,I Shot Andy Warhol,1996
+1008,Stealing Beauty (1996),True,exact_title_year,752,Stealing Beauty,1996
+1009,Basquiat (1996),True,exact_title_year,815,Basquiat,1996
+1010,2 Days in the Valley (1996),True,exact_title_year,956,2 Days in the Valley,1996
+1011,Private Parts (1997),True,exact_title_year,1400,Private Parts,1997
+1012,Anaconda (1997),True,exact_title_year,1418,Anaconda,1997
+1013,Romy and Michele's High School Reunion (1997),True,exact_title_year,1429,Romy and Michele's High School Reunion,1997
+1014,Shiloh (1997),True,exact_title_year_plusminus1,1459,Shiloh,1996
+1015,Con Air (1997),True,exact_title_year,1464,Con Air,1997
+1016,Trees Lounge (1996),True,exact_title_year,1007,Trees Lounge,1996
+1017,Tie Me Up! Tie Me Down! (1990),True,exact_title_year_plusminus1,1133,Tie Me Up! Tie Me Down!,1989
+1018,"Die xue shuang xiong (Killer, The) (1989)",True,exact_title_year,1159,The Killer,1989
+1019,Gaslight (1944),True,exact_title_year,865,Gaslight,1944
+1020,8 1/2 (1963),True,exact_title_year,1190,8½,1963
+1021,"Fast, Cheap & Out of Control (1997)",True,exact_title_year,1553,"Fast, Cheap & Out of Control",1997
+1022,Fathers' Day (1997),True,exact_title_year,1441,Fathers' Day,1997
+1023,Mrs. Dalloway (1997),True,exact_title_year,1588,Mrs. Dalloway,1997
+1024,Fire Down Below (1997),True,exact_title_year,1534,Fire Down Below,1997
+1025,"Lay of the Land, The (1997)",False,unmatched,,,
+1026,"Shooter, The (1995)",False,unmatched,,,
+1027,Grumpier Old Men (1995),True,exact_title_year,2,Grumpier Old Men,1995
+1028,Jury Duty (1995),True,exact_title_year,170,Jury Duty,1995
+1029,"Beverly Hillbillies, The (1993)",True,exact_title_year,412,The Beverly Hillbillies,1993
+1030,Lassie (1994),True,exact_title_year,477,Lassie,1994
+1031,Little Big League (1994),True,exact_title_year,561,Little Big League,1994
+1032,Homeward Bound II: Lost in San Francisco (1996),True,exact_title_year,599,Homeward Bound II: Lost in San Francisco,1996
+1033,"Quest, The (1996)",False,ambiguous,,,
+1034,Cool Runnings (1993),True,exact_title_year,977,Cool Runnings,1993
+1035,Drop Dead Fred (1991),True,exact_title_year,1075,Drop Dead Fred,1991
+1036,Grease 2 (1982),True,exact_title_year,1316,Grease 2,1982
+1037,Switchback (1997),True,exact_title_year,1565,Switchback,1997
+1038,Hamlet (1996),True,exact_title_year,1344,Hamlet,1996
+1039,Two if by Sea (1996),True,exact_title_year,62,Two If by Sea,1996
+1040,Forget Paris (1995),True,exact_title_year,232,Forget Paris,1995
+1041,Just Cause (1995),True,exact_title_year,252,Just Cause,1995
+1042,Rent-a-Kid (1995),True,exact_title_year,304,Rent-a-Kid,1995
+1043,"Paper, The (1994)",True,exact_title_year,364,The Paper,1994
+1044,Fearless (1993),True,exact_title_year,441,Fearless,1993
+1045,Malice (1993),True,exact_title_year,483,Malice,1993
+1046,Multiplicity (1996),True,exact_title_year,698,Multiplicity,1996
+1047,She's the One (1996),True,exact_title_year,774,She's the One,1996
+1048,House Arrest (1996),True,exact_title_year,805,House Arrest,1996
+1049,"Ghost and Mrs. Muir, The (1947)",True,exact_title_year,902,The Ghost and Mrs. Muir,1947
+1050,"Associate, The (1996)",True,exact_title_year,1063,The Associate,1996
+1051,Dracula: Dead and Loving It (1995),True,exact_title_year,11,Dracula: Dead and Loving It,1995
+1052,Now and Then (1995),True,exact_title_year,26,Now and Then,1995
+1053,Mr. Wrong (1996),True,exact_title_year,99,Mr. Wrong,1996
+1054,"Simple Twist of Fate, A (1994)",True,exact_title_year,529,A Simple Twist of Fate,1994
+1055,Cronos (1992),True,exact_title_year_plusminus1,557,Cronos,1993
+1056,"Pallbearer, The (1996)",True,exact_title_year,602,The Pallbearer,1996
+1057,"War, The (1994)",True,exact_title_year,333,The War,1994
+1058,Don't Be a Menace to South Central While Drinking Your Juice in the Hood (1996),True,exact_title_year,61,Don't Be a Menace to South Central While Drinking Your Juice in the Hood,1996
+1059,"Adventures of Pinocchio, The (1996)",True,exact_title_year,793,The Adventures of Pinocchio,1996
+1060,"Evening Star, The (1996)",True,exact_title_year,1343,The Evening Star,1996
+1061,Four Days in September (1997),True,exact_title_year,1652,Four Days in September,1997
+1062,"Little Princess, A (1995)",True,exact_title_year,257,A Little Princess,1995
+1063,Crossfire (1947),True,exact_title_year,1023,Crossfire,1947
+1064,Koyaanisqatsi (1983),True,exact_title_year_plusminus1,1228,Koyaanisqatsi,1982
+1065,Balto (1995),True,exact_title_year,12,Balto,1995
+1066,Bottle Rocket (1996),True,exact_title_year,98,Bottle Rocket,1996
+1067,"Star Maker, The (Uomo delle stelle, L') (1995)",True,exact_title_year,121,The Star Maker,1995
+1068,Amateur (1994),True,exact_title_year,145,Amateur,1994
+1069,Living in Oblivion (1995),True,exact_title_year,172,Living in Oblivion,1995
+1070,Party Girl (1995),True,exact_title_year,183,Party Girl,1995
+1071,"Pyromaniac's Love Story, A (1995)",True,exact_title_year,290,A Pyromaniac's Love Story,1995
+1072,Shallow Grave (1994),True,exact_title_year,313,Shallow Grave,1994
+1073,Reality Bites (1994),True,exact_title_year,365,Reality Bites,1994
+1074,"Man of No Importance, A (1994)",True,exact_title_year,378,A Man of No Importance,1994
+1075,"Pagemaster, The (1994)",True,exact_title_year,550,The Pagemaster,1994
+1076,Love and a .45 (1994),True,exact_title_year,591,Love and a .45,1994
+1077,Oliver & Company (1988),True,exact_title_year,688,Oliver & Company,1988
+1078,Joe's Apartment (1996),True,exact_title_year,794,Joe's Apartment,1996
+1079,Celestial Clockwork (1994),False,unmatched,,,
+1080,Curdled (1996),True,exact_title_year,957,Curdled,1996
+1081,Female Perversions (1996),True,exact_title_year,1250,Female Perversions,1996
+1082,Albino Alligator (1996),True,exact_title_year,1288,Albino Alligator,1996
+1083,Anne Frank Remembered (1995),True,exact_title_year,113,Anne Frank Remembered,1995
+1084,Carried Away (1996),True,exact_title_year,619,Carried Away,1996
+1085,It's My Party (1995),True,exact_title_year_plusminus1,667,It's My Party,1996
+1086,Bloodsport 2 (1995),False,unmatched,,,
+1087,Double Team (1997),True,exact_title_year,1416,Double Team,1997
+1088,Speed 2: Cruise Control (1997),True,exact_title_year,1468,Speed 2: Cruise Control,1997
+1089,Sliver (1993),True,exact_title_year,533,Sliver,1993
+1090,Pete's Dragon (1977),True,exact_title_year,987,Pete's Dragon,1977
+1091,Dear God (1996),True,exact_title_year,1111,Dear God,1996
+1092,Live Nude Girls (1995),True,exact_title_year,460,Live Nude Girls,1995
+1093,"Thin Line Between Love and Hate, A (1996)",True,exact_title_year,615,A Thin Line Between Love and Hate,1996
+1094,High School High (1996),True,exact_title_year,798,High School High,1996
+1095,Commandments (1997),True,exact_title_year,1436,Commandments,1997
+1096,"Hate (Haine, La) (1995)",True,exact_title_year,94,La Haine,1995
+1097,Flirting With Disaster (1996),True,exact_title_year,122,Flirting with Disaster,1996
+1098,"Red Firecracker, Green Firecracker (1994)",True,exact_title_year,303,"Red Firecracker, Green Firecracker",1994
+1099,What Happened Was... (1994),True,exact_title_year,489,What Happened Was...,1994
+1100,Six Degrees of Separation (1993),True,exact_title_year,531,Six Degrees of Separation,1993
+1101,Two Much (1996),True,exact_title_year,608,Two Much,1996
+1102,Trust (1990),True,exact_title_year,1176,Trust,1990
+1103,C'est arrivé près de chez vous (1992),False,unmatched,,,
+1104,Firestorm (1998),True,exact_title_year,1640,Firestorm,1998
+1105,"Newton Boys, The (1998)",True,exact_title_year,1685,The Newton Boys,1998
+1106,Beyond Rangoon (1995),True,exact_title_year,151,Beyond Rangoon,1995
+1107,Feast of July (1995),True,exact_title_year,163,Feast of July,1995
+1108,Death and the Maiden (1994),True,exact_title_year,224,Death and the Maiden,1994
+1109,Tank Girl (1995),True,exact_title_year,320,Tank Girl,1995
+1110,Double Happiness (1994),True,exact_title_year,334,Double Happiness,1994
+1111,Cobb (1994),True,exact_title_year,347,Cobb,1994
+1112,Mrs. Parker and the Vicious Circle (1994),True,exact_title_year,362,Mrs. Parker and the Vicious Circle,1994
+1113,Faithful (1996),True,exact_title_year,648,Faithful,1996
+1114,Twelfth Night (1996),True,exact_title_year,851,Twelfth Night,1996
+1115,"Mark of Zorro, The (1940)",True,exact_title_year,900,The Mark of Zorro,1940
+1116,Surviving Picasso (1996),True,exact_title_year,1001,Surviving Picasso,1996
+1117,Up in Smoke (1978),True,exact_title_year,1137,Up in Smoke,1978
+1118,Some Kind of Wonderful (1987),True,exact_title_year,1229,Some Kind of Wonderful,1987
+1119,I'm Not Rappaport (1996),True,exact_title_year,1254,I'm Not Rappaport,1996
+1120,"Umbrellas of Cherbourg, The (Parapluies de Cherbourg, Les) (1964)",True,exact_title_year,195,The Umbrellas of Cherbourg,1964
+1121,They Made Me a Criminal (1939),True,exact_title_year,921,They Made Me a Criminal,1939
+1122,"Last Time I Saw Paris, The (1954)",True,exact_title_year,931,The Last Time I Saw Paris,1954
+1123,"Farewell to Arms, A (1932)",True,exact_title_year,935,A Farewell to Arms,1932
+1124,"Innocents, The (1961)",True,exact_title_year,1029,The Innocents,1961
+1125,"Old Man and the Sea, The (1958)",True,exact_title_year,1038,The Old Man and the Sea,1958
+1126,"Truman Show, The (1998)",True,exact_title_year,1586,The Truman Show,1998
+1127,Heidi Fleiss: Hollywood Madam (1995) ,True,exact_title_year,96,Heidi Fleiss: Hollywood Madam,1995
+1128,Chungking Express (1994),True,exact_title_year,120,Chungking Express,1994
+1129,Jupiter's Wife (1994),True,exact_title_year_plusminus1,125,Jupiter's Wife,1995
+1130,Safe (1995),True,exact_title_year,186,Safe,1995
+1131,Feeling Minnesota (1996),True,exact_title_year,676,Feeling Minnesota,1996
+1132,Escape to Witch Mountain (1975),True,exact_title_year,966,Escape to Witch Mountain,1975
+1133,Get on the Bus (1996),True,exact_title_year,1009,Get on the Bus,1996
+1134,"Doors, The (1991)",True,exact_title_year,1046,The Doors,1991
+1135,Ghosts of Mississippi (1996),True,exact_title_year,1336,Ghosts of Mississippi,1996
+1136,Beautiful Thing (1996),True,exact_title_year,1003,Beautiful Thing,1996
+1137,Best Men (1997),True,exact_title_year,1397,Best Men,1997
+1138,Hackers (1995),True,exact_title_year,166,Hackers,1995
+1139,"Road to Wellville, The (1994)",True,exact_title_year,511,The Road to Wellville,1994
+1140,"War Room, The (1993)",True,exact_title_year,549,The War Room,1993
+1141,When We Were Kings (1996),True,exact_title_year,1093,When We Were Kings,1996
+1142,Hard Eight (1996),True,exact_title_year,2816,Hard Eight,1996
+1143,"Quiet Room, The (1996)",True,exact_title_year,1408,The Quiet Room,1996
+1144,Blue Chips (1994),True,exact_title_year,417,Blue Chips,1994
+1145,Calendar Girl (1993),True,exact_title_year,423,Calendar Girl,1993
+1146,My Family (1995),True,exact_title_year,274,My Family,1995
+1147,Tom & Viv (1994),True,exact_title_year,324,Tom & Viv,1994
+1148,Walkabout (1971),True,exact_title_year,1351,Walkabout,1971
+1149,Last Dance (1996),True,exact_title_year,703,Last Dance,1996
+1150,Original Gangstas (1996),True,exact_title_year,707,Original Gangstas,1996
+1151,In Love and War (1996),True,exact_title_year,1333,In Love and War,1996
+1152,Backbeat (1993),True,exact_title_year_plusminus1,339,Backbeat,1994
+1153,Alphaville (1965),True,exact_title_year,662,Alphaville,1965
+1154,"Rendezvous in Paris (Rendez-vous de Paris, Les) (1995)",True,exact_title_year,777,Rendezvous in Paris,1995
+1155,Cyclo (1995),True,exact_title_year,814,Cyclo,1995
+1156,"Relic, The (1997)",True,exact_title_year,840,The Relic,1997
+1157,"Fille seule, La (A Single Girl) (1995)",True,exact_title_year,1066,A Single Girl,1995
+1158,Stalker (1979),True,exact_title_year,1172,Stalker,1979
+1159,Love! Valour! Compassion! (1997),True,exact_title_year,1449,Love! Valour! Compassion!,1997
+1160,Palookaville (1996),True,exact_title_year_plusminus1,1062,Palookaville,1995
+1161,Phat Beach (1996),True,exact_title_year,799,Phat Beach,1996
+1162,"Portrait of a Lady, The (1996)",True,exact_title_year,1350,The Portrait of a Lady,1996
+1163,Zeus and Roxanne (1997),True,exact_title_year,1357,Zeus & Roxanne,1997
+1164,Big Bully (1996),True,exact_title_year,73,Big Bully,1996
+1165,Love & Human Remains (1993),True,exact_title_year,174,Love & Human Remains,1993
+1166,"Sum of Us, The (1994)",True,exact_title_year,317,The Sum of Us,1994
+1167,Little Buddha (1993),True,exact_title_year,358,Little Buddha,1993
+1168,Fresh (1994),True,exact_title_year,449,Fresh,1994
+1169,Spanking the Monkey (1994),True,exact_title_year,566,Spanking the Monkey,1994
+1170,Wild Reeds (1994),True,exact_title_year,855,Wild Reeds,1994
+1171,"Women, The (1939)",True,exact_title_year,886,The Women,1939
+1172,Bliss (1997),True,exact_title_year,945,Bliss,1997
+1173,Caught (1996),True,exact_title_year,954,Caught,1996
+1174,Hugo Pool (1997),True,exact_title_year,1570,Hugo Pool,1997
+1175,Welcome To Sarajevo (1997),True,exact_title_year,1574,Welcome to Sarajevo,1997
+1176,Dunston Checks In (1996),True,exact_title_year,85,Dunston Checks In,1996
+1177,Major Payne (1994),True,exact_title_year_plusminus1,262,Major Payne,1995
+1178,Man of the House (1995),True,exact_title_year,269,Man of the House,1995
+1179,I Love Trouble (1994),True,exact_title_year,353,I Love Trouble,1994
+1180,"Low Down Dirty Shame, A (1994)",True,exact_title_year,380,A Low Down Dirty Shame,1994
+1181,Cops and Robbersons (1994),True,exact_title_year,430,Cops & Robbersons,1994
+1182,"Cowboy Way, The (1994)",True,exact_title_year,431,The Cowboy Way,1994
+1183,"Endless Summer 2, The (1994)",True,exact_title_year,436,The Endless Summer 2,1994
+1184,In the Army Now (1994),True,exact_title_year,466,In the Army Now,1994
+1185,"Inkwell, The (1994)",True,exact_title_year,469,The Inkwell,1994
+1186,Switchblade Sisters (1975),True,exact_title_year,695,Switchblade Sisters,1975
+1187,Young Guns II (1990),True,exact_title_year,1314,Young Guns II,1990
+1188,Prefontaine (1997),True,exact_title_year,1371,Prefontaine,1997
+1189,That Old Feeling (1997),True,exact_title_year,1389,That Old Feeling,1997
+1190,"Letter From Death Row, A (1998)",True,exact_title_year,1656,A Letter from Death Row,1998
+1191,"Boys of St. Vincent, The (1993)",True,exact_title_year_plusminus1,118,The Boys of St. Vincent,1992
+1192,Before the Rain (Pred dozhdot) (1994),True,exact_title_year,210,Before the Rain,1994
+1193,Once Were Warriors (1994),True,exact_title_year,285,Once Were Warriors,1994
+1194,Strawberry and Chocolate (Fresa y chocolate) (1993),True,exact_title_year,315,Strawberry and Chocolate,1993
+1195,"Savage Nights (Nuits fauves, Les) (1992)",True,exact_title_year,519,Savage Nights,1992
+1196,"Family Thing, A (1996)",True,exact_title_year,624,A Family Thing,1996
+1197,Purple Noon (1960),True,exact_title_year,643,Purple Noon,1960
+1198,Cemetery Man (Dellamorte Dellamore) (1994),True,exact_title_year,710,Cemetery Man,1994
+1199,Kim (1950),True,exact_title_year,728,Kim,1950
+1200,Marlene Dietrich: Shadow and Light (1996) ,False,unmatched,,,
+1201,"Maybe, Maybe Not (Bewegte Mann, Der) (1994)",True,exact_title_year,822,Maybe... Maybe Not,1994
+1202,Top Hat (1935),True,exact_title_year,904,Top Hat,1935
+1203,To Be or Not to Be (1942),True,exact_title_year,905,To Be or Not to Be,1942
+1204,"Secret Agent, The (1996)",True,exact_title_year,997,The Secret Agent,1996
+1205,Amos & Andrew (1993),True,exact_title_year,1369,Amos & Andrew,1993
+1206,Jade (1995),True,exact_title_year,129,Jade,1995
+1207,Kiss of Death (1995),True,exact_title_year,254,Kiss of Death,1995
+1208,Mixed Nuts (1994),True,exact_title_year,270,Mixed Nuts,1994
+1209,Virtuosity (1995),True,exact_title_year,331,Virtuosity,1995
+1210,Blue Sky (1994),True,exact_title_year,418,Blue Sky,1994
+1211,Flesh and Bone (1993),True,exact_title_year,444,Flesh and Bone,1993
+1212,Guilty as Sin (1993),True,exact_title_year,456,Guilty as Sin,1993
+1213,In the Realm of the Senses (Ai no corrida) (1976),True,exact_title_year,488,In the Realm of the Senses,1976
+1214,Barb Wire (1996),True,exact_title_year,712,Barb Wire,1996
+1215,Kissed (1996),True,exact_title_year,1421,Kissed,1996
+1216,Assassins (1995),True,exact_title_year,22,Assassins,1995
+1217,Friday (1995),True,exact_title_year,67,Friday,1995
+1218,"Goofy Movie, A (1995)",True,exact_title_year,234,A Goofy Movie,1995
+1219,Higher Learning (1995),True,exact_title_year,351,Higher Learning,1995
+1220,When a Man Loves a Woman (1994),True,exact_title_year,374,When a Man Loves a Woman,1994
+1221,Judgment Night (1993),True,exact_title_year,472,Judgment Night,1993
+1222,King of the Hill (1993),True,exact_title_year,476,King of the Hill,1993
+1223,"Scout, The (1994)",True,exact_title_year,521,The Scout,1994
+1224,Angus (1995),True,exact_title_year,679,Angus,1995
+1225,Night Falls on Manhattan (1997),True,exact_title_year_plusminus1,1337,Night Falls on Manhattan,1996
+1226,"Awfully Big Adventure, An (1995)",True,exact_title_year,144,An Awfully Big Adventure,1995
+1227,Under Siege 2: Dark Territory (1995),True,exact_title_year,200,Under Siege 2: Dark Territory,1995
+1228,Poison Ivy II (1995),False,unmatched,,,
+1229,Ready to Wear (Pret-A-Porter) (1994),True,exact_title_year,299,Prêt-à-Porter,1994
+1230,Marked for Death (1990),True,exact_title_year,1317,Marked for Death,1990
+1231,Madonna: Truth or Dare (1991),True,exact_title_year,1134,Madonna: Truth or Dare,1991
+1232,Nénette et Boni (1996),False,unmatched,,,
+1233,Chairman of the Board (1998),True,exact_title_year,1583,Chairman of the Board,1998
+1234,"Big Bang Theory, The (1994)",False,unmatched,,,
+1235,"Other Voices, Other Rooms (1997)",False,unmatched,,,
+1236,Twisted (1996),True,exact_title_year,1623,Twisted,1996
+1237,Full Speed (1996),True,exact_title_year,1624,Full Speed,1996
+1238,Cutthroat Island (1995),True,exact_title_year,14,Cutthroat Island,1995
+1239,Ghost in the Shell (Kokaku kidotai) (1995),True,exact_title_year,715,Ghost in the Shell,1995
+1240,"Van, The (1996)",True,exact_title_year,1404,The Van,1996
+1241,"Old Lady Who Walked in the Sea, The (Vieille qui marchait dans la mer, La) (1991)",True,exact_title_year,767,The Old Lady Who Walked in the Sea,1991
+1242,Night Flier (1997),True,exact_title_year,1661,The Night Flier,1997
+1243,Metro (1997),True,exact_title_year,1363,Metro,1997
+1244,Gridlock'd (1997),True,exact_title_year,1375,Gridlock'd,1997
+1245,Bushwhacked (1995),True,exact_title_year,208,Bushwhacked,1995
+1246,Bad Girls (1994),True,exact_title_year,409,Bad Girls,1994
+1247,Blink (1994),True,exact_title_year,415,Blink,1994
+1248,For Love or Money (1993),True,exact_title_year,446,For Love or Money,1993
+1249,Best of the Best 3: No Turning Back (1995),True,exact_title_year,1114,Best of the Best 3: No Turning Back,1995
+1250,A Chef in Love (1996),True,exact_title_year,1428,A Chef in Love,1996
+1251,"Contempt (Mépris, Le) (1963)",True,exact_title_year,1483,Contempt,1963
+1252,"Tie That Binds, The (1995)",True,exact_title_year,196,The Tie That Binds,1995
+1253,Gone Fishin' (1997),True,exact_title_year,831,Gone Fishin',1997
+1254,Broken English (1996),True,exact_title_year,1435,Broken English,1996
+1255,"Designated Mourner, The (1997)",True,exact_title_year,1455,The Designated Mourner,1997
+1256,"Designated Mourner, The (1997)",True,exact_title_year,1455,The Designated Mourner,1997
+1257,Trial and Error (1997),True,exact_title_year,1462,Trial and Error,1997
+1258,Pie in the Sky (1995),True,exact_title_year_plusminus1,126,Pie in the Sky,1996
+1259,Total Eclipse (1995),True,exact_title_year,198,Total Eclipse,1995
+1260,"Run of the Country, The (1995)",True,exact_title_year,661,The Run of the Country,1995
+1261,Walking and Talking (1996),True,exact_title_year,773,Walking and Talking,1996
+1262,Foxfire (1996),True,exact_title_year,800,Foxfire,1996
+1263,Nothing to Lose (1994),True,exact_title_year,836,Nothing to Lose,1994
+1264,Star Maps (1997),True,exact_title_year,1522,Star Maps,1997
+1265,Bread and Chocolate (Pane e cioccolata) (1973),True,exact_title_year_plusminus1,605,Bread and Chocolate,1974
+1266,Clockers (1995),True,exact_title_year,155,Clockers,1995
+1267,Bitter Moon (1992),True,exact_title_year,340,Bitter Moon,1992
+1268,Love in the Afternoon (1957),True,exact_title_year,896,Love in the Afternoon,1957
+1269,Life with Mikey (1993),True,exact_title_year,479,Life With Mikey,1993
+1270,North (1994),True,exact_title_year,498,North,1994
+1271,Talking About Sex (1994),False,unmatched,,,
+1272,Color of Night (1994),True,exact_title_year,429,Color of Night,1994
+1273,Robocop 3 (1993),True,exact_title_year,512,RoboCop 3,1993
+1274,Killer (Bulletproof Heart) (1994),True,exact_title_year,553,Killer,1994
+1275,Sunset Park (1996),True,exact_title_year,685,Sunset Park,1996
+1276,Set It Off (1996),True,exact_title_year,955,Set It Off,1996
+1277,Selena (1997),True,exact_title_year,1409,Selena,1997
+1278,Wild America (1997),True,exact_title_year,1492,Wild America,1997
+1279,Gang Related (1997),True,exact_title_year,1566,Gang Related,1997
+1280,Manny & Lo (1996),True,exact_title_year,824,Manny & Lo,1996
+1281,"Grass Harp, The (1995)",True,exact_title_year,740,The Grass Harp,1995
+1282,Out to Sea (1997),True,exact_title_year,1491,Out to Sea,1997
+1283,Before and After (1996),True,exact_title_year,110,Before and After,1996
+1284,Princess Caraboo (1994),True,exact_title_year,571,Princess Caraboo,1994
+1285,Shall We Dance? (1937),True,exact_title_year,1021,Shall We Dance,1937
+1286,Ed (1996),True,exact_title_year,609,Ed,1996
+1287,Denise Calls Up (1995),True,exact_title_year,622,Denise Calls Up,1995
+1288,Jack and Sarah (1995),True,exact_title_year,627,Jack & Sarah,1995
+1289,Country Life (1994),True,exact_title_year,668,Country Life,1994
+1290,Celtic Pride (1996),True,exact_title_year,689,Celtic Pride,1996
+1291,"Simple Wish, A (1997)",True,exact_title_year,1493,A Simple Wish,1997
+1292,Star Kid (1997),True,exact_title_year,1645,Star Kid,1997
+1293,Ayn Rand: A Sense of Life (1997),True,exact_title_year_plusminus1,1667,Ayn Rand: A Sense of Life,1998
+1294,Kicked in the Head (1997),True,exact_title_year,1530,Kicked in the Head,1997
+1295,Indian Summer (1996),False,unmatched,,,
+1296,Love Affair (1994),True,exact_title_year,265,Love Affair,1994
+1297,"Band Wagon, The (1953)",True,exact_title_year,894,The Band Wagon,1953
+1298,Penny Serenade (1941),True,exact_title_year,915,Penny Serenade,1941
+1299,'Til There Was You (1997),True,exact_title_year,750,Til There Was You,1997
+1300,Stripes (1981),True,exact_title_year,1567,Stripes,1981
+1301,Late Bloomers (1996),True,exact_title_year,1465,Late Bloomers,1996
+1302,"Getaway, The (1994)",True,exact_title_year,452,The Getaway,1994
+1303,New York Cop (1996),False,unmatched,,,
+1304,National Lampoon's Senior Trip (1995),False,unmatched,,,
+1305,Delta of Venus (1994),True,exact_title_year_plusminus1,677,Delta of Venus,1995
+1306,Carmen Miranda: Bananas Is My Business (1994),True,exact_title_year_plusminus1,729,Carmen Miranda: Bananas Is My Business,1995
+1307,Babyfever (1994),True,exact_title_year,747,Babyfever,1994
+1308,"Very Natural Thing, A (1974)",True,exact_title_year,766,A Very Natural Thing,1974
+1309,"Walk in the Sun, A (1945)",True,exact_title_year,925,A Walk in the Sun,1945
+1310,Waiting to Exhale (1995),True,exact_title_year,3,Waiting to Exhale,1995
+1311,"Pompatus of Love, The (1996)",True,exact_title_year,942,The Pompatus of Love,1996
+1312,Palmetto (1998),True,exact_title_year,1670,Palmetto,1998
+1313,Surviving the Game (1994),True,exact_title_year,540,Surviving the Game,1994
+1314,Inventing the Abbotts (1997),True,exact_title_year,1417,Inventing the Abbotts,1997
+1315,"Horse Whisperer, The (1998)",True,exact_title_year,1627,The Horse Whisperer,1998
+1316,"Journey of August King, The (1995)",True,exact_title_year,88,The Journey of August King,1995
+1317,Catwalk (1995),True,exact_title_year,105,Catwalk,1995
+1318,"Neon Bible, The (1995)",True,exact_title_year,135,The Neon Bible,1995
+1319,Homage (1995),True,exact_title_year,393,Homage,1995
+1320,Open Season (1996),True,exact_title_year,395,Open Season,1996
+1321,Metisse (Café au Lait) (1993),True,exact_title_year,573,Café au Lait,1993
+1322,"Wooden Man's Bride, The (Wu Kui) (1994)",True,exact_title_year,592,The Wooden Man's Bride,1994
+1323,Loaded (1994),False,unmatched,,,
+1324,August (1996),True,exact_title_year,644,August,1996
+1325,Boys (1996),True,exact_title_year,682,Boys,1996
+1326,Captives (1994),True,exact_title_year,691,Captives,1994
+1327,Of Love and Shadows (1994),True,exact_title_year,692,Of Love and Shadows,1994
+1328,"Low Life, The (1994)",True,exact_title_year_plusminus1,9749,The Low Life,1995
+1329,An Unforgettable Summer (1994),True,exact_title_year,761,An Unforgettable Summer,1994
+1330,"Last Klezmer: Leopold Kozlowski, His Life and Music, The (1995)",False,unmatched,,,
+1331,My Life and Times With Antonin Artaud (En compagnie d'Antonin Artaud) (1993),True,exact_title_year,763,My Life and Times With Antonin Artaud,1993
+1332,Midnight Dancers (Sibak) (1994),True,exact_title_year,764,Midnight Dancers,1994
+1333,Somebody to Love (1994),True,exact_title_year,765,Somebody to Love,1994
+1334,American Buffalo (1996),True,exact_title_year,776,American Buffalo,1996
+1335,Kazaam (1996),True,exact_title_year,780,Kazaam,1996
+1336,Larger Than Life (1996),True,exact_title_year,782,Larger Than Life,1996
+1337,Two Deaths (1995),True,exact_title_year,784,Two Deaths,1995
+1338,Stefano Quantestorie (1993),True,exact_title_year,786,Stefano Quantestorie,1993
+1339,"Crude Oasis, The (1995)",False,unmatched,,,
+1340,Hedd Wyn (1992),True,exact_title_year,788,Hedd Wyn,1992
+1341,"Convent, The (Convento, O) (1995)",True,exact_title_year,792,The Convent,1995
+1342,Lotto Land (1995),True,exact_title_year,808,Lotto Land,1995
+1343,"Story of Xinghua, The (1993)",True,exact_title_year_plusminus1,809,The Story of Xinghua,1994
+1344,"Day the Sun Turned Cold, The (Tianguo niezi) (1994)",False,unmatched,,,
+1345,Dingo (1992),True,exact_title_year_plusminus1,817,Dingo,1991
+1346,"Ballad of Narayama, The (Narayama Bushiko) (1958)",True,exact_title_year,818,The Ballad of Narayama,1958
+1347,Every Other Weekend (1990),True,exact_title_year,819,Every Other Weekend,1990
+1348,Mille bolle blu (1993),False,unmatched,,,
+1349,Crows and Sparrows (1949),True,exact_title_year,820,Crows and Sparrows,1949
+1350,Lover's Knot (1996),True,exact_title_year,832,Lover's Knot,1996
+1351,Shadow of Angels (Schatten der Engel) (1976),True,exact_title_year,834,Shadow of Angels,1976
+1352,1-900 (1994),True,exact_title_year,849,1-900,1994
+1353,Venice/Venice (1992),False,unmatched,,,
+1354,Infinity (1996),True,exact_title_year,951,Infinity,1996
+1355,Ed's Next Move (1996),True,exact_title_year,959,Ed's Next Move,1996
+1356,For the Moment (1994),True,exact_title_year_plusminus1,1026,For the Moment,1993
+1357,The Deadly Cure (1996),False,unmatched,,,
+1358,Boys in Venice (1996),False,unmatched,,,
+1359,"Sexual Life of the Belgians, The (1994)",True,exact_title_year,1028,The Sexual Life of the Belgians,1994
+1360,"Search for One-eye Jimmy, The (1996)",False,unmatched,,,
+1361,American Strays (1996),True,exact_title_year,1055,American Strays,1996
+1362,"Leopard Son, The (1996)",True,exact_title_year,1059,The Leopard Son,1996
+1363,Bird of Prey (1996),False,unmatched,,,
+1364,Johnny 100 Pesos (1993),True,exact_title_year,1082,Johnny 100 Pesos,1993
+1365,JLG/JLG - autoportrait de décembre (1994),False,unmatched,,,
+1366,Faust (1994),True,exact_title_year,1097,Faust,1994
+1367,Mina Tannenbaum (1994),True,exact_title_year,1108,Mina Tannenbaum,1994
+1368,"Forbidden Christ, The (Cristo proibito, Il) (1950)",True,exact_title_year_plusminus1,1303,The Forbidden Christ,1951
+1369,I Can't Sleep (J'ai pas sommeil) (1994),True,exact_title_year,1304,I Can't Sleep,1994
+1370,"Machine, The (1994)",True,exact_title_year,1364,The Machine,1994
+1371,"Stranger, The (1994)",False,unmatched,,,
+1372,Good Morning (1971),False,unmatched,,,
+1373,Falling in Love Again (1980),True,exact_title_year,1365,Falling in Love Again,1980
+1374,"Cement Garden, The (1993)",True,exact_title_year,1366,The Cement Garden,1993
+1375,Meet Wally Sparks (1997),True,exact_title_year,1368,Meet Wally Sparks,1997
+1376,Hotel de Love (1996),True,exact_title_year,1381,Hotel de Love,1996
+1377,Rhyme & Reason (1997),True,exact_title_year,1394,Rhyme & Reason,1997
+1378,Love and Other Catastrophes (1996),True,exact_title_year,1413,Love and Other Catastrophes,1996
+1379,Hollow Reed (1996),True,exact_title_year,1423,Hollow Reed,1996
+1380,Losing Chase (1996),True,exact_title_year,1445,Losing Chase,1996
+1381,"Bonheur, Le (1965)",True,exact_title_year,1448,Le Bonheur,1965
+1382,"Second Jungle Book: Mowgli & Baloo, The (1997)",True,exact_title_year,1451,The Second Jungle Book: Mowgli & Baloo,1997
+1383,Squeeze (1996),True,exact_title_year_plusminus1,1469,Squeeze,1997
+1384,Roseanna's Grave (For Roseanna) (1997),True,exact_title_year,1475,Roseanna's Grave,1997
+1385,Tetsuo II: Body Hammer (1992),True,exact_title_year,1481,Tetsuo II: Body Hammer,1992
+1386,Fall (1997),True,exact_title_year,1485,Fall,1997
+1387,Gabbeh (1996),True,exact_title_year,1486,Gabbeh,1996
+1388,Mondo (1996),True,exact_title_year_plusminus1,1487,Mondo,1995
+1389,"Innocent Sleep, The (1995)",True,exact_title_year_plusminus1,1488,The Innocent Sleep,1996
+1390,For Ever Mozart (1996),True,exact_title_year,1489,For Ever Mozart,1996
+1391,"Locusts, The (1997)",True,exact_title_year,1536,The Locusts,1997
+1392,Stag (1997),True,exact_title_year,1542,Stag,1997
+1393,Swept from the Sea (1997),True,exact_title_year_plusminus1,1560,Swept from the Sea,1998
+1394,Hurricane Streets (1998),True,exact_title_year_plusminus1,1563,Hurricane Streets,1997
+1395,Stonewall (1995),True,exact_title_year,796,Stonewall,1995
+1396,Of Human Bondage (1934),True,exact_title_year,918,Of Human Bondage,1934
+1397,Anna (1996),False,unmatched,,,
+1398,Stranger in the House (1997),True,exact_title_year,1618,Stranger in the House,1997
+1399,Picture Bride (1995),True,exact_title_year,296,Picture Bride,1995
+1400,M. Butterfly (1993),True,exact_title_year,481,M. Butterfly,1993
+1401,"Ciao, Professore! (1993)",True,exact_title_year_plusminus1,565,"Ciao, Professore!",1992
+1402,Caro Diario (Dear Diary) (1994),True,exact_title_year_plusminus1,574,Dear Diary,1993
+1403,Withnail and I (1987),True,exact_title_year,1144,Withnail & I,1987
+1404,Boy's Life 2 (1997),True,exact_title_year,1395,Boys Life 2,1997
+1405,When Night Is Falling (1995),True,exact_title_year,47,When Night Is Falling,1995
+1406,"Specialist, The (1994)",True,exact_title_year,309,The Specialist,1994
+1407,Gordy (1995),True,exact_title_year,238,Gordy,1995
+1408,"Swan Princess, The (1994)",True,exact_title_year,307,The Swan Princess,1994
+1409,Harlem (1993),False,unmatched,,,
+1410,Barbarella (1968),True,exact_title_year,657,Barbarella,1968
+1411,Land Before Time III: The Time of the Great Giving (1995) (V),True,exact_title_year,848,The Land Before Time III: The Time of the Great Giving,1995
+1412,Street Fighter (1994),True,exact_title_year,386,Street Fighter,1994
+1413,Coldblooded (1995),True,exact_title_year,387,Coldblooded,1995
+1414,"Next Karate Kid, The (1994)",True,exact_title_year,495,The Next Karate Kid,1994
+1415,No Escape (1994),True,exact_title_year,497,No Escape,1994
+1416,"Turning, The (1992)",True,exact_title_year,1439,The Turning,1992
+1417,"Joy Luck Club, The (1993)",True,exact_title_year,1582,The Joy Luck Club,1993
+1418,Highlander III: The Sorcerer (1994),False,unmatched,,,
+1419,Gilligan's Island: The Movie (1998),False,unmatched,,,
+1420,My Crazy Life (Mi vida loca) (1993),True,exact_title_year_plusminus1,264,Mi Vida Loca,1994
+1421,Suture (1993),True,exact_title_year,314,Suture,1993
+1422,"Walking Dead, The (1995)",True,exact_title_year,329,The Walking Dead,1995
+1423,I Like It Like That (1994),True,exact_title_year,352,I Like It Like That,1994
+1424,I'll Do Anything (1994),True,exact_title_year,465,I'll Do Anything,1994
+1425,Grace of My Heart (1996),True,exact_title_year,946,Grace of My Heart,1996
+1426,Drunks (1995),False,unmatched,,,
+1427,SubUrbia (1997),True,exact_title_year_plusminus1,1380,SubUrbia,1996
+1428,Sliding Doors (1998),True,exact_title_year,1584,Sliding Doors,1998
+1429,Ill Gotten Gains (1997),True,exact_title_year,1610,Ill Gotten Gains,1997
+1430,Legal Deceit (1997),False,unmatched,,,
+1431,"Mighty, The (1998)",True,exact_title_year,2177,The Mighty,1998
+1432,Men of Means (1998),True,exact_title_year_plusminus1,1637,Men of Means,1999
+1433,Shooting Fish (1997),True,exact_title_year,1649,Shooting Fish,1997
+1434,"Steal Big, Steal Little (1995)",True,exact_title_year,116,Steal Big Steal Little,1995
+1435,Mr. Jones (1993),True,exact_title_year,491,Mr. Jones,1993
+1436,House Party 3 (1994),True,exact_title_year,463,House Party 3,1994
+1437,Panther (1995),True,exact_title_year,292,Panther,1995
+1438,Jason's Lyric (1994),True,exact_title_year,384,Jason's Lyric,1994
+1439,Above the Rim (1994),True,exact_title_year,402,Above the Rim,1994
+1440,Moonlight and Valentino (1995),True,exact_title_year,178,Moonlight and Valentino,1995
+1441,"Scarlet Letter, The (1995)",True,exact_title_year,187,The Scarlet Letter,1995
+1442,8 Seconds (1994),True,exact_title_year,401,8 Seconds,1994
+1443,That Darn Cat! (1965),True,exact_title_year,975,That Darn Cat!,1965
+1444,Ladybird Ladybird (1994),True,exact_title_year,258,Ladybird Ladybird,1994
+1445,"Bye Bye, Love (1995)",True,exact_title_year,594,Bye Bye Love,1995
+1446,Century (1993),True,exact_title_year,597,Century,1993
+1447,My Favorite Season (1993),True,exact_title_year,611,My Favorite Season,1993
+1448,Pather Panchali (1955),True,exact_title_year,652,Pather Panchali,1955
+1449,Golden Earrings (1947),True,exact_title_year,884,Golden Earrings,1947
+1450,Foreign Correspondent (1940),True,exact_title_year,888,Foreign Correspondent,1940
+1451,Lady of Burlesque (1943),True,exact_title_year,917,Lady of Burlesque,1943
+1452,Angel on My Shoulder (1946),True,exact_title_year,919,Angel on My Shoulder,1946
+1453,Angel and the Badman (1947),True,exact_title_year,923,Angel and the Badman,1947
+1454,"Outlaw, The (1943)",True,exact_title_year,926,The Outlaw,1943
+1455,Beat the Devil (1954),True,exact_title_year_plusminus1,929,Beat the Devil,1953
+1456,Love Is All There Is (1996),True,exact_title_year,1002,Love Is All There Is,1996
+1457,"Damsel in Distress, A (1937)",True,exact_title_year,1022,A Damsel in Distress,1937
+1458,Madame Butterfly (1995),True,exact_title_year,1040,Madame Butterfly,1995
+1459,Sleepover (1995),False,unmatched,,,
+1460,Here Comes Cookie (1935),True,exact_title_year,1103,Here Comes Cookie,1935
+1461,"Thieves (Voleurs, Les) (1996)",True,exact_title_year,1348,Thieves,1996
+1462,"Boys, Les (1997)",True,exact_title_year,1601,The Boys,1997
+1463,"Stars Fell on Henrietta, The (1995)",True,exact_title_year,193,The Stars Fell on Henrietta,1995
+1464,Last Summer in the Hamptons (1995),True,exact_title_year,82,Last Summer in the Hamptons,1995
+1465,Margaret's Museum (1995),True,exact_title_year,111,Margaret's Museum,1995
+1466,"Saint of Fort Washington, The (1993)",True,exact_title_year,518,The Saint of Fort Washington,1993
+1467,"Cure, The (1995)",True,exact_title_year,215,The Cure,1995
+1468,Tom and Huck (1995),True,exact_title_year,7,Tom and Huck,1995
+1469,Gumby: The Movie (1995),True,exact_title_year,239,Gumby: The Movie,1995
+1470,Hideaway (1995),True,exact_title_year,235,Hideaway,1995
+1471,"Visitors, The (Visiteurs, Les) (1993)",True,exact_title_year,697,The Visitors,1993
+1472,"Little Princess, The (1939)",True,exact_title_year,876,The Little Princess,1939
+1473,Nina Takes a Lover (1994),True,exact_title_year_plusminus1,282,Nina Takes a Lover,1995
+1474,Bhaji on the Beach (1993),True,exact_title_year_plusminus1,560,Bhaji on the Beach,1994
+1475,Raw Deal (1948),True,exact_title_year,1099,Raw Deal,1948
+1476,Nightwatch (1997),True,exact_title_year,1291,Nightwatch,1997
+1477,Dead Presidents (1995),True,exact_title_year,40,Dead Presidents,1995
+1478,Reckless (1995),True,exact_title_year,185,Reckless,1995
+1479,Herbie Rides Again (1974),True,exact_title_year,968,Herbie Rides Again,1974
+1480,S.F.W. (1994),True,exact_title_year,379,S.F.W.,1994
+1481,"Gate of Heavenly Peace, The (1995)",True,exact_title_year,758,The Gate of Heavenly Peace,1995
+1482,"Man in the Iron Mask, The (1998)",True,exact_title_year,1684,The Man in the Iron Mask,1998
+1483,"Jerky Boys, The (1994)",True,exact_title_year_plusminus1,250,The Jerky Boys,1995
+1484,"Colonel Chabert, Le (1994)",True,exact_title_year,382,Colonel Chabert,1994
+1485,Girl in the Cadillac (1995),True,exact_title_year,392,Girl in the Cadillac,1995
+1486,Even Cowgirls Get the Blues (1993),True,exact_title_year_plusminus1,437,Even Cowgirls Get the Blues,1994
+1487,Germinal (1993),True,exact_title_year,555,Germinal,1993
+1488,Chasers (1994),True,exact_title_year,556,Chasers,1994
+1489,Fausto (1993),False,unmatched,,,
+1490,Tough and Deadly (1995),True,exact_title_year,582,Tough and Deadly,1995
+1491,Window to Paris (1994),True,exact_title_year_plusminus1,589,Window to Paris,1993
+1492,"Modern Affair, A (1995)",True,exact_title_year_plusminus1,612,A Modern Affair,1996
+1493,"Mostro, Il (1994)",False,unmatched,,,
+1494,Flirt (1995),True,exact_title_year,810,Flirt,1995
+1495,Carpool (1996),True,exact_title_year,828,Carpool,1996
+1496,"Line King: Al Hirschfeld, The (1996)",False,unmatched,,,
+1497,Farmer & Chase (1995),False,unmatched,,,
+1498,Grosse Fatigue (1994),False,unmatched,,,
+1499,Santa with Muscles (1996),True,exact_title_year,1249,Santa with Muscles,1996
+1500,Prisoner of the Mountains (Kavkazsky Plennik) (1996),True,exact_title_year,1378,Prisoner of the Mountains,1996
+1501,Naked in New York (1994),True,exact_title_year_plusminus1,558,Naked in New York,1993
+1502,Gold Diggers: The Secret of Bear Mountain (1995),True,exact_title_year,727,Gold Diggers: The Secret of Bear Mountain,1995
+1503,"Bewegte Mann, Der (1994)",False,unmatched,,,
+1504,Killer: A Journal of Murder (1995),True,exact_title_year_plusminus1,835,Killer: A Journal of Murder,1996
+1505,Nelly & Monsieur Arnaud (1995),True,exact_title_year_plusminus1,632,Nelly and Monsieur Arnaud,1996
+1506,Three Lives and Only One Death (1996),True,exact_title_year,1089,Three Lives and Only One Death,1996
+1507,"Babysitter, The (1995)",True,exact_title_year,213,The Babysitter,1995
+1508,Getting Even with Dad (1994),True,exact_title_year,453,Getting Even with Dad,1994
+1509,Mad Dog Time (1996),True,exact_title_year,1251,Mad Dog Time,1996
+1510,Children of the Revolution (1996),True,exact_title_year,1432,Children of the Revolution,1996
+1511,"World of Apu, The (Apur Sansar) (1959)",True,exact_title_year,653,The World of Apu,1959
+1512,Sprung (1997),True,exact_title_year,1446,Sprung,1997
+1513,Dream With the Fishes (1997),True,exact_title_year,1474,Dream with the Fishes,1997
+1514,Wings of Courage (1995),False,unmatched,,,
+1515,"Wedding Gift, The (1994)",False,unmatched,,,
+1516,Race the Sun (1996),True,exact_title_year,117,Race the Sun,1996
+1517,Losing Isaiah (1995),True,exact_title_year,266,Losing Isaiah,1995
+1518,New Jersey Drive (1995),True,exact_title_year,278,New Jersey Drive,1995
+1519,"Fear, The (1995)",True,exact_title_year,390,The Fear,1995
+1520,Mr. Wonderful (1993),True,exact_title_year,492,Mr. Wonderful,1993
+1521,Trial by Jury (1994),True,exact_title_year,547,Trial by Jury,1994
+1522,"Good Man in Africa, A (1994)",True,exact_title_year,455,A Good Man in Africa,1994
+1523,Kaspar Hauser (1993),True,exact_title_year,790,Kaspar Hauser,1993
+1524,"Object of My Affection, The (1998)",True,exact_title_year,1699,The Object of My Affection,1998
+1525,Witness (1985),True,exact_title_year,1578,Witness,1985
+1526,Senseless (1998),True,exact_title_year,1641,Senseless,1998
+1527,Nowhere (1997),True,exact_title_year,1444,Nowhere,1997
+1528,Underground (1995),True,exact_title_year,649,Underground,1995
+1529,Jefferson in Paris (1995),True,exact_title_year,249,Jefferson in Paris,1995
+1530,Far From Home: The Adventures of Yellow Dog (1995),True,exact_title_year,233,Far from Home: The Adventures of Yellow Dog,1995
+1531,Foreign Student (1994),True,exact_title_year,564,Foreign Student,1994
+1532,I Don't Want to Talk About It (De eso no se habla) (1993),True,exact_title_year,575,I Don't Want to Talk About It,1993
+1533,Twin Town (1997),True,exact_title_year,1452,Twin Town,1997
+1534,"Enfer, L' (1994)",True,exact_title_year,259,L'Enfer,1994
+1535,Aiqing wansui (1994),False,unmatched,,,
+1536,Cosi (1996),True,exact_title_year,684,Cosi,1996
+1537,All Over Me (1997),True,exact_title_year,1426,All Over Me,1997
+1538,Being Human (1993),True,exact_title_year_plusminus1,411,Being Human,1994
+1539,"Amazing Panda Adventure, The (1995)",True,exact_title_year,142,The Amazing Panda Adventure,1995
+1540,"Beans of Egypt, Maine, The (1994)",True,exact_title_year,552,"The Beans of Egypt, Maine",1994
+1541,"Scarlet Letter, The (1926)",True,exact_title_year,916,The Scarlet Letter,1926
+1542,Johns (1996),True,exact_title_year,1018,Johns,1996
+1543,It Takes Two (1995),True,exact_title_year,36,It Takes Two,1995
+1544,Frankie Starlight (1995),True,exact_title_year,128,Frankie Starlight,1995
+1545,Shadows (Cienie) (1988),False,unmatched,,,
+1546,"Show, The (1995)",True,exact_title_year,188,The Show,1995
+1547,The Courtyard (1995),False,unmatched,,,
+1548,Dream Man (1995),True,exact_title_year,221,Dream Man,1995
+1549,Destiny Turns on the Radio (1995),True,exact_title_year,223,Destiny Turns on the Radio,1995
+1550,"Glass Shield, The (1994)",True,exact_title_year,240,The Glass Shield,1994
+1551,"Hunted, The (1995)",True,exact_title_year,246,The Hunted,1995
+1552,"Underneath, The (1995)",True,exact_title_year,328,The Underneath,1995
+1553,Safe Passage (1994),True,exact_title_year,368,Safe Passage,1994
+1554,"Secret Adventures of Tom Thumb, The (1993)",True,exact_title_year,385,The Secret Adventures of Tom Thumb,1993
+1555,Condition Red (1995),True,exact_title_year,613,Condition Red,1995
+1556,Yankee Zulu (1994),True,exact_title_year_plusminus1,641,Yankee Zulu,1993
+1557,Aparajito (1956),True,exact_title_year,6739,Aparajito,1956
+1558,Hostile Intentions (1994),True,exact_title_year_plusminus1,658,Hostile Intentions,1995
+1559,Clean Slate (Coup de Torchon) (1981),True,exact_title_year,663,Coup de Torchon,1981
+1560,Tigrero: A Film That Was Never Made (1994),True,exact_title_year,664,Tigrero: A Film That Was Never Made,1994
+1561,"Eye of Vichy, The (Oeil de Vichy, L') (1993)",True,exact_title_year,665,The Eye of Vichy,1993
+1562,"Promise, The (Versprechen, Das) (1994)",True,exact_title_year_plusminus1,670,The Promise,1995
+1563,To Cross the Rubicon (1991),True,exact_title_year,678,To Cross the Rubicon,1991
+1564,Daens (1992),False,unmatched,,,
+1565,"Man from Down Under, The (1943)",True,exact_title_year,723,The Man from Down Under,1943
+1566,Careful (1992),True,exact_title_year,725,Careful,1992
+1567,Vermont Is For Lovers (1992),False,unmatched,,,
+1568,"Vie est belle, La (Life is Rosey) (1987)",False,unmatched,,,
+1569,Quartier Mozart (1992),True,exact_title_year,743,Quartier Mozart,1992
+1570,Touki Bouki (Journey of the Hyena) (1973),True,exact_title_year,744,Touki Bouki,1973
+1571,Wend Kuuni (God's Gift) (1982),True,exact_title_year,745,God's Gift,1982
+1572,Spirits of the Dead (Tre passi nel delirio) (1968),True,exact_title_year,746,Spirits of the Dead,1968
+1573,Pharaoh's Army (1995),True,exact_title_year,748,Pharaoh's  Army,1995
+1574,"I, Worst of All (Yo, la peor de todas) (1990)",False,unmatched,,,
+1575,"Hungarian Fairy Tale, A (1987)",True,exact_title_year,762,A Hungarian Fairy Tale,1987
+1576,"Death in the Garden (Mort en ce jardin, La) (1956)",True,exact_title_year,787,Death in the Garden,1956
+1577,"Collectionneuse, La (1967)",True,exact_title_year,789,La Collectionneuse,1967
+1578,Baton Rouge (1988),False,unmatched,,,
+1579,Liebelei (1933),True,exact_title_year,853,Liebelei,1933
+1580,"Woman in Question, The (1950)",False,unmatched,,,
+1581,T-Men (1947),True,exact_title_year,1100,T-Men,1947
+1582,"Invitation, The (Zaproszenie) (1986)",False,unmatched,,,
+1583,"Symphonie pastorale, La (1946)",False,unmatched,,,
+1584,American Dream (1990),True,exact_title_year,1113,American Dream,1990
+1585,Lashou shentan (1992),False,unmatched,,,
+1586,Terror in a Texas Town (1958),True,exact_title_year,1321,Terror in a Texas Town,1958
+1587,Salut cousin! (1996),False,unmatched,,,
+1588,Schizopolis (1996),True,exact_title_year,1458,Schizopolis,1996
+1589,"To Have, or Not (1995)",True,exact_title_year,1467,To Have (Or Not),1995
+1590,Duoluo tianshi (1995),False,unmatched,,,
+1591,"Magic Hour, The (1998)",False,unmatched,,,
+1592,Death in Brunswick (1991),True,exact_title_year_plusminus1,829,Death in Brunswick,1990
+1593,Everest (1998),True,exact_title_year,1681,Everest,1998
+1594,Shopping (1994),True,exact_title_year,95,Shopping,1994
+1595,Nemesis 2: Nebula (1995),True,exact_title_year,281,Nemesis 2 - Nebula,1995
+1596,Romper Stomper (1992),True,exact_title_year,515,Romper Stomper,1992
+1597,City of Industry (1997),True,exact_title_year,1396,City of Industry,1997
+1598,Someone Else's America (1995),True,exact_title_year,741,Someone Else's America,1995
+1599,Guantanamera (1994),False,unmatched,,,
+1600,Office Killer (1997),True,exact_title_year,1615,Office Killer,1997
+1601,"Price Above Rubies, A (1998)",True,exact_title_year,1693,A Price Above Rubies,1998
+1602,Angela (1995),True,exact_title_year,127,Angela,1995
+1603,He Walked by Night (1948),True,exact_title_year,1098,He Walked by Night,1948
+1604,Love Serenade (1996),True,exact_title_year,1495,Love Serenade,1996
+1605,Deceiver (1997),True,exact_title_year,1575,Deceiver,1997
+1606,Hurricane Streets (1998),True,exact_title_year_plusminus1,1563,Hurricane Streets,1997
+1607,Buddy (1997),True,exact_title_year,1463,Buddy,1997
+1608,B*A*P*S (1997),True,exact_title_year,1412,B.A.P.S.,1997
+1609,"Truth or Consequences, N.M. (1997)",True,exact_title_year,1438,"Truth or Consequences, N.M.",1997
+1610,Intimate Relations (1996),True,exact_title_year,1443,Intimate Relations,1996
+1611,"Leading Man, The (1996)",True,exact_title_year,1644,The Leading Man,1996
+1612,Tokyo Fist (1995),True,exact_title_year,1663,Tokyo Fist,1995
+1613,"Reluctant Debutante, The (1958)",True,exact_title_year,898,The Reluctant Debutante,1958
+1614,Warriors of Virtue (1997),True,exact_title_year,1440,Warriors of Virtue,1997
+1615,Desert Winds (1995),False,unmatched,,,
+1616,Hugo Pool (1997),True,exact_title_year,1570,Hugo Pool,1997
+1617,King of New York (1990),True,exact_title_year,1672,King of New York,1990
+1618,All Things Fair (1996),True,exact_title_year_plusminus1,650,All Things Fair,1995
+1619,"Sixth Man, The (1997)",True,exact_title_year,6248,The Sixth Man,1997
+1620,Butterfly Kiss (1995),True,exact_title_year,675,Butterfly Kiss,1995
+1621,"Paris, France (1993)",True,exact_title_year_plusminus1,551,"Paris, France",1994
+1622,"Cérémonie, La (1995)",True,exact_title_year,1339,La Cérémonie,1995
+1623,Hush (1998),True,exact_title_year,1682,Hush,1998
+1624,Nightwatch (1997),True,exact_title_year,1291,Nightwatch,1997
+1625,Nobody Loves Me (Keiner liebt mich) (1994),True,exact_title_year,103,Nobody Loves Me,1994
+1626,"Wife, The (1995)",False,unmatched,,,
+1627,Lamerica (1994),True,exact_title_year,51,Lamerica,1994
+1628,Nico Icon (1995),True,exact_title_year,75,Nico Icon,1995
+1629,"Silence of the Palace, The (Saimt el Qusur) (1994)",False,unmatched,,,
+1630,"Slingshot, The (1993)",True,exact_title_year,562,The Slingshot,1993
+1631,Land and Freedom (Tierra y libertad) (1995),True,exact_title_year,621,Land and Freedom,1995
+1632,Á köldum klaka (Cold Fever) (1994),True,exact_title_year_plusminus1,635,Cold Fever,1995
+1633,Etz Hadomim Tafus (Under the Domin Tree) (1994),False,unmatched,,,
+1634,Two Friends (1986) ,False,unmatched,,,
+1635,Brothers in Trouble (1995),True,exact_title_year,718,Brothers in Trouble,1995
+1636,Girls Town (1996),True,exact_title_year,838,Girls Town,1996
+1637,Normal Life (1996),True,exact_title_year,1008,Normal Life,1996
+1638,Bitter Sugar (Azucar Amargo) (1996),True,exact_title_year,1013,Bitter Sugar,1996
+1639,"Eighth Day, The (1996)",True,exact_title_year,1067,The Eighth Day,1996
+1640,Dadetown (1995),True,exact_title_year,1086,Dadetown,1995
+1641,Some Mother's Son (1996),True,exact_title_year,1345,Some Mother's Son,1996
+1642,Angel Baby (1995),True,exact_title_year,1359,Angel Baby,1995
+1643,Sudden Manhattan (1996),True,exact_title_year,1470,Sudden Manhattan,1996
+1644,"Butcher Boy, The (1998)",True,exact_title_year_plusminus1,1602,The Butcher Boy,1997
+1645,Men With Guns (1997),True,exact_title_year,9075,Men with Guns,1997
+1646,Hana-bi (1997),False,unmatched,,,
+1647,"Niagara, Niagara (1997)",True,exact_title_year,1691,"Niagara, Niagara",1997
+1648,"Big One, The (1997)",True,exact_title_year,1704,The Big One,1997
+1649,"Butcher Boy, The (1998)",True,exact_title_year_plusminus1,1602,The Butcher Boy,1997
+1650,"Spanish Prisoner, The (1997)",True,exact_title_year,1709,The Spanish Prisoner,1997
+1651,Temptress Moon (Feng Yue) (1996),True,exact_title_year,1430,Temptress Moon,1996
+1652,Entertaining Angels: The Dorothy Day Story (1996),True,exact_title_year,1088,Entertaining Angels - The Dorothy Day Story,1996
+1653,Chairman of the Board (1998),True,exact_title_year,1583,Chairman of the Board,1998
+1654,"Favor, The (1994)",True,exact_title_year,440,The Favor,1994
+1655,Little City (1998),True,exact_title_year_plusminus1,1669,Little City,1997
+1656,Target (1995),True,exact_title_year,136,Target,1995
+1657,"Substance of Fire, The (1996)",True,exact_title_year,1319,The Substance of Fire,1996
+1658,Getting Away With Murder (1996),True,exact_title_year,709,Getting Away with Murder,1996
+1659,Small Faces (1995),True,exact_title_year_plusminus1,826,Small Faces,1996
+1660,"New Age, The (1994)",True,exact_title_year,496,The New Age,1994
+1661,Rough Magic (1995),True,exact_title_year,1461,Rough Magic,1995
+1662,Nothing Personal (1995),True,exact_title_year_plusminus1,937,Nothing Personal,1996
+1663,8 Heads in a Duffel Bag (1997),True,exact_title_year,1422,8 Heads in a Duffel Bag,1997
+1664,"Brother's Kiss, A (1997)",True,exact_title_year,1427,A Brother's Kiss,1997
+1665,Ripe (1996),True,exact_title_year,1437,Ripe,1996
+1666,"Next Step, The (1995)",False,unmatched,,,
+1667,Wedding Bell Blues (1996),True,exact_title_year,1472,Wedding Bell Blues,1996
+1668,MURDER and murder (1996),True,exact_title_year,1479,MURDER and murder,1996
+1669,Tainted (1998),True,exact_title_year,1655,Tainted,1998
+1670,"Further Gesture, A (1996)",True,exact_title_year_plusminus1,1668,A Further Gesture,1997
+1671,Kika (1993),True,exact_title_year,559,Kika,1993
+1672,Mirage (1995),True,exact_title_year,394,Mirage,1995
+1673,Mamma Roma (1962),True,exact_title_year,7983,Mamma Roma,1962
+1674,"Sunchaser, The (1996)",True,exact_title_year,1017,The Sunchaser,1996
+1675,"War at Home, The (1996)",True,exact_title_year,1460,The War at Home,1996
+1676,Sweet Nothing (1995),True,exact_title_year,844,Sweet Nothing,1995
+1677,Mat' i syn (1997),False,unmatched,,,
+1678,B. Monkey (1998),True,exact_title_year,1660,B. Monkey,1998
+1679,Sliding Doors (1998),True,exact_title_year,1584,Sliding Doors,1998
+1680,You So Crazy (1994),False,unmatched,,,
+1681,Scream of Stone (Schrei aus Stein) (1991),True,exact_title_year,610,Scream of Stone,1991

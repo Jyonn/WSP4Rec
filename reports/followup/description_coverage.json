@@ -1,0 +1,22 @@
+{
+  "items": 1682,
+  "descriptions_available": 1570,
+  "coverage": 0.9334126040428062,
+  "missing": 112,
+  "match_methods": {
+    "exact_title_year": 1469,
+    "unmatched": 110,
+    "exact_title_year_plusminus1": 101,
+    "ambiguous": 2
+  },
+  "source": "https://huggingface.co/datasets/mt0rm0/movie_descriptors",
+  "source_revision": "da10aae44140ac618c9cfcd96572555f6797a4d1",
+  "source_parquet_sha256": "e90a3b2c4706a57750f738c097918b22e35445087637226bfccd04c4c831f069",
+  "source_rows": 44435,
+  "source_card_license": "cc0-1.0",
+  "matching": "normalized title/alias with release year, unique +/-1 year fallback; no fuzzy autoaccept",
+  "unavailable_policy": "preserve item and fall back to title-only embedding; mark missing explicitly; no generated descriptions",
+  "raw_data_publication": "not included in git; store source and hashes plus matching metadata",
+  "items_sha256": "553841ebc7de3a0fd0d6b62a204ea30c1e651aacfb2814c7a6584ac52f2c5701",
+  "matched_records_sha256": "4e8b169cd4a36643ae9e1778da31fc691ac81de83b5a1b9fcc715d5cdb33c23d"
+}

@@ -1,0 +1,18 @@
+{
+  "scope": "Retrieve movie descriptions, extract prompted Llama-3 representations with same-model title-only control, and audit observable historical Astra motivations. Do not re-open test selection.",
+  "description_source": "mt0rm0/movie_descriptors, public TMDB-derived overview subset, exact pinned revision and content hashes recorded in coverage report",
+  "movie_matching": "MovieLens metadata only; Unicode normalization, article and conjunction normalization, English/original-title aliases, unique title+year matches and unique +/-1-year fallback. No fuzzy match is autoaccepted. Missing or ambiguous descriptions remain explicitly missing.",
+  "model": "meta-llama/Meta-Llama-3-8B",
+  "revision": "8cde5ca8380496c9a6cc7ef3a8b46a0372a1d920",
+  "encoder": "Frozen base language model, not a purpose-trained embedding model; no generation or fine-tuning",
+  "prompt": "Represent the following movie for personalized recommendation based on its plot, themes, genre, mood, and setting. Use only the supplied movie information.\nTitle: {raw_movielens_title}\nDescription: {retrieved_overview}\nMovie representation:",
+  "title_only_control": "Same instruction, title, readout suffix and model; omit Description line. Allows isolating added description from encoder replacement.",
+  "pooling": "Last layer hidden state of the final valid input token; left padding; L2 normalization",
+  "missing_description_policy": "Exact copy of corresponding same-model title-only vector, with availability mask and no generated plot",
+  "truncation": "512-token cap; truncate description content only; retain instruction/title/readout suffix",
+  "hardware_budget": "one A100, one experiment <3600 seconds, external timeout and internal 3500-second watchdog",
+  "cost": "Actual model version, prompt, token counts, full extraction and per-condition compute wall, peak GPU memory, hashes; no fabricated monetary conversion",
+  "quality_check": "Finite normalized 1682x4096 arrays, exact fallback equality, deterministic top-neighbor diagnostics; not a recommendation performance evaluation",
+  "motivation_audit": "Inspect saved hypotheses/diagnostics before first feedback versus proposals after feedback. Explicit rationale is not private internal reasoning. Interface examples and parent bias cues are confounders for claims of autonomous discovery.",
+  "next_recommendation_study": "Freeze a new protocol before selection: same-model title-only vs title+description, availability-aware and same-item comparisons, fixed calibration and semantic smoothing controls, neutral editor prompt plus explicit pre-feedback hypotheses. Historical test results remain exploratory and cannot be treated as untouched test discovery."
+}

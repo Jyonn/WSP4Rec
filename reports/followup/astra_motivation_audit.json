@@ -1,0 +1,1525 @@
+{
+  "question": "Astra 是否在看到自身首轮编辑的验证分数前就提出了流行度相关假设？",
+  "scope": "已提交的候选理由和数值诊断可以确定相对轮次。无法进一步区分首轮提交内部的构思、写理由和生成编辑的先后，也不推断未记录的内部思考。",
+  "sources": [
+    "reports/evidence/editor_trajectories.json",
+    "editor_interface.json",
+    "study_protocol.json",
+    "study_amendments.json"
+  ],
+  "design": {
+    "archived": "协议预设按训练计数衡量物品流行度，接口提供训练交互计数、非零计数三分组及零支持组，示例直接给出 item_bias.weight × 0.5 及 popularity_shift(-0.1)。接口还说明用户与全局偏置不影响用户内排序。示例与可选操作已引导搜索。",
+    "dispatch_excerpt_provenance": "本轮委托转述的原聊天调度提示。四份旧档案不含这两条调度原话。",
+    "bpr_dispatch": "user/global bias cannot change ranking; useful edits must modify itembias or interaction terms",
+    "mse_dispatch": "Consider whether weights support calibrated bias or interaction correction and sparse-group handling"
+  },
+  "timeline": [
+    "首轮每条轨迹从同一条件的原始检查点提交四个候选和理由，可知基线验证分，尚无自身候选的验证结果。",
+    "验证器只回传该编辑器自己的候选 ID、验证 NDCG@10 与通用错误。",
+    "第二轮据此从原始检查点再提四个候选，验证后按发现种子 42 的验证 NDCG@10，在八个候选和原模型中选最高者。"
+  ],
+  "interpretation": "事前可观察的是设计者提示下提出并行假设，事后可观察的是按验证反馈筛选方向和力度。BPR 的物品偏置缩放作用于学习到的物品项，不等同于按训练频次惩罚。MSE 最终四条均增加支持度先验。排序收益本身不能证明缓解了流行度偏差，也不能证明编辑器自主发现偏差。",
+  "trajectories": {
+    "bpr-blind": {
+      "first_round_hypotheses": "对称尝试减小及放大物品偏置，另试正向计数先验、低支持物品邻居平滑。",
+      "pre_feedback_weight_diagnostics": "无权重访问。仅有计数，不知道物品偏置与计数的关系。",
+      "post_feedback_change": "减小偏置胜过基线，放大偏置和正向先验都下降；第二轮扫描更小的偏置比例并试叠加负向先验。",
+      "baseline_valid_ndcg@10": 0.11901201906956592,
+      "round1": {
+        "candidates": [
+          {
+            "id": "bpr_blind_r1_bias_down",
+            "rationale": "Test whether reducing item-only preference exposes useful personalized ordering learned by the BPR factors. The direction is a hypothesis, since no weight values or scores were inspected.",
+            "ops": [
+              {
+                "kind": "scale",
+                "parameter": "item_bias.weight",
+                "group": "all",
+                "factor": 0.7
+              }
+            ],
+            "valid_ndcg@10": 0.12127913974409871
+          },
+          {
+            "id": "bpr_blind_r1_bias_up",
+            "rationale": "Test the opposite calibration: amplify the learned item-only prior when noisy personalized factors may dominate top-ten ordering. This brackets the unknown bias-versus-interaction balance.",
+            "ops": [
+              {
+                "kind": "scale",
+                "parameter": "item_bias.weight",
+                "group": "all",
+                "factor": 1.3
+              }
+            ],
+            "valid_ndcg@10": 0.11669140767628995
+          },
+          {
+            "id": "bpr_blind_r1_pop_prior",
+            "rationale": "Training item support is highly heterogeneous. A modest positive standardized-log-count offset tests whether a support-based prior improves top-ten ranking beyond the learned item bias. Counts include all interactions, so they are only a proxy for relevance.",
+            "ops": [
+              {
+                "kind": "popularity_shift",
+                "coefficient": 0.2
+              }
+            ],
+            "valid_ndcg@10": 0.11821613880548573
+          },
+          {
+            "id": "bpr_blind_r1_tail_smooth",
+            "rationale": "Low-support item factors may have higher variance. Ask the runner to mildly blend them with ten trained cosine neighbors while retaining most original signal. Neighbor values and identities remain private to the runner.",
+            "ops": [
+              {
+                "kind": "neighbor_smooth",
+                "parameter": "item.weight",
+                "group": "low",
+                "source": "weights",
+                "neighbors": 10,
+                "strength": 0.2
+              }
+            ],
+            "valid_ndcg@10": 0.11901201906956592
+          }
+        ],
+        "winner_id": "bpr_blind_r1_bias_down",
+        "winner_valid_ndcg_at_10": 0.12127913974409871
+      },
+      "round2": {
+        "candidates": [
+          {
+            "id": "bpr_blind_r2_bias_040",
+            "rationale": "Bias reduction to 0.7 improved validation while amplification hurt. Extend this supported direction to 0.4 to test stronger personalized ranking.",
+            "ops": [
+              {
+                "kind": "scale",
+                "parameter": "item_bias.weight",
+                "group": "all",
+                "factor": 0.4
+              }
+            ],
+            "valid_ndcg@10": 0.12112518055368046
+          },
+          {
+            "id": "bpr_blind_r2_bias_000",
+            "rationale": "Test the endpoint of the improving bias-reduction direction by removing item bias. Retained round-one candidates protect against excessive removal.",
+            "ops": [
+              {
+                "kind": "scale",
+                "parameter": "item_bias.weight",
+                "group": "all",
+                "factor": 0.0
+              }
+            ],
+            "valid_ndcg@10": 0.11907388364102084
+          },
+          {
+            "id": "bpr_blind_r2_bias_055",
+            "rationale": "Probe a moderate continuation beyond the successful 0.7 scale, between 0.4 and 0.7, because top-ten ordering need not vary monotonically with bias scale.",
+            "ops": [
+              {
+                "kind": "scale",
+                "parameter": "item_bias.weight",
+                "group": "all",
+                "factor": 0.55
+              }
+            ],
+            "valid_ndcg@10": 0.12128801291714214
+          },
+          {
+            "id": "bpr_blind_r2_bias_070_pop_negative",
+            "rationale": "Combine the observed beneficial 0.7 bias scale with a modest negative popularity correction. Positive popularity correction hurt in round one, motivating a smaller opposite-sign test; its interaction with reduced learned bias is uncertain.",
+            "ops": [
+              {
+                "kind": "scale",
+                "parameter": "item_bias.weight",
+                "group": "all",
+                "factor": 0.7
+              },
+              {
+                "kind": "popularity_shift",
+                "coefficient": -0.1
+              }
+            ],
+            "valid_ndcg@10": 0.12016967361550586
+          }
+        ],
+        "winner_id": "bpr_blind_r2_bias_055",
+        "winner_valid_ndcg_at_10": 0.12128801291714214
+      },
+      "selected_from_validation": {
+        "round": 2,
+        "id": "bpr_blind_r2_bias_055",
+        "ops": [
+          {
+            "kind": "scale",
+            "parameter": "item_bias.weight",
+            "group": "all",
+            "factor": 0.55
+          }
+        ],
+        "valid_ndcg_at_10": 0.12128801291714214
+      }
+    },
+    "bpr-blind_text": {
+      "first_round_hypotheses": "物品偏置双向试探，同时测试稀疏组与全体物品的标题邻居平滑。",
+      "pre_feedback_weight_diagnostics": "无权重访问。563 个正支持物品最多八次交互，另有 71 个零支持物品。",
+      "post_feedback_change": "削弱偏置表现最好，重点继续降低比例，另将首轮削弱方案与稀疏组平滑组合。",
+      "baseline_valid_ndcg@10": 0.11901201906956592,
+      "round1": {
+        "candidates": [
+          {
+            "id": "bpr_bt_r1_bias_down",
+            "rationale": "Reduce the global item-bias contribution to favor personalized pairwise factors; its optimal balance is unknown without learned weights.",
+            "ops": [
+              {
+                "kind": "scale",
+                "parameter": "item_bias.weight",
+                "group": "all",
+                "factor": 0.7
+              }
+            ],
+            "valid_ndcg@10": 0.12127913974409871
+          },
+          {
+            "id": "bpr_bt_r1_bias_up",
+            "rationale": "Explore the opposite calibration: stronger item biases can stabilize ranking when pairwise factors are noisy, particularly with sparse support.",
+            "ops": [
+              {
+                "kind": "scale",
+                "parameter": "item_bias.weight",
+                "group": "all",
+                "factor": 1.3
+              }
+            ],
+            "valid_ndcg@10": 0.11669140767628995
+          },
+          {
+            "id": "bpr_bt_r1_sparse_text",
+            "rationale": "563 positive-support items have at most eight interactions and 71 have none. Blend low-support factors modestly with five title neighbors and replace half of unsupported factors; title similarity is high but cannot establish preference similarity.",
+            "ops": [
+              {
+                "kind": "neighbor_smooth",
+                "parameter": "item.weight",
+                "group": "low",
+                "source": "text",
+                "neighbors": 5,
+                "strength": 0.35
+              },
+              {
+                "kind": "neighbor_smooth",
+                "parameter": "item.weight",
+                "group": "zero",
+                "source": "text",
+                "neighbors": 5,
+                "strength": 0.5
+              }
+            ],
+            "valid_ndcg@10": 0.11901574794102412
+          },
+          {
+            "id": "bpr_bt_r1_broad_text",
+            "rationale": "Test gentle semantic regularization across all items, including better-supported titles, using ten neighbors to average idiosyncratic factors while retaining 85 percent of each original vector.",
+            "ops": [
+              {
+                "kind": "neighbor_smooth",
+                "parameter": "item.weight",
+                "group": "all",
+                "source": "text",
+                "neighbors": 10,
+                "strength": 0.15
+              }
+            ],
+            "valid_ndcg@10": 0.1188366508736853
+          }
+        ],
+        "winner_id": "bpr_bt_r1_bias_down",
+        "winner_valid_ndcg_at_10": 0.12127913974409871
+      },
+      "round2": {
+        "candidates": [
+          {
+            "id": "bpr_bt_r2_bias_045",
+            "rationale": "Bias scaling to 0.7 improved validation while 1.3 hurt; extend the improving direction to 0.45.",
+            "ops": [
+              {
+                "kind": "scale",
+                "parameter": "item_bias.weight",
+                "group": "all",
+                "factor": 0.45
+              }
+            ],
+            "valid_ndcg@10": 0.12146766350464892
+          },
+          {
+            "id": "bpr_bt_r2_bias_020",
+            "rationale": "Test substantial bias attenuation to determine whether pairwise personalized factors benefit from only a small global item prior.",
+            "ops": [
+              {
+                "kind": "scale",
+                "parameter": "item_bias.weight",
+                "group": "all",
+                "factor": 0.2
+              }
+            ],
+            "valid_ndcg@10": 0.12034624380202356
+          },
+          {
+            "id": "bpr_bt_r2_bias_zero",
+            "rationale": "Evaluate the endpoint of the favorable bias-attenuation direction by removing item biases entirely; all learned interaction factors remain.",
+            "ops": [
+              {
+                "kind": "scale",
+                "parameter": "item_bias.weight",
+                "group": "all",
+                "factor": 0.0
+              }
+            ],
+            "valid_ndcg@10": 0.11907388364102084
+          },
+          {
+            "id": "bpr_bt_r2_bias_sparse_text",
+            "rationale": "Combine the observed favorable 0.7 bias scale with the only text recipe showing a positive, though negligible, change, to test whether sparse semantic transfer complements calibration.",
+            "ops": [
+              {
+                "kind": "scale",
+                "parameter": "item_bias.weight",
+                "group": "all",
+                "factor": 0.7
+              },
+              {
+                "kind": "neighbor_smooth",
+                "parameter": "item.weight",
+                "group": "low",
+                "source": "text",
+                "neighbors": 5,
+                "strength": 0.35
+              },
+              {
+                "kind": "neighbor_smooth",
+                "parameter": "item.weight",
+                "group": "zero",
+                "source": "text",
+                "neighbors": 5,
+                "strength": 0.5
+              }
+            ],
+            "valid_ndcg@10": 0.12136172851975821
+          }
+        ],
+        "winner_id": "bpr_bt_r2_bias_045",
+        "winner_valid_ndcg_at_10": 0.12146766350464892
+      },
+      "selected_from_validation": {
+        "round": 2,
+        "id": "bpr_bt_r2_bias_045",
+        "ops": [
+          {
+            "kind": "scale",
+            "parameter": "item_bias.weight",
+            "group": "all",
+            "factor": 0.45
+          }
+        ],
+        "valid_ndcg_at_10": 0.12146766350464892
+      }
+    },
+    "bpr-weights": {
+      "first_round_hypotheses": "检验额外物品偏置是否过强，另试阻尼与支持度相关的交互维度、高支持组范数收缩及稀疏组邻居平滑。",
+      "pre_feedback_weight_diagnostics": "物品偏置标准差 0.464，偏置、向量范数与 log1p(训练计数) 相关分别为 0.905、0.913。高支持组范数中位数 2.276，低支持组 1.044。",
+      "post_feedback_change": "首轮减半获益，交互维度阻尼降至 0.114528；第二轮试零、四分之一、四分之三及减半加高支持组收缩。均未超过首轮减半。",
+      "baseline_valid_ndcg@10": 0.11901201906956592,
+      "round1": {
+        "candidates": [
+          {
+            "id": "bpr_weights_r1_bias_half",
+            "rationale": "Item bias has standard deviation 0.464 and correlation 0.905 with log support, while item norms also strongly track support (0.913). Halve item bias to test whether the separately learned popularity term is excessive alongside interactions; preserves all learned geometry. Correlations motivate the hypothesis but do not establish its ranking benefit.",
+            "ops": [
+              {
+                "kind": "scale",
+                "parameter": "item_bias.weight",
+                "group": "all",
+                "factor": 0.5
+              }
+            ],
+            "valid_ndcg@10": 0.12147265964052226
+          },
+          {
+            "id": "bpr_weights_r1_pop_axis_damping",
+            "rationale": "Item coordinates 2, 6, 11, 14, and 15 have absolute log-support correlations above 0.55 and aligned nonzero user means, whereas coordinates 1, 5, and 10 are weakly support-correlated. Apply modest coordinate-specific damping proportional to squared observed correlation, retaining at least 65% of every dimension. This tests targeted reduction of a shared popularity direction without a rotation or fitting.",
+            "ops": [
+              {
+                "kind": "dimension_scale",
+                "parameter": "item.weight",
+                "group": "all",
+                "factors": [
+                  0.876151,
+                  0.992013,
+                  0.661182,
+                  0.787694,
+                  0.890716,
+                  0.996329,
+                  0.672488,
+                  0.733469,
+                  0.818174,
+                  0.913142,
+                  0.993784,
+                  0.65,
+                  0.901554,
+                  0.813508,
+                  0.67205,
+                  0.67978
+                ]
+              }
+            ],
+            "valid_ndcg@10": 0.11452769583198028
+          },
+          {
+            "id": "bpr_weights_r1_high_norm_tail",
+            "rationale": "High-support items have median norm 2.276 and maximum 4.028, substantially above mid-support median 1.665. A 35% norm shrink toward the observed high-group median tests whether very large popular-item norms overstate preference strength while preserving vector directions and item biases.",
+            "ops": [
+              {
+                "kind": "norm_shrink",
+                "parameter": "item.weight",
+                "group": "high",
+                "strength": 0.35,
+                "target": 2.2762681022269327
+              }
+            ],
+            "valid_ndcg@10": 0.11997856416402623
+          },
+          {
+            "id": "bpr_weights_r1_support_local_smoothing",
+            "rationale": "The low-support group has only 1-8 observations and median norm 1.044; mid-support has 9-43 observations and median norm 1.665. Use trained-item cosine neighborhoods to denoise these less-supported vectors, more strongly for low support, keeping high-support vectors and item biases untouched. No text or recommendation scoring is used.",
+            "ops": [
+              {
+                "kind": "neighbor_smooth",
+                "parameter": "item.weight",
+                "group": "low",
+                "source": "weights",
+                "neighbors": 10,
+                "strength": 0.35
+              },
+              {
+                "kind": "neighbor_smooth",
+                "parameter": "item.weight",
+                "group": "mid",
+                "source": "weights",
+                "neighbors": 10,
+                "strength": 0.15
+              }
+            ],
+            "valid_ndcg@10": 0.11865316395946165
+          }
+        ],
+        "winner_id": "bpr_weights_r1_bias_half",
+        "winner_valid_ndcg_at_10": 0.12147265964052226
+      },
+      "round2": {
+        "candidates": [
+          {
+            "id": "bpr_weights_r2_bias_zero",
+            "rationale": "The strongest first-round edit halved bias and improved NDCG by 0.002461. Remove the bias term to test the boundary of that beneficial direction; item interactions retain their learned support-related structure.",
+            "ops": [
+              {
+                "kind": "scale",
+                "parameter": "item_bias.weight",
+                "group": "all",
+                "factor": 0.0
+              }
+            ],
+            "valid_ndcg@10": 0.11907388364102084
+          },
+          {
+            "id": "bpr_weights_r2_bias_quarter",
+            "rationale": "Halving bias improved validation while damping popularity-correlated interaction coordinates hurt. Retain those coordinates and test a further but partial bias reduction, between the successful half-bias candidate and zero bias.",
+            "ops": [
+              {
+                "kind": "scale",
+                "parameter": "item_bias.weight",
+                "group": "all",
+                "factor": 0.25
+              }
+            ],
+            "valid_ndcg@10": 0.120720869013657
+          },
+          {
+            "id": "bpr_weights_r2_bias_three_quarters",
+            "rationale": "Bracket the successful half-bias result on its conservative side to test whether retaining more of the learned item offsets gives a better tradeoff than factor 0.5.",
+            "ops": [
+              {
+                "kind": "scale",
+                "parameter": "item_bias.weight",
+                "group": "all",
+                "factor": 0.75
+              }
+            ],
+            "valid_ndcg@10": 0.1208231433127939
+          },
+          {
+            "id": "bpr_weights_r2_half_bias_high_norm",
+            "rationale": "Combine the two independently beneficial first-round operations: half bias gained 0.002461 NDCG and high-support norm shrink gained 0.000967. Test complementarity while retaining the successful strengths; synergy is uncertain because both can reduce popular-item dominance.",
+            "ops": [
+              {
+                "kind": "scale",
+                "parameter": "item_bias.weight",
+                "group": "all",
+                "factor": 0.5
+              },
+              {
+                "kind": "norm_shrink",
+                "parameter": "item.weight",
+                "group": "high",
+                "strength": 0.35,
+                "target": 2.2762680053710938
+              }
+            ],
+            "valid_ndcg@10": 0.12097586752361636
+          }
+        ],
+        "winner_id": "bpr_weights_r2_half_bias_high_norm",
+        "winner_valid_ndcg_at_10": 0.12097586752361636
+      },
+      "selected_from_validation": {
+        "round": 1,
+        "id": "bpr_weights_r1_bias_half",
+        "ops": [
+          {
+            "kind": "scale",
+            "parameter": "item_bias.weight",
+            "group": "all",
+            "factor": 0.5
+          }
+        ],
+        "valid_ndcg_at_10": 0.12147265964052226
+      }
+    },
+    "bpr-weights_text": {
+      "first_round_hypotheses": "偏置与流行度有关，同时检验增强或减半，另试标题平滑及高支持组范数收缩。",
+      "pre_feedback_weight_diagnostics": "首轮记录物品偏置与 log 支持度相关 0.905；高支持组的范数超过低支持组两倍，标题邻居的平均学习向量余弦为 0.147。",
+      "post_feedback_change": "减半胜过增强；比较进一步削弱与保留减半并加入标题平滑或范数收缩。",
+      "baseline_valid_ndcg@10": 0.11901201906956592,
+      "round1": {
+        "candidates": [
+          {
+            "id": "bpr_wt_r1_bias_up",
+            "rationale": "Item bias strongly tracks log support (r=0.905), while high-support item norms are more than twice low-support norms. Increase the shared bias prior moderately to counter noisy personalized extremes in top-10 ranking.",
+            "ops": [
+              {
+                "kind": "scale",
+                "parameter": "item_bias.weight",
+                "group": "all",
+                "factor": 1.5
+              }
+            ],
+            "valid_ndcg@10": 0.11513221775338407
+          },
+          {
+            "id": "bpr_wt_r1_bias_down",
+            "rationale": "Test the opposing calibration hypothesis: bias already closely tracks popularity, so halving it may recover personalized relevant items displaced by the shared popularity prior.",
+            "ops": [
+              {
+                "kind": "scale",
+                "parameter": "item_bias.weight",
+                "group": "all",
+                "factor": 0.5
+              }
+            ],
+            "valid_ndcg@10": 0.12147265964052226
+          },
+          {
+            "id": "bpr_wt_r1_text_local",
+            "rationale": "Text neighbors have positive learned-item alignment (mean cosine 0.147), but examples include noisy title associations. Use restrained all-item smoothing over five neighbors to borrow semantic evidence without overwhelming learned preferences.",
+            "ops": [
+              {
+                "kind": "neighbor_smooth",
+                "parameter": "item.weight",
+                "group": "all",
+                "source": "text",
+                "neighbors": 5,
+                "strength": 0.15
+              }
+            ],
+            "valid_ndcg@10": 0.11983980726614775
+          },
+          {
+            "id": "bpr_wt_r1_head_norm_tail_text",
+            "rationale": "High-support norms span 1.30 to 4.03 with median 2.28; mildly shrink high-support norm extremes. Add conservative text smoothing only for weakly supported items, where estimation uncertainty is greatest.",
+            "ops": [
+              {
+                "kind": "norm_shrink",
+                "parameter": "item.weight",
+                "group": "high",
+                "strength": 0.25,
+                "target": 2.2762680053710938
+              },
+              {
+                "kind": "neighbor_smooth",
+                "parameter": "item.weight",
+                "group": "low",
+                "source": "text",
+                "neighbors": 5,
+                "strength": 0.2
+              }
+            ],
+            "valid_ndcg@10": 0.12052778367600799
+          }
+        ],
+        "winner_id": "bpr_wt_r1_bias_down",
+        "winner_valid_ndcg_at_10": 0.12147265964052226
+      },
+      "round2": {
+        "candidates": [
+          {
+            "id": "bpr_wt_r2_bias_quarter",
+            "rationale": "Halving item bias improved validation whereas increasing it hurt. Reduce further to one quarter to test whether excessive popularity bias remains.",
+            "ops": [
+              {
+                "kind": "scale",
+                "parameter": "item_bias.weight",
+                "group": "all",
+                "factor": 0.25
+              }
+            ],
+            "valid_ndcg@10": 0.120720869013657
+          },
+          {
+            "id": "bpr_wt_r2_bias_zero",
+            "rationale": "The first-round calibration direction favors less item bias. Remove it to test the endpoint while preserving all learned user and item vectors.",
+            "ops": [
+              {
+                "kind": "scale",
+                "parameter": "item_bias.weight",
+                "group": "all",
+                "factor": 0.0
+              }
+            ],
+            "valid_ndcg@10": 0.11907388364102084
+          },
+          {
+            "id": "bpr_wt_r2_bias_half_text",
+            "rationale": "Combine the strongest first-round bias calibration with independently positive restrained all-item title-neighbor smoothing; the mechanisms adjust the shared prior and personalized item geometry respectively.",
+            "ops": [
+              {
+                "kind": "scale",
+                "parameter": "item_bias.weight",
+                "group": "all",
+                "factor": 0.5
+              },
+              {
+                "kind": "neighbor_smooth",
+                "parameter": "item.weight",
+                "group": "all",
+                "source": "text",
+                "neighbors": 5,
+                "strength": 0.15
+              }
+            ],
+            "valid_ndcg@10": 0.12172460878058353
+          },
+          {
+            "id": "bpr_wt_r2_bias_half_head_tail",
+            "rationale": "Combine the strongest first-round calibration with the positive high-support norm regularization and low-support text smoothing recipe. Retain tested strengths to isolate their compatibility with reduced item bias.",
+            "ops": [
+              {
+                "kind": "scale",
+                "parameter": "item_bias.weight",
+                "group": "all",
+                "factor": 0.5
+              },
+              {
+                "kind": "norm_shrink",
+                "parameter": "item.weight",
+                "group": "high",
+                "strength": 0.25,
+                "target": 2.2762680053710938
+              },
+              {
+                "kind": "neighbor_smooth",
+                "parameter": "item.weight",
+                "group": "low",
+                "source": "text",
+                "neighbors": 5,
+                "strength": 0.2
+              }
+            ],
+            "valid_ndcg@10": 0.12074373557811167
+          }
+        ],
+        "winner_id": "bpr_wt_r2_bias_half_text",
+        "winner_valid_ndcg_at_10": 0.12172460878058353
+      },
+      "selected_from_validation": {
+        "round": 2,
+        "id": "bpr_wt_r2_bias_half_text",
+        "ops": [
+          {
+            "kind": "scale",
+            "parameter": "item_bias.weight",
+            "group": "all",
+            "factor": 0.5
+          },
+          {
+            "kind": "neighbor_smooth",
+            "parameter": "item.weight",
+            "group": "all",
+            "source": "text",
+            "neighbors": 5,
+            "strength": 0.15
+          }
+        ],
+        "valid_ndcg_at_10": 0.12172460878058353
+      }
+    },
+    "mse-blind": {
+      "first_round_hypotheses": "试偏置减半、两档正向支持度先验及尾部正则化，提出评分目标可能低估高曝光物品。",
+      "pre_feedback_weight_diagnostics": "无权重访问。仅凭计数及评分目标提出假设。",
+      "post_feedback_change": "正向先验 +0.35 优于 +0.8；第二轮细调系数并加入偏置缩放或尾部正则化。",
+      "baseline_valid_ndcg@10": 0.05551313943751218,
+      "round1": {
+        "candidates": [
+          {
+            "id": "mse_blind_r1_bias_half",
+            "rationale": "Halve item intercepts to test whether rating-level item means overwhelm personalized latent interactions in top-ten ranking.",
+            "ops": [
+              {
+                "kind": "scale",
+                "parameter": "item_bias.weight",
+                "group": "all",
+                "factor": 0.5
+              }
+            ],
+            "valid_ndcg@10": 0.05685496705549086
+          },
+          {
+            "id": "mse_blind_r1_pop035",
+            "rationale": "Add a moderate exposure prior from training support: MSE rating prediction need not rank frequently encountered relevant items highly enough.",
+            "ops": [
+              {
+                "kind": "popularity_shift",
+                "coefficient": 0.35
+              }
+            ],
+            "valid_ndcg@10": 0.06491271183677456
+          },
+          {
+            "id": "mse_blind_r1_pop080",
+            "rationale": "Probe a stronger popularity prior because item support spans several orders of magnitude and the observed-rating MSE objective may inadequately represent exposure.",
+            "ops": [
+              {
+                "kind": "popularity_shift",
+                "coefficient": 0.8
+              }
+            ],
+            "valid_ndcg@10": 0.06206526639171073
+          },
+          {
+            "id": "mse_blind_r1_tail_regularize",
+            "rationale": "Stabilize weakly supported item factors with a conservative learned-neighbor blend and support shrinkage; the runner computes neighbors without revealing weights.",
+            "ops": [
+              {
+                "kind": "neighbor_smooth",
+                "parameter": "item.weight",
+                "group": "low",
+                "source": "weights",
+                "neighbors": 10,
+                "strength": 0.25
+              },
+              {
+                "kind": "support_shrink",
+                "parameter": "item.weight",
+                "group": "all",
+                "tau": 5
+              }
+            ],
+            "valid_ndcg@10": 0.056177705434252
+          }
+        ],
+        "winner_id": "mse_blind_r1_pop035",
+        "winner_valid_ndcg_at_10": 0.06491271183677456
+      },
+      "round2": {
+        "candidates": [
+          {
+            "id": "mse_blind_r2_pop020",
+            "rationale": "Probe below the winning 0.35 popularity shift because the stronger 0.8 shift lost ground, locating a potentially smaller optimum.",
+            "ops": [
+              {
+                "kind": "popularity_shift",
+                "coefficient": 0.2
+              }
+            ],
+            "valid_ndcg@10": 0.06477858404221391
+          },
+          {
+            "id": "mse_blind_r2_pop050",
+            "rationale": "Probe between the two tested positive shifts to refine the useful exposure-prior magnitude.",
+            "ops": [
+              {
+                "kind": "popularity_shift",
+                "coefficient": 0.5
+              }
+            ],
+            "valid_ndcg@10": 0.06239294768448294
+          },
+          {
+            "id": "mse_blind_r2_bias_half_pop035",
+            "rationale": "Combine the individually helpful intercept attenuation with the best tested popularity prior, retaining more personalized relative ranking while correcting exposure.",
+            "ops": [
+              {
+                "kind": "scale",
+                "parameter": "item_bias.weight",
+                "group": "all",
+                "factor": 0.5
+              },
+              {
+                "kind": "popularity_shift",
+                "coefficient": 0.35
+              }
+            ],
+            "valid_ndcg@10": 0.06297695417320817
+          },
+          {
+            "id": "mse_blind_r2_tail_pop035",
+            "rationale": "Combine the individually helpful sparse-factor regularization with the best popularity correction to test complementary improvement.",
+            "ops": [
+              {
+                "kind": "neighbor_smooth",
+                "parameter": "item.weight",
+                "group": "low",
+                "source": "weights",
+                "neighbors": 10,
+                "strength": 0.25
+              },
+              {
+                "kind": "support_shrink",
+                "parameter": "item.weight",
+                "group": "all",
+                "tau": 5
+              },
+              {
+                "kind": "popularity_shift",
+                "coefficient": 0.35
+              }
+            ],
+            "valid_ndcg@10": 0.06494932809620388
+          }
+        ],
+        "winner_id": "mse_blind_r2_tail_pop035",
+        "winner_valid_ndcg_at_10": 0.06494932809620388
+      },
+      "selected_from_validation": {
+        "round": 2,
+        "id": "mse_blind_r2_tail_pop035",
+        "ops": [
+          {
+            "kind": "neighbor_smooth",
+            "parameter": "item.weight",
+            "group": "low",
+            "source": "weights",
+            "neighbors": 10,
+            "strength": 0.25
+          },
+          {
+            "kind": "support_shrink",
+            "parameter": "item.weight",
+            "group": "all",
+            "tau": 5
+          },
+          {
+            "kind": "popularity_shift",
+            "coefficient": 0.35
+          }
+        ],
+        "valid_ndcg_at_10": 0.06494932809620388
+      }
+    },
+    "mse-blind_text": {
+      "first_round_hypotheses": "比较稀疏和全体标题平滑、偏置减半加平滑，以及正向先验加稀疏平滑。",
+      "pre_feedback_weight_diagnostics": "无权重访问。支持度与标题邻居信息可用。",
+      "post_feedback_change": "+0.2 先验加稀疏标题平滑最好；第二轮提高先验强度并试偏置减半，均未超出首轮。首轮为组合候选，不能单独归因。",
+      "baseline_valid_ndcg@10": 0.05551313943751218,
+      "round1": {
+        "candidates": [
+          {
+            "id": "r1_text_tail",
+            "rationale": "Conservative semantic borrowing for sparsely supported items, with stronger replacement of unobserved random vectors. Ten title neighbors reduce dependence on an accidental lexical match.",
+            "ops": [
+              {
+                "kind": "neighbor_smooth",
+                "parameter": "item.weight",
+                "group": "low",
+                "source": "text",
+                "neighbors": 10,
+                "strength": 0.25
+              },
+              {
+                "kind": "neighbor_smooth",
+                "parameter": "item.weight",
+                "group": "zero",
+                "source": "text",
+                "neighbors": 10,
+                "strength": 0.75
+              }
+            ],
+            "valid_ndcg@10": 0.05551313943751218
+          },
+          {
+            "id": "r1_text_broad",
+            "rationale": "Test whether title neighborhoods provide useful denoising throughout the catalog without modifying learned item biases. Small global blending limits semantic oversmoothing.",
+            "ops": [
+              {
+                "kind": "neighbor_smooth",
+                "parameter": "item.weight",
+                "group": "all",
+                "source": "text",
+                "neighbors": 10,
+                "strength": 0.15
+              }
+            ],
+            "valid_ndcg@10": 0.055141896482617796
+          },
+          {
+            "id": "r1_text_bias_balance",
+            "rationale": "Reduce item-bias dominance to give personalized interactions greater influence while modestly stabilizing sparse item vectors using semantic neighbors.",
+            "ops": [
+              {
+                "kind": "scale",
+                "parameter": "item_bias.weight",
+                "group": "all",
+                "factor": 0.5
+              },
+              {
+                "kind": "neighbor_smooth",
+                "parameter": "item.weight",
+                "group": "low",
+                "source": "text",
+                "neighbors": 5,
+                "strength": 0.2
+              },
+              {
+                "kind": "neighbor_smooth",
+                "parameter": "item.weight",
+                "group": "zero",
+                "source": "text",
+                "neighbors": 5,
+                "strength": 0.5
+              }
+            ],
+            "valid_ndcg@10": 0.05685496705549086
+          },
+          {
+            "id": "r1_text_support_prior",
+            "rationale": "MSE calibration need not align with top-ranked relevance. A positive support prior may promote reliably estimated items, paired with mild sparse-item semantic smoothing.",
+            "ops": [
+              {
+                "kind": "popularity_shift",
+                "coefficient": 0.2
+              },
+              {
+                "kind": "neighbor_smooth",
+                "parameter": "item.weight",
+                "group": "low",
+                "source": "text",
+                "neighbors": 10,
+                "strength": 0.2
+              },
+              {
+                "kind": "neighbor_smooth",
+                "parameter": "item.weight",
+                "group": "zero",
+                "source": "text",
+                "neighbors": 10,
+                "strength": 0.5
+              }
+            ],
+            "valid_ndcg@10": 0.06477858404221391
+          }
+        ],
+        "winner_id": "r1_text_support_prior",
+        "winner_valid_ndcg_at_10": 0.06477858404221391
+      },
+      "round2": {
+        "candidates": [
+          {
+            "id": "r2_text_prior_040",
+            "rationale": "The positive support-prior recipe improved validation most. Double its prior while preserving the identical conservative semantic edits to test a moderate extension.",
+            "ops": [
+              {
+                "kind": "popularity_shift",
+                "coefficient": 0.4
+              },
+              {
+                "kind": "neighbor_smooth",
+                "parameter": "item.weight",
+                "group": "low",
+                "source": "text",
+                "neighbors": 10,
+                "strength": 0.2
+              },
+              {
+                "kind": "neighbor_smooth",
+                "parameter": "item.weight",
+                "group": "zero",
+                "source": "text",
+                "neighbors": 10,
+                "strength": 0.5
+              }
+            ],
+            "valid_ndcg@10": 0.06357705481935312
+          },
+          {
+            "id": "r2_text_prior_070",
+            "rationale": "Test a substantially stronger support prior, retaining sparse-item semantic smoothing; this explores whether support remains useful beyond the initial small shift.",
+            "ops": [
+              {
+                "kind": "popularity_shift",
+                "coefficient": 0.7
+              },
+              {
+                "kind": "neighbor_smooth",
+                "parameter": "item.weight",
+                "group": "low",
+                "source": "text",
+                "neighbors": 10,
+                "strength": 0.2
+              },
+              {
+                "kind": "neighbor_smooth",
+                "parameter": "item.weight",
+                "group": "zero",
+                "source": "text",
+                "neighbors": 10,
+                "strength": 0.5
+              }
+            ],
+            "valid_ndcg@10": 0.06235372778037138
+          },
+          {
+            "id": "r2_text_prior_100",
+            "rationale": "Test the allowed upper-bound support prior to cover a popularity-dominant correction of MSE ranking. Earlier milder recipes remain retained externally.",
+            "ops": [
+              {
+                "kind": "popularity_shift",
+                "coefficient": 1.0
+              },
+              {
+                "kind": "neighbor_smooth",
+                "parameter": "item.weight",
+                "group": "low",
+                "source": "text",
+                "neighbors": 10,
+                "strength": 0.2
+              },
+              {
+                "kind": "neighbor_smooth",
+                "parameter": "item.weight",
+                "group": "zero",
+                "source": "text",
+                "neighbors": 10,
+                "strength": 0.5
+              }
+            ],
+            "valid_ndcg@10": 0.062000109144951826
+          },
+          {
+            "id": "r2_text_prior_bias_balance",
+            "rationale": "Combine the two promising round-one directions: stronger support prior and halved learned item bias, with the same tail semantic smoothing. This tests whether reducing bias dominance complements the support correction.",
+            "ops": [
+              {
+                "kind": "scale",
+                "parameter": "item_bias.weight",
+                "group": "all",
+                "factor": 0.5
+              },
+              {
+                "kind": "popularity_shift",
+                "coefficient": 0.4
+              },
+              {
+                "kind": "neighbor_smooth",
+                "parameter": "item.weight",
+                "group": "low",
+                "source": "text",
+                "neighbors": 10,
+                "strength": 0.2
+              },
+              {
+                "kind": "neighbor_smooth",
+                "parameter": "item.weight",
+                "group": "zero",
+                "source": "text",
+                "neighbors": 10,
+                "strength": 0.5
+              }
+            ],
+            "valid_ndcg@10": 0.06288370242515895
+          }
+        ],
+        "winner_id": "r2_text_prior_040",
+        "winner_valid_ndcg_at_10": 0.06357705481935312
+      },
+      "selected_from_validation": {
+        "round": 1,
+        "id": "r1_text_support_prior",
+        "ops": [
+          {
+            "kind": "popularity_shift",
+            "coefficient": 0.2
+          },
+          {
+            "kind": "neighbor_smooth",
+            "parameter": "item.weight",
+            "group": "low",
+            "source": "text",
+            "neighbors": 10,
+            "strength": 0.2
+          },
+          {
+            "kind": "neighbor_smooth",
+            "parameter": "item.weight",
+            "group": "zero",
+            "source": "text",
+            "neighbors": 10,
+            "strength": 0.5
+          }
+        ],
+        "valid_ndcg_at_10": 0.06477858404221391
+      }
+    },
+    "mse-weights": {
+      "first_round_hypotheses": "对比缩小偏置、放大交互、正向支持度先验与稀疏组组合校准。",
+      "pre_feedback_weight_diagnostics": "偏置标准差 0.09954，用户/物品 RMS 范数乘积 0.01030；98.14% 物品因子能量在一个方向。偏置、范数与 log 支持度相关约 0.533、0.636。",
+      "post_feedback_change": "+0.08 先验胜出；第二轮尝试更大正系数及把 +0.08 与偏置缩至四分之一组合。",
+      "baseline_valid_ndcg@10": 0.05551313943751218,
+      "round1": {
+        "candidates": [
+          {
+            "id": "mse_weights_r1_bias_quarter",
+            "rationale": "Bias standard deviation 0.09954 exceeds the product of user/item RMS norms (0.01030). Reduce bias to a quarter to test stronger relative interaction contribution without assuming latent coordinate semantics. Interaction factors are nearly rank one and bias-correlated, so this is a calibration hypothesis rather than evidence of rich personalization.",
+            "ops": [
+              {
+                "kind": "scale",
+                "parameter": "item_bias.weight",
+                "group": "all",
+                "factor": 0.25
+              }
+            ],
+            "valid_ndcg@10": 0.058423598430735184
+          },
+          {
+            "id": "mse_weights_r1_interaction_tripled",
+            "rationale": "Amplify all interaction coordinates uniformly by three, preserving directions and coordinate symmetry; compare a milder relative bias correction against the quarter-bias recipe. Weight energy is 98.14% in one item direction, so arbitrary dimension-specific semantics are unsupported.",
+            "ops": [
+              {
+                "kind": "dimension_scale",
+                "parameter": "item.weight",
+                "group": "all",
+                "factors": [
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0
+                ]
+              }
+            ],
+            "valid_ndcg@10": 0.057548431705102626
+          },
+          {
+            "id": "mse_weights_r1_support_prior",
+            "rationale": "Learned bias and item norm correlate with log support at 0.533 and 0.636, but bias remains dispersed. Add a support prior of 0.08, approximately 0.8 bias standard deviations per standardized log-count unit, to test support calibration for ranking.",
+            "ops": [
+              {
+                "kind": "popularity_shift",
+                "coefficient": 0.08
+              }
+            ],
+            "valid_ndcg@10": 0.06379218919841476
+          },
+          {
+            "id": "mse_weights_r1_sparse_calibration",
+            "rationale": "Low-support item norms have median 0.00792 against 0.07677 in high support; strengthen their uncertainty shrinkage without borrowing neighbors from the nearly rank-one geometry. Combine half bias, a moderate support prior, and low-group support shrinkage; zero-support interactions are removed as untrained noise.",
+            "ops": [
+              {
+                "kind": "scale",
+                "parameter": "item_bias.weight",
+                "group": "all",
+                "factor": 0.5
+              },
+              {
+                "kind": "popularity_shift",
+                "coefficient": 0.04
+              },
+              {
+                "kind": "support_shrink",
+                "parameter": "item.weight",
+                "group": "low",
+                "tau": 4
+              },
+              {
+                "kind": "dimension_scale",
+                "parameter": "item.weight",
+                "group": "zero",
+                "factors": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              }
+            ],
+            "valid_ndcg@10": 0.06375344260398177
+          }
+        ],
+        "winner_id": "mse_weights_r1_support_prior",
+        "winner_valid_ndcg_at_10": 0.06379218919841476
+      },
+      "round2": {
+        "candidates": [
+          {
+            "id": "mse_weights_r2_support_016",
+            "rationale": "Round-one support prior 0.08 improved NDCG from 0.05551 to 0.06379, exceeding interaction calibration alone. Double the prior to test whether learned biases still underweight item support.",
+            "ops": [
+              {
+                "kind": "popularity_shift",
+                "coefficient": 0.16
+              }
+            ],
+            "valid_ndcg@10": 0.06461765729351397
+          },
+          {
+            "id": "mse_weights_r2_support_032",
+            "rationale": "Probe a stronger support correction while retaining learned item biases and all interaction directions; 0.32 is about 3.2 original bias standard deviations per standardized log-support unit. No optimum is inferred from the single successful prior value.",
+            "ops": [
+              {
+                "kind": "popularity_shift",
+                "coefficient": 0.32
+              }
+            ],
+            "valid_ndcg@10": 0.06401560139686761
+          },
+          {
+            "id": "mse_weights_r2_support_064",
+            "rationale": "Explore a support-dominant endpoint at 0.64 to distinguish a continuing improvement from a peaked calibration response. Original factor and bias distinctions remain, and the previous weaker prior is retained externally.",
+            "ops": [
+              {
+                "kind": "popularity_shift",
+                "coefficient": 0.64
+              }
+            ],
+            "valid_ndcg@10": 0.06256446731825686
+          },
+          {
+            "id": "mse_weights_r2_support_interaction_calibration",
+            "rationale": "Combine quarter bias, which improved round-one validation alone, with a 0.08 support prior. Up to a ranking-invariant positive rescaling, this compares directly with prior 0.32 but amplifies interactions fourfold. It tests whether nearly rank-one interaction structure adds value after support correction without arbitrary dimension reweighting.",
+            "ops": [
+              {
+                "kind": "scale",
+                "parameter": "item_bias.weight",
+                "group": "all",
+                "factor": 0.25
+              },
+              {
+                "kind": "popularity_shift",
+                "coefficient": 0.08
+              }
+            ],
+            "valid_ndcg@10": 0.06554571342751293
+          }
+        ],
+        "winner_id": "mse_weights_r2_support_interaction_calibration",
+        "winner_valid_ndcg_at_10": 0.06554571342751293
+      },
+      "selected_from_validation": {
+        "round": 2,
+        "id": "mse_weights_r2_support_interaction_calibration",
+        "ops": [
+          {
+            "kind": "scale",
+            "parameter": "item_bias.weight",
+            "group": "all",
+            "factor": 0.25
+          },
+          {
+            "kind": "popularity_shift",
+            "coefficient": 0.08
+          }
+        ],
+        "valid_ndcg_at_10": 0.06554571342751293
+      }
+    },
+    "mse-weights_text": {
+      "first_round_hypotheses": "在标题平滑下比较个性化校准及两档正向先验。",
+      "pre_feedback_weight_diagnostics": "偏置与 log 支持度相关约 0.533，低/高支持组物品范数中位数 0.0079/0.0768；标题邻居学习向量余弦约 0.099，支持物品对约 0.011。",
+      "post_feedback_change": "+0.2 加稀疏平滑优于 +0.1；第二轮在同一平滑上增强先验或结合偏置、交互缩放。",
+      "baseline_valid_ndcg@10": 0.05551313943751218,
+      "round1": {
+        "candidates": [
+          {
+            "id": "mse_wt_r1_semantic",
+            "rationale": "Low-support item vectors have median norm 0.0079 versus 0.0768 for high support. Text neighbors show learned-vector cosine 0.099 versus 0.011 for supported pairs; cautiously borrow their trained vectors without changing ranking priors.",
+            "ops": [
+              {
+                "kind": "neighbor_smooth",
+                "parameter": "item.weight",
+                "group": "low",
+                "source": "text",
+                "neighbors": 10,
+                "strength": 0.25
+              }
+            ],
+            "valid_ndcg@10": 0.05551313943751218
+          },
+          {
+            "id": "mse_wt_r1_personalize",
+            "rationale": "Learned factors are small while item biases vary substantially. Amplify all latent dimensions threefold and halve item bias, while gently stabilizing low-support vectors using semantically related items.",
+            "ops": [
+              {
+                "kind": "neighbor_smooth",
+                "parameter": "item.weight",
+                "group": "low",
+                "source": "text",
+                "neighbors": 10,
+                "strength": 0.25
+              },
+              {
+                "kind": "dimension_scale",
+                "parameter": "item.weight",
+                "group": "all",
+                "factors": [
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0
+                ]
+              },
+              {
+                "kind": "scale",
+                "parameter": "item_bias.weight",
+                "group": "all",
+                "factor": 0.5
+              }
+            ],
+            "valid_ndcg@10": 0.05792040535204862
+          },
+          {
+            "id": "mse_wt_r1_support_prior",
+            "rationale": "Bias and log support correlate 0.533 but low and zero support have near-zero biases. A moderate positive support prior may improve top-ten relevance; retain mild semantic smoothing to share signal among sparse items.",
+            "ops": [
+              {
+                "kind": "neighbor_smooth",
+                "parameter": "item.weight",
+                "group": "low",
+                "source": "text",
+                "neighbors": 10,
+                "strength": 0.25
+              },
+              {
+                "kind": "popularity_shift",
+                "coefficient": 0.1
+              }
+            ],
+            "valid_ndcg@10": 0.06344531524847848
+          },
+          {
+            "id": "mse_wt_r1_strong_support",
+            "rationale": "Test a stronger positive support prior against the moderate recipe because rating-MSE item biases need not represent ranking exposure; use the same modest text smoothing for a controlled strength comparison.",
+            "ops": [
+              {
+                "kind": "neighbor_smooth",
+                "parameter": "item.weight",
+                "group": "low",
+                "source": "text",
+                "neighbors": 10,
+                "strength": 0.25
+              },
+              {
+                "kind": "popularity_shift",
+                "coefficient": 0.2
+              }
+            ],
+            "valid_ndcg@10": 0.06477858404221391
+          }
+        ],
+        "winner_id": "mse_wt_r1_strong_support",
+        "winner_valid_ndcg_at_10": 0.06477858404221391
+      },
+      "round2": {
+        "candidates": [
+          {
+            "id": "mse_wt_r2_support_035",
+            "rationale": "The externally reported ranking metric improves as the support coefficient rises from 0.1 to 0.2; extend this trend conservatively to 0.35, preserving the same modest semantic smoothing.",
+            "ops": [
+              {
+                "kind": "neighbor_smooth",
+                "parameter": "item.weight",
+                "group": "low",
+                "source": "text",
+                "neighbors": 10,
+                "strength": 0.25
+              },
+              {
+                "kind": "popularity_shift",
+                "coefficient": 0.35
+              }
+            ],
+            "valid_ndcg@10": 0.06491271183677456
+          },
+          {
+            "id": "mse_wt_r2_support_060",
+            "rationale": "Probe whether the positive support prior continues to help at 0.60, since MSE item biases may underrepresent exposure-related ranking evidence. Earlier weaker priors remain retained externally.",
+            "ops": [
+              {
+                "kind": "neighbor_smooth",
+                "parameter": "item.weight",
+                "group": "low",
+                "source": "text",
+                "neighbors": 10,
+                "strength": 0.25
+              },
+              {
+                "kind": "popularity_shift",
+                "coefficient": 0.6
+              }
+            ],
+            "valid_ndcg@10": 0.06245907173339346
+          },
+          {
+            "id": "mse_wt_r2_support_personalize",
+            "rationale": "Combine the independently favorable latent amplification and bias attenuation with the strongest first-round support prior, checking whether their ranking contributions complement each other.",
+            "ops": [
+              {
+                "kind": "neighbor_smooth",
+                "parameter": "item.weight",
+                "group": "low",
+                "source": "text",
+                "neighbors": 10,
+                "strength": 0.25
+              },
+              {
+                "kind": "dimension_scale",
+                "parameter": "item.weight",
+                "group": "all",
+                "factors": [
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0,
+                  3.0
+                ]
+              },
+              {
+                "kind": "scale",
+                "parameter": "item_bias.weight",
+                "group": "all",
+                "factor": 0.5
+              },
+              {
+                "kind": "popularity_shift",
+                "coefficient": 0.2
+              }
+            ],
+            "valid_ndcg@10": 0.0651405708053669
+          },
+          {
+            "id": "mse_wt_r2_support_bias",
+            "rationale": "Keep the 0.2 support prior and halve item biases to assess a stronger relative exposure contribution without amplifying potentially noisy latent dimensions; text smoothing remains conservative.",
+            "ops": [
+              {
+                "kind": "neighbor_smooth",
+                "parameter": "item.weight",
+                "group": "low",
+                "source": "text",
+                "neighbors": 10,
+                "strength": 0.25
+              },
+              {
+                "kind": "scale",
+                "parameter": "item_bias.weight",
+                "group": "all",
+                "factor": 0.5
+              },
+              {
+                "kind": "popularity_shift",
+                "coefficient": 0.2
+              }
+            ],
+            "valid_ndcg@10": 0.06548471884365581
+          }
+        ],
+        "winner_id": "mse_wt_r2_support_bias",
+        "winner_valid_ndcg_at_10": 0.06548471884365581
+      },
+      "selected_from_validation": {
+        "round": 2,
+        "id": "mse_wt_r2_support_bias",
+        "ops": [
+          {
+            "kind": "neighbor_smooth",
+            "parameter": "item.weight",
+            "group": "low",
+            "source": "text",
+            "neighbors": 10,
+            "strength": 0.25
+          },
+          {
+            "kind": "scale",
+            "parameter": "item_bias.weight",
+            "group": "all",
+            "factor": 0.5
+          },
+          {
+            "kind": "popularity_shift",
+            "coefficient": 0.2
+          }
+        ],
+        "valid_ndcg_at_10": 0.06548471884365581
+      }
+    }
+  }
+}
