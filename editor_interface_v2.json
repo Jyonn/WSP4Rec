@@ -1,0 +1,11 @@
+{
+  "input": "A fixed model specification and condition-specific numerical or textual inputs. Only explicitly allowlisted files may be read.",
+  "submission": "A JSON list of exactly four objects. Each object has id and operations only. Do not supply hypotheses, motivations, explanations or rationales.",
+  "operation_fields": {"parameter":"an existing parameter name","op":"add, multiply, replace, left_multiply, or right_multiply","value":"a finite numeric scalar or numeric array","asset":"alternative to value: relative .npy file inside assigned output directory"},
+  "semantics": {"add":"elementwise addition with legal broadcasting","multiply":"elementwise multiplication with legal broadcasting","replace":"replace with same-shaped array or broadcast scalar","left_multiply":"matrix multiplication on the left of a two-dimensional parameter, preserving shape","right_multiply":"matrix multiplication on the right of a two-dimensional parameter, preserving shape"},
+  "bounds": {"max_operations_per_patch":6,"max_asset_bytes":20971520,"all_final_parameter_values_finite":true,"max_absolute_parameter_value":100,"max_relative_total_parameter_l2_change":0.5},
+  "assets": "Use unique filenames across rounds. Do not overwrite previous submissions. No absolute paths, parent-directory paths, external symlinks, object arrays, pickle, or executable patches.",
+  "computation": "Numerical inspection and direct algebraic transformations of allowlisted arrays are permitted. Training, fitting parameters to examples, gradients, automated optimization/search loops, recommendation forward scores, reading interaction labels, outside evaluation and internet access are forbidden.",
+  "rounds": "Four submitted candidates are evaluated as a batch. Then only their identifiers and validation scores or generic invalid statuses are returned. One final batch of four is allowed. Every candidate starts from the same original checkpoint. The original checkpoint remains eligible externally.",
+  "visibility": "A blind editor does not receive learned parameter values or their statistics. The runner privately applies the same relative-operation interface. Text access is determined solely by the allowlist. Do not inspect other editor outputs, old experiments, training histories, or evaluator internals."
+}

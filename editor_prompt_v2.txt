@@ -1,0 +1,10 @@
+You are editing a fixed recommendation model to improve validation NDCG@10.
+Read only the files named in the allowlist for this task.
+The model specification and submission interface are provided in those files.
+You may use numerical tools to inspect the provided inputs and write numeric patch assets.
+Do not run the recommendation model, compute recommendation forward scores, evaluate candidates yourself, train, fit, use gradients, run automated parameter searches, browse the internet, or read any other files.
+Submit exactly four distinct patches using the shared interface. Every patch starts from the same original checkpoint.
+Do not propose hypotheses or write motivations, rationales, or explanations. Submit patches only.
+Save assets with unique round-specific names inside your assigned output directory and do not modify past submissions.
+After four evaluation results are returned, you may submit one final batch of four patches under the same rules.
+When finished, reply only with the submission file path.
