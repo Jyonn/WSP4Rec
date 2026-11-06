@@ -4,6 +4,7 @@ import hashlib
 import json
 import shutil
 import time
+from collections import Counter
 from pathlib import Path
 
 import numpy as np
@@ -11,7 +12,7 @@ import torch
 from .cli import FM
 from .study import quick_metric, scores, save, checkpoint
 from .study_metrics import rank_metrics, paired_bootstrap
-from .tensor_edits import compile_patch
+from .tensor_edits import compile_patch, _asset_array
 
 ROOT=Path(__file__).resolve().parents[1]
 DATA=ROOT/'data/ml-100k-description-complete'
@@ -128,24 +129,39 @@ def evaluate_round(key,round_number,control=False):
     folder=OUT/('controls' if control else 'editors')/key
     destination=OUT/'evaluations'/key/f'round{round_number}.json'
     if destination.exists():raise FileExistsError('evaluation already recorded')
+    destination.parent.mkdir(parents=True,exist_ok=True)
+    marker=destination.with_suffix('.started')
+    with marker.open('x') as stream:stream.write(str(time.time()))
     obj=key.split('-')[0];base=cp(obj)['state'];train,valid=data();t=time.monotonic()
     try:
         patches=json.loads((folder/f'round{round_number}.json').read_text())
         if not isinstance(patches,list) or len(patches)!=4:raise ValueError('four patches required')
     except (ValueError,TypeError,OSError):
         patches=[{'id':f'invalid_submission_{round_number}_{i}'} for i in range(4)]
-    results=[]
+    results=[];seen_ids=set();seen_payloads=set()
     for i,patch in enumerate(patches):
         began=time.monotonic();identifier=patch.get('id',f'r{round_number}_{i}') if isinstance(patch,dict) else f'r{round_number}_{i}'
         try:
             if not isinstance(patch,dict) or set(patch)-{'id','operations'}:raise ValueError('patch-only schema')
-            edited,stats=compile_patch(base,patch,folder)
+            if not isinstance(patch.get('operations'),list) or not all(isinstance(op,dict) for op in patch['operations']):
+                raise ValueError('operations must be a list of dictionaries')
             snapshot=destination.parent/'snapshots'/f'r{round_number}-c{i}'
-            snapshot.mkdir(parents=True,exist_ok=True)
+            snapshot.mkdir(parents=True,exist_ok=False)
             for op in patch['operations']:
                 if 'asset' in op:
-                    src=folder/op['asset'];dst=snapshot/op['asset'];dst.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(src,dst)
+                    # Materialize a validated immutable byte snapshot before scoring.
+                    array=_asset_array(folder,op['asset']);dst=snapshot/op['asset'];dst.parent.mkdir(parents=True,exist_ok=True)
+                    np.save(dst,array,allow_pickle=False)
             save(snapshot/'patch.json',patch)
+            payload=[]
+            for op in patch['operations']:
+                record={k:v for k,v in op.items() if k!='asset'}
+                if 'asset' in op:record['asset_sha256']=digest(snapshot/op['asset'])
+                payload.append(record)
+            signature=hashlib.sha256(json.dumps(payload,sort_keys=True).encode()).hexdigest()
+            if identifier in seen_ids or signature in seen_payloads:raise ValueError('duplicate candidate in batch')
+            seen_ids.add(identifier);seen_payloads.add(signature)
+            edited,stats=compile_patch(base,patch,snapshot)
             score=quick_metric(scores(edited),valid,train)
             results.append({'id':identifier,'valid_ndcg@10':score,'error':None,'patch':patch,
                 'snapshot':str(snapshot.relative_to(ROOT)),**stats,'wall_seconds':time.monotonic()-began})
@@ -154,7 +170,7 @@ def evaluate_round(key,round_number,control=False):
                 'patch':patch,'wall_seconds':time.monotonic()-began})
         if time.monotonic()-t>3500:raise TimeoutError('evaluation budget')
     result={'trajectory':key,'round':round_number,'wall_seconds':time.monotonic()-t,'results':results}
-    save(destination,result)
+    temporary=destination.with_suffix('.writing.json');save(temporary,result);temporary.replace(destination)
     feedback=[{k:r[k] for k in ('id','valid_ndcg@10','error')} for r in results]
     print(json.dumps({'trajectory':key,'feedback':feedback}),flush=True)
     return result
@@ -222,23 +238,45 @@ def choose(key,obj):
 def freeze():
     target=OUT/'frozen_manifest.json'
     if target.exists():raise FileExistsError('already frozen')
+    audit=json.loads((OUT/'consistency_audit.json').read_text())
+    if not audit['passed']:raise ValueError('pre-test consistency replay did not pass')
+    for file,value in audit['inputs_sha256'].items():
+        if digest(ROOT/file)!=value:raise ValueError('changed consistency-audited input: '+file)
+    users,items=dimensions()
+    for name in ('popular','ease'):
+        path=OUT/f'references/{name}.npy'
+        array=np.load(path,allow_pickle=False)
+        if array.shape!=(users,items) or not np.isfinite(array).all():raise ValueError('invalid required reference')
     assignments=json.loads((OUT/'editor_assignments.json').read_text());choices={};hashes={}
-    for key,assignment in assignments.items():choices[key]=choose(key,assignment['objective'])
+    if len(assignments)!=24:raise ValueError('expected24 editor trajectories')
+    for key,assignment in assignments.items():
+        choices[key]=choose(key,assignment['objective'])
+        if choices[key]['candidate_queries']!=8:raise ValueError('expected8 slots per trajectory')
+        for suffix in ('.txt','.dispatch.txt','-round2.dispatch.txt'):
+            if not (OUT/'prompts'/f'{key}{suffix}').is_file():raise ValueError('missing exact prompt record')
+        first=json.loads((OUT/'evaluations'/key/'round1.json').read_text())['results']
+        feedback=json.loads((OUT/'feedback'/f'{key}-round1.json').read_text())
+        expected=[{k:r[k] for k in ('id','valid_ndcg@10','error')} for r in first]
+        if feedback!=expected:raise ValueError('feedback is not the prescribed score-only data')
     for obj in OBJECTIVES:
         for family in CONTROL_FAMILIES:choices[f'{obj}-{family}']=choose(f'{obj}-{family}',obj)
     for path in [ROOT/'neutral_protocol_v2.json',ROOT/'editor_interface_v2.json',ROOT/'editor_prompt_v2.txt',
-        ROOT/'wsprec/neutral_study.py',ROOT/'wsprec/tensor_edits.py',DATA/'manifest.json',DATA/'train.npy',DATA/'valid.npy',
-        DATA/'splits.npz',DATA/'title_only.npy',DATA/'title_description.npy']:
+        ROOT/'wsprec/neutral_study.py',ROOT/'wsprec/tensor_edits.py',ROOT/'wsprec/study.py',ROOT/'wsprec/study_metrics.py',ROOT/'wsprec/cli.py',
+        OUT/'training_summary.json',OUT/'consistency_audit.json',DATA/'manifest.json',DATA/'train.npy',DATA/'valid.npy',
+        DATA/'splits.npz',DATA/'movies.json',DATA/'title_only.npy',DATA/'title_description.npy']:
         hashes[str(path.relative_to(ROOT))]=digest(path)
     for obj in OBJECTIVES:
         m=json.loads((OUT/'training_summary.json').read_text())
         for seed in (42,43,44):
             path=OUT/'training'/m['selected'][obj][str(seed)]/'best.pt';hashes[str(path.relative_to(ROOT))]=digest(path)
-    for pattern in ('evaluations/**/*.json','evaluations/**/snapshots/**/*.npy','references/*.npy','inputs/*','prompts/*.txt'):
+    for pattern in ('evaluations/**/*.json','evaluations/**/snapshots/**/*.npy','references/*.npy','references/*.json','inputs/*','prompts/*.txt','feedback/*.json','editor_assignments.json'):
         for path in OUT.glob(pattern):
             if path.is_file():hashes[str(path.relative_to(ROOT))]=digest(path)
     if not list((OUT/'prompts').glob('*.txt')):raise ValueError('record exact prompts first')
-    save(target,{'created_unix':time.time(),'choices':choices,'sha256':hashes,'test_scope':'filtered/re-split same original corpus, not an external new test set'})
+    with (OUT/'freeze_started.lock').open('x') as stream:stream.write(str(time.time()))
+    temporary=target.with_suffix('.writing.json')
+    save(temporary,{'created_unix':time.time(),'choices':choices,'sha256':hashes,'test_scope':'filtered/re-split same original corpus, not an external new test set'})
+    temporary.replace(target)
     print('Frozen',digest(target),flush=True)
 
 
@@ -256,14 +294,23 @@ def final():
     manifest=json.loads((OUT/'frozen_manifest.json').read_text())
     for file,h in manifest['sha256'].items():
         if digest(ROOT/file)!=h:raise ValueError('changed frozen input: '+file)
+    # Exclusively claim the reporting pass before any test-label decompression.
+    with (OUT/'test_opened.lock').open('x') as stream:
+        stream.write(json.dumps({'manifest_sha256':digest(OUT/'frozen_manifest.json'),'opened_unix':time.time()}))
     train,valid=data()
     with np.load(DATA/'splits.npz') as z:test=z['test']
     seen=np.concatenate([train,valid]);started=time.monotonic();output={'objectives':{},'references':{},'manifest_sha256':digest(OUT/'frozen_manifest.json')}
+    movies=json.loads((DATA/'movies.json').read_text())
+    repetitions=Counter((m['title'],m['description']) for m in movies)
+    unique_ids={m['item_id'] for m in movies if repetitions[(m['title'],m['description'])]==1}
+    unique_test=test[np.isin(test[:,1],list(unique_ids))]
+    output['metadata_diagnostic']={'duplicate_text_extra_records':len(movies)-len(repetitions),
+        'unique_text_catalogue_items':len(unique_ids),'unique_text_test_rows':len(unique_test)}
     for obj in OBJECTIVES:
         output['objectives'][obj]={}
         for seed in (42,43,44):
-            base=cp(obj,seed)['state'];base_metrics=rank_metrics(scores(base),test,seen,train)
-            methods={'base':{'metrics':base_metrics}}
+            base=cp(obj,seed)['state'];base_scores=scores(base);base_metrics=rank_metrics(base_scores,test,seen,train)
+            methods={'base':{'metrics':base_metrics,'unique_text_target_summary':rank_metrics(base_scores,unique_test,seen,train)['summary']}}
             for key,choice in manifest['choices'].items():
                 if not key.startswith(obj+'-'):continue
                 selected=choice['selection']
@@ -274,14 +321,16 @@ def final():
                         state,stats=compile_patch(base,{'id':'no_op','operations':[]},OUT)
                         transfer_error=str(error)
                 else:state,stats=compile_patch(base,{'id':'no_op','operations':[]},OUT)
-                metrics=rank_metrics(scores(state),test,seen,train)
+                edited_scores=scores(state);metrics=rank_metrics(edited_scores,test,seen,train)
                 methods[key]={'metrics':metrics,'edit_stats':stats,'selected_id':selected['id'] if selected else 'no_op',
+                    'unique_text_target_summary':rank_metrics(edited_scores,unique_test,seen,train)['summary'],
                     'transfer_error':transfer_error,
                     'paired_bootstrap_vs_base':paired_bootstrap(base_metrics['per_user'],metrics['per_user'])}
             output['objectives'][obj][str(seed)]=methods
-            print(obj,seed,{k:v['metrics']['summary']['ndcg@10'] for k,v in methods.items()},flush=True)
     for name in ('popular','ease'):output['references'][name]=rank_metrics(np.load(OUT/f'references/{name}.npy'),test,seen,train)
-    output['wall_seconds']=time.monotonic()-started;save(path,serial(output))
+    output['wall_seconds']=time.monotonic()-started
+    temporary=path.with_suffix('.writing.json');save(temporary,serial(output));temporary.replace(path)
+    print('Completed single final reporting pass:',path,flush=True)
 
 
 def main():
