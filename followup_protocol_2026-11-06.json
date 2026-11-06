@@ -8,6 +8,7 @@
   "prompt": "Represent the following movie for personalized recommendation based on its plot, themes, genre, mood, and setting. Use only the supplied movie information.\nTitle: {raw_movielens_title}\nDescription: {retrieved_overview}\nMovie representation:",
   "title_only_control": "Same instruction, title, readout suffix and model; omit Description line. Allows isolating added description from encoder replacement.",
   "pooling": "Last layer hidden state of the final valid input token; left padding; L2 normalization",
+  "position_ids": "Explicit attention-mask cumulative positions, each valid sequence starts at zero independent of left padding; added during numerical QA before any downstream recommendation evaluation",
   "missing_description_policy": "Exact copy of corresponding same-model title-only vector, with availability mask and no generated plot",
   "truncation": "512-token cap; truncate description content only; retain instruction/title/readout suffix",
   "hardware_budget": "one A100, one experiment <3600 seconds, external timeout and internal 3500-second watchdog",

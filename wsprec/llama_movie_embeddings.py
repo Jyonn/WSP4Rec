@@ -90,9 +90,11 @@ def main():
         tokenized=time.monotonic()
         for offset in range(0,len(tokens),args.batch_size):
             batch=tokenizer.pad({'input_ids':tokens[offset:offset+args.batch_size]},padding=True,return_tensors='pt').to(device)
+            position_ids=batch['attention_mask'].long().cumsum(-1)-1
+            position_ids.masked_fill_(batch['attention_mask']==0,0)
             with torch.inference_mode():
                 # Left padding means the final position is valid for every row.
-                vectors=model(**batch,use_cache=False).last_hidden_state[:,-1].float()
+                vectors=model(**batch,position_ids=position_ids,use_cache=False).last_hidden_state[:,-1].float()
                 vectors=torch.nn.functional.normalize(vectors,p=2,dim=1)
             features.append(vectors.cpu().numpy())
             print(condition,min(offset+args.batch_size,len(tokens)),len(tokens),flush=True)
@@ -118,6 +120,7 @@ def main():
     metadata={'model':args.model,'requested_revision':args.revision,'resolved_revision':getattr(model.config,'_commit_hash',None),
         'model_is_purpose_trained_embedding_model':False,'fine_tuning':False,'generated_descriptions':False,
         'pooling':'last layer, final valid input token of fixed Movie representation: suffix; left padding',
+        'position_ids':'attention-mask cumulative positions, padded positions zero; valid token positions start from zero regardless of left padding',
         'normalization':'L2','instruction':INSTRUCTION,'suffix':SUFFIX,'chat_template':False,
         'input_format':'instruction + newline Title: raw MovieLens title including year + optional newline Description: retrieved overview + suffix',
         'max_length':args.max_length,'truncation':'description tokens only; instruction, title and suffix preserved',
