@@ -1,0 +1,11 @@
+{
+  "comparison": ["Traditional BP-trained BPR matrix factorization", "Same checkpoint edited by weight-visible, training-aware Astra"],
+  "dataset": "Same v3 filtered cohort: 943 users, 1568 items, 97445 interactions; train 77573 / validation 9691 / test 10181",
+  "base": "Reuse fixed BP-trained BPR checkpoints for seeds 42,43,44. No new BP training cost. Original checkpoint remains eligible by validation.",
+  "astra": "Two fresh independent editors per checkpoint, each sees all weights, all training interactions and exact training-ID-to-embedding-row mapping. No blind or text condition. No previous results or directional hypotheses supplied. No rationales requested.",
+  "computation": "Training forward predictions, residuals, statistics and one-shot analytical updates allowed; no backpropagation, gradient optimizers, iterative model training or automated candidate search. Direct numeric tensor edits only.",
+  "budget": "Each trajectory: two rounds of four candidates; invalid candidates consume slots. Six trajectories,48 candidates,12 recorded completed generation turns. Single training/editor experiment budget one hour.",
+  "evaluation": "Validation and test rows hidden from Astra. Own score-only validation feedback. Snapshot and replay valid patches, freeze all policies/inputs before one test reporting pass. Full-catalogue NDCG@10 and Recall@10. Three training seeds, two independent editors per seed, paired-user conditional intervals.",
+  "bounds": "Same generic arithmetic interface: <=6 operations, <=20MiB per asset, finite parameters, maximum absolute value100, global relative parameter L2 change<=0.5.",
+  "limits": "Same previously evaluated MovieLens corpus, not an untouched external dataset. Two nested editor replicates per training seed. Training/weights access comparison only; no claim that access to either factor separately causes any gain. Agent-written one-shot analytical fitting is allowed and disclosed; no claim of data-free editing. Instruction allowlists are not OS sandboxing. Native token/charge telemetry unavailable."
+}

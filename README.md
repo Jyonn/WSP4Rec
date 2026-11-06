@@ -1,10 +1,9 @@
 # WSP4Rec
 
-The latest experiment rebuilds MovieLens after removing films without a reliable
-public description, including explicit missing-overview placeholders: 943 users,
-1,568 films and 97,445 interactions. It uses fresh Astra contexts, a generic
-tensor-edit interface, and patch-only submissions without directional hypotheses
-or requested rationales. The original studies below remain historical records.
+The latest experiment compares **BP-trained BPR** with **the same checkpoint
+edited by Astra with full weights, training interactions and explicit ID-to-row
+mappings**. The updated [interactive explanation](output/web/WSP4Rec_interactive.html)
+shows only these two systems. Previous blind/text experiments below are historical.
 
 
 MovieLens-100K + a two-field Factorization Machine. With only user/item fields,
@@ -272,3 +271,52 @@ The snapshot audit replays validation only and provides no editor feedback.
 Raw ratings, descriptions, features, model checkpoints and private ID mappings
 are not committed. Native subscription token counts and per-call monetary
 charges remain unavailable (`null`), not zero.
+
+## BP versus training-aware Astra (v4)
+
+At the user's request, the main comparison now has exactly two systems: the
+BP-trained BPR model, and Astra directly editing that same checkpoint after
+access to every learned parameter, the full training set, and an explicit
+user/item-ID-to-embedding-row mapping. No blind or external-text condition.
+Astra may compute training predictions, residuals and statistics and perform
+one-shot analytical updates; extra BP, gradients, iterative model training
+and automated parameter searches are disallowed by the editor instructions.
+No directional hypotheses or requested rationales are supplied. Validation
+and test rows remain unavailable to editors.
+
+Three fixed BP training seeds are reused; each gets two fresh independent
+Astra runs with two rounds of four candidates. The original checkpoint remains
+eligible by validation. All 48 candidates were valid and replayed exactly
+before policy/input freezing and one final test reporting pass.
+
+| System | Test NDCG@10 | Test Recall@10 |
+| --- | ---: | ---: |
+| BP-trained BPR | 0.10568 | 0.12156 |
+| Astra with weights + training data | 0.12178 | 0.14309 |
+
+All six editor outputs improved test NDCG over their respective BP checkpoints.
+Every selected patch changed user embeddings, item embeddings and item biases.
+These results concern a previously evaluated MovieLens cohort, not untouched
+external data, and do not separate the individual contribution of weights and
+training access. One-shot analytical data-dependent updates are allowed, so
+this is not data-free editing. Instruction allowlists are not OS isolation.
+Native tokens, charges and total editor numerical-analysis wall time remain
+unavailable; the [cost record](reports/v4_train_aware/costs.json) records them
+as null, with reused training cost identified separately.
+
+[Protocol](neutral_protocol_v4.json), [results and paired-user intervals](reports/v4_train_aware/summary.json),
+[per-run table](reports/v4_train_aware/test_results.csv), and
+[prompts and replay evidence](reports/v4_train_aware/evidence/) preserve the record.
+The offline single-file interactive page is checked without network access.
+
+```bash
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -m wsprec.train_aware_study prepare
+# Dispatch fresh Astra sessions using runs/v4_train_aware/prompts/KEY.txt.
+python -m wsprec.train_aware_study evaluate --key KEY --round 1
+# Send the saved score-only feedback and exact second-round dispatch.
+python -m wsprec.train_aware_study evaluate --key KEY --round 2
+python -m wsprec.train_aware_study freeze
+python -m wsprec.train_aware_study final
+python scripts/collect_train_aware_results.py
+python scripts/build_train_aware_web.py
+```

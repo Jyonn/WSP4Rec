@@ -1,0 +1,6 @@
+{
+  "source": "v3 fixed BP-trained BPR checkpoints reused without retraining",
+  "source_training_summary_sha256": "878ddf2a2da2eb007a9f1f7096ac7c01dbe265dda1c46061b45f4f69115a2fb9",
+  "dataset_manifest_sha256": "8d9ca6827f1b0102a9f4665dccb6f7b25b3c29ff5402107617ef84187daa97ff",
+  "existing_test_scope": "Same previously evaluated MovieLens cohort; not an untouched external test set."
+}

@@ -1,0 +1,18 @@
+{
+  "fresh_editors": 6,
+  "recorded_generation_dispatches": 12,
+  "full_training_rows_visible": 77573,
+  "all_learned_parameter_values_visible": true,
+  "explicit_user_and_item_id_to_row_mapping": true,
+  "validation_and_test_rows_in_allowlist": false,
+  "external_movie_text_or_text_vectors": false,
+  "directional_hypotheses_supplied": false,
+  "hypotheses_or_rationales_requested": false,
+  "all_submitted_patch_fields": [
+    "id",
+    "operations"
+  ],
+  "training_data_forward_analysis_and_one_shot_analytic_updates_permitted": true,
+  "extra_bp_and_iterative_training_forbidden_by_instruction": true,
+  "scope": "Supplied instructions, actual submitted schema, file exports and evaluation replay; not an audit of private reasoning or OS isolation."
+}

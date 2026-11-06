@@ -1,0 +1,1419 @@
+{
+  "bpr-s42-r0": [
+    {
+      "results": [
+        {
+          "id": "r1_1",
+          "valid_ndcg@10": 0.11854310378023933,
+          "error": null,
+          "patch": {
+            "id": "r1_1",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "r1_1_user.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s42-r0/snapshots/r1-c0",
+          "changed_parameters": 15088,
+          "total_parameters": 42688,
+          "delta_l2": 33.36306810479675,
+          "relative_delta_l2": 0.3524993979127935
+        },
+        {
+          "id": "r1_2",
+          "valid_ndcg@10": 0.12657383435735828,
+          "error": null,
+          "patch": {
+            "id": "r1_2",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "r1_2_user.npy"
+              },
+              {
+                "parameter": "item.weight",
+                "op": "add",
+                "asset": "r1_2_item.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s42-r0/snapshots/r1-c1",
+          "changed_parameters": 40176,
+          "total_parameters": 42688,
+          "delta_l2": 45.90387423567888,
+          "relative_delta_l2": 0.4849999999734728
+        },
+        {
+          "id": "r1_3",
+          "valid_ndcg@10": 0.13710570247014048,
+          "error": null,
+          "patch": {
+            "id": "r1_3",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "r1_3_user.npy"
+              },
+              {
+                "parameter": "item.weight",
+                "op": "add",
+                "asset": "r1_3_item.npy"
+              },
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "r1_3_item_bias.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s42-r0/snapshots/r1-c2",
+          "changed_parameters": 41744,
+          "total_parameters": 42688,
+          "delta_l2": 45.90387421538218,
+          "relative_delta_l2": 0.4849999997590269
+        },
+        {
+          "id": "r1_4",
+          "valid_ndcg@10": 0.11817210962588046,
+          "error": null,
+          "patch": {
+            "id": "r1_4",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "r1_4_user.npy"
+              },
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "r1_4_item_bias.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s42-r0/snapshots/r1-c3",
+          "changed_parameters": 16656,
+          "total_parameters": 42688,
+          "delta_l2": 25.158916619770913,
+          "relative_delta_l2": 0.26581796772258953
+        }
+      ],
+      "wall_seconds": 1.2907184171490371
+    },
+    {
+      "results": [
+        {
+          "id": "r2_1",
+          "valid_ndcg@10": 0.14367670042427735,
+          "error": null,
+          "patch": {
+            "id": "r2_1",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "r2_1_user.npy"
+              },
+              {
+                "parameter": "item.weight",
+                "op": "add",
+                "asset": "r2_1_item.npy"
+              },
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "r2_1_item_bias.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s42-r0/snapshots/r2-c0",
+          "changed_parameters": 41744,
+          "total_parameters": 42688,
+          "delta_l2": 46.85034499934119,
+          "relative_delta_l2": 0.4949999907802254
+        },
+        {
+          "id": "r2_2",
+          "valid_ndcg@10": 0.14127024030160287,
+          "error": null,
+          "patch": {
+            "id": "r2_2",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "r2_2_user.npy"
+              },
+              {
+                "parameter": "item.weight",
+                "op": "add",
+                "asset": "r2_2_item.npy"
+              },
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "r2_2_item_bias.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s42-r0/snapshots/r2-c1",
+          "changed_parameters": 41744,
+          "total_parameters": 42688,
+          "delta_l2": 46.85034629050238,
+          "relative_delta_l2": 0.49500000442206255
+        },
+        {
+          "id": "r2_3",
+          "valid_ndcg@10": 0.14867575559536655,
+          "error": null,
+          "patch": {
+            "id": "r2_3",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "r2_3_user.npy"
+              },
+              {
+                "parameter": "item.weight",
+                "op": "add",
+                "asset": "r2_3_item.npy"
+              },
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "r2_3_item_bias.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s42-r0/snapshots/r2-c2",
+          "changed_parameters": 41744,
+          "total_parameters": 42688,
+          "delta_l2": 46.85034586044009,
+          "relative_delta_l2": 0.4949999998782149
+        },
+        {
+          "id": "r2_4",
+          "valid_ndcg@10": 0.14453587295971748,
+          "error": null,
+          "patch": {
+            "id": "r2_4",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "r2_4_user.npy"
+              },
+              {
+                "parameter": "item.weight",
+                "op": "add",
+                "asset": "r2_4_item.npy"
+              },
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "r2_4_item_bias.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s42-r0/snapshots/r2-c3",
+          "changed_parameters": 41744,
+          "total_parameters": 42688,
+          "delta_l2": 46.85034581922554,
+          "relative_delta_l2": 0.4949999994427602
+        }
+      ],
+      "wall_seconds": 0.7254570829682052
+    }
+  ],
+  "bpr-s42-r1": [
+    {
+      "results": [
+        {
+          "id": "bpr42-r1-1",
+          "valid_ndcg@10": 0.12040895490372713,
+          "error": null,
+          "patch": {
+            "id": "bpr42-r1-1",
+            "operations": [
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "round1_1_item_bias.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s42-r1/snapshots/r1-c0",
+          "changed_parameters": 1568,
+          "total_parameters": 42688,
+          "delta_l2": 18.60151404838855,
+          "relative_delta_l2": 0.19653535705190742
+        },
+        {
+          "id": "bpr42-r1-2",
+          "valid_ndcg@10": 0.12833061161633755,
+          "error": null,
+          "patch": {
+            "id": "bpr42-r1-2",
+            "operations": [
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "round1_2_item_bias.npy"
+              },
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "round1_2_user.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s42-r1/snapshots/r1-c1",
+          "changed_parameters": 16656,
+          "total_parameters": 42688,
+          "delta_l2": 34.90370288031327,
+          "relative_delta_l2": 0.36877706245693065
+        },
+        {
+          "id": "bpr42-r1-3",
+          "valid_ndcg@10": 0.1463111594098965,
+          "error": null,
+          "patch": {
+            "id": "bpr42-r1-3",
+            "operations": [
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "round1_3_item_bias.npy"
+              },
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "round1_3_user.npy"
+              },
+              {
+                "parameter": "item.weight",
+                "op": "add",
+                "asset": "round1_3_item.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s42-r1/snapshots/r1-c2",
+          "changed_parameters": 41744,
+          "total_parameters": 42688,
+          "delta_l2": 46.47175593291081,
+          "relative_delta_l2": 0.4909999864175005
+        },
+        {
+          "id": "bpr42-r1-4",
+          "valid_ndcg@10": 0.12913924708432908,
+          "error": null,
+          "patch": {
+            "id": "bpr42-r1-4",
+            "operations": [
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "round1_4_item_bias.npy"
+              },
+              {
+                "parameter": "item.weight",
+                "op": "add",
+                "asset": "round1_4_item.npy"
+              },
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "round1_4_user.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s42-r1/snapshots/r1-c3",
+          "changed_parameters": 37296,
+          "total_parameters": 42688,
+          "delta_l2": 38.99211494906128,
+          "relative_delta_l2": 0.4119734132279759
+        }
+      ],
+      "wall_seconds": 0.3794604171998799
+    },
+    {
+      "results": [
+        {
+          "id": "bpr42-r2-1",
+          "valid_ndcg@10": 0.14862805497329196,
+          "error": null,
+          "patch": {
+            "id": "bpr42-r2-1",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "round2_1_user.npy"
+              },
+              {
+                "parameter": "item.weight",
+                "op": "add",
+                "asset": "round2_1_item.npy"
+              },
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "round2_1_item_bias.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s42-r1/snapshots/r2-c0",
+          "changed_parameters": 41744,
+          "total_parameters": 42688,
+          "delta_l2": 46.94499143221987,
+          "relative_delta_l2": 0.49599998306209625
+        },
+        {
+          "id": "bpr42-r2-2",
+          "valid_ndcg@10": 0.14279354849366563,
+          "error": null,
+          "patch": {
+            "id": "bpr42-r2-2",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "round2_2_user.npy"
+              },
+              {
+                "parameter": "item.weight",
+                "op": "add",
+                "asset": "round2_2_item.npy"
+              },
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "round2_2_item_bias.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s42-r1/snapshots/r2-c1",
+          "changed_parameters": 41744,
+          "total_parameters": 42688,
+          "delta_l2": 46.94499171719485,
+          "relative_delta_l2": 0.49599998607301565
+        },
+        {
+          "id": "bpr42-r2-3",
+          "valid_ndcg@10": 0.14903929435757385,
+          "error": null,
+          "patch": {
+            "id": "bpr42-r2-3",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "round2_3_user.npy"
+              },
+              {
+                "parameter": "item.weight",
+                "op": "add",
+                "asset": "round2_3_item.npy"
+              },
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "round2_3_item_bias.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s42-r1/snapshots/r2-c2",
+          "changed_parameters": 41744,
+          "total_parameters": 42688,
+          "delta_l2": 46.944991586311986,
+          "relative_delta_l2": 0.49599998469016526
+        },
+        {
+          "id": "bpr42-r2-4",
+          "valid_ndcg@10": 0.13770761992656752,
+          "error": null,
+          "patch": {
+            "id": "bpr42-r2-4",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "round2_4_user.npy"
+              },
+              {
+                "parameter": "item.weight",
+                "op": "add",
+                "asset": "round2_4_item.npy"
+              },
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "round2_4_item_bias.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s42-r1/snapshots/r2-c3",
+          "changed_parameters": 41744,
+          "total_parameters": 42688,
+          "delta_l2": 46.94499194241631,
+          "relative_delta_l2": 0.4959999884526058
+        }
+      ],
+      "wall_seconds": 0.48353329207748175
+    }
+  ],
+  "bpr-s43-r0": [
+    {
+      "results": [
+        {
+          "id": "bpr43r1_1",
+          "valid_ndcg@10": 0.12834866292809063,
+          "error": null,
+          "patch": {
+            "id": "bpr43r1_1",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "r1_1_user.npy"
+              },
+              {
+                "parameter": "item.weight",
+                "op": "add",
+                "asset": "r1_1_item.npy"
+              },
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "r1_1_item_bias.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s43-r0/snapshots/r1-c0",
+          "changed_parameters": 41744,
+          "total_parameters": 42688,
+          "delta_l2": 47.41730121600076,
+          "relative_delta_l2": 0.49000001412778194
+        },
+        {
+          "id": "bpr43r1_2",
+          "valid_ndcg@10": 0.1486127736629724,
+          "error": null,
+          "patch": {
+            "id": "bpr43r1_2",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "r1_2_user.npy"
+              },
+              {
+                "parameter": "item.weight",
+                "op": "add",
+                "asset": "r1_2_item.npy"
+              },
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "r1_2_item_bias.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s43-r0/snapshots/r1-c1",
+          "changed_parameters": 41744,
+          "total_parameters": 42688,
+          "delta_l2": 47.41730117601472,
+          "relative_delta_l2": 0.4900000137145749
+        },
+        {
+          "id": "bpr43r1_3",
+          "valid_ndcg@10": 0.11151895615184153,
+          "error": null,
+          "patch": {
+            "id": "bpr43r1_3",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "r1_3_user.npy"
+              },
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "r1_3_item_bias.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s43-r0/snapshots/r1-c2",
+          "changed_parameters": 16656,
+          "total_parameters": 42688,
+          "delta_l2": 41.85577525934812,
+          "relative_delta_l2": 0.4325284219568587
+        },
+        {
+          "id": "bpr43r1_4",
+          "valid_ndcg@10": 0.12568890409009825,
+          "error": null,
+          "patch": {
+            "id": "bpr43r1_4",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "r1_4_user.npy"
+              },
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "r1_4_item_bias.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s43-r0/snapshots/r1-c3",
+          "changed_parameters": 16656,
+          "total_parameters": 42688,
+          "delta_l2": 27.874783557611984,
+          "relative_delta_l2": 0.2880519132630367
+        }
+      ],
+      "wall_seconds": 0.4138494576327503
+    },
+    {
+      "results": [
+        {
+          "id": "bpr43r2_1",
+          "valid_ndcg@10": 0.1583436779143355,
+          "error": null,
+          "patch": {
+            "id": "bpr43r2_1",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "r2_1_user.npy"
+              },
+              {
+                "parameter": "item.weight",
+                "op": "add",
+                "asset": "r2_1_item.npy"
+              },
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "r2_1_item_bias.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s43-r0/snapshots/r2-c0",
+          "changed_parameters": 41744,
+          "total_parameters": 42688,
+          "delta_l2": 47.90114978000565,
+          "relative_delta_l2": 0.4949999993044605
+        },
+        {
+          "id": "bpr43r2_2",
+          "valid_ndcg@10": 0.15195532409255963,
+          "error": null,
+          "patch": {
+            "id": "bpr43r2_2",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "r2_2_user.npy"
+              },
+              {
+                "parameter": "item.weight",
+                "op": "add",
+                "asset": "r2_2_item.npy"
+              },
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "r2_2_item_bias.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s43-r0/snapshots/r2-c1",
+          "changed_parameters": 41744,
+          "total_parameters": 42688,
+          "delta_l2": 47.90114976242573,
+          "relative_delta_l2": 0.4949999991227934
+        },
+        {
+          "id": "bpr43r2_3",
+          "valid_ndcg@10": 0.15720515475903812,
+          "error": null,
+          "patch": {
+            "id": "bpr43r2_3",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "r2_3_user.npy"
+              },
+              {
+                "parameter": "item.weight",
+                "op": "add",
+                "asset": "r2_3_item.npy"
+              },
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "r2_3_item_bias.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s43-r0/snapshots/r2-c2",
+          "changed_parameters": 41744,
+          "total_parameters": 42688,
+          "delta_l2": 47.90114975336437,
+          "relative_delta_l2": 0.4949999990291553
+        },
+        {
+          "id": "bpr43r2_4",
+          "valid_ndcg@10": 0.1522146817317205,
+          "error": null,
+          "patch": {
+            "id": "bpr43r2_4",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "r2_4_user.npy"
+              },
+              {
+                "parameter": "item.weight",
+                "op": "add",
+                "asset": "r2_4_item.npy"
+              },
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "r2_4_item_bias.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s43-r0/snapshots/r2-c3",
+          "changed_parameters": 41744,
+          "total_parameters": 42688,
+          "delta_l2": 47.90114973240667,
+          "relative_delta_l2": 0.494999998812583
+        }
+      ],
+      "wall_seconds": 0.47217487497255206
+    }
+  ],
+  "bpr-s43-r1": [
+    {
+      "results": [
+        {
+          "id": "a",
+          "valid_ndcg@10": 0.11691919009188242,
+          "error": null,
+          "patch": {
+            "id": "a",
+            "operations": [
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "r1_a_item_bias_weight.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s43-r1/snapshots/r1-c0",
+          "changed_parameters": 1568,
+          "total_parameters": 42688,
+          "delta_l2": 33.85013894054166,
+          "relative_delta_l2": 0.34979992816410505
+        },
+        {
+          "id": "b",
+          "valid_ndcg@10": 0.12969455061217222,
+          "error": null,
+          "patch": {
+            "id": "b",
+            "operations": [
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "r1_b_item_bias_weight.npy"
+              },
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "r1_b_user_weight.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s43-r1/snapshots/r1-c1",
+          "changed_parameters": 16656,
+          "total_parameters": 42688,
+          "delta_l2": 46.439045799727026,
+          "relative_delta_l2": 0.47989093673404454
+        },
+        {
+          "id": "c",
+          "valid_ndcg@10": 0.1316397946761411,
+          "error": null,
+          "patch": {
+            "id": "c",
+            "operations": [
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "r1_c_item_bias_weight.npy"
+              },
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "r1_c_user_weight.npy"
+              },
+              {
+                "parameter": "item.weight",
+                "op": "add",
+                "asset": "r1_c_item_weight.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s43-r1/snapshots/r1-c2",
+          "changed_parameters": 41744,
+          "total_parameters": 42688,
+          "delta_l2": 47.41730122402157,
+          "relative_delta_l2": 0.49000001421066725
+        },
+        {
+          "id": "d",
+          "valid_ndcg@10": 0.14199242484308625,
+          "error": null,
+          "patch": {
+            "id": "d",
+            "operations": [
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "r1_d_item_bias_weight.npy"
+              },
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "r1_d_user_weight.npy"
+              },
+              {
+                "parameter": "item.weight",
+                "op": "add",
+                "asset": "r1_d_item_weight.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s43-r1/snapshots/r1-c3",
+          "changed_parameters": 41744,
+          "total_parameters": 42688,
+          "delta_l2": 47.417301158203536,
+          "relative_delta_l2": 0.4900000135305181
+        }
+      ],
+      "wall_seconds": 1.0031583332456648
+    },
+    {
+      "results": [
+        {
+          "id": "e",
+          "valid_ndcg@10": 0.13954635484496666,
+          "error": null,
+          "patch": {
+            "id": "e",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "r2_e_user_weight.npy"
+              },
+              {
+                "parameter": "item.weight",
+                "op": "add",
+                "asset": "r2_e_item_weight.npy"
+              },
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "r2_e_item_bias_weight.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s43-r1/snapshots/r2-c0",
+          "changed_parameters": 41744,
+          "total_parameters": 42688,
+          "delta_l2": 47.99791720587625,
+          "relative_delta_l2": 0.49599997270715807
+        },
+        {
+          "id": "f",
+          "valid_ndcg@10": 0.1438464140741578,
+          "error": null,
+          "patch": {
+            "id": "f",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "r2_f_user_weight.npy"
+              },
+              {
+                "parameter": "item.weight",
+                "op": "add",
+                "asset": "r2_f_item_weight.npy"
+              },
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "r2_f_item_bias_weight.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s43-r1/snapshots/r2-c1",
+          "changed_parameters": 41744,
+          "total_parameters": 42688,
+          "delta_l2": 47.9979171482277,
+          "relative_delta_l2": 0.49599997211143054
+        },
+        {
+          "id": "g",
+          "valid_ndcg@10": 0.14322088587409437,
+          "error": null,
+          "patch": {
+            "id": "g",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "r2_g_user_weight.npy"
+              },
+              {
+                "parameter": "item.weight",
+                "op": "add",
+                "asset": "r2_g_item_weight.npy"
+              },
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "r2_g_item_bias_weight.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s43-r1/snapshots/r2-c2",
+          "changed_parameters": 41744,
+          "total_parameters": 42688,
+          "delta_l2": 47.99791718261689,
+          "relative_delta_l2": 0.4959999724668009
+        },
+        {
+          "id": "h",
+          "valid_ndcg@10": 0.13868147390233632,
+          "error": null,
+          "patch": {
+            "id": "h",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "r2_h_user_weight.npy"
+              },
+              {
+                "parameter": "item.weight",
+                "op": "add",
+                "asset": "r2_h_item_weight.npy"
+              },
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "r2_h_item_bias_weight.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s43-r1/snapshots/r2-c3",
+          "changed_parameters": 41744,
+          "total_parameters": 42688,
+          "delta_l2": 47.9979171503107,
+          "relative_delta_l2": 0.4959999721329558
+        }
+      ],
+      "wall_seconds": 0.5191399161703885
+    }
+  ],
+  "bpr-s44-r0": [
+    {
+      "results": [
+        {
+          "id": "r1_1",
+          "valid_ndcg@10": 0.13868227403882008,
+          "error": null,
+          "patch": {
+            "id": "r1_1",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "round1_1_user.weight.npy"
+              },
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "round1_1_item_bias.weight.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s44-r0/snapshots/r1-c0",
+          "changed_parameters": 16656,
+          "total_parameters": 42688,
+          "delta_l2": 44.954528715093105,
+          "relative_delta_l2": 0.43458652296349254
+        },
+        {
+          "id": "r1_2",
+          "valid_ndcg@10": 0.1378691419248865,
+          "error": null,
+          "patch": {
+            "id": "r1_2",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "round1_2_user.weight.npy"
+              },
+              {
+                "parameter": "item.weight",
+                "op": "add",
+                "asset": "round1_2_item.weight.npy"
+              },
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "round1_2_item_bias.weight.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s44-r0/snapshots/r1-c1",
+          "changed_parameters": 41744,
+          "total_parameters": 42688,
+          "delta_l2": 48.3707172924873,
+          "relative_delta_l2": 0.4676116609878823
+        },
+        {
+          "id": "r1_3",
+          "valid_ndcg@10": 0.1343460886082303,
+          "error": null,
+          "patch": {
+            "id": "r1_3",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "round1_3_user.weight.npy"
+              },
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "round1_3_item_bias.weight.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s44-r0/snapshots/r1-c2",
+          "changed_parameters": 16656,
+          "total_parameters": 42688,
+          "delta_l2": 51.2038268705576,
+          "relative_delta_l2": 0.49500003043362323
+        },
+        {
+          "id": "r1_4",
+          "valid_ndcg@10": 0.13257830263849926,
+          "error": null,
+          "patch": {
+            "id": "r1_4",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "round1_4_user.weight.npy"
+              },
+              {
+                "parameter": "item.weight",
+                "op": "add",
+                "asset": "round1_4_item.weight.npy"
+              },
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "round1_4_item_bias.weight.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s44-r0/snapshots/r1-c3",
+          "changed_parameters": 41744,
+          "total_parameters": 42688,
+          "delta_l2": 15.068025410296706,
+          "relative_delta_l2": 0.14566632012733882
+        }
+      ],
+      "wall_seconds": 1.0093345833010972
+    },
+    {
+      "results": [
+        {
+          "id": "r2_1",
+          "valid_ndcg@10": 0.13660365675620287,
+          "error": null,
+          "patch": {
+            "id": "r2_1",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "round2_1_user.weight.npy"
+              },
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "round2_1_item_bias.weight.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s44-r0/snapshots/r2-c0",
+          "changed_parameters": 16656,
+          "total_parameters": 42688,
+          "delta_l2": 51.20382692421542,
+          "relative_delta_l2": 0.4950000309523466
+        },
+        {
+          "id": "r2_2",
+          "valid_ndcg@10": 0.1280600700318248,
+          "error": null,
+          "patch": {
+            "id": "r2_2",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "round2_2_user.weight.npy"
+              },
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "round2_2_item_bias.weight.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s44-r0/snapshots/r2-c1",
+          "changed_parameters": 16656,
+          "total_parameters": 42688,
+          "delta_l2": 51.20382689591381,
+          "relative_delta_l2": 0.4950000306787479
+        },
+        {
+          "id": "r2_3",
+          "valid_ndcg@10": 0.15892877694074947,
+          "error": null,
+          "patch": {
+            "id": "r2_3",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "round2_3_user.weight.npy"
+              },
+              {
+                "parameter": "item.weight",
+                "op": "add",
+                "asset": "round2_3_item.weight.npy"
+              },
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "round2_3_item_bias.weight.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s44-r0/snapshots/r2-c2",
+          "changed_parameters": 41744,
+          "total_parameters": 42688,
+          "delta_l2": 51.20382687402775,
+          "relative_delta_l2": 0.49500003046717
+        },
+        {
+          "id": "r2_4",
+          "valid_ndcg@10": 0.16359427405439508,
+          "error": null,
+          "patch": {
+            "id": "r2_4",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "round2_4_user.weight.npy"
+              },
+              {
+                "parameter": "item.weight",
+                "op": "add",
+                "asset": "round2_4_item.weight.npy"
+              },
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "round2_4_item_bias.weight.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s44-r0/snapshots/r2-c3",
+          "changed_parameters": 41744,
+          "total_parameters": 42688,
+          "delta_l2": 51.20382694587647,
+          "relative_delta_l2": 0.49500003116174934
+        }
+      ],
+      "wall_seconds": 0.4832018753513694
+    }
+  ],
+  "bpr-s44-r1": [
+    {
+      "results": [
+        {
+          "id": "bpr44-r1-1",
+          "valid_ndcg@10": 0.12691264512032335,
+          "error": null,
+          "patch": {
+            "id": "bpr44-r1-1",
+            "operations": [
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "r1_1_item_bias.weight.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s44-r1/snapshots/r1-c0",
+          "changed_parameters": 1568,
+          "total_parameters": 42688,
+          "delta_l2": 10.431739510599911,
+          "relative_delta_l2": 0.10084620019273872
+        },
+        {
+          "id": "bpr44-r1-2",
+          "valid_ndcg@10": 0.14490002964605372,
+          "error": null,
+          "patch": {
+            "id": "bpr44-r1-2",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "r1_2_user.weight.npy"
+              },
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "r1_2_item_bias.weight.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s44-r1/snapshots/r1-c1",
+          "changed_parameters": 16656,
+          "total_parameters": 42688,
+          "delta_l2": 31.428565577311048,
+          "relative_delta_l2": 0.30382769937454635
+        },
+        {
+          "id": "bpr44-r1-3",
+          "valid_ndcg@10": 0.15586504352993205,
+          "error": null,
+          "patch": {
+            "id": "bpr44-r1-3",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "r1_3_user.weight.npy"
+              },
+              {
+                "parameter": "item.weight",
+                "op": "add",
+                "asset": "r1_3_item.weight.npy"
+              },
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "r1_3_item_bias.weight.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s44-r1/snapshots/r1-c2",
+          "changed_parameters": 41744,
+          "total_parameters": 42688,
+          "delta_l2": 49.65219356906931,
+          "relative_delta_l2": 0.4800000083962047
+        },
+        {
+          "id": "bpr44-r1-4",
+          "valid_ndcg@10": 0.1592569283531602,
+          "error": null,
+          "patch": {
+            "id": "bpr44-r1-4",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "r1_4_user.weight.npy"
+              },
+              {
+                "parameter": "item.weight",
+                "op": "add",
+                "asset": "r1_4_item.weight.npy"
+              },
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "r1_4_item_bias.weight.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s44-r1/snapshots/r1-c3",
+          "changed_parameters": 41744,
+          "total_parameters": 42688,
+          "delta_l2": 43.3950511954657,
+          "relative_delta_l2": 0.4195106689335277
+        }
+      ],
+      "wall_seconds": 1.0083344168961048
+    },
+    {
+      "results": [
+        {
+          "id": "bpr44-r2-1",
+          "valid_ndcg@10": 0.15229372619793013,
+          "error": null,
+          "patch": {
+            "id": "bpr44-r2-1",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "r2_1_user.weight.npy"
+              },
+              {
+                "parameter": "item.weight",
+                "op": "add",
+                "asset": "r2_1_item.weight.npy"
+              },
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "r2_1_item_bias.weight.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s44-r1/snapshots/r2-c0",
+          "changed_parameters": 41744,
+          "total_parameters": 42688,
+          "delta_l2": 51.203826841814745,
+          "relative_delta_l2": 0.49500003015575894
+        },
+        {
+          "id": "bpr44-r2-2",
+          "valid_ndcg@10": 0.1512676042330464,
+          "error": null,
+          "patch": {
+            "id": "bpr44-r2-2",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "r2_2_user.weight.npy"
+              },
+              {
+                "parameter": "item.weight",
+                "op": "add",
+                "asset": "r2_2_item.weight.npy"
+              },
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "r2_2_item_bias.weight.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s44-r1/snapshots/r2-c1",
+          "changed_parameters": 41744,
+          "total_parameters": 42688,
+          "delta_l2": 51.20382688574148,
+          "relative_delta_l2": 0.49500003058040953
+        },
+        {
+          "id": "bpr44-r2-3",
+          "valid_ndcg@10": 0.1489789165144172,
+          "error": null,
+          "patch": {
+            "id": "bpr44-r2-3",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "r2_3_user.weight.npy"
+              },
+              {
+                "parameter": "item.weight",
+                "op": "add",
+                "asset": "r2_3_item.weight.npy"
+              },
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "r2_3_item_bias.weight.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s44-r1/snapshots/r2-c2",
+          "changed_parameters": 41744,
+          "total_parameters": 42688,
+          "delta_l2": 51.203826875314164,
+          "relative_delta_l2": 0.4950000304796061
+        },
+        {
+          "id": "bpr44-r2-4",
+          "valid_ndcg@10": 0.1561518889342386,
+          "error": null,
+          "patch": {
+            "id": "bpr44-r2-4",
+            "operations": [
+              {
+                "parameter": "user.weight",
+                "op": "add",
+                "asset": "r2_4_user.weight.npy"
+              },
+              {
+                "parameter": "item.weight",
+                "op": "add",
+                "asset": "r2_4_item.weight.npy"
+              },
+              {
+                "parameter": "item_bias.weight",
+                "op": "add",
+                "asset": "r2_4_item_bias.weight.npy"
+              }
+            ]
+          },
+          "snapshot": "runs/v4_train_aware/evaluations/bpr-s44-r1/snapshots/r2-c3",
+          "changed_parameters": 41744,
+          "total_parameters": 42688,
+          "delta_l2": 51.20382699210851,
+          "relative_delta_l2": 0.4950000316086859
+        }
+      ],
+      "wall_seconds": 0.7030982091091573
+    }
+  ]
+}

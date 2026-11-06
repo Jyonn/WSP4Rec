@@ -1,0 +1,74 @@
+{
+  "bpr-s42-r0": {
+    "seed": 42,
+    "replicate": 0,
+    "allowlist": [
+      "runs/v4_train_aware/inputs/interface.json",
+      "runs/v4_train_aware/inputs/train.npy",
+      "runs/v4_train_aware/inputs/id_to_embedding_row.json",
+      "runs/v4_train_aware/inputs/bpr-s42-parameters.npz",
+      "runs/v4_train_aware/inputs/bpr-s42-spec.json"
+    ],
+    "output_directory": "runs/v4_train_aware/editors/bpr-s42-r0"
+  },
+  "bpr-s42-r1": {
+    "seed": 42,
+    "replicate": 1,
+    "allowlist": [
+      "runs/v4_train_aware/inputs/interface.json",
+      "runs/v4_train_aware/inputs/train.npy",
+      "runs/v4_train_aware/inputs/id_to_embedding_row.json",
+      "runs/v4_train_aware/inputs/bpr-s42-parameters.npz",
+      "runs/v4_train_aware/inputs/bpr-s42-spec.json"
+    ],
+    "output_directory": "runs/v4_train_aware/editors/bpr-s42-r1"
+  },
+  "bpr-s43-r0": {
+    "seed": 43,
+    "replicate": 0,
+    "allowlist": [
+      "runs/v4_train_aware/inputs/interface.json",
+      "runs/v4_train_aware/inputs/train.npy",
+      "runs/v4_train_aware/inputs/id_to_embedding_row.json",
+      "runs/v4_train_aware/inputs/bpr-s43-parameters.npz",
+      "runs/v4_train_aware/inputs/bpr-s43-spec.json"
+    ],
+    "output_directory": "runs/v4_train_aware/editors/bpr-s43-r0"
+  },
+  "bpr-s43-r1": {
+    "seed": 43,
+    "replicate": 1,
+    "allowlist": [
+      "runs/v4_train_aware/inputs/interface.json",
+      "runs/v4_train_aware/inputs/train.npy",
+      "runs/v4_train_aware/inputs/id_to_embedding_row.json",
+      "runs/v4_train_aware/inputs/bpr-s43-parameters.npz",
+      "runs/v4_train_aware/inputs/bpr-s43-spec.json"
+    ],
+    "output_directory": "runs/v4_train_aware/editors/bpr-s43-r1"
+  },
+  "bpr-s44-r0": {
+    "seed": 44,
+    "replicate": 0,
+    "allowlist": [
+      "runs/v4_train_aware/inputs/interface.json",
+      "runs/v4_train_aware/inputs/train.npy",
+      "runs/v4_train_aware/inputs/id_to_embedding_row.json",
+      "runs/v4_train_aware/inputs/bpr-s44-parameters.npz",
+      "runs/v4_train_aware/inputs/bpr-s44-spec.json"
+    ],
+    "output_directory": "runs/v4_train_aware/editors/bpr-s44-r0"
+  },
+  "bpr-s44-r1": {
+    "seed": 44,
+    "replicate": 1,
+    "allowlist": [
+      "runs/v4_train_aware/inputs/interface.json",
+      "runs/v4_train_aware/inputs/train.npy",
+      "runs/v4_train_aware/inputs/id_to_embedding_row.json",
+      "runs/v4_train_aware/inputs/bpr-s44-parameters.npz",
+      "runs/v4_train_aware/inputs/bpr-s44-spec.json"
+    ],
+    "output_directory": "runs/v4_train_aware/editors/bpr-s44-r1"
+  }
+}

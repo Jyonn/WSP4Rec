@@ -5,3 +5,6 @@ data/
 runs/
 tmp/
 .DS_Store
+
+# Private Sites checkout is mirrored as public static source in web/explainer.
+web/wsp-explainer/

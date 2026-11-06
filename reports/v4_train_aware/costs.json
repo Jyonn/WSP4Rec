@@ -1,0 +1,22 @@
+{
+  "new_bp_training_runs": 0,
+  "reused_bp_checkpoints": 3,
+  "preparation_baseline_validation_evaluations": 3,
+  "freeze_baseline_validation_evaluations": 6,
+  "final_test_metric_evaluations": 9,
+  "editor_trajectories": 6,
+  "recorded_editor_generation_turns": 12,
+  "candidate_queries": 48,
+  "invalid_candidates": 0,
+  "candidate_execution_wall_seconds": 8.491460876073688,
+  "integrity_replay": {
+    "scored_patches": 48,
+    "wall_seconds": 4.19097000034526
+  },
+  "test_reporting_wall_seconds": 2.0049488339573145,
+  "editor_input_tokens": null,
+  "editor_output_tokens": null,
+  "editor_billed_usd": null,
+  "editor_training_data_analysis_wall_seconds": null,
+  "scope": "Current train-aware run only. Reused BP training costs in reports/v3_neutral/costs.json; prior studies not free. Native billing and complete agent compute telemetry unavailable, not zero."
+}
