@@ -63,7 +63,11 @@ def main():
         raise ValueError('movie records must be in contiguous zero-based catalogue order')
     args.output.mkdir(parents=True,exist_ok=True)
     device=torch.device(args.device)
-    if device.type=='cuda':torch.cuda.reset_peak_memory_stats(device)
+    if device.type=='cuda':
+        # reset_peak_memory_stats does not initialize CUDA on older Torch.
+        torch.cuda.init()
+        torch.cuda.set_device(device)
+        torch.cuda.reset_peak_memory_stats(device)
     tokenizer=AutoTokenizer.from_pretrained(args.model,revision=args.revision,local_files_only=True,padding_side='left')
     if tokenizer.pad_token_id is None:tokenizer.pad_token=tokenizer.eos_token
     tokenizer.padding_side='left'
