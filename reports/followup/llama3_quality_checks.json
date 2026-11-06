@@ -1,0 +1,431 @@
+{
+  "finite_and_normalized": true,
+  "input_and_embedding_hashes_verified": true,
+  "shape_each": [
+    1682,
+    4096
+  ],
+  "exact_missing_fallback_verified": true,
+  "missing_items": 112,
+  "description_coverage_by_train_support": {
+    "zero": {
+      "items": 71,
+      "descriptions_available": 54,
+      "coverage": 0.7605633802816901
+    },
+    "low": {
+      "items": 563,
+      "descriptions_available": 500,
+      "coverage": 0.8880994671403197
+    },
+    "mid": {
+      "items": 515,
+      "descriptions_available": 498,
+      "coverage": 0.9669902912621359
+    },
+    "high": {
+      "items": 533,
+      "descriptions_available": 518,
+      "coverage": 0.9718574108818011
+    }
+  },
+  "same_item_title_description_cosine_mean_available": 0.9784857630729675,
+  "title_vs_description_top10_overlap_mean_available": 0.2526751592356688,
+  "conditions": {
+    "title_only": {
+      "mean_random_pair_cosine": 0.9439135789871216,
+      "fixed_query_examples": [
+        {
+          "item_id": 0,
+          "title": "Toy Story (1995)",
+          "description_available": true,
+          "neighbors": [
+            {
+              "item_id": 408,
+              "title": "Jack (1996)",
+              "cosine": 0.959825336933136
+            },
+            {
+              "item_id": 1292,
+              "title": "Star Kid (1997)",
+              "cosine": 0.9577929377555847
+            },
+            {
+              "item_id": 329,
+              "title": "187 (1997)",
+              "cosine": 0.9561001062393188
+            },
+            {
+              "item_id": 1325,
+              "title": "Boys (1996)",
+              "cosine": 0.9558888077735901
+            },
+            {
+              "item_id": 403,
+              "title": "Pinocchio (1940)",
+              "cosine": 0.9556678533554077
+            }
+          ]
+        },
+        {
+          "item_id": 49,
+          "title": "Star Wars (1977)",
+          "description_available": true,
+          "neighbors": [
+            {
+              "item_id": 171,
+              "title": "Empire Strikes Back, The (1980)",
+              "cosine": 0.9778856635093689
+            },
+            {
+              "item_id": 180,
+              "title": "Return of the Jedi (1983)",
+              "cosine": 0.9761368632316589
+            },
+            {
+              "item_id": 448,
+              "title": "Star Trek: The Motion Picture (1979)",
+              "cosine": 0.9608588218688965
+            },
+            {
+              "item_id": 449,
+              "title": "Star Trek V: The Final Frontier (1989)",
+              "cosine": 0.9585765600204468
+            },
+            {
+              "item_id": 1292,
+              "title": "Star Kid (1997)",
+              "cosine": 0.9573683142662048
+            }
+          ]
+        },
+        {
+          "item_id": 126,
+          "title": "Godfather, The (1972)",
+          "description_available": true,
+          "neighbors": [
+            {
+              "item_id": 186,
+              "title": "Godfather: Part II, The (1974)",
+              "cosine": 0.9915301203727722
+            },
+            {
+              "item_id": 181,
+              "title": "GoodFellas (1990)",
+              "cosine": 0.9703116416931152
+            },
+            {
+              "item_id": 865,
+              "title": "Michael (1996)",
+              "cosine": 0.9672731161117554
+            },
+            {
+              "item_id": 1648,
+              "title": "Big One, The (1997)",
+              "cosine": 0.965955376625061
+            },
+            {
+              "item_id": 688,
+              "title": "Jackal, The (1997)",
+              "cosine": 0.9654913544654846
+            }
+          ]
+        },
+        {
+          "item_id": 171,
+          "title": "Empire Strikes Back, The (1980)",
+          "description_available": true,
+          "neighbors": [
+            {
+              "item_id": 180,
+              "title": "Return of the Jedi (1983)",
+              "cosine": 0.9820167422294617
+            },
+            {
+              "item_id": 49,
+              "title": "Star Wars (1977)",
+              "cosine": 0.9778856635093689
+            },
+            {
+              "item_id": 226,
+              "title": "Star Trek VI: The Undiscovered Country (1991)",
+              "cosine": 0.9683080911636353
+            },
+            {
+              "item_id": 449,
+              "title": "Star Trek V: The Final Frontier (1989)",
+              "cosine": 0.9666351079940796
+            },
+            {
+              "item_id": 448,
+              "title": "Star Trek: The Motion Picture (1979)",
+              "cosine": 0.9661805033683777
+            }
+          ]
+        },
+        {
+          "item_id": 257,
+          "title": "Contact (1997)",
+          "description_available": true,
+          "neighbors": [
+            {
+              "item_id": 869,
+              "title": "Touch (1997)",
+              "cosine": 0.9754804372787476
+            },
+            {
+              "item_id": 1656,
+              "title": "Target (1995)",
+              "cosine": 0.9688954949378967
+            },
+            {
+              "item_id": 1352,
+              "title": "1-900 (1994)",
+              "cosine": 0.9688882827758789
+            },
+            {
+              "item_id": 896,
+              "title": "Time Tracers (1995)",
+              "cosine": 0.9687911868095398
+            },
+            {
+              "item_id": 1356,
+              "title": "For the Moment (1994)",
+              "cosine": 0.9681047797203064
+            }
+          ]
+        },
+        {
+          "item_id": 299,
+          "title": "Air Force One (1997)",
+          "description_available": true,
+          "neighbors": [
+            {
+              "item_id": 684,
+              "title": "Executive Decision (1996)",
+              "cosine": 0.967154860496521
+            },
+            {
+              "item_id": 683,
+              "title": "In the Line of Fire (1993)",
+              "cosine": 0.9641128778457642
+            },
+            {
+              "item_id": 1015,
+              "title": "Con Air (1997)",
+              "cosine": 0.9637429118156433
+            },
+            {
+              "item_id": 545,
+              "title": "Broken Arrow (1996)",
+              "cosine": 0.9611254930496216
+            },
+            {
+              "item_id": 800,
+              "title": "Air Up There, The (1994)",
+              "cosine": 0.9604201912879944
+            }
+          ]
+        }
+      ]
+    },
+    "title_description": {
+      "mean_random_pair_cosine": 0.9335302710533142,
+      "fixed_query_examples": [
+        {
+          "item_id": 0,
+          "title": "Toy Story (1995)",
+          "description_available": true,
+          "neighbors": [
+            {
+              "item_id": 403,
+              "title": "Pinocchio (1940)",
+              "cosine": 0.9566744565963745
+            },
+            {
+              "item_id": 329,
+              "title": "187 (1997)",
+              "cosine": 0.9562501907348633
+            },
+            {
+              "item_id": 893,
+              "title": "Home Alone 3 (1997)",
+              "cosine": 0.9558067917823792
+            },
+            {
+              "item_id": 341,
+              "title": "Man Who Knew Too Little, The (1997)",
+              "cosine": 0.9537069797515869
+            },
+            {
+              "item_id": 414,
+              "title": "Apple Dumpling Gang, The (1975)",
+              "cosine": 0.9536207318305969
+            }
+          ]
+        },
+        {
+          "item_id": 49,
+          "title": "Star Wars (1977)",
+          "description_available": true,
+          "neighbors": [
+            {
+              "item_id": 171,
+              "title": "Empire Strikes Back, The (1980)",
+              "cosine": 0.9799222350120544
+            },
+            {
+              "item_id": 180,
+              "title": "Return of the Jedi (1983)",
+              "cosine": 0.9742993712425232
+            },
+            {
+              "item_id": 448,
+              "title": "Star Trek: The Motion Picture (1979)",
+              "cosine": 0.9640541672706604
+            },
+            {
+              "item_id": 226,
+              "title": "Star Trek VI: The Undiscovered Country (1991)",
+              "cosine": 0.9630321860313416
+            },
+            {
+              "item_id": 221,
+              "title": "Star Trek: First Contact (1996)",
+              "cosine": 0.9622290134429932
+            }
+          ]
+        },
+        {
+          "item_id": 126,
+          "title": "Godfather, The (1972)",
+          "description_available": true,
+          "neighbors": [
+            {
+              "item_id": 186,
+              "title": "Godfather: Part II, The (1974)",
+              "cosine": 0.9879798293113708
+            },
+            {
+              "item_id": 1509,
+              "title": "Mad Dog Time (1996)",
+              "cosine": 0.965181291103363
+            },
+            {
+              "item_id": 181,
+              "title": "GoodFellas (1990)",
+              "cosine": 0.9638623595237732
+            },
+            {
+              "item_id": 688,
+              "title": "Jackal, The (1997)",
+              "cosine": 0.9638257026672363
+            },
+            {
+              "item_id": 984,
+              "title": "Blood & Wine (1997)",
+              "cosine": 0.9632014632225037
+            }
+          ]
+        },
+        {
+          "item_id": 171,
+          "title": "Empire Strikes Back, The (1980)",
+          "description_available": true,
+          "neighbors": [
+            {
+              "item_id": 49,
+              "title": "Star Wars (1977)",
+              "cosine": 0.9799222350120544
+            },
+            {
+              "item_id": 180,
+              "title": "Return of the Jedi (1983)",
+              "cosine": 0.9784723520278931
+            },
+            {
+              "item_id": 221,
+              "title": "Star Trek: First Contact (1996)",
+              "cosine": 0.9678749442100525
+            },
+            {
+              "item_id": 226,
+              "title": "Star Trek VI: The Undiscovered Country (1991)",
+              "cosine": 0.9638667106628418
+            },
+            {
+              "item_id": 182,
+              "title": "Alien (1979)",
+              "cosine": 0.9628355503082275
+            }
+          ]
+        },
+        {
+          "item_id": 257,
+          "title": "Contact (1997)",
+          "description_available": true,
+          "neighbors": [
+            {
+              "item_id": 428,
+              "title": "Day the Earth Stood Still, The (1951)",
+              "cosine": 0.9615761041641235
+            },
+            {
+              "item_id": 342,
+              "title": "Alien: Resurrection (1997)",
+              "cosine": 0.9587989449501038
+            },
+            {
+              "item_id": 422,
+              "title": "E.T. the Extra-Terrestrial (1982)",
+              "cosine": 0.9585115909576416
+            },
+            {
+              "item_id": 182,
+              "title": "Alien (1979)",
+              "cosine": 0.958036482334137
+            },
+            {
+              "item_id": 320,
+              "title": "Mother (1996)",
+              "cosine": 0.9573529958724976
+            }
+          ]
+        },
+        {
+          "item_id": 299,
+          "title": "Air Force One (1997)",
+          "description_available": true,
+          "neighbors": [
+            {
+              "item_id": 878,
+              "title": "Peacemaker, The (1997)",
+              "cosine": 0.9654055833816528
+            },
+            {
+              "item_id": 684,
+              "title": "Executive Decision (1996)",
+              "cosine": 0.9649883508682251
+            },
+            {
+              "item_id": 297,
+              "title": "Face/Off (1997)",
+              "cosine": 0.9628307223320007
+            },
+            {
+              "item_id": 688,
+              "title": "Jackal, The (1997)",
+              "cosine": 0.9621701240539551
+            },
+            {
+              "item_id": 1087,
+              "title": "Double Team (1997)",
+              "cosine": 0.960698664188385
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "interpretation": "Content-neighbour diagnostics only, not a recommendation performance or semantic benchmark; prompted base Llama embeddings are not guaranteed to be good similarity embeddings."
+}

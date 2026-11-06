@@ -116,3 +116,60 @@ python -m unittest discover -s tests -v
 
 Existing checkpoints selected by RMSE can be evaluated with the new metrics,
 but must not be described as selected by NDCG; train into a new run directory.
+
+## Description and Llama-3 follow-up (2026-11-06)
+
+The frozen first study is unchanged. New metadata preparation retrieves genuine
+movie overviews from the public
+[movie_descriptors dataset](https://huggingface.co/datasets/mt0rm0/movie_descriptors),
+pinning revision and content hashes. Conservative title/alias/year matching
+currently covers 1,570/1,682 movies (93.3%). The other 112 stay explicitly missing
+or ambiguous; no fuzzy match or generated plot is silently substituted.
+See [coverage](reports/followup/description_coverage.json) and
+[identity matches](reports/followup/description_matches.csv).
+
+`wsprec.llama_movie_embeddings` extracts frozen **Meta-Llama-3-8B** final-layer
+representations for both title-only and title+description using the same model
+and prompt. It uses the final valid token of a fixed readout suffix, L2
+normalization, and a 512-token limit that truncates only description content.
+This is a prompted base language model, not a purpose-trained embedding model.
+The extraction uses locally cached, access-authorized model weights only.
+Missing descriptions use exactly the title-only representation plus a mask.
+The full prompt and comparison scope are fixed in
+`followup_protocol_2026-11-06.json`.
+Both 1,682 x 4,096 arrays have been extracted and verified. The final pass took
+47.62 seconds on one A100 with 15.54 GB peak allocated GPU memory; two completed
+passes including the superseded numerical-QA version totaled 106.95 seconds.
+See the [follow-up findings](reports/followup/findings_2026-11-06.txt),
+[embedding metadata](reports/followup/llama3_embedding_metadata.json),
+[quality checks](reports/followup/llama3_quality_checks.json), and
+[execution attempts](reports/followup/execution_attempts.json).
+Description coverage is lower in zero/low-support items; base-model vectors
+also show high random-pair cosine similarity. Extraction is not evidence of
+better recommendation performance or a validated semantic similarity metric.
+
+```bash
+pip install -e '.[text,descriptions]'
+# Download descriptors_data.parquet and source API metadata into
+# data/movie_descriptions/ from the pinned public source.
+python -m wsprec.movie_descriptions
+CUDA_VISIBLE_DEVICES=0 timeout 3500 python -m wsprec.llama_movie_embeddings \
+  --movies data/movie_descriptions/matched_movies.json \
+  --output runs/followup/llama3
+OPENBLAS_NUM_THREADS=1 python scripts/check_followup_embeddings.py
+```
+
+The [Astra motivation audit](reports/followup/astra_motivation_audit.json) finds
+bias/support hypotheses already present in all eight first-round proposals,
+before their candidate feedback. Feedback then selected direction and magnitude.
+However, the shared interface already illustrated bias scaling and popularity
+adjustment, and parent prompts contained bias cues. This is **prior hypotheses
+under designer-provided cues followed by feedback selection**, not evidence of
+unprompted discovery. BPR often reduced learned item bias; all selected MSE
+trajectories added a positive support prior. Ranking gains do not establish
+popularity debiasing. The audit concerns saved explicit rationales and diagnostics,
+not unavailable private internal reasoning.
+
+No new recommendation/test score is inferred from representation extraction.
+Future comparisons must separate encoder replacement from added descriptions,
+account for missing-description coverage, and freeze a new evaluation protocol.

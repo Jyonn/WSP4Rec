@@ -1,5 +1,6 @@
 """Check representation artifacts and content neighbours, never ratings/test."""
 import json
+import hashlib
 from pathlib import Path
 import numpy as np
 
@@ -10,12 +11,14 @@ FOLDER=ROOT/'runs/followup/llama3'
 def main():
     movies=json.loads((ROOT/'data/movie_descriptions/matched_movies.json').read_text())
     metadata=json.loads((FOLDER/'metadata.json').read_text())
+    assert hashlib.sha256((ROOT/'data/movie_descriptions/matched_movies.json').read_bytes()).hexdigest()==metadata['movies_sha256']
     availability=np.load(FOLDER/'description_available.npy')
     arrays={name:np.load(FOLDER/f'{name}.npy') for name in ('title_only','title_description')}
     hashes=json.loads((FOLDER/'prompt_token_hashes.json').read_text())
     assert len(movies)==1682 and availability.shape==(1682,)
     assert int(availability.sum())==metadata['descriptions_available']
     for name,array in arrays.items():
+        assert hashlib.sha256((FOLDER/f'{name}.npy').read_bytes()).hexdigest()==metadata['conditions'][name]['embeddings_sha256']
         assert array.shape==(1682,4096)
         assert np.isfinite(array).all()
         assert np.allclose(np.linalg.norm(array,axis=1),1.,atol=2e-6)
@@ -39,7 +42,7 @@ def main():
     coverage={}
     for name,mask in (('zero',counts==0),('low',(counts>0)&(counts<=8)),('mid',(counts>8)&(counts<=43)),('high',counts>43)):
         coverage[name]={'items':int(mask.sum()),'descriptions_available':int(availability[mask].sum()),'coverage':float(availability[mask].mean())}
-    summary={'finite_and_normalized':True,'shape_each':[1682,4096],'exact_missing_fallback_verified':True,
+    summary={'finite_and_normalized':True,'input_and_embedding_hashes_verified':True,'shape_each':[1682,4096],'exact_missing_fallback_verified':True,
        'missing_items':int((~availability).sum()),'description_coverage_by_train_support':coverage,
        'same_item_title_description_cosine_mean_available':float((arrays['title_only'][availability]*arrays['title_description'][availability]).sum(1).mean()),
        'title_vs_description_top10_overlap_mean_available':float(np.mean([len(set(title_neighbors[i])&set(description_neighbors[i]))/10 for i in np.flatnonzero(availability)])),

@@ -1,0 +1,37 @@
+{
+  "experiment": "prompted_llama3_movie_embeddings_2026-11-06",
+  "attempts": [
+    {
+      "attempt": 1,
+      "commit": "80363bd",
+      "status": "failed_before_model_load",
+      "error": "Torch 2.7 reset_peak_memory_stats called before CUDA initialization: Invalid device argument",
+      "fix": "explicit torch.cuda.init and torch.cuda.set_device before resetting peak memory counters",
+      "model_forward_batches": 0,
+      "measured_wall_seconds": null,
+      "failure_log": "runs/followup/llama3_implicit_positions/extraction.failed_cuda_init.log"
+    },
+    {
+      "attempt": 2,
+      "commit": "48ace45",
+      "status": "completed_superseded_during_numerical_QA",
+      "metadata": "runs/followup/llama3_implicit_positions/metadata.json",
+      "wall_budget_seconds": 3500,
+      "wall_seconds": 59.333727955818176,
+      "peak_gpu_memory_bytes": 15540656640,
+      "reason": "Make valid-token positions independent of padding explicitly; first pass retained separately"
+    },
+    {
+      "attempt": 3,
+      "commit": "8cd56a2",
+      "status": "completed",
+      "metadata": "reports/followup/llama3_embedding_metadata.json",
+      "wall_budget_seconds": 3500,
+      "wall_seconds": 47.62019404023886,
+      "peak_gpu_memory_bytes": 15544390144
+    }
+  ],
+  "successful_pass_wall_seconds_including_superseded": 106.95392199605703,
+  "timing_scope": "Extraction processes only, excludes setup/download/transfers and unmeasured first CUDA-init failure",
+  "note": "Explicit position IDs control valid-token positions; BF16 padded-batch numerical differences remain observable and are logged. Missing-description output rows are forced to exact title-only fallback."
+}

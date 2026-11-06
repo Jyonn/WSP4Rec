@@ -1,0 +1,63 @@
+{
+  "model": "meta-llama/Meta-Llama-3-8B",
+  "requested_revision": "8cde5ca8380496c9a6cc7ef3a8b46a0372a1d920",
+  "resolved_revision": "8cde5ca8380496c9a6cc7ef3a8b46a0372a1d920",
+  "model_is_purpose_trained_embedding_model": false,
+  "fine_tuning": false,
+  "generated_descriptions": false,
+  "pooling": "last layer, final valid input token of fixed Movie representation: suffix; left padding",
+  "position_ids": "attention-mask cumulative positions, padded positions zero; valid token positions start from zero regardless of left padding",
+  "normalization": "L2",
+  "instruction": "Represent the following movie for personalized recommendation based on its plot, themes, genre, mood, and setting. Use only the supplied movie information.",
+  "suffix": "\nMovie representation:",
+  "chat_template": false,
+  "input_format": "instruction + newline Title: raw MovieLens title including year + optional newline Description: retrieved overview + suffix",
+  "max_length": 512,
+  "truncation": "description tokens only; instruction, title and suffix preserved",
+  "missing_description_policy": "exact title-only fallback after encoding; same prompt IDs; mask saved",
+  "missing_description_raw_numerical_delta_before_exact_fallback": 0.005082368850708008,
+  "movies_sha256": "4e8b169cd4a36643ae9e1778da31fc691ac81de83b5a1b9fcc715d5cdb33c23d",
+  "movies": 1682,
+  "descriptions_available": 1570,
+  "conditions": {
+    "title_only": {
+      "shape": [
+        1682,
+        4096
+      ],
+      "input_tokens": 71056,
+      "max_input_tokens": 61,
+      "descriptions_truncated": 0,
+      "wall_seconds": 9.196952253580093,
+      "tokenization_seconds": 0.2055017426609993,
+      "embeddings_sha256": "d9c24b30fdddeb9a6644a893ddc01b1f42bd11508d7f14fae1d0baabcbd44eff",
+      "row_norm_min": 0.9999998807907104,
+      "row_norm_max": 1.0000001192092896
+    },
+    "title_description": {
+      "shape": [
+        1682,
+        4096
+      ],
+      "input_tokens": 181893,
+      "max_input_tokens": 273,
+      "descriptions_truncated": 0,
+      "wall_seconds": 27.642313443124294,
+      "tokenization_seconds": 0.4638870358467102,
+      "embeddings_sha256": "53c6eb5923a533661b1da3bb1f6dcb58777347aae4bc19ab30d1160644500996",
+      "row_norm_min": 0.9999998807907104,
+      "row_norm_max": 1.0000001192092896
+    }
+  },
+  "wall_seconds": 47.62019404023886,
+  "model_load_seconds": 10.18503338843584,
+  "device": "cuda:0",
+  "dtype": "bfloat16",
+  "gpu_name": "NVIDIA A100 80GB PCIe",
+  "peak_gpu_memory_bytes": 15544390144,
+  "python": "3.10.13",
+  "torch": "2.7.0+cu118",
+  "transformers": "5.10.2",
+  "billing_usd": null,
+  "smoke_prefix_only": false
+}
