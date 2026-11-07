@@ -1,4 +1,7 @@
 import unittest
+import tempfile
+from pathlib import Path
+from unittest.mock import patch
 import numpy as np
 import torch
 from wsprec.text_model import TextMF, scores, effective_items, fit_pca, simple_fusion_delta
@@ -51,6 +54,24 @@ class TextModelTests(unittest.TestCase):
         np.testing.assert_allclose(np.linalg.norm(x, axis=1), 1, atol=1e-7)
         largest = np.argmax(np.abs(p['components']), axis=1)
         self.assertTrue(np.all(p['components'][np.arange(4), largest] >= 0))
+
+    def test_shuffled_control_preserves_geometry_and_breaks_row_identity(self):
+        import wsprec.text_model as module
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp)
+            (out / 'text').mkdir()
+            features = np.arange(40, dtype=np.float32).reshape(10, 4)
+            np.save(out / 'text/features.npy', features)
+            with patch.object(module, 'OUT', out):
+                meta = module.preprocess_shuffled()
+                shuffled = np.load(module.feature_path('shuffled_text'))
+                permutation = np.load(out / 'text/shuffled_permutation.npy')
+                np.testing.assert_array_equal(shuffled, features[permutation])
+                self.assertFalse(np.array_equal(shuffled, features))
+                np.testing.assert_array_equal(np.sort(np.linalg.norm(shuffled, axis=1)),
+                                              np.sort(np.linalg.norm(features, axis=1)))
+                self.assertEqual(meta, module.preprocess_shuffled())
+                self.assertEqual(module.feature_path('none'), module.feature_path('text'))
 
     def test_fusion_preserves_text_branch_and_obeys_actual_budget(self):
         state = self.model.state_dict()
