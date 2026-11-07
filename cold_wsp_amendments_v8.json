@@ -1,0 +1,11 @@
+{
+  "recorded_at": 1794077198.620675,
+  "before_first_research_model_call": true,
+  "clarifications": [
+    "Nonce condition also uses a fixed random channel permutation with a complete legend; evaluator applies corresponding input permutation. This tests semantic-coordinate grounding rather than reusing fixed row indices. Frozen transfer canonicalizes input rows algebraically, without fitting.",
+    "Writing has12cases across3tasks x2encodings x2replicates, so task0 has FOUR frozen programs, not the six mistakenly stated in the bridge count. No generation budget is changed.",
+    "Real onboarding K0/5/10 uses the same eligible cold users and identical targets after the tenth warm-item support event. K0 withholds all onboarding evidence; K5 supplies first5; K10first10. This avoids confounding support size with targets/time.",
+    "Installed official Codex0.167.0 in isolated temporarydirectory because preexisting CLI rejected requested Astra version. Existing global client/config/auth unchanged; successful smoke audited zero tool items.",
+    "Research budgeted repair calls use ephemeral full-visible-transcript replay, not persistedCodexresume. No hidden reasoning traces requested."
+  ]
+}
