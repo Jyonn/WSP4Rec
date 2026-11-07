@@ -1,6 +1,24 @@
 # WSP4Rec
 
-The latest experiment compares **BP-trained BPR** with **the same checkpoint
+## Text-feature experiment implementation (v7)
+
+This branch adds joint BPR training with cached Llama-3 title+description features:
+`U[u] dot (V[i] + X[i] W)`, with frozen64D PCA features and a learned64x16 W.
+The same checkpoints support fixed effective-factor SVD fusion and three Astra
+input conditions (no text, numeric text, numeric+readable movie text).
+
+The protocol is `text_study_protocol_v7.json`; run-specific clarifications and
+exploratory-control declarations are in `text_study_amendments_v7.json`.
+Use `python -m wsprec.text_model --command preprocess`, then train with
+`--command train --condition none|text|shuffled_text --device cuda`. The laboratory
+runner is `scripts/run_text_gpu_training.py`. Editor preparation/scoring/freezing
+and final reporting are provided by `python -m wsprec.text_study`.
+The text feature cache and licensed MovieLens data are not committed.
+Do not select or revise edits against test results. The new report and numeric
+evidence remain in the research workspace; no manuscript is published by this branch.
+
+
+The earlier experiment compares **BP-trained BPR** with **the same checkpoint
 edited by Astra with full weights, training interactions and explicit ID-to-row
 mappings**. The updated [interactive explanation](output/web/WSP4Rec_interactive.html)
 shows only these two systems. Previous blind/text experiments below are historical.

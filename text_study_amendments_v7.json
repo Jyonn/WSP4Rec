@@ -1,0 +1,18 @@
+{
+  "recorded_before_test_at": 1794066733.4510221,
+  "amendments": [
+    {
+      "type": "Outer JSON format clarification",
+      "reason": "The new interface specified four patch objects but did not explicitly name the outer list. Two agents submitted {patches:[...]}; accept that equivalent single-key wrapper for every case/round, without changing any operations/assets or increasing score budgets. All original submission bytes preserved. Prior raw-list submissions already comply."
+    },
+    {
+      "type": "Additional transparent reporting",
+      "reason": "In addition to prelocked fixed-fusion validation fallback policy, report the existing raw fixed-fusion output without fallback. No coefficient selection, additional candidate proposals or editor feedback; extra final scoring only. All original policy comparisons unchanged."
+    },
+    {
+      "type": "Exploratory calibration control before test",
+      "recorded_at": 1794066954.205656,
+      "reason": "During validation-stage inspection several editors proposed simple branch/bias scaling. Add explicitly posthoc control: for text scaleW in[.8,1.2] and item bias in[.5,1,1.5,2]; no-text scaleuser instead. Eight predetermined pairs, samecap andvalidationfallback; no newfeedbacktoeditors. This control is validation-informed and not preregistered, only mechanistic context, with no alteration of primarycomparisons."
+    }
+  ]
+}
