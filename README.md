@@ -3,7 +3,7 @@
 ## Text-feature experiment implementation (v7)
 
 This branch adds joint BPR training with cached Llama-3 title+description features:
-`U[u] dot (V[i] + X[i] W)`, with frozen64D PCA features and a learned64x16 W.
+`U[u] dot (V[i] + X[i] W)`, with frozen 64D PCA features and a learned 64x16 W.
 The same checkpoints support fixed effective-factor SVD fusion and three Astra
 input conditions (no text, numeric text, numeric+readable movie text).
 
